@@ -1,0 +1,131 @@
+import dependencies.*
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id ("androidx.navigation.safeargs")
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id "org.jlleitschuh.gradle.ktlint"
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    compileSdk Versions.compilesdk
+
+    defaultConfig {
+        applicationId "com.decagon.aqua"
+        minSdk Versions.minsdk
+        targetSdk Versions.targetsdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility Java.java_version
+        targetCompatibility Java.java_version
+    }
+    kotlinOptions {
+        jvmTarget = Java.java_version
+    }
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
+    tasks.withType(Test) {
+        useJUnitPlatform()
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Koltin
+    implementation Dependencies.kotlin_standard_library
+    implementation Dependencies.kotlin_reflect
+    implementation Dependencies.ktx
+
+    // support lib
+    implementation SupportDependencies.appcompat
+    implementation SupportDependencies.constraintlayout
+    implementation SupportDependencies.material_design
+    implementation SupportDependencies.swipe_refresh_layout
+
+    // dagger hilt
+    implementation Dependencies.dagger_hilt
+    kapt Dependencies.hilt_android
+    implementation Dependencies.hilt_view_model
+    kapt Dependencies.kapt_hilt_compiler
+
+
+    // firebase
+    implementation Dependencies.firebase_firestore
+    implementation Dependencies.firebase_auth
+    implementation Dependencies.firebase_crashlytics
+    implementation Dependencies.firebase_analytics
+
+    // coroutines
+    implementation Dependencies.kotlin_coroutines
+    implementation Dependencies.kotlin_coroutines_android
+    implementation Dependencies.kotlin_coroutines_play_services
+
+    // retrofit
+    implementation Dependencies.retrofit
+    implementation Dependencies.retrofit_gson
+
+    // unit test
+    testImplementation TestDependencies.junit4
+    testImplementation TestDependencies.mock
+    testImplementation TestDependencies.jupiter_api
+    testImplementation TestDependencies.jupiter_params
+    testRuntimeOnly TestDependencies.jupiter_engine  // for android test   on runtime and not project level
+    testImplementation Dependencies.retrofit_gson
+
+    // room
+    implementation Dependencies.room_runtime
+    implementation Dependencies.room_ktx
+    kapt AnnotationProcessing.room_compiler
+    kapt Dependencies.room_compiler
+    implementation Dependencies.coroutines_room_support
+
+    // navigation
+    implementation Dependencies.navigation_fragment
+    implementation Dependencies.navigation_ui
+    implementation Dependencies.navigation_runtime
+
+    // lifecycle
+    implementation Dependencies.lifecycle_coroutines
+    implementation Dependencies.lifecycle_runtime
+
+
+    // ---------------------------------------------------------------------------------------------
+    // utilities
+    // add other libraries below here
+    // ---------------------------------------------------------------------------------------------
+
+
+    // mike
+    implementation Dependencies.mike_utils
+
+    // fakes
+    implementation Dependencies.faker
+    implementation Dependencies.lorem
+
+    // timber
+    implementation Dependencies.timber_logger
+
+}
