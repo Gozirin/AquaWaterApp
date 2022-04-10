@@ -1,4 +1,11 @@
-import dependencies.*
+import dependencies.AnnotationProcessing
+import dependencies.Dependencies
+import dependencies.Java
+import dependencies.TestDependencies
+import dependencies.SupportDependencies
+import dependencies.AndroidTestDependencies
+import dependencies.Versions
+
 
 plugins {
     id 'com.android.application'
@@ -8,7 +15,6 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
     id "org.jlleitschuh.gradle.ktlint"
-    id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
 }
 
@@ -73,8 +79,6 @@ dependencies {
 
 
     // firebase
-    implementation Dependencies.firebase_firestore
-    implementation Dependencies.firebase_auth
     implementation Dependencies.firebase_crashlytics
     implementation Dependencies.firebase_analytics
 
@@ -95,12 +99,24 @@ dependencies {
     testRuntimeOnly TestDependencies.jupiter_engine  // for android test   on runtime and not project level
     testImplementation Dependencies.retrofit_gson
 
+    // ui test
+    androidTestImplementation AndroidTestDependencies.kotlin_test
+    androidTestImplementation AndroidTestDependencies.coroutines_test
+    androidTestImplementation AndroidTestDependencies.navigation_testing
+    androidTestImplementation AndroidTestDependencies.espresso_idling_resource
+    androidTestImplementation AndroidTestDependencies.androidx_test_ext
+    androidTestImplementation AndroidTestDependencies.fragment_testing
+    androidTestImplementation AndroidTestDependencies.test_runner
+    androidTestImplementation AndroidTestDependencies.test_rules
+    androidTestImplementation AndroidTestDependencies.text_core_ktx
+    androidTestImplementation AndroidTestDependencies.espresso_core
+    androidTestImplementation AndroidTestDependencies.espresso_contrib
+
     // room
     implementation Dependencies.room_runtime
     implementation Dependencies.room_ktx
     kapt AnnotationProcessing.room_compiler
     kapt Dependencies.room_compiler
-    implementation Dependencies.coroutines_room_support
 
     // navigation
     implementation Dependencies.navigation_fragment
@@ -123,7 +139,6 @@ dependencies {
 
     // fakes
     implementation Dependencies.faker
-    implementation Dependencies.lorem
 
     // timber
     implementation Dependencies.timber_logger

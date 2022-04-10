@@ -29,12 +29,10 @@ object Dependencies {
     val markdown_processor = "com.yydcdut:markdown-processor:${Versions.markdown_processor}"
     val mike_utils = "com.github.CodaarX:mike-lambda:${Versions.mike_utils}"
     val faker = "com.github.blocoio:faker:${Versions.faker}"
-    val lorem = "com.github.Qase:LoremKotlinum:${Versions.lorem}"
     val dagger_hilt = "com.google.dagger:hilt-android:${Versions.dagger_hilt}"
     val hilt_android = "com.google.dagger:hilt-android-compiler:${Versions.dagger_hilt_compiler}"
     val hilt_view_model = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hilt_view_model}"
     val kapt_hilt_compiler = "androidx.hilt:hilt-compiler:${Versions.kapt_hilt_compiler}"
-    val coroutines_room_support = "androidx.room:room-ktx:${Versions.coroutines_room_support}"
     val room_compiler = "androidx.room:room-compiler:${Versions.room_compiler}"
     val timber_logger = "com.jakewharton.timber:timber:${Versions.timber}"
 

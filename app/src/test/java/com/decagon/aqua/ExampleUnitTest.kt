@@ -1,7 +1,7 @@
 package com.decagon.aqua
 
-import org.junit.Assert.*
 import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
 
 /**
  * Example local unit test, which will execute on the development machine (host).

@@ -39,12 +39,10 @@ object Versions {
     const val crashlytics_gradle = "2.1.0"
     const val mike_utils = "1.0.2"
     const val faker = "1.2.8"
-    const val lorem = "1.0"
     const val dagger_hilt = "2.40"
     const val dagger_hilt_compiler = "2.40"
     const val hilt_view_model = "1.0.0-alpha03"
     const val kapt_hilt_compiler = "1.0.0"
-    const val coroutines_room_support = "2.4.2"
     const val timber = "2.7.1"
     const val room_compiler = "2.4.2"
 
