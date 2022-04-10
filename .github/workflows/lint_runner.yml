@@ -1,9 +1,5 @@
-name: Aqua CI
-on:
-  push:
-    branches: [ aqua_dev_central ]
-  pull_request:
-    branches: [ aqua_dev_central ]
+name: Lint Runner
+on: push
         
 jobs:
   build:
