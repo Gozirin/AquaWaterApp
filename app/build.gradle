@@ -5,6 +5,7 @@ import dependencies.TestDependencies
 import dependencies.SupportDependencies
 import dependencies.AndroidTestDependencies
 import dependencies.Versions
+import dependencies.Application
 
 
 plugins {
@@ -22,13 +23,13 @@ android {
     compileSdk Versions.compilesdk
 
     defaultConfig {
-        applicationId "com.decagon.aqua"
+        applicationId Application.id
         minSdk Versions.minsdk
         targetSdk Versions.targetsdk
-        versionCode 1
-        versionName "1.0"
+        versionCode Application.versioncode
+        versionName Application.versionname
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner AndroidTestDependencies.instrumentation_runner
     }
 
     buildTypes {
