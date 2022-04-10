@@ -1,7 +1,7 @@
-name: Aqua Push
+name: Test Runner
 
 on: 
-  push:
+  pull_request:
     branches: [ aqua_dev_central ]
 
 jobs:
