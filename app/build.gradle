@@ -7,16 +7,15 @@ import dependencies.AndroidTestDependencies
 import dependencies.Versions
 import dependencies.Application
 
-
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'dagger.hilt.android.plugin'
     id ("androidx.navigation.safeargs")
-    id 'kotlin-kapt'
     id 'kotlin-parcelize'
-    id "org.jlleitschuh.gradle.ktlint"
+    id 'org.jlleitschuh.gradle.ktlint'
     id 'com.google.firebase.crashlytics'
+    id 'kotlin-kapt'
 }
 
 android {
