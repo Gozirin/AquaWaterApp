@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagon.aqua.R
 
-class SupplierOrdersPage : Fragment(){
+class SupplierOrdersPage : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

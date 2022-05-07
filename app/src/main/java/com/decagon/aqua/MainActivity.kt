@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
         /**
          * to switch between fragments
          */
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener{
-            when(it.itemId){
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
                 R.id.supplier_homepage_bottom_nav_menu_home -> setCurrentFragment(supplierHomePageFragment)
                 R.id.supplier_homepage_bottom_nav_menu_order -> setCurrentFragment(supplierOrdersFragment)
                 R.id.supplier_homepage_bottom_nav_menu_account -> setCurrentFragment(supplierAccountFragment)
@@ -44,9 +44,9 @@ class MainActivity : AppCompatActivity() {
      * to set the selected fragment
      */
     private fun setCurrentFragment(fragment: Fragment) =
-        supportFragmentManager.beginTransaction().apply{
+        supportFragmentManager.beginTransaction().apply {
             replace(R.id.supplier_homepage_frame_layout, fragment)
             addToBackStack("null")
             commit()
-    }
+        }
 }
