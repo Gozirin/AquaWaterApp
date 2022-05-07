@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:scrollbarStyle="insideInset"
+    android:layout_width="match_parent"
+    android:scrollbarThumbVertical="@null"
+    android:scrollbarThumbHorizontal="@null"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/signFragment"
+        tools:context=".fragment.SignUpFragment">
+
+        <TextView
+            android:id="@+id/text_Arrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/arrow"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/manrope"
+            android:text="   Back"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.028"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.019" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/image"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.06" />
+
+        <TextView
+            android:id="@+id/text_signUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/manrope_bold"
+            android:layout_marginTop="30dp"
+            android:text="Sign up to your account"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/image"
+            app:layout_constraintHorizontal_bias="0.371"
+            app:layout_constraintStart_toStartOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/text_UserType"
+            app:layout_constraintEnd_toEndOf="@+id/text_signUp"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="@+id/text_signUp"
+            app:layout_constraintTop_toBottomOf="@+id/text_signUp"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:layout_margin="10dp"
+            android:text="User Type"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <Spinner
+            android:id="@+id/Spiner"
+            app:layout_constraintEnd_toEndOf="@+id/text_UserType"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="@+id/text_UserType"
+            app:layout_constraintTop_toBottomOf="@+id/text_UserType"
+            android:layout_width="match_parent"
+            android:entries="@array/name"
+            android:background="@drawable/shapes"
+            android:layout_height="60dp"
+            android:textSize="10sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="76dp">
+
+        </Spinner>
+
+
+        <ImageView
+            android:id="@+id/image_dropdown"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_drop_down"
+            app:layout_constraintEnd_toEndOf="@+id/Spiner"
+            app:layout_constraintHorizontal_bias="0.982"
+            app:layout_constraintStart_toStartOf="@+id/Spiner"
+            app:layout_constraintTop_toBottomOf="@+id/text_UserType" />
+
+        <TextView
+            android:id="@+id/text_FirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/manrope"
+            android:text="Fiest Name"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/Spiner"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/Spiner"
+            app:layout_constraintTop_toBottomOf="@+id/Spiner" />
+
+        <EditText
+            android:id="@+id/text_Input_FirstName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shapes"
+            android:fontFamily="@font/manrope"
+            android:hint="First Name"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_FirstName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_FirstName"
+            app:layout_constraintTop_toBottomOf="@+id/text_FirstName" />
+
+        <TextView
+            android:id="@+id/text_LastName"
+            app:layout_constraintEnd_toEndOf="@+id/text_Input_FirstName"
+            app:layout_constraintStart_toStartOf="@+id/text_Input_FirstName"
+            app:layout_constraintTop_toBottomOf="@+id/text_Input_FirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textFontWeight="400"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/manrope"
+            android:textColor="@color/black"
+            android:text="Last Name"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="47dp" />
+
+        <EditText
+            android:id="@+id/text_Input_LastName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/shapes"
+            android:padding="15dp"
+            android:hint="Last Name"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_LastName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_LastName"
+            app:layout_constraintTop_toBottomOf="@+id/text_LastName" />
+
+        <TextView
+            android:id="@+id/text_CustomerEmail"
+            app:layout_constraintEnd_toEndOf="@+id/text_Input_FirstName"
+            app:layout_constraintStart_toStartOf="@+id/text_Input_LastName"
+            app:layout_constraintTop_toBottomOf="@+id/text_Input_LastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:text="Email"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="47dp" />
+
+        <EditText
+            android:id="@+id/text_Input_CustomerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:background="@drawable/shapes"
+            android:hint="Password"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_CustomerEmail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_CustomerEmail"
+            app:layout_constraintTop_toBottomOf="@+id/text_CustomerEmail"/>
+        <TextView
+            android:id="@+id/text_CustomerPassword"
+            app:layout_constraintEnd_toEndOf="@+id/text_Input_CustomerEmail"
+            app:layout_constraintStart_toStartOf="@+id/text_Input_CustomerEmail"
+            app:layout_constraintTop_toBottomOf="@+id/text_Input_CustomerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:text="Password"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="47dp" />
+
+        <EditText
+            android:id="@+id/text_Input_CustomerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shapes"
+            android:fontFamily="@font/manrope"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_CustomerPassword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_CustomerPassword"
+            app:layout_constraintTop_toBottomOf="@+id/text_CustomerPassword" />
+
+        <TextView
+            android:id="@+id/text_CustomerPhoneNumber"
+            app:layout_constraintEnd_toEndOf="@+id/text_Input_CustomerPassword"
+            app:layout_constraintStart_toStartOf="@+id/text_Input_CustomerPassword"
+            app:layout_constraintTop_toBottomOf="@+id/text_Input_CustomerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:text="Phone Number"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="47dp" />
+
+        <EditText
+            android:id="@+id/text_Input_CustomerPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shapes"
+            android:fontFamily="@font/manrope"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_CustomerPhoneNumber"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_CustomerPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/text_CustomerPhoneNumber" />
+
+        <TextView
+            android:id="@+id/text_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:text="Address"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/text_Input_CustomerPhoneNumber"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_Input_CustomerPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/text_Input_CustomerPhoneNumber" />
+
+        <EditText
+            android:id="@+id/text_Input_Address"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:background="@drawable/shapes"
+            android:hint="Location"
+            android:drawableLeft="@drawable/ic_baseline_location"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_Address"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_Address"
+            app:layout_constraintTop_toBottomOf="@+id/text_Address"/>
+
+
+        <TextView
+            android:id="@+id/text_NumberOfWaterBottle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="144dp"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:text="Number Of Water Bottle"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/text_Input_Address"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/text_Input_Address" />
+
+
+        <EditText
+            android:id="@+id/text_Input_NumberOfWaterBottle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/manrope"
+            android:textFontWeight="400"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:background="@drawable/shapes"
+            android:inputType="number"
+            android:hint="1"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_NumberOfWaterBottle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_NumberOfWaterBottle"
+            app:layout_constraintTop_toBottomOf="@+id/text_NumberOfWaterBottle"/>
+
+        <Button
+            android:id="@+id/button_Customer_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#047DDD"
+            android:text="SignUp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintEnd_toEndOf="@+id/text_Input_NumberOfWaterBottle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_Input_NumberOfWaterBottle"
+            app:layout_constraintTop_toBottomOf="@+id/text_Input_NumberOfWaterBottle" />
+
+        <TextView
+            android:id="@+id/customer_have_an_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Already have an account?"
+            android:textFontWeight="700"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_Customer_SignUp" />
+
+        <TextView
+            android:id="@+id/text_CustomerSignInToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="204dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Sign in"
+            android:textColor="#047DDD"
+            android:textFontWeight="700"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/button_Customer_SignUp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/customer_have_an_account"
+            app:layout_constraintTop_toBottomOf="@+id/button_Customer_SignUp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

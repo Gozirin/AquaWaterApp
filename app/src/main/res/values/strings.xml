@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Aqua</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="name">
+        <item>Customer</item>
+        <item>Supplier</item>
+    </string-array>
 </resources>
