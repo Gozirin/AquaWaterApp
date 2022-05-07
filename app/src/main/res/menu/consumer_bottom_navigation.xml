@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/consumerHomeFragment"
+        android:title="@string/home_tab"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/consumerTransactionFragment"
+        android:title="@string/transaction_tab"
+        android:icon="@drawable/ic_transaction"/>
+
+    <item
+        android:id="@+id/consumerAccountFragment"
+        android:title="@string/account_tab"
+        android:icon="@drawable/ic_account"/>
+</menu>

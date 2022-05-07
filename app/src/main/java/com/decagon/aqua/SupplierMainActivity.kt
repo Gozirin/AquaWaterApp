@@ -3,16 +3,16 @@ package com.decagon.aqua
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.decagon.aqua.databinding.ActivityMainBinding
+import com.decagon.aqua.databinding.ActivitySupplierMainBinding
 import com.decagon.aqua.feature.supplier.dashboard.account_screen.SupplierAccountPage
 import com.decagon.aqua.feature.supplier.dashboard.home_screen.SupplierHomePage
 import com.decagon.aqua.feature.supplier.dashboard.order_screen.SupplierOrdersPage
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class SupplierMainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySupplierMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySupplierMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         /**
