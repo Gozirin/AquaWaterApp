@@ -97,7 +97,6 @@
         android:background="@drawable/shapes"
         android:hint="Password"
         android:inputType="textPassword"
-        android:onClick="ShowHidePassword"
         android:padding="15dp"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/text_Password"
