@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.decagon.aqua.R
 import com.decagon.aqua.core.baseClasses.BaseFragment
 import com.decagon.aqua.databinding.FragmentConsumerHomeFragmentBinding
 
