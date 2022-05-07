@@ -20,4 +20,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/app_nav" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/consumer_bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/consumer_bottom_navigation" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

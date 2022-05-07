@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/app_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/consumerHomeFragment">
 
+    <fragment
+        android:id="@+id/consumerHomeFragment"
+        android:name="com.decagon.aqua.feature.consumer.home.ConsumerHomeFragment"
+        android:label="fragment_consumer_home_fragment"
+        tools:layout="@layout/fragment_consumer_home_fragment" />
+    <fragment
+        android:id="@+id/consumerTransactionFragment"
+        android:name="com.decagon.aqua.feature.consumer.home.ConsumerTransactionFragment"
+        android:label="fragment_consumer_transaction"
+        tools:layout="@layout/fragment_consumer_transaction" />
+    <fragment
+        android:id="@+id/consumerAccountFragment"
+        android:name="com.decagon.aqua.feature.consumer.home.ConsumerAccountFragment"
+        android:label="fragment_consumer_account"
+        tools:layout="@layout/fragment_consumer_account" />
 </navigation>
