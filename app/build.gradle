@@ -74,6 +74,7 @@ dependencies {
 
     // dagger hilt
     implementation Dependencies.dagger_hilt
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt Dependencies.hilt_android
     implementation Dependencies.hilt_view_model
     kapt Dependencies.kapt_hilt_compiler
