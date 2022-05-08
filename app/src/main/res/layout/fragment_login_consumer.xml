@@ -8,7 +8,7 @@
     tools:context=".features.consumer.authentication.CustomerLoginFragment">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/consumer_login_layout_image_view_image_icon"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginTop="50dp"
@@ -20,152 +20,151 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/text_Login"
+        android:id="@+id/consumer_login_layout_login_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:fontFamily="@font/manrope_bold"
-        android:text="Login to your account"
+        android:text="@string/consumer_login_fragment"
         android:layout_marginTop="50dp"
         android:textColor="@color/black"
         android:textFontWeight="700"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_image_view_image_icon"
         app:layout_constraintHorizontal_bias="0.371"
-        app:layout_constraintStart_toStartOf="@+id/image"
-        app:layout_constraintTop_toBottomOf="@+id/image" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_image_view_image_icon"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_image_view_image_icon" />
 
     <TextView
-        android:id="@+id/text_Email"
+        android:id="@+id/consumer_login_layout_text_view_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:layout_marginTop="76dp"
         android:fontFamily="@font/manrope"
-        android:text="Email"
+        android:text="@string/consumer_login_text_view_email"
         android:textColor="@color/black"
         android:textFontWeight="400"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/text_Login"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_login_account"
         app:layout_constraintHorizontal_bias="0.345"
-        app:layout_constraintStart_toStartOf="@+id/text_Login"
-        app:layout_constraintTop_toBottomOf="@+id/text_Login" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_login_account"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_login_account" />
 
     <EditText
-        android:id="@+id/text_Input_Email"
+        android:id="@+id/consumer_login_layout_edit_text_Email"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:padding="15dp"
         android:fontFamily="@font/manrope"
         android:textFontWeight="400"
         android:textColor="@color/black"
         android:inputType="textEmailAddress"
         android:background="@drawable/shapes"
-        android:hint="Email"
+        android:hint="@string/consumer_login_edit_text_email"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/text_Email"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_text_view_email"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/text_Email"
-        app:layout_constraintTop_toBottomOf="@+id/text_Email" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_text_view_email"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_text_view_email" />
 
     <TextView
-        android:id="@+id/text_Password"
+        android:id="@+id/consumer_login_layout_text_view_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:fontFamily="@font/manrope"
         android:textFontWeight="400"
         android:textColor="@color/black"
         android:layout_marginTop="76dp"
-        android:text="Password"
+        android:text="@string/consumer_login_text_view_password"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/text_Input_Email"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_edit_text_Email"
         app:layout_constraintHorizontal_bias="0.345"
-        app:layout_constraintStart_toStartOf="@+id/text_Input_Email"
-        app:layout_constraintTop_toBottomOf="@+id/text_Input_Email" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_edit_text_Email"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_edit_text_Email" />
 
     <EditText
-        android:id="@+id/text_Input_Password"
+        android:id="@+id/consumer_login_layout_edit_text_password"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/manrope"
         android:textFontWeight="400"
         android:textColor="@color/black"
         android:background="@drawable/shapes"
-        android:hint="Password"
+        android:hint="@string/consumer_login_edit_text_password"
         android:inputType="textPassword"
         android:padding="15dp"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/text_Password"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_text_view_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_Password"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_text_view_password"
         tools:layout_editor_absoluteY="113dp" />
 
     <ImageView
-        android:id="@+id/image_icon"
+        android:id="@+id/consumer_login_layout_image_icon"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/text_Input_Password"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="@+id/text_Input_Password"
-        app:layout_constraintTop_toBottomOf="@+id/text_Password" />
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_hidden"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_edit_text_password"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_edit_text_password"
+        app:layout_constraintTop_toTopOf="@+id/consumer_login_layout_edit_text_password" />
 
     <TextView
-        android:id="@+id/text_ForgetPassword"
+        android:id="@+id/consumer_login_layout_text_view_forget_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:fontFamily="@font/manrope"
         android:textFontWeight="400"
-        android:text="Forget Password?"
+        android:text="@string/consumer_login_text_view_forget_password"
         android:textColor="#4C9EDF"
-        app:layout_constraintEnd_toEndOf="@+id/text_Input_Password"
-        app:layout_constraintStart_toStartOf="@+id/text_Input_Password"
-        app:layout_constraintTop_toBottomOf="@+id/text_Input_Password" />
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_edit_text_password"
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_edit_text_password"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_edit_text_password" />
 
     <Button
-        android:id="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/text_ForgetPassword"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/text_ForgetPassword"
-        app:layout_constraintTop_toBottomOf="@+id/text_ForgetPassword"
+        android:id="@+id/consumer_login_layout_login_button"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#047DDD"
-        android:text="Login"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/consumer_login_button_login"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="190dp" />
-
-    <TextView
-        android:id="@+id/text_CreateAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="8dp"
-        android:text="Don't have an account?"
-        android:fontFamily="@font/manrope_bold"
-        android:textFontWeight="700"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-    <TextView
-        android:id="@+id/text_LoginToSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Sign Up"
-        android:textColor="#0467B8"
-        android:fontFamily="@font/manrope_bold"
-        android:textFontWeight="700"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_text_view_forget_password"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/text_CreateAccount"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_text_view_forget_password"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_text_view_forget_password" />
+
+    <TextView
+        android:id="@+id/consumer_login_layout_create_account"
+        android:layout_width="203dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="Don't have an account?"
+        android:textFontWeight="700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_login_button"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_login_button" />
+
+    <TextView
+        android:id="@+id/consumer_login_layout_login_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/consumer_login_text_view_signup"
+        android:textColor="#4C9EDF"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_create_account"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_create_account"
+        app:layout_constraintTop_toTopOf="@+id/consumer_login_layout_create_account" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@ class ConsumerSignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // initializing view binding
         binding = FragmentSignUpConsumerBinding.bind(view)
-        val nextbtn = binding.textCustomerSignInToLogin
+        val nextbtn = binding.consumerSignupLayoutTextViewSignIn
         // navigate to CustomerLoginFragment using the arrow icon
         nextbtn.setOnClickListener {
             val fragment = CustomerLoginFragment()
@@ -31,7 +31,7 @@ class ConsumerSignUpFragment : Fragment() {
             transaction?.replace(R.id.nav_Container, fragment)?.commit()
         }
         // Sign in to login fragment if consumer already have an account
-        val prev = binding.textArrow
+        val prev = binding.consumerSignupLayoutTextViewBack
         prev.setOnClickListener {
             val fragment = CustomerLoginFragment() // move back to login fragment
             val transaction = fragmentManager?.beginTransaction()

@@ -24,7 +24,7 @@ class CustomerLoginFragment : Fragment() {
         // initializing view binding
         binding = FragmentLoginConsumerBinding.bind(view)
         // Sign up if consumer don't have an account
-        val nextbtn = binding.textLoginToSignUp
+        val nextbtn = binding.consumerLoginLayoutLoginSignup
         nextbtn.setOnClickListener {
             val fragment = ConsumerSignUpFragment() // navigate to login fragment
             val transaction = fragmentManager?.beginTransaction()

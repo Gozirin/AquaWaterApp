@@ -1,8 +1,37 @@
 <resources>
     <string name="app_name">Aqua</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string-array name="name">
-        <item>Customer</item>
-        <item>Supplier</item>
-    </string-array>
+    <string name="consumer_login_fragment">Login to your account</string>
+    <string name="consumer_login_edit_text_password">Password</string>
+    <string name="consumer_login_text_view_password">Password</string>
+    <string name="consumer_login_text_view_email">Email</string>
+    <string name="consumer_login_edit_text_email">Email</string>
+    <string name="consumer_login_text_view_forget_password">Forget Password?</string>
+    <string name="consumer_login_button_login">Login</string>
+    <string name="consumer_login_text_view_signup">SignUp</string>
+    <string name="consumer_sign_up_text_view_back">Back</string>
+    <string name="consumer_sign_up_fragment">Sign up to your account</string>
+    <string name="consumer_signup_text_view_first_name">First Name</string>
+    <string name="consumer_signup_edit_text_first_name">First Name</string>
+    <string name="consumer_signup_text_view_last_name">Last Name</string>
+    <string name="consumer_signup_edit_text_last_name">Last Name</string>
+    <string name="consumer_signup_text_view_email">Email</string>
+    <string name="consumer_signup_edit_text_email">Email</string>
+    <string name="consumer_signup_text_view_password">Password</string>
+    <string name="consumer_signup_edit_text_password">Password</string>
+    <string name="consumer_signup_text_view_phoneNumber">Phone Number</string>
+    <string name="consumer_signup_edit_text_phoneNumber">Phone number</string>
+    <string name="consumer_signup_text_view_address">Address</string>
+    <string name="consumer_signup_edit_text_address">Location</string>
+    <string name="consumer_signup_text_view_number_of_bottles">Number Of Bottle</string>
+    <string name="consumer_signup_edit_text_number_of_bottles">1</string>
+    <string name="consumer_signup_button_login">SignUp</string>
+    <string name="consumer_signup_text_view_already_have_an_account">Already have an account?</string>
+    <string name="consumer_signup_text_viev_sign_in">Sign in</string>
+
+
+
+
+
+
 </resources>

@@ -10,8 +10,10 @@
         <entry key="app/src/main/res/drawable/ic__logo_icon.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/shapes.xml" value="0.1705" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_login_consumer.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/fragment_sign_up_consumer.xml" value="0.25" />
       </map>
