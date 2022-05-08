@@ -13,7 +13,7 @@ class SupplierHomePage : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.supplier_home_page_layout, container, false)
+        return inflater.inflate(R.layout.fragment_supplier_home_page_layout, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

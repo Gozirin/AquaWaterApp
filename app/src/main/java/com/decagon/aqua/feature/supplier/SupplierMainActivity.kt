@@ -1,8 +1,9 @@
-package com.decagon.aqua
+package com.decagon.aqua.feature.supplier
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.decagon.aqua.R
 import com.decagon.aqua.databinding.ActivitySupplierMainBinding
 import com.decagon.aqua.feature.supplier.dashboard.account_screen.SupplierAccountPage
 import com.decagon.aqua.feature.supplier.dashboard.home_screen.SupplierHomePage
