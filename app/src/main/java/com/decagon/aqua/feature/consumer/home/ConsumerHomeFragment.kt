@@ -39,7 +39,6 @@ class ConsumerHomeFragment : BaseFragment() {
         consumerHomeScreenAdapter = ConsumerHomeScreenAdapter(newArrayList)
         recyclerView.adapter = consumerHomeScreenAdapter
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-
     }
     private fun getProfiles() {
         newArrayList.add(ConsumerItem(R.drawable.image, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
