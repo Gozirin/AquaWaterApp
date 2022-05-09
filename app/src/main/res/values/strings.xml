@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Aqua</string>
+    <string name="supplier_homepage">Supplier Homepage</string>
     <string name="account_tab">Account</string>
     <string name="transaction_tab">Transaction</string>
     <string name="home_tab">Home</string>

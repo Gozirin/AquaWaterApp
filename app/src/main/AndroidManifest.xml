@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aqua">
         <activity
-            android:name=".ConsumerMainActivity"
+            android:name=".feature.supplier.SupplierMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
