@@ -18,13 +18,17 @@ class SplashScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         requireActivity().window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        Handler().postDelayed({
-            if (onBoardingFinished()) {
-                findNavController().navigate(R.id.action_splashFragment_to_loggingFragment)
-            } else {
-                findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
-            }
-        }, 3000)
+        Handler().postDelayed(
+
+            {
+                if (onBoardingFinished()) {
+                    findNavController().navigate(R.id.action_splashFragment_to_loggingFragment)
+                } else {
+                    findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
+                }
+            },
+            3000
+        )
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false)
