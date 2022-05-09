@@ -5,25 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#147DF5"
-    tools:context=".SplashFragment">
+    tools:context=".core.onboarding.SplashScreenFragment">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/background_design"
+        android:layout_height="350dp"
+        android:src="@drawable/rectangle_5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="86dp"
+        android:layout_height="91dp"
         android:src="@drawable/aqua_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
 
     <TextView
         android:layout_width="wrap_content"
