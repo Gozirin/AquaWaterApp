@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
@@ -31,6 +33,10 @@ class ConsumerHomeFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         initView2()
         getProfiles()
+        binding.consumptionlevelView.setOnClickListener {
+            val action = ConsumerHomeFragmentDirections.actionConsumerHomeFragmentToConsumerConsumptionLevelFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private fun initView2() {

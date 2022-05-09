@@ -9,7 +9,11 @@
         android:id="@+id/consumerHomeFragment"
         android:name="com.decagon.aqua.feature.consumer.home.ConsumerHomeFragment"
         android:label="fragment_consumer_home_fragment"
-        tools:layout="@layout/fragment_consumer_home_fragment" />
+        tools:layout="@layout/fragment_consumer_home_fragment" >
+        <action
+            android:id="@+id/action_consumerHomeFragment_to_consumerConsumptionLevelFragment"
+            app:destination="@id/consumerConsumptionLevelFragment" />
+    </fragment>
     <fragment
         android:id="@+id/consumerTransactionFragment"
         android:name="com.decagon.aqua.feature.consumer.home.ConsumerTransactionFragment"
@@ -20,4 +24,9 @@
         android:name="com.decagon.aqua.feature.consumer.home.ConsumerAccountFragment"
         android:label="fragment_consumer_account"
         tools:layout="@layout/fragment_consumer_account" />
+    <fragment
+        android:id="@+id/consumerConsumptionLevelFragment"
+        android:name="com.decagon.aqua.feature.consumer.home.ConsumerConsumptionLevelFragment"
+        android:label="fragment_consumer_consumption_level"
+        tools:layout="@layout/fragment_consumer_consumption_level" />
 </navigation>
