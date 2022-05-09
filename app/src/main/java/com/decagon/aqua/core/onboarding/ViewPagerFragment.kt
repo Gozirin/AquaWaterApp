@@ -5,9 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import androidx.viewpager2.widget.ViewPager2
-import com.decagon.aqua.R
 import com.decagon.aqua.core.onboarding.screens.FirstOnboardingScreenFragment
 import com.decagon.aqua.core.onboarding.screens.SecondOnboardingScreenFragment
 import com.decagon.aqua.core.onboarding.screens.ThirdOnboardingScreenFragment
