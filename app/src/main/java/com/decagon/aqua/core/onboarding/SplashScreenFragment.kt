@@ -23,7 +23,7 @@ class SplashScreenFragment : Fragment() {
 
             {
                 if (onBoardingFinished()) {
-                    findNavController().navigate(R.id.action_splashFragment_to_loggingFragment)
+                    findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
                 } else {
                     findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
                 }

@@ -27,7 +27,7 @@ class ConsumerSignUpFragment : Fragment() {
         val nextbtn = binding.consumerSignupLayoutTextViewSignIn
         // navigate to LoginFragment using the arrow icon
         nextbtn.setOnClickListener {
-             findNavController().navigate(R.id.action_consumerSignUpFragment_to_loginFragment)
+            findNavController().navigate(R.id.action_consumerSignUpFragment_to_loginFragment)
         }
         // Sign in to login fragment if consumer already have an account
         val prev = binding.consumerSignupLayoutTextViewBack

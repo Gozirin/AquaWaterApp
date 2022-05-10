@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
-import com.decagon.aqua.databinding.FragmentLoggingBinding
 import com.decagon.aqua.databinding.FragmentSupplierSignUpBinding
 
 class SupplierSignUpFragment : Fragment() {
