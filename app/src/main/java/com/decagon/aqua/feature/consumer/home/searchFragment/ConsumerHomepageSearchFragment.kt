@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagon.aqua.databinding.ConsumerHomepageSearchFragmentBinding
 
-
 class ConsumerHomepageSearchFragment : Fragment() {
 
     private lateinit var binding: ConsumerHomepageSearchFragmentBinding
