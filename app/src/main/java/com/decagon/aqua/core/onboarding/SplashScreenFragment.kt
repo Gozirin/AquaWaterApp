@@ -3,6 +3,7 @@ package com.decagon.aqua.core.onboarding
 import android.content.Context
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +19,7 @@ class SplashScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         requireActivity().window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        Handler().postDelayed(
+        Handler(Looper.getMainLooper()).postDelayed(
 
             {
                 if (onBoardingFinished()) {
