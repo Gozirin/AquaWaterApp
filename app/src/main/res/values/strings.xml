@@ -27,14 +27,8 @@
     <string name="consumer_signup_edit_text_number_of_bottles">1</string>
     <string name="consumer_signup_button_login">SignUp</string>
     <string name="consumer_signup_text_view_already_have_an_account">Already have an account?</string>
-    <string name="consumer_signup_text_viev_sign_in">Sign in</string>
+    <string name="consumer_signup_text_view_sign_in">Sign in</string>
 
-
-
-
-
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="firstOBTitle">Find the best deals and special offers!</string>
     <string name="firstOBText">Signing up and receiving your order is straightforward and effortless. There is no need to contact the seller or sign a contract.</string>
     <string name="secondOBTitle">Transparent pricing</string>

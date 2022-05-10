@@ -1,4 +1,4 @@
-package com.decagon.aqua.features.consumer.authentication
+package com.decagon.aqua.core.authentication
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentLoginConsumerBinding
 
-class CustomerLoginFragment : Fragment() {
+class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginConsumerBinding
     override fun onCreateView(
         inflater: LayoutInflater,
