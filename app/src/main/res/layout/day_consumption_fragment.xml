@@ -29,11 +29,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:textColor="#21334F"
+            android:fontFamily="@font/manrope_regular"
             android:text="@string/day_usageText"/>
        <TextView
            android:id="@+id/day_consumption_fragment_usagePercent_tv"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+           android:textColor="#21334F"
+           android:fontFamily="@font/manrope_bold"
            android:textSize="30sp"
            android:text="@string/day_UsagePercent"
            android:textStyle="bold"/>
