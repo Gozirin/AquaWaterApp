@@ -1,10 +1,11 @@
-package com.decagon.aqua.features.consumer.authentication
+package com.decagon.aqua.core.authentication
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSignUpConsumerBinding
 class ConsumerSignUpFragment : Fragment() {
@@ -24,16 +25,14 @@ class ConsumerSignUpFragment : Fragment() {
         // initializing view binding
         binding = FragmentSignUpConsumerBinding.bind(view)
         val nextbtn = binding.consumerSignupLayoutTextViewSignIn
-        // navigate to CustomerLoginFragment using the arrow icon
+        // navigate to LoginFragment using the arrow icon
         nextbtn.setOnClickListener {
-            val fragment = CustomerLoginFragment()
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.nav_Container, fragment)?.commit()
+             findNavController().navigate(R.id.action_consumerSignUpFragment_to_loginFragment)
         }
         // Sign in to login fragment if consumer already have an account
         val prev = binding.consumerSignupLayoutTextViewBack
         prev.setOnClickListener {
-            val fragment = CustomerLoginFragment() // move back to login fragment
+            val fragment = LoginFragment() // move back to login fragment
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.nav_Container, fragment)?.commit()
         }

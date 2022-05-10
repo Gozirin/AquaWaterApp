@@ -37,5 +37,34 @@
         android:id="@+id/loggingFragment"
         android:name="com.decagon.aqua.core.onboarding.LoggingFragment"
         android:label="fragment_logging"
-        tools:layout="@layout/fragment_logging" />
+        tools:layout="@layout/fragment_logging" >
+        <action
+            android:id="@+id/action_loggingFragment_to_consumerSignUpFragment"
+            app:destination="@id/consumerSignUpFragment" />
+        <action
+            android:id="@+id/action_loggingFragment_to_supplierSignUpFragment"
+            app:destination="@id/supplierSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumerSignUpFragment"
+        android:name="com.decagon.aqua.core.authentication.ConsumerSignUpFragment"
+        android:label="ConsumerSignUpFragment" >
+        <action
+            android:id="@+id/action_consumerSignUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.decagon.aqua.core.authentication.LoginFragment"
+        android:label="fragment_login_consumer"
+        tools:layout="@layout/fragment_login_consumer" />
+    <fragment
+        android:id="@+id/supplierSignUpFragment"
+        android:name="com.decagon.aqua.core.authentication.SupplierSignUpFragment"
+        android:label="fragment_supplier_sign_up"
+        tools:layout="@layout/fragment_supplier_sign_up" >
+        <action
+            android:id="@+id/action_supplierSignUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>

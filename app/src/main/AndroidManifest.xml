@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/theme_launcher">
         <activity
-            android:name=".core.onboarding.OnboardingMainActivity"
+            android:name=".core.OnboardingMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

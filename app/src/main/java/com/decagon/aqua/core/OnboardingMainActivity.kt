@@ -1,4 +1,4 @@
-package com.decagon.aqua.core.onboarding
+package com.decagon.aqua.core
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
