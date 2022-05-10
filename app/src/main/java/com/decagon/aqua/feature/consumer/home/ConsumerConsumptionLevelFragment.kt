@@ -6,19 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagon.aqua.commons.adapters.ConsumptionViewPagerAdapter
-import com.decagon.aqua.databinding.FragmentConsumerConsumptionLevelBinding
+import com.decagon.aqua.databinding.ConsumerConsumptionLevelFragmentBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class ConsumerConsumptionLevelFragment : Fragment() {
 
-    private lateinit var binding: FragmentConsumerConsumptionLevelBinding
+    private lateinit var binding: ConsumerConsumptionLevelFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentConsumerConsumptionLevelBinding.inflate(inflater, container, false)
+        binding = ConsumerConsumptionLevelFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

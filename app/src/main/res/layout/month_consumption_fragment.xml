@@ -25,16 +25,18 @@
         android:padding="30dp"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/month_consumption_fragment_usageText_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="TOTAL USAGE TODAY"/>
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:textSize="30sp"
-           android:text="65.89%"
-           android:textStyle="bold"/>
+            android:text="@string/month_usageText"/>
+        <TextView
+            android:id="@+id/month_consumption_fragment_usagePercent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/month_usagePercent"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 </LinearLayout>

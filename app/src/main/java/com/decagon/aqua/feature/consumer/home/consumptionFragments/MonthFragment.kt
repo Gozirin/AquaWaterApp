@@ -23,7 +23,7 @@ class MonthFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_month, container, false)
+        return inflater.inflate(R.layout.month_consumption_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

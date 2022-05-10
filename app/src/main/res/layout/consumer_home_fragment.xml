@@ -9,13 +9,14 @@
     tools:context=".ConsumerMainActivity">
 
     <LinearLayout
+        android:id="@+id/consumer_home_fragment_view"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="0dp"
         android:weightSum="1">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/topLevel"
+            android:id="@+id/consumer_home_fragment_blue_section"
             android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,14 +27,14 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/bell_image"
+                android:id="@+id/consumer_home_fragment_notification_iv"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_real_bell"
-                app:layout_constraintBottom_toTopOf="@+id/tvSearch"
+                app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_search_editText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.956"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,41 +42,41 @@
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
-                android:id="@+id/tvGoodMorning"
+                android:id="@+id/consumer_home_fragment_greeting_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hi, Godswill"
+                android:text="@string/greeting"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/heartsImage"
+                app:layout_constraintEnd_toStartOf="@+id/consumer_home_fragment_waveIcon_iv"
                 app:layout_constraintHorizontal_bias="0.714"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.086" />
 
             <EditText
-                android:id="@+id/tvSearch"
+                android:id="@+id/consumer_home_fragment_search_editText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-               android:hint="Search for supplier"
+                android:hint="@string/search_hint"
                 android:layout_margin="10dp"
                 android:background="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvGoodMorning"
+                app:layout_constraintTop_toBottomOf="@id/consumer_home_fragment_greeting_tv"
                 app:layout_constraintVertical_bias="0.163" />
 
             <ImageView
-                android:id="@+id/heartsImage"
+                android:id="@+id/consumer_home_fragment_waveIcon_iv"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginEnd="68dp"
                 android:layout_marginBottom="10dp"
-                app:layout_constraintBottom_toTopOf="@+id/tvSearch"
-                app:layout_constraintEnd_toStartOf="@+id/cartImage"
+                app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_search_editText"
+                app:layout_constraintEnd_toStartOf="@+id/consumer_home_fragment_shoppingCart_iv"
                 app:layout_constraintHorizontal_bias="0.586"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -83,13 +84,13 @@
                 app:srcCompat="@drawable/ic_hand_emoji" />
 
             <ImageView
-                android:id="@+id/cartImage"
+                android:id="@+id/consumer_home_fragment_shoppingCart_iv"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="288dp"
                 android:layout_marginBottom="11dp"
-                app:layout_constraintBottom_toTopOf="@+id/tvSearch"
-                app:layout_constraintEnd_toStartOf="@+id/bell_image"
+                app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_search_editText"
+                app:layout_constraintEnd_toStartOf="@+id/consumer_home_fragment_notification_iv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0"
@@ -98,14 +99,14 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consumer_home_fragment_consumption_section"
             android:padding="15dp"
-            android:id="@+id/secondLevel"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/topLevel">
+            app:layout_constraintTop_toBottomOf="@id/consumer_home_fragment_blue_section">
 
             <LinearLayout
-                android:id="@+id/consumptionlevel_view"
+                android:id="@+id/consumer_home_fragment_consumptionlevel_view"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:padding="15dp"
@@ -117,29 +118,33 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
+                    android:id="@+id/consumer_home_fragment_graph_iv"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_chart" />
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/consumer_home_fragment_consumptionText_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:text="Your consumption level is 65.89%"/>
+                        android:text="@string/consumtion_text"/>
                     <TextView
+                        android:id="@+id/consumer_home_fragment_datet_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Today 02 Apr 2022"/>
+                        android:text="@string/date"/>
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/consumer_home_fragment_direction_iv"
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -149,36 +154,37 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/tvRecyclerViewHeader"
+            android:id="@+id/consumer_home_fragment_RecyclerViewHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:paddingStart="15dp"
-            android:text="Suppliers"
+            android:paddingEnd="0dp"
+            android:text="@string/recyclerview_title"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/consumer_homeScreen_recyclerView"
+            app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_recyclerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/secondLevel" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/consumer_homeScreen_recyclerView"
+            android:id="@+id/consumer_home_fragment_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
            android:padding="5dp"
             app:layoutManager="GridLayoutManager"
-            app:layout_constraintBottom_toTopOf="@+id/addbox"
+            app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_advert_iv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecyclerViewHeader"
-            tools:listitem="@layout/consumer_item_layout"
+            app:layout_constraintTop_toBottomOf="@+id/consumer_home_fragment_RecyclerViewHeader"
+            tools:listitem="@layout/consumer_homescreen_adapter_item"
             tools:spanCount="2" />
 
         <ImageView
-            android:id="@+id/addbox"
+            android:id="@+id/consumer_home_fragment_advert_iv"
             android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

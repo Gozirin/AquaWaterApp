@@ -14,7 +14,7 @@ class ConsumerHomeScreenAdapter(private val consumerItem: ArrayList<ConsumerItem
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileViewHolder {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.consumer_item_layout, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.consumer_homescreen_adapter_item, parent, false)
         return ProfileViewHolder(itemView)
     }
 
@@ -27,10 +27,10 @@ class ConsumerHomeScreenAdapter(private val consumerItem: ArrayList<ConsumerItem
     }
 
     class ProfileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titleImage: ImageView = itemView.findViewById(R.id.profilePic)
-        val companyname: TextView = itemView.findViewById(R.id.companyName)
-        val location: TextView = itemView.findViewById(R.id.location)
-        val price: TextView = itemView.findViewById(R.id.price)
+        val titleImage: ImageView = itemView.findViewById(R.id.consumer_homescreen_adapterItem_imageView)
+        val companyname: TextView = itemView.findViewById(R.id.consumer_homescreen_adapterItem_companyName_tv)
+        val location: TextView = itemView.findViewById(R.id.consumer_homescreen_adapterItem_location_tv)
+        val price: TextView = itemView.findViewById(R.id.consumer_homescreen_adapterItem_price_tv)
     }
 
     override fun getItemCount(): Int = consumerItem.size
