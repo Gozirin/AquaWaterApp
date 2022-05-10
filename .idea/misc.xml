@@ -10,12 +10,18 @@
         <entry key="app/src/main/res/drawable/ic__logo_icon.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/shapes.xml" value="0.1705" />
+        <entry key="app/src/main/res/font/manrope.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/font/manrope_bold.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2484375" />
+        <entry key="app/src/main/res/layout/fragment_first_onboarding_screen.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/layout/fragment_logging.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_login_consumer.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/fragment_sign_up_consumer.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_supplier_orders_layout.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_supplier_sign_up.xml" value="0.24479166666666666" />
       </map>
     </option>
   </component>
