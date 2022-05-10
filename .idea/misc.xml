@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/onboarding_unselected_dot_blue.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/onboarding_viewpager_selector_blue.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/splashscreen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_consumer_main.xml" value="0.2554517133956386" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2972972972972973" />
         <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.165" />
