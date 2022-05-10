@@ -9,26 +9,26 @@ import com.decagon.aqua.feature.consumer.home.consumptionFragments.MonthFragment
 import com.decagon.aqua.feature.consumer.home.consumptionFragments.WeekFragment
 import com.decagon.aqua.feature.consumer.home.consumptionFragments.YearFragment
 
-class ConsumptionViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle) {
+class ConsumptionViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle) {
     override fun getItemCount(): Int {
         return 4
     }
 
     override fun createFragment(position: Int): Fragment {
-       return when(position){
-            0->{
+        return when (position) {
+            0 -> {
                 DayFragment()
             }
-            1->{
+            1 -> {
                 WeekFragment()
             }
-            2->{
+            2 -> {
                 MonthFragment()
             }
-            3->{
+            3 -> {
                 YearFragment()
             }
-            else->{
+            else -> {
                 Fragment()
             }
         }
