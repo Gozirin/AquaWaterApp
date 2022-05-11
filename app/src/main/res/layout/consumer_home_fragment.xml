@@ -1,0 +1,200 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:background="#41E5E5E5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ConsumerMainActivity">
+
+    <LinearLayout
+        android:id="@+id/consumer_home_fragment_view"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consumer_home_fragment_blue_section"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#147DF5"
+            app:layout_constraintBottom_toTopOf="@+id/secondLevel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/consumer_home_fragment_notification_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_real_bell"
+                app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_search_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.956"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/consumer_home_fragment_greeting_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/greeting"
+                android:fontFamily="@font/manrope_semibold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/consumer_home_fragment_waveIcon_iv"
+                app:layout_constraintHorizontal_bias="0.714"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.086" />
+
+            <EditText
+                android:id="@+id/consumer_home_fragment_search_editText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/search_hint"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/consumer_home_fragment_greeting_tv"
+                app:layout_constraintVertical_bias="0.163" />
+
+            <ImageView
+                android:id="@+id/consumer_home_fragment_waveIcon_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="68dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_search_editText"
+                app:layout_constraintEnd_toStartOf="@+id/consumer_home_fragment_shoppingCart_iv"
+                app:layout_constraintHorizontal_bias="0.586"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_hand_emoji" />
+
+            <ImageView
+                android:id="@+id/consumer_home_fragment_shoppingCart_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="288dp"
+                android:layout_marginBottom="11dp"
+                app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_search_editText"
+                app:layout_constraintEnd_toStartOf="@+id/consumer_home_fragment_notification_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_icons_cart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consumer_home_fragment_consumption_section"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/consumer_home_fragment_blue_section">
+
+            <LinearLayout
+                android:id="@+id/consumer_home_fragment_consumptionlevel_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="15dp"
+                android:background="#19FFBE0B"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/consumer_home_fragment_graph_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_chart" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/consumer_home_fragment_consumptionText_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@string/consumtion_text"/>
+                    <TextView
+                        android:id="@+id/consumer_home_fragment_datet_tv"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/manrope_regular"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/consumer_home_fragment_direction_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_angle_right" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/consumer_home_fragment_RecyclerViewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            android:text="@string/recyclerview_title"
+            android:fontFamily="@font/manrope_bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/secondLevel" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/consumer_home_fragment_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:padding="5dp"
+            app:layoutManager="GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_advert_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consumer_home_fragment_RecyclerViewHeader"
+            tools:listitem="@layout/consumer_homescreen_adapter_item"
+            tools:spanCount="2" />
+
+        <ImageView
+            android:id="@+id/consumer_home_fragment_advert_iv"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:src="@drawable/add"/>
+
+    </LinearLayout>
+</ScrollView>

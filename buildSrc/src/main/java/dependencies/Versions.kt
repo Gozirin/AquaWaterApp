@@ -45,5 +45,4 @@ object Versions {
     const val kapt_hilt_compiler = "1.0.0"
     const val timber = "2.7.1"
     const val room_compiler = "2.4.2"
-
 }

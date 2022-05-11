@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.consumer.home.consumptionFragments.DayFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.anychart.AnyChartView
+            android:id="@+id/consumptionChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="70dp"
+        android:padding="30dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/week_consumption_fragment_usageText_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#21334F"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/week_usageText"/>
+        <TextView
+            android:id="@+id/week_consumption_fragment_usagePercent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#21334F"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/week_usagePercent"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

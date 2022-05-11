@@ -43,4 +43,34 @@
     <string name="account_tab">Account</string>
 
     <string name="supplier_homepage">Supplier Homepage</string>
+    <string name="back">Back</string>
+    <string name="statistics_level">Statistics Level</string>
+    <string name="logout">Logout</string>
+    <string name="help">Help</string>
+    <string name="invite_friends">Invite friends</string>
+    <string name="settings">Settings</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="edit_photo">Edit Photo</string>
+    <string name="email">abimbolathomas@gmail.com</string>
+    <string name="profile_name">Abimbola Thomas</string>
+    <string name="profile_image">profile Image</string>
+    <string name="title">My Profile</string>
+    <string name="greeting">Hi, Godswill</string>
+    <string name="search_hint">Search for supplier</string>
+    <string name="consumtion_text">Your consumption level is 65.89%</string>
+    <string name="date">Today 02 Apr 2022</string>
+    <string name="recyclerview_title">Suppliers</string>
+    <string name="company_name">Arizona Water Inc</string>
+    <string name="location">Ikeja, Lagos</string>
+    <string name="price">N900.00 per/bottle</string>
+    <string name="store">View store</string>
+    <string name="day_usageText">TOTAL USAGE TODAY</string>
+    <string name="day_UsagePercent">65.89%</string>
+    <string name="month_usageText">TOTAL USAGE THIS MONTH</string>
+    <string name="month_usagePercent">35.51%</string>
+    <string name="week_usageText">TOTAL USAGE THIS WEEK</string>
+    <string name="week_usagePercent">55.18%</string>
+    <string name="year_usageText">TOTAL USAGE THIS YEAR</string>
+    <string name="year_usagePercent">29.76%</string>
 </resources>

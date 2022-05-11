@@ -4,15 +4,15 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.decagon.aqua.databinding.ActivityConsumerMainBinding
+import com.decagon.aqua.databinding.ConsumerMainActivityBinding
 
 class ConsumerMainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityConsumerMainBinding
+    private lateinit var binding: ConsumerMainActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityConsumerMainBinding.inflate(layoutInflater)
+        binding = ConsumerMainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val bottomNavigationView = binding.consumerActivityBtmNav
