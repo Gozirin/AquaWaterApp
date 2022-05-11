@@ -5,18 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.decagon.aqua.core.baseClasses.BaseFragment
-import com.decagon.aqua.databinding.FragmentConsumerAccountBinding
+import com.decagon.aqua.databinding.ConsumerAccountFragmentBinding
 
 class ConsumerAccountFragment : BaseFragment() {
 
-    private lateinit var binding: FragmentConsumerAccountBinding
+    private lateinit var binding: ConsumerAccountFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentConsumerAccountBinding.inflate(inflater, container, false)
+        binding = ConsumerAccountFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
