@@ -28,10 +28,10 @@ class LoggingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loggingConsumerTv.setOnClickListener {
-            findNavController().navigate(R.id.action_loggingFragment_to_consumerSignUpFragment)
+            findNavController().navigate(R.id.action_loggingFragment_to_loginFragment2)
         }
         binding.loggingSupplierTv.setOnClickListener {
-            findNavController().navigate(R.id.action_loggingFragment_to_supplierSignUpFragment)
+            findNavController().navigate(R.id.action_loggingFragment_to_supplierLoginFragment)
         }
     }
 }
