@@ -16,7 +16,10 @@
         <entry key="app/src/main/res/font/manrope_regular.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2484375" />
+        <entry key="app/src/main/res/layout/fragment_consumer_account.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/fragment_consumer_forgot_password.xml" value="0.23072916666666668" />
+        <entry key="app/src/main/res/layout/fragment_consumer_home_fragment.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/layout/fragment_consumer_transaction.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/fragment_first_onboarding_screen.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/fragment_logging.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
@@ -25,6 +28,7 @@
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/fragment_sign_up_consumer.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/fragment_supplier_account_layout.xml" value="0.2453125" />
         <entry key="app/src/main/res/layout/fragment_supplier_forgot_password.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_supplier_home_page_layout.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_supplier_login.xml" value="0.23072916666666668" />
