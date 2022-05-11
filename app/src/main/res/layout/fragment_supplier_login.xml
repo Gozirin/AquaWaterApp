@@ -145,8 +145,8 @@
 
     <TextView
         android:id="@+id/supplier_login_layout_create_account"
-        android:layout_width="203dp"
-        android:layout_height="20dp"
+        android:layout_width="173dp"
+        android:layout_height="19dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/manrope_bold"
@@ -166,5 +166,6 @@
         app:layout_constraintHorizontal_bias="0.618"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_create_account"
         app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_create_account" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
