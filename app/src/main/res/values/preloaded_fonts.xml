@@ -4,5 +4,7 @@
         <item>@font/</item>
         <item>@font/manrope</item>
         <item>@font/manrope_bold</item>
+        <item>@font/manrope_bold</item>
+        <item>@font/manrope_medium</item>
     </array>
 </resources>

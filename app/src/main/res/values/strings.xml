@@ -73,4 +73,5 @@
     <string name="week_usagePercent">55.18%</string>
     <string name="year_usageText">TOTAL USAGE THIS YEAR</string>
     <string name="year_usagePercent">29.76%</string>
+    <string name="hi_supplier">Hi, Supplier</string>
 </resources>

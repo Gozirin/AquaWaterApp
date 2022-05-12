@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/filter_modal_LO"
+    android:background="@drawable/consumer_details_modal_bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_comsumer_profile_modal_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/filter_detail_modal_profile_detail_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/consumer_detail_modal_profile_detail"
+            android:layout_marginLeft="130dp"
+            android:layout_toEndOf="@id/consumer_detail_modal_profile_detail"
+            android:src="@drawable/ic_close_24" />
+
+
+        <TextView
+            android:id="@+id/consumer_detail_modal_profile_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Filter"
+            android:textAlignment="center"
+            android:textColor="@color/all_text_color"
+            android:textFontWeight="700"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/consumer_detail_modal_profile_detail"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_comsumer_profile_modal_line2" />
+
+    <RelativeLayout
+        android:id="@+id/filter_modal_name_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/filter_modal_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/manrope_medium"
+            android:padding="5dp"
+            android:text="Name"
+            android:textColor="@color/all_text_color"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/filter_modal_date_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/filter_modal_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/manrope_medium"
+            android:padding="5dp"
+            android:text="Date"
+            android:textColor="@color/all_text_color"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/filter_modal_time_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/filter_modal_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/manrope_medium"
+            android:padding="5dp"
+            android:text="Time"
+            android:textColor="@color/all_text_color"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/filter_modal_items_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/filter_modal_items_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/manrope_medium"
+            android:padding="5dp"
+            android:text="Items"
+            android:textColor="@color/all_text_color"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/filter_modal_price_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/filter_modal_price_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/manrope_medium"
+            android:padding="5dp"
+            android:text="Price"
+            android:textColor="@color/all_text_color"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/filter_modal_location_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/filter_modal_location_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/manrope_medium"
+            android:padding="5dp"
+            android:text="Location"
+            android:textColor="@color/all_text_color"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>
