@@ -341,8 +341,8 @@
             android:textColor="#047DDD"
             android:textFontWeight="700"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_already_have_an_account"
-            app:layout_constraintHorizontal_bias="0.961"
+            app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_button_sign_in"
+            app:layout_constraintHorizontal_bias="0.732"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_already_have_an_account"
             app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_button_sign_in" />
 

@@ -27,8 +27,11 @@ class SupplierSignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.supplierSignUpTv.setOnClickListener {
-            findNavController().navigate(R.id.action_supplierSignUpFragment_to_loginFragment)
+        binding.supplierSignupTextViewSignIn.setOnClickListener {
+            findNavController().navigate(R.id.action_supplierSignUpFragment_to_supplierLoginFragment)
+        }
+        binding.supplierSignupTextViewBack.setOnClickListener {
+            findNavController().navigate(R.id.action_supplierSignUpFragment_to_supplierLoginFragment)
         }
     }
 }

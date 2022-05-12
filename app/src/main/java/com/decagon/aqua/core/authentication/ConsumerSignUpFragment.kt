@@ -25,16 +25,14 @@ class ConsumerSignUpFragment : Fragment() {
         // initializing view binding
         binding = FragmentSignUpConsumerBinding.bind(view)
         val nextbtn = binding.consumerSignupLayoutTextViewSignIn
-        // navigate to LoginFragment using the arrow icon
+        // navigate to ConsumerLoginFragment using the arrow icon
         nextbtn.setOnClickListener {
             findNavController().navigate(R.id.action_consumerSignUpFragment_to_loginFragment)
         }
         // Sign in to login fragment if consumer already have an account
-        val prev = binding.consumerSignupLayoutTextViewBack
-        prev.setOnClickListener {
-            val fragment = LoginFragment() // move back to login fragment
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.nav_Container, fragment)?.commit()
+
+        binding.consumerSignupLayoutTextViewBack.setOnClickListener {
+            findNavController().navigate(R.id.action_consumerSignUpFragment_to_loginFragment)
         }
     }
 }

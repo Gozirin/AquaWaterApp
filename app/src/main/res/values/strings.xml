@@ -6,7 +6,7 @@
     <string name="consumer_login_text_view_password">Password</string>
     <string name="consumer_login_text_view_email">Email</string>
     <string name="consumer_login_edit_text_email">Email</string>
-    <string name="consumer_login_text_view_forget_password">Forget Password?</string>
+    <string name="consumer_login_text_view_forget_password">Forgot Password?</string>
     <string name="consumer_login_button_login">Login</string>
     <string name="consumer_login_text_view_signup">SignUp</string>
     <string name="consumer_sign_up_text_view_back">Back</string>
@@ -73,4 +73,5 @@
     <string name="week_usagePercent">55.18%</string>
     <string name="year_usageText">TOTAL USAGE THIS YEAR</string>
     <string name="year_usagePercent">29.76%</string>
+    <string name="hi_supplier">Hi, Supplier</string>
 </resources>

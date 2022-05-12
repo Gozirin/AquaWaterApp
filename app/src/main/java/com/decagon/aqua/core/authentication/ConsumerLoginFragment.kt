@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentLoginConsumerBinding
 
-class LoginFragment : Fragment() {
+class ConsumerLoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginConsumerBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,11 +25,12 @@ class LoginFragment : Fragment() {
         // initializing view binding
         binding = FragmentLoginConsumerBinding.bind(view)
         // Sign up if consumer don't have an account
-        val nextbtn = binding.consumerLoginLayoutLoginSignup
-        nextbtn.setOnClickListener {
-            val fragment = ConsumerSignUpFragment() // navigate to login fragment
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.nav_Container, fragment)?.commit()
+        binding.consumerLoginLayoutLoginSignup.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_consumerSignUpFragment)
+        }
+        // navigate to consumer forgot password page
+        binding.consumerLoginLayoutTextViewForgetPassword.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_consumerForgotPasswordFragment)
         }
     }
 }
