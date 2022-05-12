@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_blue">#147DF5</color>
+    <color name="app_primary_color_light">#147DF5</color>
+    <color name="all_text_color">#21334F</color>
+    <color name="search_background_color">#D6DBDF</color>
+    <color name="active_text_background_color">#2238B000</color>
+    <color name="active_text_color">#38B000</color>
 </resources>

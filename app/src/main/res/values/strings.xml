@@ -6,4 +6,6 @@
     <string name="home_tab">Home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hi_supplier">Hi, Supplier</string>
+    <string name="back">Back</string>
 </resources>
