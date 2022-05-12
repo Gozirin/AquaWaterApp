@@ -3,40 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.1205" />
-        <entry key="app/src/main/res/drawable/ic_invite_friends.xml" value="0.2015" />
-        <entry key="app/src/main/res/drawable/ic_profile_icon.xml" value="0.2015" />
-        <entry key="app/src/main/res/drawable/ic_real_bell.xml" value="0.1205" />
-        <entry key="app/src/main/res/drawable/ic_rectangle.xml" value="0.2015" />
-        <entry key="app/src/main/res/drawable/ic_rectangle2.xml" value="0.2015" />
-        <entry key="app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.2015" />
-        <entry key="app/src/main/res/font/manrope_bold.xml" value="0.27291666666666664" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_consumer_main.xml" value="0.2554517133956386" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2972972972972973" />
-        <entry key="app/src/main/res/layout/base_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/consumer_account_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/consumer_consumption_level_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/consumer_home_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/consumer_homepage_search_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/consumer_homescreen_adapter_item.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/consumer_item_layout.xml" value="0.14351851851851852" />
-        <entry key="app/src/main/res/layout/consumer_main_activity.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/consumer_transaction_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/day_consumption_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/fragment_consumer_account.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_consumer_consumption_level.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_consumer_home_fragment.xml" value="0.27977839335180055" />
-        <entry key="app/src/main/res/layout/fragment_consumer_homepage_search.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/fragment_day.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/consumer_account_fragment.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/consumer_consumption_level_fragment.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/consumer_home_fragment.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/consumer_homescreen_adapter_item.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/consumer_main_activity.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/consumer_transaction_fragment.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/day_consumption_fragment.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_logging.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/fragment_month.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/fragment_week.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/fragment_year.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/month_consumption_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/week_consumption_fragment.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/year_consumption_fragment.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/month_consumption_fragment.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/week_consumption_fragment.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/year_consumption_fragment.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/consumer_bottom_navigation.xml" value="0.1" />
       </map>
     </option>
