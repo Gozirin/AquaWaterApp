@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.decagon.aqua.R
-import com.decagon.aqua.databinding.ConsumerProfileDetailsBottomSheetLayoutBinding
 import com.decagon.aqua.databinding.FragmentTotalSuppliesMadeSupplierBinding
 import com.decagon.aqua.feature.supplier.commons.adapter.SupplierDataListItems
 import com.decagon.aqua.feature.supplier.commons.adapter.SupplierRVAdapter
@@ -45,7 +44,7 @@ class TotalSuppliesMade_Supplier : BottomSheetDialogFragment(), SupplierRVAdapte
             Toast.makeText(requireContext(), "Display Filter Modal", Toast.LENGTH_SHORT).show()
         }
         /**
-       * Back textview on top of TotalSuppliesMade(past supplies) screen
+         * Back textview on top of TotalSuppliesMade(past supplies) screen
          */
         binding.totalSupplyMadeSupplierBackTv.setOnClickListener {
             val supplierHomepageOverview = SupplierHomePage()
