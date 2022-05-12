@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
+    android:background="#F2F2F3"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
@@ -31,7 +32,7 @@
                     android:layout_height="0dp"
                     android:scaleType="fitXY"
                     android:layout_weight="1"
-                    android:src="@drawable/image" />
+                    android:src="@drawable/image2" />
                 <TextView
                     android:id="@+id/consumer_homescreen_adapterItem_companyName_tv"
                     android:layout_width="match_parent"

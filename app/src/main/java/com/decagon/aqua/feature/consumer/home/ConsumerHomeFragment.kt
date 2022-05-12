@@ -46,13 +46,13 @@ class ConsumerHomeFragment : BaseFragment() {
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
     }
     private fun getProfiles() {
-        newArrayList.add(ConsumerItem(R.drawable.image, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(ConsumerItem(R.drawable.image, "Regal brothers", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(ConsumerItem(R.drawable.image, "Ikechukwu Water Co.", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(ConsumerItem(R.drawable.image, "Eva Bottling Co", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(ConsumerItem(R.drawable.image, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(ConsumerItem(R.drawable.image, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(ConsumerItem(R.drawable.image, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(ConsumerItem(R.drawable.image, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(ConsumerItem(R.drawable.image1, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(ConsumerItem(R.drawable.image2, "Regal brothers", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(ConsumerItem(R.drawable.image3, "Ikechukwu Water Co.", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(ConsumerItem(R.drawable.image4, "Eva Bottling Co", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(ConsumerItem(R.drawable.image5, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(ConsumerItem(R.drawable.image6, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(ConsumerItem(R.drawable.image1, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(ConsumerItem(R.drawable.image3, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
     }
 }
