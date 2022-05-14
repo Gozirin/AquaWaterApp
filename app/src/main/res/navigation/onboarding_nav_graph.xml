@@ -5,9 +5,15 @@
     android:id="@+id/app_nav_graph"
     app:startDestination="@id/splashFragment">
 
+    <activity
+        android:id="@+id/consumer_mainActivity"
+        android:name="com.decagon.aqua.feature.consumer.ConsumerMainActivity">
+
+    </activity>
+
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.decagon.aqua.core.onboarding.SplashScreenFragment"
+        android:name="com.decagon.aqua.feature.onboarding.SplashScreenFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -18,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.decagon.aqua.core.onboarding.ViewPagerFragment"
+        android:name="com.decagon.aqua.feature.onboarding.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" >
 
@@ -30,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/loggingFragment"
-        android:name="com.decagon.aqua.core.onboarding.LoggingFragment"
+        android:name="com.decagon.aqua.feature.onboarding.LoggingFragment"
         android:label="fragment_logging"
         tools:layout="@layout/fragment_logging" >
         <action
@@ -42,15 +48,18 @@
     </fragment>
     <fragment
         android:id="@+id/consumerSignUpFragment"
-        android:name="com.decagon.aqua.core.authentication.ConsumerSignUpFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.ConsumerSignUpFragment"
         android:label="ConsumerSignUpFragment" >
         <action
             android:id="@+id/action_consumerSignUpFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_consumerSignUpFragment_to_consumer_mainActivity"
+            app:destination="@id/consumer_mainActivity" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.decagon.aqua.core.authentication.ConsumerLoginFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.ConsumerLoginFragment"
         android:label="fragment_login_consumer"
         tools:layout="@layout/fragment_login_consumer" >
         <action
@@ -59,10 +68,13 @@
         <action
             android:id="@+id/action_loginFragment_to_consumerForgotPasswordFragment"
             app:destination="@id/consumerForgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_consumer_mainActivity"
+            app:destination="@id/consumer_mainActivity" />
     </fragment>
     <fragment
         android:id="@+id/supplierSignUpFragment"
-        android:name="com.decagon.aqua.core.authentication.SupplierSignUpFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.SupplierSignUpFragment"
         android:label="fragment_supplier_sign_up"
         tools:layout="@layout/fragment_supplier_sign_up" >
         <action
@@ -71,7 +83,7 @@
     </fragment>
     <fragment
         android:id="@+id/supplierLoginFragment"
-        android:name="com.decagon.aqua.core.authentication.SupplierLoginFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.SupplierLoginFragment"
         android:label="fragment_supplier_login"
         tools:layout="@layout/fragment_supplier_login" >
         <action
@@ -83,12 +95,12 @@
     </fragment>
     <fragment
         android:id="@+id/consumerForgotPasswordFragment"
-        android:name="com.decagon.aqua.core.authentication.ConsumerForgotPasswordFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.ConsumerForgotPasswordFragment"
         android:label="fragment_consumer_forgot_password"
         tools:layout="@layout/fragment_consumer_forgot_password" />
     <fragment
         android:id="@+id/supplierForgotPasswordFragment"
-        android:name="com.decagon.aqua.core.authentication.SupplierForgotPasswordFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.SupplierForgotPasswordFragment"
         android:label="fragment_supplier_forgot_password"
         tools:layout="@layout/fragment_supplier_forgot_password" />
 </navigation>

@@ -74,4 +74,9 @@
     <string name="year_usageText">TOTAL USAGE THIS YEAR</string>
     <string name="year_usagePercent">29.76%</string>
     <string name="hi_supplier">Hi, Supplier</string>
+    <string name="supplier">Supplier</string>
+    <string name="consumer">Consumer</string>
+    <string name="water_with_excellence">water with excellence</string>
+    <string name="explore_quality">Explore quality</string>
+    <string name="the_water_quality_is_in_excellent_condition">The water quality is in excellent condition</string>
 </resources>

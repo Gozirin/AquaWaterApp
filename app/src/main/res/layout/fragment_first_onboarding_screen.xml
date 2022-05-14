@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".core.onboarding.screens.FirstOnboardingScreenFragment">
+    tools:context=".feature.onboarding.screens.FirstOnboardingScreenFragment">
 
     <ImageView
         android:id="@+id/ivOnboardingScreen"

@@ -13,7 +13,10 @@
         android:theme="@style/theme_launcher"
         tools:replace="android:label">
         <activity
-            android:name=".core.OnboardingMainActivity"
+            android:name=".feature.consumer.ConsumerMainActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.decagon.aqua.feature.onboarding.OnboardingMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F2F2F3"
-    tools:context=".feature.consumer.home.consumptionFragments.DayFragment">
+    tools:context=".feature.consumer.ui.consumptionFragments.DayFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -5,9 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.ActivitySupplierMainBinding
-import com.decagon.aqua.feature.supplier.dashboard.account_screen.SupplierAccountPage
-import com.decagon.aqua.feature.supplier.dashboard.home_screen.SupplierHomePage
 import com.decagon.aqua.feature.supplier.dashboard.order_screen.SupplierOrdersPage
+import com.decagon.aqua.feature.supplier.ui.SupplierAccountPage
+import com.decagon.aqua.feature.supplier.ui.SupplierHomePage
 
 class SupplierMainActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySupplierMainBinding

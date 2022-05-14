@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#147DF5"
-    tools:context=".core.onboarding.SplashScreenFragment">
+    tools:context=".feature.onboarding.SplashScreenFragment">
 
     <ImageView
         android:layout_width="match_parent"

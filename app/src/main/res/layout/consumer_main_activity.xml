@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/consumer_mainActivity"
     android:layout_height="match_parent"
-    tools:context=".ConsumerMainActivity">
+    tools:context=".feature.consumer.ConsumerMainActivity">
 
 
     <androidx.fragment.app.FragmentContainerView

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".ConsumerMainActivity">
+    tools:context=".feature.consumer.ConsumerMainActivity">
 
     <LinearLayout
         android:id="@+id/consumer_home_fragment_view"
