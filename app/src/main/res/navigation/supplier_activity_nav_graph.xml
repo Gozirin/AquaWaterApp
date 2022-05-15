@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/supplier_activity_nav_graph"
+    app:startDestination="@id/supplierHomePage">
+
+    <fragment
+        android:id="@+id/supplierHomePage"
+        android:name="com.decagon.aqua.feature.supplier.ui.SupplierHomePage"
+        android:label="SupplierHomePage" >
+        <action
+            android:id="@+id/action_supplierHomePage_to_favouriteCustomersFragment"
+            app:destination="@id/favouriteCustomersFragment" />
+        <action
+            android:id="@+id/action_supplierHomePage_to_ordersReceivedFragment"
+            app:destination="@id/ordersReceivedFragment" />
+        <action
+            android:id="@+id/action_supplierHomePage_to_suppliesMadeFragment"
+            app:destination="@id/suppliesMadeFragment" />
+        <action
+            android:id="@+id/action_supplierHomePage_to_pastSuppilesFragement"
+            app:destination="@id/pastSuppilesFragement" />
+    </fragment>
+    <fragment
+        android:id="@+id/supplierOrdersPage"
+        android:name="com.decagon.aqua.feature.supplier.ui.SupplierOrdersPage"
+        android:label="SupplierOrdersPage" />
+    <fragment
+        android:id="@+id/supplierAccountPage"
+        android:name="com.decagon.aqua.feature.supplier.ui.SupplierAccountPage"
+        android:label="SupplierAccountPage" >
+        <action
+            android:id="@+id/action_supplierAccountPage_to_supplierProfileDetailsFragment"
+            app:destination="@id/supplierProfileDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteCustomersFragment"
+        android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.FavouriteCustomersFragment"
+        android:label="FavouriteCustomersFragment" />
+    <fragment
+        android:id="@+id/ordersReceivedFragment"
+        android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.OrdersReceivedFragment"
+        android:label="OrdersReceivedFragment" />
+    <fragment
+        android:id="@+id/suppliesMadeFragment"
+        android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.SuppliesMadeFragment"
+        android:label="SuppliesMadeFragment" />
+    <fragment
+        android:id="@+id/pastSuppilesFragement"
+        android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.PastSuppliesFragment"
+        android:label="PastSuppilesFragement" >
+        <action
+            android:id="@+id/action_pastSuppilesFragement_to_supplierHomePage"
+            app:destination="@id/supplierHomePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/supplierProfileDetailsFragment"
+        android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.profileDetailsFragments.SupplierProfileDetailsFragment"
+        android:label="SupplierProfileDetailsFragment" />
+
+</navigation>
