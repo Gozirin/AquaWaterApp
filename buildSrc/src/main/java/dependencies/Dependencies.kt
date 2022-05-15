@@ -35,5 +35,4 @@ object Dependencies {
     val kapt_hilt_compiler = "androidx.hilt:hilt-compiler:${Versions.kapt_hilt_compiler}"
     val room_compiler = "androidx.room:room-compiler:${Versions.room_compiler}"
     val timber_logger = "com.jakewharton.timber:timber:${Versions.timber}"
-
 }

@@ -26,7 +26,7 @@
         tools:layout="@layout/consumer_account_fragment" />
     <fragment
         android:id="@+id/consumerConsumptionLevelFragment"
-        android:name="com.decagon.aqua.feature.consumer.ui.ConsumerConsumptionLevelFragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerConsumptionLevelFragment"
         android:label="fragment_consumer_consumption_level"
         tools:layout="@layout/consumer_consumption_level_fragment" />
 </navigation>

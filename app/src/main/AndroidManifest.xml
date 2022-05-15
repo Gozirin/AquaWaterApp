@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/theme_launcher"
         tools:replace="android:label">
+
+        <activity
+            android:name=".feature.supplier.SupplierMainActivity"
+            android:exported="false"/>
         <activity
             android:name=".feature.consumer.ConsumerMainActivity"
             android:exported="false"/>

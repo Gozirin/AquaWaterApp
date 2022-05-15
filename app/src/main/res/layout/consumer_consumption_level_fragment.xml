@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F2F2F3"
-    tools:context=".feature.consumer.ui.ConsumerConsumptionLevelFragment">
+    tools:context=".feature.consumer.ui.consumptionFragments.ConsumerConsumptionLevelFragment">
 
     <LinearLayout
         android:layout_margin="10dp"

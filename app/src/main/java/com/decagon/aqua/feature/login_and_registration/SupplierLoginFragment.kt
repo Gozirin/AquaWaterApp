@@ -32,5 +32,8 @@ class SupplierLoginFragment : Fragment() {
         binding.supplierLoginLayoutTextViewForgetPassword.setOnClickListener {
             findNavController().navigate(R.id.action_supplierLoginFragment_to_supplierForgotPasswordFragment)
         }
+        binding.supplierLoginLayoutLoginButton.setOnClickListener {
+            findNavController().navigate(R.id.action_supplierLoginFragment_to_supplier_mainActivity)
+        }
     }
 }

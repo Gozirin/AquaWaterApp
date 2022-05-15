@@ -11,7 +11,6 @@ import com.decagon.aqua.models.DummyConsumerItem
 
 class ConsumerHomeScreenAdapter(private val consumerItem: ArrayList<DummyConsumerItem>) :
     RecyclerView.Adapter<ConsumerHomeScreenAdapter.ProfileViewHolder>() {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.consumer_homescreen_adapter_item, parent, false)

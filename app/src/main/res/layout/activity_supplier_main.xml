@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/supplier_mainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".feature.supplier.SupplierMainActivity">
 
 
-    <!--
-            FrameLayout to contain fragments
-    -->
-    <FrameLayout
-        android:id="@+id/supplier_homepage_frame_layout"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/supplier_activity_fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/supplierActivityBtmNav"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navGraph="@navigation/supplier_activity_nav_graph"/>
 
-    <!--
-            Bottom navigation menu for homepage om main activity
-    -->
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/supplierActivityBtmNav"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/supplier_homepage_bottom_nav_menu" />
+        app:menu="@menu/supplier_bottom_nav_menu" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

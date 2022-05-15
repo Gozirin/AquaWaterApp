@@ -11,6 +11,12 @@
 
     </activity>
 
+    <activity
+        android:id="@+id/supplier_mainActivity"
+        android:name="com.decagon.aqua.feature.supplier.SupplierMainActivity">
+
+    </activity>
+
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.decagon.aqua.feature.onboarding.SplashScreenFragment"
@@ -92,6 +98,10 @@
         <action
             android:id="@+id/action_supplierLoginFragment_to_supplierForgotPasswordFragment"
             app:destination="@id/supplierForgotPasswordFragment" />
+        <action
+            android:id="@+id/action_supplierLoginFragment_to_supplier_mainActivity"
+            app:destination="@id/supplier_mainActivity" />
+
     </fragment>
     <fragment
         android:id="@+id/consumerForgotPasswordFragment"
@@ -103,4 +113,5 @@
         android:name="com.decagon.aqua.feature.login_and_registration.SupplierForgotPasswordFragment"
         android:label="fragment_supplier_forgot_password"
         tools:layout="@layout/fragment_supplier_forgot_password" />
+
 </navigation>
