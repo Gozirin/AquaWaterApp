@@ -15,7 +15,7 @@ class ConsumerAccountFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         binding = ConsumerAccountFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
