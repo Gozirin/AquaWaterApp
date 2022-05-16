@@ -22,6 +22,10 @@ android {
     compileSdk Versions.compilesdk
 
 
+    lintOptions {
+        baseline(file("lint-baseline.xml"))
+    }
+
     defaultConfig {
         applicationId Application.id
         minSdk Versions.minsdk
