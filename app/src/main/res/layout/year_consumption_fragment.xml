@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2F2F3"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".feature.consumer.ui.consumptionFragments.DayFragment">
 
@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginBottom="70dp"
+        android:background="@color/white"
         android:padding="30dp"
         android:orientation="vertical">
         <TextView

@@ -1,20 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F2F3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".feature.supplier.SupplierMainActivity">
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/supplier_account_fragment_blue_section"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Account Fragment"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:padding="25dp"
+        android:background="@color/main_blue"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/supplier_account_fragment_myProfile_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/title"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:background="@drawable/circle_border"
+                app:cardCornerRadius="55dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="60dp">
+                    <ImageView
+                        android:id="@+id/supplier_account_fragment_profilePic_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/julian"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/profile_image" />
+                </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/supplier_account_fragment_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="Don Jazzy"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/supplier_account_fragment_email_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/white"
+                    android:text="donjazzyagain@gmail.com"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/supplier_account_fragment_editPhoto_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textColor="@color/white"
+                    android:text="@string/edit_photo"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/supplier_account_fragment_white_section"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="25dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/supplier_account_fragment_editProfile_tv"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#21334F"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/profile"
+            android:drawablePadding="15dp"
+            app:drawableStartCompat="@drawable/ic_profile_icon"
+            app:drawableEndCompat="@drawable/ic_path" />
+        <TextView
+            android:id="@+id/supplier_account_fragment_notification_tv"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#21334F"
+            android:fontFamily="@font/manrope_regular"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/notification"
+            android:drawablePadding="18dp"
+            app:drawableStartCompat="@drawable/ic_bell_notification"
+            app:drawableEndCompat="@drawable/ic_path" />
+        <TextView
+            android:id="@+id/supplier_account_fragment_settings_tv"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#21334F"
+            android:fontFamily="@font/manrope_regular"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/settings"
+            android:drawablePadding="12dp"
+            app:drawableStartCompat="@drawable/ic_settings_outline"
+            app:drawableEndCompat="@drawable/ic_path" />
+
+        <TextView
+            android:id="@+id/supplier_account_fragment_help_tv"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#21334F"
+            android:fontFamily="@font/manrope_regular"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/help"
+            android:drawablePadding="13dp"
+            app:drawableStartCompat="@drawable/ic_help_circle"
+            app:drawableEndCompat="@drawable/ic_path" />
+
+        <TextView
+            android:id="@+id/supplier_account_fragment_logout_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:gravity="center"
+            android:fontFamily="@font/manrope_semibold"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_rectangle"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="130dp"
+            android:paddingEnd="130dp"
+            android:text="@string/logout"
+            android:textColor="@color/main_blue"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_logout_icon" />
+    </LinearLayout>
+
+</LinearLayout>
