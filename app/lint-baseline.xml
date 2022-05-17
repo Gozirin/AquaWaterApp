@@ -2,147 +2,10 @@
 <issues format="6" by="lint 7.2.0" type="baseline" client="gradle" dependencies="false" name="AGP (7.2.0)" variant="all" version="7.2.0">
 
     <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerAccountFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/consumer/ui/ConsumerAccountFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerConsumptionLevelFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/consumer/ui/consumptionFragments/ConsumerConsumptionLevelFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerForgotPasswordFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/login_and_registration/ConsumerForgotPasswordFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerHomeFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/consumer/ui/ConsumerHomeFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerLoginFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/login_and_registration/ConsumerLoginFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerMainActivity.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/consumer/ConsumerMainActivity.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerProfileFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/supplier/ui/supplierFragments/ConsumerProfileFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerSignUpFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/login_and_registration/ConsumerSignUpFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of ConsumerTransactionFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/consumer/ui/ConsumerTransactionFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of OnboardingMainActivity.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/onboarding/OnboardingMainActivity.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of PastSuppliesFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/supplier/ui/supplierFragments/PastSuppliesFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of SupplierAccountPage.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/supplier/ui/SupplierAccountPage.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of SupplierAddProductFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/supplier/ui/supplierFragments/profileDetailsFragments/SupplierAddProductFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of SupplierEditProfileFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/supplier/ui/supplierFragments/profileDetailsFragments/SupplierEditProfileFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of SupplierHomePage.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/supplier/ui/SupplierHomePage.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of SupplierLoginFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/login_and_registration/SupplierLoginFragment.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of SupplierMainActivity.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/supplier/SupplierMainActivity.kt"/>
-    </issue>
-
-    <issue
-        id="LintError"
-        message="Unexpected failure during lint analysis of SupplierProfileDetailsFragment.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: &apos;java.util.List org.jetbrains.uast.UField.getAnnotations()&apos;&#xA;&#xA;The crash seems to involve the detector `dagger.lint.DaggerKotlinIssueDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;JvmStaticProvidesInObjectDetector&quot;, &quot;FieldSiteTargetOnQualifierAnnotation&quot;, &quot;ModuleCompanionObjects&quot;, &quot;ModuleCompanionObjectsNotInModuleParent&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `NoSuchMethodError:DaggerKotlinIssueDetector$createUastHandler$1.visitField(DaggerKotlinIssueDetector.kt:166)←UElementVisitor$DispatchPsiVisitor.visitField(UElementVisitor.kt:659)←KotlinUField.accept(KotlinUField.kt:51)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←AbstractKotlinUClass.accept(AbstractKotlinUClass.kt:42)←ImplementationUtilsKt.acceptList(implementationUtils.kt:23)←UFile$DefaultImpls.accept(UFile.kt:87)←KotlinUFile.accept(KotlinUFile.kt:14)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
-        <location
-            file="src/main/java/com/decagon/aqua/feature/supplier/ui/supplierFragments/profileDetailsFragments/SupplierProfileDetailsFragment.kt"/>
-    </issue>
-
-    <issue
         id="IidCompatibilityCheckFailure"
         message="Check failed with exception: java.lang.NoSuchMethodException: com.android.tools.lint.detector.api.LintModelModuleProject.getGradleProjectModel()">
         <location
             file="app"/>
-    </issue>
-
-    <issue
-        id="ScrollViewSize"
-        message="This androidx.constraintlayout.widget.ConstraintLayout should use `android:layout_height=&quot;wrap_content&quot;`"
-        errorLine1="        android:layout_height=&quot;match_parent&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="16"
-            column="9"/>
     </issue>
 
     <issue
@@ -368,6 +231,28 @@
     <issue
         id="UnusedAttribute"
         message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
+        errorLine1="        android:textFontWeight=&quot;1000&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_check_mail.xml"
+            line="34"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
+        errorLine1="        android:textFontWeight=&quot;1000&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="31"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
         errorLine1="        android:textFontWeight=&quot;700&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -451,193 +336,6 @@
             file="src/main/res/layout/fragment_orders_received_activity_overview.xml"
             line="17"
             column="9"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;700&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="60"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="76"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="93"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="107"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="122"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="142"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="157"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="175"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="194"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="211"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="228"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="241"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="257"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="277"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;400&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="293"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;700&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="327"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `textFontWeight` is only used in API level 28 and higher (current min is 21)"
-        errorLine1="            android:textFontWeight=&quot;700&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="342"
-            column="13"/>
     </issue>
 
     <issue
@@ -1177,17 +875,6 @@
             file="src/main/res/layout/fragment_orders_received_activity_overview.xml"
             line="13"
             column="9"/>
-    </issue>
-
-    <issue
-        id="UseCompatTextViewDrawableXml"
-        message="Use `app:drawableLeftCompat` instead of `android:drawableLeft`"
-        errorLine1="            android:drawableLeft=&quot;@drawable/arrow&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="24"
-            column="13"/>
     </issue>
 
     <issue
@@ -2753,6 +2440,17 @@
     </issue>
 
     <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/search_background_color` with a theme that also paints a background (inferred theme is `@style/Theme_Aqua`)"
+        errorLine1="    android:background=&quot;@color/search_background_color&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_password_account_successful.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
         id="UnusedResources"
         message="The resource `R.font._xml` appears to be unused"
         errorLine1="&lt;font-family xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;"
@@ -3035,6 +2733,17 @@
     </issue>
 
     <issue
+        id="UnusedResources"
+        message="The resource `R.string.enter_the_email_associated_with_your_account_and_we_ll_send_an_email_with_instruction_to_reset_your_password` appears to be unused"
+        errorLine1="    &lt;string name=&quot;enter_the_email_associated_with_your_account_and_we_ll_send_an_email_with_instruction_to_reset_your_password&quot;>Enter the email associated with your account and we \&apos;ll send an email with instruction to reset your password&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
         id="UselessParent"
         message="This `ScrollView` layout or its `LinearLayout` parent is unnecessary; transfer the `background` attribute to the other view"
         errorLine1="    &lt;ScrollView"
@@ -3097,6 +2806,13 @@
 
     <issue
         id="IconLocation"
+        message="Found bitmap drawable `res/drawable/aqua.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/aqua.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
         message="Found bitmap drawable `res/drawable/aqua_logo.png` in densityless folder">
         <location
             file="src/main/res/drawable/aqua_logo.png"/>
@@ -3132,6 +2848,13 @@
 
     <issue
         id="IconLocation"
+        message="Found bitmap drawable `res/drawable/good.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/good.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
         message="Found bitmap drawable `res/drawable/image.png` in densityless folder">
         <location
             file="src/main/res/drawable/image.png"/>
@@ -3156,6 +2879,13 @@
         message="Found bitmap drawable `res/drawable/man_pic.jpeg` in densityless folder">
         <location
             file="src/main/res/drawable/man_pic.jpeg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/round1.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/round1.png"/>
     </issue>
 
     <issue
@@ -3220,7 +2950,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="83"
+            line="81"
             column="10"/>
     </issue>
 
@@ -3231,7 +2961,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="251"
+            line="239"
             column="10"/>
     </issue>
 
@@ -3352,7 +3082,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="83"
+            line="81"
             column="10"/>
     </issue>
 
@@ -3363,7 +3093,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="116"
+            line="112"
             column="10"/>
     </issue>
 
@@ -3374,7 +3104,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="150"
+            line="144"
             column="10"/>
     </issue>
 
@@ -3385,7 +3115,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="183"
+            line="175"
             column="10"/>
     </issue>
 
@@ -3396,7 +3126,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="217"
+            line="207"
             column="10"/>
     </issue>
 
@@ -3407,7 +3137,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="251"
+            line="239"
             column="10"/>
     </issue>
 
@@ -3418,7 +3148,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="287"
+            line="273"
             column="10"/>
     </issue>
 
@@ -3747,6 +3477,39 @@
         errorLine1="    &lt;ImageView"
         errorLine2="     ~~~~~~~~~">
         <location
+            file="src/main/res/layout/fragment_consumer_check_mail.xml"
+            line="12"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageButton"
+        errorLine2="     ~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_forgot_password.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
             file="src/main/res/layout/fragment_first_onboarding_screen.xml"
             line="9"
             column="6"/>
@@ -3772,6 +3535,17 @@
             file="src/main/res/layout/fragment_login_consumer.xml"
             line="107"
             column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_password_account_successful.xml"
+            line="39"
+            column="10"/>
     </issue>
 
     <issue
@@ -4161,12 +3935,144 @@
 
     <issue
         id="HardcodedText"
-        message="Hardcoded string &quot;Forgot Password&quot;, should use `@string` resource"
-        errorLine1="        android:text=&quot;Forgot Password&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        message="Hardcoded string &quot;Create New Password&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Create New Password&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;New Password&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;New Password&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="46"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;New password&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;New password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="70"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Confirm Password&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Confirm Password&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="83"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Confirm Password&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Confirm Password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="109"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Reset Password&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Reset Password&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="125"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Don&apos;t have an account?&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Don&apos;t have an account?&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="140"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Sign Up&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Sign Up&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_create_new_password.xml"
+            line="157"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Back&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Back&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_consumer_forgot_password.xml"
-            line="16"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Reset Password&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Reset Password&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_forgot_password.xml"
+            line="46"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Email&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Email&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_forgot_password.xml"
+            line="78"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;abayomitunde@gmail.com&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;abayomitunde@gmail.com&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_forgot_password.xml"
+            line="98"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Reset Password&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Reset Password&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_consumer_forgot_password.xml"
+            line="111"
             column="9"/>
     </issue>
 
@@ -4234,6 +4140,28 @@
             file="src/main/res/layout/fragment_orders_received_activity_overview.xml"
             line="40"
             column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;PasswordSuccessful&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;PasswordSuccessful&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_password_account_successful.xml"
+            line="18"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Password reset successfully&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Password reset successfully&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_password_account_successful.xml"
+            line="64"
+            column="13"/>
     </issue>
 
     <issue
@@ -5125,28 +5053,6 @@
             file="src/main/res/layout/fragment_orders_received_activity_overview.xml"
             line="13"
             column="9"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        message="Consider replacing `android:drawableLeft` with `android:drawableStart=&quot;@drawable/arrow&quot;` to better support right-to-left layouts"
-        errorLine1="            android:drawableLeft=&quot;@drawable/arrow&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="24"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        message="Consider replacing `android:drawableLeft` with `android:drawableStart=&quot;@drawable/ic_baseline_location&quot;` to better support right-to-left layouts"
-        errorLine1="            android:drawableLeft=&quot;@drawable/ic_baseline_location&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_sign_up_consumer.xml"
-            line="262"
-            column="13"/>
     </issue>
 
     <issue
