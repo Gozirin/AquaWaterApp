@@ -13,7 +13,7 @@ object Versions {
     const val room = "2.4.0"
     const val appcompat = "1.1.0-rc01"
     const val constraintlayout = "1.1.3"
-    const val material_design = "1.1.0"
+    const val material_design = "1.6.0"
     const val play_core = "1.7.1"
     const val play_services = "4.3.3"
     const val leak_canary = "2.0-alpha-3"
