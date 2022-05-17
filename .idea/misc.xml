@@ -59,8 +59,10 @@
         <entry key="app/src/main/res/layout/filter_modal_layout.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/fragment_base.xml" value="0.19927536231884058" />
         <entry key="app/src/main/res/layout/fragment_consumer_account.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/layout/fragment_consumer_check_mail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_consumer_consumption_level.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_consumer_forgot_password.xml" value="0.23072916666666668" />
+        <entry key="app/src/main/res/layout/fragment_consumer_create_new_password.xml" value="0.2515625" />
+        <entry key="app/src/main/res/layout/fragment_consumer_forgot_password.xml" value="0.1895910780669145" />
         <entry key="app/src/main/res/layout/fragment_consumer_home_fragment.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/fragment_consumer_homepage_search.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/fragment_consumer_transaction.xml" value="0.11197916666666667" />
@@ -70,6 +72,7 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_login_consumer.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_month.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/fragment_password_account_successful.xml" value="0.2515625" />
         <entry key="app/src/main/res/layout/fragment_second_onboarding_screen.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/fragment_sign_up_consumer.xml" value="0.25" />
