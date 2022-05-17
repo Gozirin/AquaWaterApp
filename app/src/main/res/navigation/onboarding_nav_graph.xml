@@ -102,9 +102,6 @@
             android:id="@+id/action_supplierLoginFragment_to_supplierSignUpFragment"
             app:destination="@id/supplierSignUpFragment" />
         <action
-            android:id="@+id/action_supplierLoginFragment_to_supplierForgotPasswordFragment"
-            app:destination="@id/supplierForgotPasswordFragment" />
-        <action
             android:id="@+id/action_supplierLoginFragment_to_supplier_mainActivity"
             app:destination="@id/supplier_mainActivity" />
         <action
@@ -123,15 +120,6 @@
         <action
             android:id="@+id/action_consumerForgotPasswordFragment_to_consumerCheckMailFragment"
             app:destination="@id/consumerCheckMailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/supplierForgotPasswordFragment"
-        android:name="com.decagon.aqua.feature.login_and_registration.SupplierForgotPasswordFragment"
-        android:label="fragment_supplier_forgot_password"
-        tools:layout="@layout/fragment_supplier_forgot_password" >
-        <action
-            android:id="@+id/action_supplierForgotPasswordFragment_to_consumerForgotPasswordFragment"
-            app:destination="@id/consumerForgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/consumerCheckMailFragment"
@@ -161,5 +149,28 @@
         android:id="@+id/password_AccountSuccessfulFragment2"
         android:name="com.decagon.aqua.feature.login_and_registration.Password_AccountSuccessfulFragment"
         android:label="Password_AccountSuccessfulFragment" />
+    <fragment
+        android:id="@+id/consumer_Referral_Screen_Fragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerReferralScreenFragment"
+        android:label="fragment_consumer_referral_screen"
+        tools:layout="@layout/fragment_consumer_referral_screen" >
+        <action
+            android:id="@+id/action_consumer_Referral_Screen_Fragment_to_consumer_Change_Password_Screen_Fragment"
+            app:destination="@id/consumer_Change_Password_Screen_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumer_Change_Password_Screen_Fragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerChangePasswordScreenFragment"
+        android:label="fragment_consumer_change_password_screen"
+        tools:layout="@layout/fragment_consumer_change_password_screen" >
+        <action
+            android:id="@+id/action_consumer_Change_Password_Screen_Fragment_to_consumer_Notification_Screen_Fragment"
+            app:destination="@id/consumer_Notification_Screen_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumer_Notification_Screen_Fragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerNotificationScreenFragment"
+        android:label="fragment_consumer_notification_screen"
+        tools:layout="@layout/fragment_consumer_notification_screen" />
 
 </navigation>

@@ -57,6 +57,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+        abortOnError false
+    }
 
 }
 
