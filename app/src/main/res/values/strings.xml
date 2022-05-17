@@ -86,4 +86,23 @@
     <string name="open_mail_app">Open mail app</string>
     <string name="did_not_receive_the_email_check_your_spam_filter_or">Did not receive the email check your spam filter or</string>
     <string name="try_another_email">try another email</string>
+    <string name="refer_your_friends_earn_ncash_back"><![CDATA[Refer your friends & earn \ncash back]]></string>
+    <string name="invite_your_friends_to_join_aqua_and_get_500_ncash_back_for_each_friend_that_joins_using_nyour_referral_code">Invite your friends to join aqua and get 500 \ncash back for each friend that joins using \nyour referral code</string>
+    <string name="change_password">Change password</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="comfirm_password">Comfirm password</string>
+    <string name="notifications">Notifications</string>
+    <string name="push_notification">Push Notification</string>
+    <string name="allows_you_receive_notification_on_nphone_screen">Allows you receive notification on \nphone screen</string>
+    <string name="email_notification">Email notification</string>
+    <string name="allows_you_receive_the_eemail_notification_nfrom_the_app">Allows you receive the eemail notification \nfrom the app</string>
+    <string name="my_referrals">My referrals</string>
+    <string name="create_new_password">Create New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="invite_more_friends">Invite more friends</string>
+    <string name="save">Save</string>
 </resources>
