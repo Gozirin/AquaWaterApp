@@ -52,6 +52,7 @@
         <entry key="app/src/main/res/layout/consumer_profile_details_bottom_sheet_layout.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/consumer_transaction_fragment.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/day_consumption_fragment.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/dialog_added_to_cart.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/layout/favourite_customers.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/favourite_customers2.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/filter_modal_layout.xml" value="0.2234375" />
@@ -67,6 +68,7 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_login_consumer.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_month.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/fragment_orders_received_activity_overview.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_second_onboarding_screen.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/fragment_sign_up_consumer.xml" value="0.25" />
@@ -75,18 +77,23 @@
         <entry key="app/src/main/res/layout/fragment_supplier_forgot_password.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_supplier_home_page_layout.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_supplier_homepage_overview.xml" value="0.20652173913043478" />
+        <entry key="app/src/main/res/layout/fragment_supplier_homepage_overview_appbar.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_supplier_login.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/layout/fragment_supplier_orders_layout.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_supplier_sign_up.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/fragment_supplies_details.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_supplies_made_activity_overview.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_third_onboarding_screen.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_total_supplies_made__supplier.xml" value="0.2074074074074074" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_week.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/fragment_year.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/layout_custom_snackbar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/month_consumption_fragment.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/orders_received_activity_overview.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/supplier_homepage_overview.xml" value="0.25" />
         <entry key="app/src/main/res/layout/supplier_homepage_overview_appbar.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/supplies_detail_fragment_item.xml" value="0.33762054443359374" />
         <entry key="app/src/main/res/layout/supplies_made_activity_overview.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/total_supplies_made_supplier_itemview_layout.xml" value="0.2074074074074074" />
         <entry key="app/src/main/res/layout/week_consumption_fragment.xml" value="0.23802083333333332" />
