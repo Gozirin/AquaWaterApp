@@ -9,14 +9,14 @@ import com.decagon.aqua.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SupplierForgotPasswordFragment : Fragment() {
+class Password_AccountSuccessfulFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_supplier_forgot_password, container, false)
+        return inflater.inflate(R.layout.fragment_password_account_successful, container, false)
     }
 }
