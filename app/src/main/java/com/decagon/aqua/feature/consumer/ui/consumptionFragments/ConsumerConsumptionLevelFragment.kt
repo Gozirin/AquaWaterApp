@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import com.decagon.aqua.databinding.ConsumerConsumptionLevelFragmentBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumptionViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerConsumptionLevelFragment : Fragment() {
 
     private lateinit var binding: ConsumerConsumptionLevelFragmentBinding

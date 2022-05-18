@@ -1,4 +1,4 @@
-package com.decagon.aqua.core
+package com.decagon.aqua.core.data
 
 import androidx.room.Dao
 import androidx.room.Delete

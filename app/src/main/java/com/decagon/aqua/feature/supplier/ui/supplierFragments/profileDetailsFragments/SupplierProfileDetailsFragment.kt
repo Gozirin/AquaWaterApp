@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import com.decagon.aqua.databinding.FragmentSupplierProfileDetailsBinding
 import com.decagon.aqua.feature.supplier.adapter.SupplierProfileViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SupplierProfileDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentSupplierProfileDetailsBinding

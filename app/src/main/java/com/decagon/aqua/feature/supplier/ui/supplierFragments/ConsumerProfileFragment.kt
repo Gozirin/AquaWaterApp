@@ -8,7 +8,9 @@ import android.widget.ImageView
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.ConsumerProfileDetailsBottomSheetLayoutBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerProfileFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: ConsumerProfileDetailsBottomSheetLayoutBinding

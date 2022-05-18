@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagon.aqua.R
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class SupplierForgotPasswordFragment : Fragment() {
 
     override fun onCreateView(

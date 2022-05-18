@@ -13,7 +13,9 @@ import com.decagon.aqua.databinding.FragmentTotalSuppliesMadeSupplierBinding
 import com.decagon.aqua.feature.supplier.adapter.SupplierDataListItems
 import com.decagon.aqua.feature.supplier.adapter.SupplierRVAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PastSuppliesFragment : Fragment(), SupplierRVAdapter.OnItemClickListener {
 
     private lateinit var binding: FragmentTotalSuppliesMadeSupplierBinding
