@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSupplierAccountLayoutBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SupplierAccountPage : Fragment() {
 
     private lateinit var binding: FragmentSupplierAccountLayoutBinding

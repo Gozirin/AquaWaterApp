@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSupplierSignUpBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SupplierSignUpFragment : Fragment() {
     private var _binding: FragmentSupplierSignUpBinding? = null
 

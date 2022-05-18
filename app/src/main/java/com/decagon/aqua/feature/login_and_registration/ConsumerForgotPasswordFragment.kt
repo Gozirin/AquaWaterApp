@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerForgotPasswordBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerForgotPasswordFragment : Fragment() {
 
     private lateinit var binding: FragmentConsumerForgotPasswordBinding
