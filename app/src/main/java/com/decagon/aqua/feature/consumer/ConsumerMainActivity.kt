@@ -8,7 +8,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.ConsumerMainActivityBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerMainActivity : AppCompatActivity() {
 
     private lateinit var binding: ConsumerMainActivityBinding

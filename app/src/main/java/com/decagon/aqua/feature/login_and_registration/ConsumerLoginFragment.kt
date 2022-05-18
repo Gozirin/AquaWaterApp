@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentLoginConsumerBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerLoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginConsumerBinding
     override fun onCreateView(

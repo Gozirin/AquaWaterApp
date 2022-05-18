@@ -51,6 +51,12 @@
         <action
             android:id="@+id/action_loggingFragment_to_loginFragment2"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loggingFragment_self"
+            app:destination="@id/loggingFragment" />
+        <action
+            android:id="@+id/action_loggingFragment_to_consumerForgotPasswordFragment"
+            app:destination="@id/consumerForgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/consumerSignUpFragment"
@@ -101,17 +107,59 @@
         <action
             android:id="@+id/action_supplierLoginFragment_to_supplier_mainActivity"
             app:destination="@id/supplier_mainActivity" />
+        <action
+            android:id="@+id/action_supplierLoginFragment_to_consumerForgotPasswordFragment"
+            app:destination="@id/consumerForgotPasswordFragment" />
 
     </fragment>
     <fragment
         android:id="@+id/consumerForgotPasswordFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.ConsumerForgotPasswordFragment"
         android:label="fragment_consumer_forgot_password"
-        tools:layout="@layout/fragment_consumer_forgot_password" />
+        tools:layout="@layout/fragment_consumer_forgot_password" >
+        <action
+            android:id="@+id/action_consumerForgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_consumerForgotPasswordFragment_to_consumerCheckMailFragment"
+            app:destination="@id/consumerCheckMailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/supplierForgotPasswordFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.SupplierForgotPasswordFragment"
         android:label="fragment_supplier_forgot_password"
-        tools:layout="@layout/fragment_supplier_forgot_password" />
+        tools:layout="@layout/fragment_supplier_forgot_password" >
+        <action
+            android:id="@+id/action_supplierForgotPasswordFragment_to_consumerForgotPasswordFragment"
+            app:destination="@id/consumerForgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumerCheckMailFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.ConsumerCheckMailFragment"
+        android:label="fragment_consumer_check_mail"
+        tools:layout="@layout/fragment_consumer_check_mail" >
+        <action
+            android:id="@+id/action_consumerCheckMailFragment_to_consumerForgotPasswordFragment"
+            app:destination="@id/consumerForgotPasswordFragment" />
+        <action
+            android:id="@+id/action_consumerCheckMailFragment_to_consumerCreateNewPasswordFragment"
+            app:destination="@id/consumerCreateNewPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumerCreateNewPasswordFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.ConsumerCreateNewPasswordFragment"
+        android:label="fragment_consumer_create_new_password"
+        tools:layout="@layout/fragment_consumer_create_new_password" >
+        <action
+            android:id="@+id/action_consumerCreateNewPasswordFragment_to_supplierSignUpFragment"
+            app:destination="@id/supplierSignUpFragment" />
+        <action
+            android:id="@+id/action_consumerCreateNewPasswordFragment_to_password_AccountSuccessfulFragment2"
+            app:destination="@id/password_AccountSuccessfulFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/password_AccountSuccessfulFragment2"
+        android:name="com.decagon.aqua.feature.login_and_registration.Password_AccountSuccessfulFragment"
+        android:label="Password_AccountSuccessfulFragment" />
 
 </navigation>

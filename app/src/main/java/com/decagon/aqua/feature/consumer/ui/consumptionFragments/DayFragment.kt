@@ -11,7 +11,9 @@ import com.anychart.chart.common.dataentry.DataEntry
 import com.anychart.chart.common.dataentry.ValueDataEntry
 import com.anychart.charts.Pie
 import com.decagon.aqua.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DayFragment : Fragment() {
 
     private var chart: AnyChartView? = null

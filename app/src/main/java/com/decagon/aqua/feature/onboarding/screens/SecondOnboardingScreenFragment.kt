@@ -10,7 +10,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSecondOnboardingScreenBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SecondOnboardingScreenFragment : Fragment() {
 
     private var _binding: FragmentSecondOnboardingScreenBinding? = null

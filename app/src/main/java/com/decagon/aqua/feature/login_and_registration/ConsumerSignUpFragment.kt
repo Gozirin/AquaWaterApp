@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSignUpConsumerBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class ConsumerSignUpFragment : Fragment() {
 
     private lateinit var binding: FragmentSignUpConsumerBinding

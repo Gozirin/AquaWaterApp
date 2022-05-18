@@ -12,7 +12,9 @@ import com.decagon.aqua.R
 import com.decagon.aqua.databinding.ConsumerHomeFragmentBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerHomeScreenAdapter
 import com.decagon.aqua.models.DummyConsumerItem
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerHomeFragment : Fragment() {
 
     private lateinit var binding: ConsumerHomeFragmentBinding

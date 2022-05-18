@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagon.aqua.databinding.ConsumerTransactionFragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerTransactionFragment : Fragment() {
 
     private lateinit var binding: ConsumerTransactionFragmentBinding

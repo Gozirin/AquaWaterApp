@@ -13,27 +13,27 @@ class Converter {
     fun fromUserToJsonString(value: User): String = Gson().toJson(value)
 
     @TypeConverter
-    fun jsonStringToUser(value: String) =
+    fun jsonStringToUser(value: String): User =
         Gson().fromJson(value, User::class.java)
 
     @TypeConverter
     fun fromUserXToJsonString(value: UserX): String = Gson().toJson(value)
 
     @TypeConverter
-    fun jsonStringToUserX(value: String) =
+    fun jsonStringToUserX(value: String): UserX =
         Gson().fromJson(value, UserX::class.java)
 
     @TypeConverter
     fun fromLocationToJsonString(value: Location): String = Gson().toJson(value)
 
     @TypeConverter
-    fun jsonStringToLocation(value: String) =
+    fun jsonStringToLocation(value: String): Location =
         Gson().fromJson(value, Location::class.java)
 
     @TypeConverter
     fun fromLocationXToJsonString(value: LocationX): String = Gson().toJson(value)
 
     @TypeConverter
-    fun jsonStringToLocationX(value: String) =
+    fun jsonStringToLocationX(value: String): LocationX =
         Gson().fromJson(value, LocationX::class.java)
 }
