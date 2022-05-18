@@ -19,4 +19,8 @@ class ConsumerAccountFragment : Fragment() {
         binding = ConsumerAccountFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    override fun onResume() {
+        super.onResume()
+    }
 }
