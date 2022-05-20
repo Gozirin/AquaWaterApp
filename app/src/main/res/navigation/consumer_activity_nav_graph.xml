@@ -39,7 +39,11 @@
     <fragment
         android:id="@+id/consumerProfileSettingsAccountFragment"
         android:name="com.decagon.aqua.feature.consumer.ui.ConsumerProfileSettingsAccountFragment"
-        android:label="ConsumerProfileSettingsAccountFragment" />
+        android:label="ConsumerProfileSettingsAccountFragment" >
+        <action
+            android:id="@+id/action_consumerProfileSettingsAccountFragment_to_consumerAccountFragment"
+            app:destination="@id/consumerAccountFragment" />
+    </fragment>
     <fragment
         android:id="@+id/suppliesDetailsFragment"
         android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.SuppliesDetailsFragment"

@@ -27,7 +27,7 @@ class ConsumerAccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.consumerAccountFragmentMyProfileTv.setOnClickListener {
+        binding.consumerAccountFragmentEditProfileTv.setOnClickListener {
             findNavController().navigate(R.id.action_consumerAccountFragment_to_consumerProfileSettingsAccountFragment)
         }
 

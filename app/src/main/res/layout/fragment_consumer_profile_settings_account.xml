@@ -6,7 +6,34 @@
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <include layout="@layout/consumer_profile_account_appbar" />
+    <TextView
+        android:id="@+id/consumer_profile_settings_account_back_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:fontFamily="@font/manrope_regular"
+        android:text=" Back"
+        android:textColor="@color/all_text_color"
+        android:textFontWeight="200"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/consumer_profile_settings_account_back_tv"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="148dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="Edit Profile"
+        android:textColor="@color/all_text_color"
+        android:textFontWeight="700"
+        android:textSize="17sp" />
+
+    <!--<include layout="@layout/consumer_profile_account_appbar" />-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -124,29 +151,7 @@
                 android:textFontWeight="700"
                 android:textSize="16sp" />
 
-            <!--<EditText
-        android:id="@+id/consumer_profile_layout_password_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/consumer_profile_layout_password_tv"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/consumer_profile_account_form_borders"
-        android:fontFamily="@font/manrope_medium"
-        android:hint="Password"
-        android:paddingLeft="20dp"
-        android:textColor="@color/all_text_color"
-        android:textFontWeight="500"
-        android:textSize="17dp" />-->
 
-           <!-- <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/consumer_profile_layout_password_inputtext_layout"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@id/consumer_profile_layout_password_tv"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="4dp"
-                app:passwordToggleEnabled="true">-->
 
             <EditText
                 android:id="@+id/consumer_profile_layout_password_inputtext_layout"
@@ -162,9 +167,8 @@
                 android:paddingStart="20dp"
                 android:textColor="@color/all_text_color"
                 android:textFontWeight="500"
-                android:textSize="17dp"/>
+                android:textSize="17dp" />
 
-           <!-- </com.google.android.material.textfield.TextInputLayout>-->
 
             <TextView
                 android:id="@+id/consumer_profile_layout_phone_number_tv"
