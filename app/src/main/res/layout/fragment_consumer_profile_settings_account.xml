@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/consumer_profile_account_appbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/consumer_profile_layout_imageview"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#21334F"
+                app:roundPercent="1"
+                app:srcCompat="@drawable/abimbola" />
+
+            <TextView
+                android:id="@+id/consumer_profile_layout_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/consumer_profile_layout_imageview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/manrope_medium"
+                android:text="Abimbola Thomas"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/consumer_profile_layout_email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/consumer_profile_layout_name_tv"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/manrope_medium"
+                android:text="abimbolathomas@gmail.com"
+                android:textColor="@color/all_text_color" />
+
+            <TextView
+                android:id="@+id/consumer_profile_layout_email_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/consumer_profile_layout_email_tv"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/manrope"
+                android:text="Email Address"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="700"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/consumer_profile_layout_email_address_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/consumer_profile_layout_email_address_tv"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/consumer_profile_account_form_borders"
+                android:fontFamily="@font/manrope_medium"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="500"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/consumer_profile_layout_username_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/consumer_profile_layout_email_address_edittext"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/manrope"
+                android:text="Username"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="700"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/consumer_profile_layout_username_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/consumer_profile_layout_username_tv"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/consumer_profile_account_form_borders"
+                android:fontFamily="@font/manrope_medium"
+                android:hint="Username"
+                android:paddingLeft="20dp"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="500"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/consumer_profile_layout_password_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/consumer_profile_layout_username_edittext"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/manrope"
+                android:text="Password"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="700"
+                android:textSize="16sp" />
+
+            <!--<EditText
+        android:id="@+id/consumer_profile_layout_password_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/consumer_profile_layout_password_tv"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/consumer_profile_account_form_borders"
+        android:fontFamily="@font/manrope_medium"
+        android:hint="Password"
+        android:paddingLeft="20dp"
+        android:textColor="@color/all_text_color"
+        android:textFontWeight="500"
+        android:textSize="17dp" />-->
+
+           <!-- <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/consumer_profile_layout_password_inputtext_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/consumer_profile_layout_password_tv"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="4dp"
+                app:passwordToggleEnabled="true">-->
+
+            <EditText
+                android:id="@+id/consumer_profile_layout_password_inputtext_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/consumer_profile_layout_password_tv"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/consumer_profile_account_form_borders"
+                android:fontFamily="@font/manrope_medium"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingStart="20dp"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="500"
+                android:textSize="17dp"/>
+
+           <!-- </com.google.android.material.textfield.TextInputLayout>-->
+
+            <TextView
+                android:id="@+id/consumer_profile_layout_phone_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/consumer_profile_layout_password_inputtext_layout"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/manrope"
+                android:text="Phone Number"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="700"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/consumer_profile_layout_phone_number_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/consumer_profile_layout_phone_number_tv"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/consumer_profile_account_form_borders2"
+                android:fontFamily="@font/manrope_medium"
+                android:hint="Phone Number"
+                android:paddingLeft="20dp"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="500"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/consumer_profile_layout_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/consumer_profile_layout_phone_number_edittext"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/manrope"
+                android:text="Address"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="700"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/consumer_profile_layout_address_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/consumer_profile_layout_address_tv"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/consumer_profile_account_form_borders2"
+                android:fontFamily="@font/manrope_medium"
+                android:hint="Address"
+                android:paddingLeft="20dp"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="500"
+                android:textSize="17dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/consumer_profile_layout_log_out_no_btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/consumer_profile_layout_address_edittext"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="#147DF5"
+                android:fontFamily="@font/manrope_bold"
+                android:paddingVertical="15dp"
+                android:text="Done"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textFontWeight="500"
+                android:textSize="17sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#147DF5" />
+        </RelativeLayout>
+</ScrollView>
+
+</RelativeLayout>
