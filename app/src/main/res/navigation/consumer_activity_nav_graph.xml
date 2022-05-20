@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_consumerHomeFragment_to_consumerConsumptionLevelFragment"
             app:destination="@id/consumerConsumptionLevelFragment" />
+        <action
+            android:id="@+id/action_consumerHomeFragment_to_suppliesDetailsFragment"
+            app:destination="@id/suppliesDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/consumerTransactionFragment"
@@ -37,4 +40,13 @@
         android:id="@+id/consumerProfileSettingsAccountFragment"
         android:name="com.decagon.aqua.feature.consumer.ui.ConsumerProfileSettingsAccountFragment"
         android:label="ConsumerProfileSettingsAccountFragment" />
+    <fragment
+        android:id="@+id/suppliesDetailsFragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.SuppliesDetailsFragment"
+        android:label="fragment_supplies_details"
+        tools:layout="@layout/fragment_supplies_details" >
+        <action
+            android:id="@+id/action_suppliesDetailsFragment_to_consumerHomeFragment"
+            app:destination="@id/consumerHomeFragment" />
+    </fragment>
 </navigation>

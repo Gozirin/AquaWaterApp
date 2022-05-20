@@ -5,8 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
+import com.decagon.aqua.feature.consumer.ui.ConsumerHomeFragmentDirections
 import com.decagon.aqua.models.DummyConsumerItem
 
 class ConsumerHomeScreenAdapter(private val consumerItem: ArrayList<DummyConsumerItem>) :
@@ -23,13 +25,18 @@ class ConsumerHomeScreenAdapter(private val consumerItem: ArrayList<DummyConsume
         holder.companyname.text = currentItem.company_name
         holder.location.text = currentItem.location
         holder.price.text = currentItem.price
+        holder.itemView.setOnClickListener {
+            val action = ConsumerHomeFragmentDirections.actionConsumerHomeFragmentToSuppliesDetailsFragment()
+            val navController = Navigation.findNavController(holder.itemView)
+            navController.navigate(action)
+        }
     }
 
     class ProfileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titleImage: ImageView = itemView.findViewById(R.id.consumer_homescreen_adapterItem_imageView)
-        val companyname: TextView = itemView.findViewById(R.id.consumer_homescreen_adapterItem_companyName_tv)
-        val location: TextView = itemView.findViewById(R.id.consumer_homescreen_adapterItem_location_tv)
-        val price: TextView = itemView.findViewById(R.id.consumer_homescreen_adapterItem_price_tv)
+        val titleImage: ImageView = itemView.findViewById(R.id.consumer_suppliesDetail_adapterItem_imageView)
+        val companyname: TextView = itemView.findViewById(R.id.consumer_suppliesDetails_adapterItem_itemName_tv)
+        val location: TextView = itemView.findViewById(R.id.consumer_suppliesDetails_adapterItem_rating_tv)
+        val price: TextView = itemView.findViewById(R.id.consumer_suppliesDetail_adapterItem_price_tv)
     }
 
     override fun getItemCount(): Int = consumerItem.size
