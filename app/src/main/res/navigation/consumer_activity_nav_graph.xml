@@ -26,12 +26,24 @@
         android:id="@+id/consumerAccountFragment"
         android:name="com.decagon.aqua.feature.consumer.ui.ConsumerAccountFragment"
         android:label="fragment_consumer_account"
-        tools:layout="@layout/consumer_account_fragment" />
+        tools:layout="@layout/consumer_account_fragment" >
+        <action
+            android:id="@+id/action_consumerAccountFragment_to_consumerProfileSettingsAccountFragment"
+            app:destination="@id/consumerProfileSettingsAccountFragment" />
+    </fragment>
     <fragment
         android:id="@+id/consumerConsumptionLevelFragment"
         android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerConsumptionLevelFragment"
         android:label="fragment_consumer_consumption_level"
         tools:layout="@layout/consumer_consumption_level_fragment" />
+    <fragment
+        android:id="@+id/consumerProfileSettingsAccountFragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.ConsumerProfileSettingsAccountFragment"
+        android:label="ConsumerProfileSettingsAccountFragment" >
+        <action
+            android:id="@+id/action_consumerProfileSettingsAccountFragment_to_consumerAccountFragment"
+            app:destination="@id/consumerAccountFragment" />
+    </fragment>
     <fragment
         android:id="@+id/suppliesDetailsFragment"
         android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.SuppliesDetailsFragment"
@@ -40,5 +52,14 @@
         <action
             android:id="@+id/action_suppliesDetailsFragment_to_consumerHomeFragment"
             app:destination="@id/consumerHomeFragment" />
+    </fragment>
+    <include app:graph="@navigation/onboarding_nav_graph" />
+    <fragment
+        android:id="@+id/logoutConfirmationDialog"
+        android:name="com.decagon.aqua.feature.consumer.ui.LogoutConfirmationDialog"
+        android:label="LogoutConfirmationDialog" >
+        <action
+            android:id="@+id/action_logoutConfirmationDialog_to_app_nav_graph"
+            app:destination="@id/app_nav_graph" />
     </fragment>
 </navigation>

@@ -21,7 +21,8 @@ class SupplierMainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bottomNavigationView = binding.supplierActivityBtmNav
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.supplier_activity_fragmentContainerView) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.supplier_activity_fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
         NavigationUI.setupWithNavController(bottomNavigationView, navController)
 

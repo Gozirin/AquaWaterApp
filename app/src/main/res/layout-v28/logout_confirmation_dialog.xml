@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LogoutConfirmationDialog_ID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/logout_confirmation_dialog_header_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/logout_confirmation"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/logout_confirmation_dialog_line_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logout_confirmation_dialog_header_tv"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/ic_comsumer_profile_modal_line2" />
+
+    <TextView
+        android:id="@+id/logout_confirmation_dialog_question_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logout_confirmation_dialog_line_iv"
+        android:layout_alignLeft="@id/logout_confirmation_dialog_header_tv"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope_medium"
+        android:text="Are you sure you want to logout from your\nAccount?"
+        android:textColor="@color/black"
+        android:textFontWeight="400"/>
+
+    <Button
+        android:id="@+id/logout_confirmation_dialog_log_out_yes_btn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logout_confirmation_dialog_question_tv"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/manrope_bold"
+        android:paddingVertical="15dp"
+        android:text="Yes"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:backgroundTint="#147DF5"
+        android:textFontWeight="500"
+        android:textSize="17sp"
+        app:cornerRadius="5dp"
+        app:strokeColor="#147DF5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logout_confirmation_dialog_log_out_no_btn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logout_confirmation_dialog_log_out_yes_btn"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#ffffff"
+        android:fontFamily="@font/manrope_bold"
+        android:paddingVertical="15dp"
+        android:text="No"
+        android:textAllCaps="false"
+        android:textColor="#147DF5"
+        android:textFontWeight="500"
+        android:textSize="17sp"
+        app:cornerRadius="5dp"
+        app:strokeColor="#147DF5" />
+</RelativeLayout>

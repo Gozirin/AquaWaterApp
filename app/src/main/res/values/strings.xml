@@ -15,6 +15,7 @@
     <string name="consumer_signup_edit_text_first_name">First Name</string>
     <string name="consumer_signup_text_view_last_name">Last Name</string>
     <string name="consumer_signup_edit_text_last_name">Last Name</string>
+    <string name="logout_confirmation">Logout Confirmation</string>
     <string name="consumer_signup_text_view_email">Email</string>
     <string name="consumer_signup_edit_text_email">Email</string>
     <string name="consumer_signup_text_view_password">Password</string>
@@ -101,4 +102,14 @@
     <string name="open_mail_app">Open mail app</string>
     <string name="did_not_receive_the_email_check_your_spam_filter_or">Did not receive the email check your spam filter or</string>
     <string name="try_another_email">try another email</string>
+    <string name="supplier_login_text_view_signup">Sign up</string>
+    <string name="done">Done</string>
+    <string name="are_you_sure_you_want_to_logout_from_your_naccount">Are you sure you want to logout from your\nAccount?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="overview">Overview</string>
+    <string name="_98">98</string>
+    <string name="total_nsupplies_made">Total \nSupplies Made</string>
+    <string name="_111">111</string>
+    <string name="total_norders_received">Total \norders received</string>
 </resources>
