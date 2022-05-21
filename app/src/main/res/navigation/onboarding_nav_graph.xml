@@ -83,6 +83,9 @@
         <action
             android:id="@+id/action_loginFragment_to_consumer_mainActivity"
             app:destination="@id/consumer_mainActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_favouriteConsumerFragment2"
+            app:destination="@id/favouriteConsumerFragment" />
     </fragment>
     <fragment
         android:id="@+id/supplierSignUpFragment"
@@ -161,5 +164,53 @@
         android:id="@+id/password_AccountSuccessfulFragment2"
         android:name="com.decagon.aqua.feature.login_and_registration.Password_AccountSuccessfulFragment"
         android:label="Password_AccountSuccessfulFragment" />
+    <fragment
+        android:id="@+id/incomingFragment"
+        android:name="com.example.tablayout.fragment.IncomingFragment"
+        android:label="IncomingFragment" >
+        <action
+            android:id="@+id/action_incomingFragment_to_supplierOrderHistoryMainActivity"
+            app:destination="@id/supplierOrderHistoryMainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/supplierOrderHistoryMainActivity"
+        android:name="com.example.tablayout.SupplierOrderHistoryMainActivity"
+        android:label="SupplierOrderHistoryMainActivity" />
+    <fragment
+        android:id="@+id/orderDetails"
+        android:name="com.example.tablayout.fragment.OrderDetails"
+        android:label="OrderDetails" >
+        <action
+            android:id="@+id/action_orderDetails_to_supplierOrderHistoryMainActivity"
+            app:destination="@id/supplierOrderHistoryMainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.tablayout.fragment.OrderFragment"
+        android:label="OrderFragment" >
+        <action
+            android:id="@+id/action_orderFragment_to_supplierOrderHistoryMainActivity"
+            app:destination="@id/supplierOrderHistoryMainActivity" />
+    </fragment>
+    <dialog
+        android:id="@+id/consumerModalFragment"
+        android:name="com.example.sprint2.ConsumerModalFragment"
+        android:label="ConsumerModalFragment" >
+        <action
+            android:id="@+id/action_consumerModalFragment_to_consumerModal2Fragment"
+            app:destination="@id/consumerModal2Fragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/consumerModal2Fragment"
+        android:name="com.example.sprint2.ConsumerModal2Fragment"
+        android:label="ConsumerModal2Fragment" />
+    <fragment
+        android:id="@+id/favouriteConsumerFragment"
+        android:name="com.example.sprint2.FavouriteConsumerFragment"
+        android:label="FavouriteConsumerFragment" >
+        <action
+            android:id="@+id/action_favouriteConsumerFragment_to_consumerModalFragment"
+            app:destination="@id/consumerModalFragment" />
+    </fragment>
 
 </navigation>

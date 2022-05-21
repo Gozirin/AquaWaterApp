@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_detail_page"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rounded">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#EBEBEB"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_bar_icon" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/consumer_order_detail_modal_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/consumer_order_detail_modal_detail_order"
+            android:layout_marginLeft="100dp"
+            android:layout_toEndOf="@id/consumer_order_detail_modal_detail_order"
+            android:src="@drawable/ic_close" />
+
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_detail_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Order details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_comsumer_profile_modal_line" />
+
+    <RelativeLayout
+        android:id="@+id/profileDetail_lo"
+        android:layout_width="match_parent"
+        android:layout_height="468dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="0dp"
+        android:paddingBottom="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="366dp"
+            android:layout_height="152dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="15dp"
+            android:background="#2221334F">
+
+            <ImageView
+                android:id="@+id/consumer_order_detail_modal_pack_image"
+                android:layout_width="109dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.307"
+                app:roundPercent="1"
+                app:srcCompat="@drawable/water_can" />
+
+            <TextView
+                android:id="@+id/consumer_order_detail_modal_detail_water_packs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bottle water pack"
+                android:textColor="#21334F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/consumer_order_detail_modal_pack_image" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/consumer_order_detail_modal_image"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="294dp"
+            android:src="@drawable/ic_comsumer_profile_modalsec_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_requester_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="29dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="266dp"
+            android:text="Abimbola Thomas"
+            android:textColor="#21334F"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_detail_requester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="267dp"
+            android:text="Requester:"
+            android:textColor="#21334F"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_detail_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="230dp"
+            android:text="Quantity:"
+            android:textColor="#21334F"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_detail_packs_bottle"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="143dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="229dp"
+            android:layout_toEndOf="@+id/consumer_order_detail_modal_detail_quantity"
+            android:text="10 packs of bottle water"
+            android:textColor="#21334F"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_phone"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="168dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="196dp"
+            android:layout_toEndOf="@+id/consumer_order_detail_modal_phone_number"
+            android:text="09088764533"
+            android:textColor="#21334F"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_detail_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="158dp"
+            android:text="Address:"
+            android:textColor="#21334F"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="196dp"
+            android:text="Phone number:"
+            android:textColor="#21334F" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_street_address"
+            android:layout_width="210dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="98dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="156dp"
+            android:layout_toEndOf="@+id/consumer_order_detail_modal_phone_number"
+            android:text="44, Alidada street, Okota, Lagos"
+            android:textColor="#21334F"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="94dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="106dp"
+            android:layout_toEndOf="@+id/consumer_order_detail_modal_description_text"
+            android:text="Lorem ispsum ruh’un tehs jsh rem kahk lsurem."
+            android:textColor="#21334F"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="117dp"
+            android:text="Description:"
+            android:textColor="#21334F"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/consumer_order_detail_modal__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="19dp"
+            android:backgroundTint="@color/all_text_color"
+            android:text="Confirm Order"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </RelativeLayout>
+</LinearLayout>

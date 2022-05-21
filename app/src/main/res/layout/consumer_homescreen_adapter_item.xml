@@ -32,7 +32,7 @@
                     android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:layout_weight="1"
-                    android:src="@drawable/image2" />
+                    android:src="@drawable/image_1" />
                 <TextView
                     android:id="@+id/consumer_suppliesDetails_adapterItem_itemName_tv"
                     android:layout_width="match_parent"
