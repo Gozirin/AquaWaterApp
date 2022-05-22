@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/consumer_modal_favourite_customer"
+    tools:context=".FavouriteConsumerFragment">
+
+    <LinearLayout
+        android:id="@+id/consumer_modal_card_linearLayout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="128dp"
+        android:layout_margin="16dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/consumer_modal_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/manrope_bold"
+                android:text="@string/favourite"
+                android:textColor="@color/black"
+                android:textFontWeight="700"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/consumer_modal_searchView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/consumer_modal_searchView" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/consumer_modal_searchView"
+                android:layout_width="298dp"
+                android:layout_height="59dp"
+                android:background="@drawable/shapes"
+                android:backgroundTint="#F5F5F5"
+                app:iconifiedByDefault="false"
+                app:layout_constraintBottom_toBottomOf="@+id/consumer_modal_customer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.046"
+                app:queryHint="search"
+                app:searchIcon="@drawable/icon_search" />
+
+
+            <TextView
+                android:id="@+id/consumer_modal_text_view_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/manrope"
+                android:text="@string/Filter"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                app:layout_constraintBottom_toTopOf="@+id/consumer_modal_customer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.245"
+                app:layout_constraintStart_toEndOf="@+id/consumer_modal_searchView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/consumer_modal_image_view_straight_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/horizontal_line"
+                app:layout_constraintBottom_toTopOf="@+id/consumer_modal_customer"
+                app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_filter"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/consumer_modal_searchView"
+                app:layout_constraintTop_toBottomOf="@+id/consumer_modal_searchView"
+                app:layout_constraintVertical_bias="0.75" />
+
+            <ImageView
+                android:id="@+id/consumer_modal_image_view_filter"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/filter"
+                app:layout_constraintBottom_toBottomOf="@+id/consumer_modal_text_view_filter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/consumer_modal_text_view_filter"
+                app:layout_constraintTop_toTopOf="@+id/consumer_modal_text_view_filter" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/consumer_modal_recyclerView"
+        android:layout_width="408dp"
+        android:layout_height="596dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_card_linearLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/faviourite_consumer_item_details_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

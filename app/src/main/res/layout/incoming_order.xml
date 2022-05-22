@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardElevation="10mm">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/total_supplies_made_supplier_itemview_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/total_supplies_made_supplier_itemview_imageview"
+                android:fontFamily="@font/manrope_regular"
+                android:lineHeight="16.39px"
+                android:text="Abimbola Thomas"
+                android:textColor="#21334F"
+                android:textFontWeight="400"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/total_supplies_made_supplier_itemview_purchaseItem_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_supplies_made_supplier_itemview_name_tv"
+                android:layout_alignLeft="@+id/total_supplies_made_supplier_itemview_name_tv"
+                android:layout_toEndOf="@id/total_supplies_made_supplier_itemview_imageview"
+                android:fontFamily="@font/manrope_bold"
+                android:lineHeight="19.12px"
+                android:text="Bottle water pack"
+                android:textColor="#21334F"
+                android:textFontWeight="700"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/total_supplies_made_supplier_itemview_imageview"
+                android:layout_width="66dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:roundPercent="1"
+                app:srcCompat="@drawable/water_icon" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_baseline_navigate_next_24" />
+
+            <TextView
+                android:id="@+id/supplier_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_supplies_made_supplier_itemview_purchaseItem_tv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="13dp"
+                android:layout_toEndOf="@+id/total_supplies_made_supplier_itemview_imageview"
+                android:fontFamily="@font/manrope_regular"
+                android:lineHeight="19.12px"
+                android:text="Magodo, Lagos"
+                android:textColor="#21334F"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/supplier_quantity_purchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/supplier_address_tv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="-12dp"
+                android:layout_toEndOf="@+id/total_supplies_made_supplier_itemview_imageview"
+                android:fontFamily="@font/manrope_regular"
+                android:lineHeight="19.12px"
+                android:text="Qty: 10"
+                android:textColor="#21334F"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/supplier_purchase_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="11dp"
+                android:text="4/04/2022" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

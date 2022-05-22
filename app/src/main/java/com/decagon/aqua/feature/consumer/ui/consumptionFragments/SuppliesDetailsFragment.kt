@@ -54,13 +54,13 @@ class SuppliesDetailsFragment : Fragment() {
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
     }
     private fun getProfiles() {
-        newArrayList.add(SupplyDetailsItem(R.drawable.image1, "Bottle Water Pack", "N900", "per/bottle", 9.0, "(9)", "in stock"))
-        newArrayList.add(SupplyDetailsItem(R.drawable.image2, "Bottle Water", "N400", "per/bottle", 7.0, "(7.0)", "out of stock"))
-        newArrayList.add(SupplyDetailsItem(R.drawable.image3, "Fountain Bottle Water", "N800", "per/bottle", 10.0, "10", "out of stock"))
-        newArrayList.add(SupplyDetailsItem(R.drawable.image4, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
-        newArrayList.add(SupplyDetailsItem(R.drawable.image4, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
-        newArrayList.add(SupplyDetailsItem(R.drawable.image4, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
-        newArrayList.add(SupplyDetailsItem(R.drawable.image4, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
-        newArrayList.add(SupplyDetailsItem(R.drawable.image4, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "out of stock"))
+        newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Bottle Water Pack", "N900", "per/bottle", 9.0, "(9)", "in stock"))
+        newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Bottle Water", "N400", "per/bottle", 7.0, "(7.0)", "out of stock"))
+        newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Fountain Bottle Water", "N800", "per/bottle", 10.0, "10", "out of stock"))
+        newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
+        newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
+        newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
+        newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
+        newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "out of stock"))
     }
 }
