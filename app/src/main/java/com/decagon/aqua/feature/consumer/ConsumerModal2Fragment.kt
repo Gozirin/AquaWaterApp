@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerModal2Binding
-
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class ConsumerModal2Fragment : BottomSheetDialogFragment() {

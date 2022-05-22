@@ -8,15 +8,10 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
-import com.example.tablayout.*
+import com.example.tablayout.* // ktlint-disable no-wildcard-imports
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class OrderFragment : BottomSheetDialogFragment(), SupplierAdapter.OnItemClickListener {
-
-//    private lateinit var binding: FragmentOrderBinding
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +26,7 @@ class OrderFragment : BottomSheetDialogFragment(), SupplierAdapter.OnItemClickLi
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = SupplierOrderHistoryAdapter(SupplierOrderHistoryRvItem().supplierOrderList)
-        val rvOrderView = view?.findViewById<RecyclerView>(R.id.consumer_order_history_reclyclerView)
+        val rvOrderView = view.findViewById<RecyclerView>(R.id.consumer_order_history_reclyclerView)
         rvOrderView?.adapter = adapter
         rvOrderView?.layoutManager = LinearLayoutManager(requireContext())
     }
@@ -42,8 +37,6 @@ class OrderFragment : BottomSheetDialogFragment(), SupplierAdapter.OnItemClickLi
         filter_tv?.setOnClickListener {
             val supportFragmentManager = parentFragmentManager
             filterModalBottomSheet.show(supportFragmentManager, "TAG")
-
         }
     }
 }
-

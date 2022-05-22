@@ -1,6 +1,5 @@
 package com.example.tablayout
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -27,9 +26,8 @@ class SupplierOrderHistoryMainActivity : AppCompatActivity() {
         binding = IncomingOrderHistoryMainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var pager = binding.consumerIncomingOderViewPager
-        var t1 = binding.consumerIncomingOrderTabLayout
-
+        val pager = binding.consumerIncomingOderViewPager
+        val t1 = binding.consumerIncomingOrderTabLayout
 
         pager.adapter = Adapter(supportFragmentManager, lifecycle)
 

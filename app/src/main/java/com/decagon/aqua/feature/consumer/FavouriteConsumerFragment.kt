@@ -13,7 +13,6 @@ import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentFavouriteConsumerBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerModalAdapter
 import com.decagon.aqua.feature.supplier.adapter.ConsumerModalItem
-
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class FavouriteConsumerFragment : Fragment(), ConsumerModalAdapter.OnItemClickListener {
@@ -38,7 +37,7 @@ class FavouriteConsumerFragment : Fragment(), ConsumerModalAdapter.OnItemClickLi
         dialog = BottomSheetDialog(requireContext(), R.style.bottom_sheet_dialog_theme)
 
         // displaying the recyclerView?/
-       val adapter =ConsumerModalAdapter(ConsumerModalItem().consumerModalItem,this)
+        val adapter = ConsumerModalAdapter(ConsumerModalItem().consumerModalItem, this)
         // val adapter = ModalAdapter(ConsumerModalItem().consumerModalItem, this)
         binding.consumerModalRecyclerView.adapter = adapter
     }
@@ -54,7 +53,6 @@ class FavouriteConsumerFragment : Fragment(), ConsumerModalAdapter.OnItemClickLi
         setReminder?.setOnClickListener {
             Toast.makeText(requireContext(), "hide", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.consumerModal2Fragment)
-
         }
         showDialog(productsDetailsDialogue)
 

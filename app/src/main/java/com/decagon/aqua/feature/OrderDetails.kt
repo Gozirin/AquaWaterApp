@@ -6,20 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentOrderBinding
-
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-
 
 class OrderDetails : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentOrderBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -30,5 +28,4 @@ class OrderDetails : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentOrderBinding.bind(view)
     }
-
 }

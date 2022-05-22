@@ -13,12 +13,11 @@ class ConsumerModalFragment : BottomSheetDialogFragment() {
     private var _binding: FragmentConsumerModalBinding? = null
     val binding: FragmentConsumerModalBinding get() = _binding!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
 
         _binding = FragmentConsumerModalBinding.inflate(layoutInflater, container, false)
         return binding.root
@@ -28,7 +27,6 @@ class ConsumerModalFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.consumerModalButton.setOnClickListener {
-
 
             findNavController().navigate(R.id.action_consumerModalFragment_to_consumerModal2Fragment)
         }

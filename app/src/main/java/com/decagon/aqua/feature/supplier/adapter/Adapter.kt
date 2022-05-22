@@ -7,10 +7,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.tablayout.fragment.IncomingFragment
 import com.example.tablayout.fragment.OrderFragment
 
-class Adapter(fragmentManager: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle) {
+class Adapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle) {
     override fun getItemCount(): Int {
         return 2
-
     }
 
     override fun createFragment(position: Int): Fragment {
@@ -19,10 +18,5 @@ class Adapter(fragmentManager: FragmentManager, lifecycle: Lifecycle): FragmentS
             1 -> return OrderFragment()
             else -> return IncomingFragment()
         }
-
     }
-
-
-
-
 }

@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.databinding.FaviouriteConsumerItemDetailsViewBinding
 import com.decagon.aqua.feature.supplier.adapter.ConsumerModalData
 
-
 class ConsumerModalAdapter(
     val list: List<ConsumerModalData>,
     private val listener: OnItemClickListener
