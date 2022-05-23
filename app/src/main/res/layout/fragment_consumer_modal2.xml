@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/round"
+    android:id="@+id/consumer_modal_dialog_fragment"
+    android:layout_height="match_parent"
+    tools:context=".ConsumerModal2Fragment">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <ImageView
+               android:id="@+id/consumer_modal_image_view_rectangle"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/rectangle"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.022" />
+
+           <ImageView
+               android:id="@+id/consumer_modal_image_view_details_successful"
+               android:layout_width="72dp"
+               android:layout_height="68dp"
+               android:src="@drawable/successful"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.498"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.133" />
+
+           <TextView
+               android:id="@+id/consumer_modal_text_view_details_reminder"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_margin="25dp"
+               android:fontFamily="@font/manrope_bold"
+               android:text="@string/reminder"
+               android:textAlignment="center"
+               android:textColor="@color/black"
+               android:textSize="27dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_details_successful" />
+           <TextView
+               android:id="@+id/consumer_modal_text_view_details_reminder_message"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_margin="33dp"
+               android:text="@string/reminder_message"
+               android:textAlignment="center"
+               android:textSize="23dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_details_reminder" />
+
+           <Button
+               android:id="@+id/consumer_modal_button_details_back_home"
+               android:layout_width="match_parent"
+               android:layout_height="65dp"
+               android:layout_margin="17dp"
+               android:layout_marginTop="68dp"
+               android:backgroundTint="#147DF5"
+               android:textAppearance="@style/TextAppearance.AppCompat"
+               android:text="@string/back_home"
+               android:textSize="23sp"
+               android:textColor="@color/white"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_details_reminder_message" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
