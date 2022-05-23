@@ -126,4 +126,16 @@
     <string name="bottle_remaining">Total Bottle remaining(76)</string>
     <string name="modal_button">Send a Reminder</string>
     <string name="product_details">product_details</string>
+    <string name="activity_overview">Activity overview</string>
+    <string name="showing_all_supplies_failed_and_delivered">Showing all supplies, failed and delivered</string>
+    <string name="supply_made">Supply made</string>
+    <string name="in_the_past">in the past</string>
+    <string name="_112">112</string>
+    <string name="bottles_delivered_successful">Bottles delivered successful</string>
+    <string name="_24">24</string>
+    <string name="defaulted_bottles">Defaulted bottles</string>
+    <string name="_7">7</string>
+    <string name="failed_delivery">Failed delivery</string>
+    <string name="total_norders_received">Total\nOrders Received</string>
+    <string name="favourite_customers">Favourite Customers</string>
 </resources>
