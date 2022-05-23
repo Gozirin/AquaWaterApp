@@ -46,4 +46,5 @@ class YearFragment : Fragment() {
         pie.title("12 Tuesday 2022")
         chart?.setChart(pie)
     }
+
 }
