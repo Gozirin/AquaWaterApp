@@ -19,6 +19,12 @@ class SupplierAdapter(
     }
 
     override fun onBindViewHolder(holder: SupplierAdapter.ViewHolder, position: Int) {
+        val item = list[position]
+        holder.tvSupplierName.text = item.name
+        holder.tvSupplierPurchase.text = item.purchaseItem
+        holder.supplierAddress.text = item.address
+        holder.supplierQuantityPurchase.text = item.quantity
+        holder.supplierImage.setImageResource(item.image)
     }
 
     override fun getItemCount() = list.size

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/consumer_modal_favourite_customer"
-    tools:context=".FavouriteConsumerFragment">
+    >
 
     <LinearLayout
         android:id="@+id/consumer_modal_card_linearLayout"
@@ -34,16 +34,17 @@
                 android:text="@string/favourite"
                 android:textColor="@color/black"
                 android:textFontWeight="700"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/consumer_modal_searchView"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/consumer_modal_searchView" />
+                app:layout_constraintStart_toStartOf="@+id/consumer_modal_searchView"
+                tools:targetApi="p" />
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/consumer_modal_searchView"
-                android:layout_width="298dp"
-                android:layout_height="59dp"
+                android:layout_width="306dp"
+                android:layout_height="53dp"
                 android:background="@drawable/shapes"
                 android:backgroundTint="#F5F5F5"
                 app:iconifiedByDefault="false"
@@ -64,15 +65,16 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/manrope"
                 android:text="@string/Filter"
-                android:textSize="17sp"
                 android:textColor="@color/black"
-                android:textFontWeight="400"
+                android:textFontWeight="500"
+                android:textSize="17sp"
                 app:layout_constraintBottom_toTopOf="@+id/consumer_modal_customer"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.245"
+                app:layout_constraintHorizontal_bias="0.27"
                 app:layout_constraintStart_toEndOf="@+id/consumer_modal_searchView"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.086"
+                tools:targetApi="p" />
 
             <ImageView
                 android:id="@+id/consumer_modal_image_view_straight_line"
@@ -84,17 +86,19 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/consumer_modal_searchView"
                 app:layout_constraintTop_toBottomOf="@+id/consumer_modal_searchView"
-                app:layout_constraintVertical_bias="0.75" />
+                app:layout_constraintVertical_bias="0.75"
+                android:contentDescription="@null" />
 
             <ImageView
                 android:id="@+id/consumer_modal_image_view_filter"
-                android:layout_width="20dp"
+                android:layout_width="40dp"
                 android:layout_height="20dp"
-                android:src="@drawable/filter"
+                android:src="@drawable/ic_path_33"
                 app:layout_constraintBottom_toBottomOf="@+id/consumer_modal_text_view_filter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/consumer_modal_text_view_filter"
-                app:layout_constraintTop_toTopOf="@+id/consumer_modal_text_view_filter" />
+                app:layout_constraintTop_toTopOf="@+id/consumer_modal_text_view_filter"
+                android:contentDescription="@null" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

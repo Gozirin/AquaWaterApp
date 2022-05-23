@@ -125,5 +125,8 @@
     <string name="bottle_bought">Total Bottle bought(76)</string>
     <string name="bottle_remaining">Total Bottle remaining(76)</string>
     <string name="modal_button">Send a Reminder</string>
-    <string name="product_details">product_details</string>
+    <string name="product_details">Product Details</string>
+    <string name="pearl_somto">Pearl Somto</string>
+    <string name="egbeda_lagos">Egbeda, Lagos</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
 </resources>

@@ -55,32 +55,9 @@ class FavouriteConsumerFragment : Fragment(), ConsumerModalAdapter.OnItemClickLi
             findNavController().navigate(R.id.consumerModal2Fragment)
         }
         showDialog(productsDetailsDialogue)
-
-//
-//        val productDetailsDialogue = LayoutInflater.from(requireContext()).inflate(
-//            R.layout.fragment_consumer_modal,
-//            LinearLayout(context)
-//        )
-//        Toast.makeText(requireContext(), "$position", Toast.LENGTH_SHORT).show()
-//
-        //    showDialog(productsDetailsDialogue)
     }
-
     private fun showDialog(view: View) {
         dialog.setContentView(view)
-
-        // on below line we are calling
-        // a show method to display a dialog.
         dialog.show()
     }
-
-//    override fun productsDetailsDialogue(view: View?) {
-//    }
-//
-//    override fun hideDialogue(view: View?) {
-//        dialog.hide()
-//        view?.let {
-//            showDialog(view)
-//        }
-    // }
 }

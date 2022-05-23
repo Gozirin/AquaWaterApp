@@ -32,7 +32,7 @@ class IncomingFragment : Fragment(), SupplierAdapter.OnItemClickListener {
         binding = FragmentIncomingBinding.bind(view)
 
         val adapter = SupplierAdapter(SupplierRvItem().supplierList, this)
-        val rView = view?.findViewById<RecyclerView>(R.id.consumer_incoming_order_modal_recyclerView)
+        val rView = view.findViewById<RecyclerView>(R.id.consumer_incoming_order_modal_recyclerView)
         rView?.adapter = adapter
         rView?.layoutManager = LinearLayoutManager(requireContext())
     }
@@ -41,7 +41,7 @@ class IncomingFragment : Fragment(), SupplierAdapter.OnItemClickListener {
 
         val orderBottomSheet = BottomSheetDialog(requireContext(), R.style.bottom_sheet_dialog_theme)
         val bottomSheetView = LayoutInflater.from(requireContext()).inflate(
-            R.layout.fragment_order, LinearLayout(context)
+            R.layout.fragment_consumer_order_details, LinearLayout(context)
         )
 
         orderBottomSheet.setContentView(bottomSheetView)

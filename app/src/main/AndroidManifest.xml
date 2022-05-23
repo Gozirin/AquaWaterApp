@@ -14,6 +14,10 @@
         tools:replace="android:label">
 
         <activity
+            android:name=".feature.supplier.SupplierOrderHistoryMainActivity"
+            android:exported="true"/>
+
+        <activity
             android:name=".feature.supplier.SupplierMainActivity"
             android:exported="false"/>
         <activity
@@ -22,6 +26,7 @@
         <activity
             android:name="com.decagon.aqua.feature.onboarding.OnboardingMainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
