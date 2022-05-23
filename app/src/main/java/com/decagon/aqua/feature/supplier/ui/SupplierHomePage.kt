@@ -29,13 +29,12 @@ class SupplierHomePage : Fragment() {
             findNavController().navigate(R.id.action_supplierHomePage_to_suppliesMadeFragment)
         }
         binding.supplierHomepageOverviewCardview2.setOnClickListener {
-            findNavController().navigate(R.id.action_supplierHomePage_to_ordersReceivedFragment)
         }
         binding.supplierHomepageOverviewCardview3.setOnClickListener {
             findNavController().navigate(R.id.action_supplierHomePage_to_pastSuppilesFragement)
         }
         binding.supplierHomepageOverviewCardview4.setOnClickListener {
-            findNavController().navigate(R.id.action_supplierHomePage_to_favouriteCustomersFragment)
+            findNavController().navigate(R.id.action_supplierHomePage_to_favouriteConsumerFragment2)
         }
     }
 }

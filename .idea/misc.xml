@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.2703125" />
+        <entry key="app/src/main/res/drawable-hdpi/rounded.xml" value="0.1625" />
+        <entry key="app/src/main/res/drawable-mdpi/shapes.xml" value="0.1625" />
         <entry key="app/src/main/res/drawable-v24/ic_baseline_drop_down.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable-v24/ic_baseline_location.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable-v24/ic_hidden.xml" value="0.1705" />
@@ -14,9 +16,12 @@
         <entry key="app/src/main/res/drawable/circle_border.xml" value="0.2105" />
         <entry key="app/src/main/res/drawable/ic__logo_icon.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.134" />
+        <entry key="app/src/main/res/drawable/ic_baseline_filter_list_24.xml" value="0.1625" />
         <entry key="app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.1205" />
         <entry key="app/src/main/res/drawable/ic_close_24.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/ic_comsumer_profile_modal_line2.xml" value="0.134" />
+        <entry key="app/src/main/res/drawable/ic_consumption.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/ic_emeka.xml" value="0.127" />
         <entry key="app/src/main/res/drawable/ic_frame_outline.xml" value="0.2145" />
         <entry key="app/src/main/res/drawable/ic_hand_emoji.xml" value="0.1505" />
         <entry key="app/src/main/res/drawable/ic_image_1.xml" value="0.2015" />
@@ -24,6 +29,8 @@
         <entry key="app/src/main/res/drawable/ic_input_field_background.xml" value="0.2105" />
         <entry key="app/src/main/res/drawable/ic_invite_friends.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1705" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1625" />
+        <entry key="app/src/main/res/drawable/ic_location1.xml" value="0.127" />
         <entry key="app/src/main/res/drawable/ic_mail.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/ic_profile_icon.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_real_bell.xml" value="0.1205" />
@@ -33,11 +40,14 @@
         <entry key="app/src/main/res/drawable/ic_select_user_backgroung.xml" value="0.2145" />
         <entry key="app/src/main/res/drawable/ic_waving_hand_icon.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.2015" />
+        <entry key="app/src/main/res/drawable/shape.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/shapes.xml" value="0.1705" />
+        <entry key="app/src/main/res/drawable/splash_background_color.xml" value="0.1625" />
         <entry key="app/src/main/res/font/.xml" value="0.275" />
         <entry key="app/src/main/res/font/manrope.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/font/manrope_bold.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/font/manrope_regular.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/layout-v28/fragment_consumer_modal.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/activity_consumer_main.xml" value="0.2554517133956386" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2484375" />
@@ -55,6 +65,7 @@
         <entry key="app/src/main/res/layout/consumer_transaction_fragment.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/day_consumption_fragment.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/dialog_added_to_cart.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/faviourite_consumer_item_details_view.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/favourite_customers.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/favourite_customers2.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/filter_modal_layout.xml" value="0.2234375" />
@@ -66,15 +77,22 @@
         <entry key="app/src/main/res/layout/fragment_consumer_forgot_password.xml" value="0.1895910780669145" />
         <entry key="app/src/main/res/layout/fragment_consumer_home_fragment.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/fragment_consumer_homepage_search.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/fragment_consumer_modal.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_consumer_modal2.xml" value="0.24375" />
+        <entry key="app/src/main/res/layout/fragment_consumer_order_details.xml" value="0.24375" />
+        <entry key="app/src/main/res/layout/fragment_consumer_profile_settings_account.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/fragment_consumer_transaction.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/fragment_day.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/fragment_favourite_consumer.xml" value="0.18007662835249041" />
         <entry key="app/src/main/res/layout/fragment_first_onboarding_screen.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/layout/fragment_incoming.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/fragment_logging.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_login_consumer.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_month.xml" value="0.23802083333333332" />
-        <entry key="app/src/main/res/layout/fragment_password_account_successful.xml" value="0.2515625" />
+        <entry key="app/src/main/res/layout/fragment_order.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/fragment_orders_received_activity_overview.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_password_account_successful.xml" value="0.2515625" />
         <entry key="app/src/main/res/layout/fragment_second_onboarding_screen.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/fragment_sign_up_consumer.xml" value="0.25" />
@@ -97,8 +115,11 @@
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_week.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/fragment_year.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/incoming_order.xml" value="0.24375" />
+        <entry key="app/src/main/res/layout/incoming_order_history_main_activity.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/layout_custom_snackbar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/month_consumption_fragment.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/order_history.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/orders_received_activity_overview.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/supplier_homepage_overview.xml" value="0.25" />
         <entry key="app/src/main/res/layout/supplier_homepage_overview_appbar.xml" value="0.2953125" />

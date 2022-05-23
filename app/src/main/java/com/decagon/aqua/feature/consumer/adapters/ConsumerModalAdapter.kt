@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.decagon.aqua.databinding.FaviouriteConsumerItemDetailsViewBinding
+import com.decagon.aqua.databinding.FaviouriteCustomerItemDetailsViewBinding
 import com.decagon.aqua.feature.supplier.adapter.ConsumerModalData
 
 class ConsumerModalAdapter(
@@ -12,7 +12,7 @@ class ConsumerModalAdapter(
     private val listener: OnItemClickListener
 ) : RecyclerView.Adapter<ConsumerModalAdapter.ViewHolder>() {
 
-    inner class ViewHolder(binding: FaviouriteConsumerItemDetailsViewBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+    inner class ViewHolder(binding: FaviouriteCustomerItemDetailsViewBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
         var consumer_name = binding.consumerModalCardTextViewName
         var consumer_address = binding.consumerModalCardTextViewStreetName
         var consumer_image = binding.consumerModalCardImageViewImage
@@ -32,7 +32,7 @@ class ConsumerModalAdapter(
         viewType: Int,
     ): ConsumerModalAdapter.ViewHolder {
 //
-        val binding = FaviouriteConsumerItemDetailsViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = FaviouriteCustomerItemDetailsViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

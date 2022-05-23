@@ -23,6 +23,8 @@
     <string name="consumer_signup_edit_text_phoneNumber">Phone number</string>
     <string name="consumer_signup_text_view_address">Address</string>
     <string name="consumer_signup_edit_text_address">Location</string>
+    <string name="consumer_signup_text_company_name">Company Name</string>
+    <string name="consumer_signup_text_location">Location</string>
     <string name="consumer_signup_text_view_number_of_bottles">Number Of Bottle</string>
     <string name="consumer_signup_edit_text_number_of_bottles">1</string>
     <string name="consumer_signup_button_login">SignUp</string>
@@ -41,7 +43,6 @@
     <string name="home_tab">Home</string>
     <string name="transaction_tab">Transaction</string>
     <string name="account_tab">Account</string>
-
     <string name="supplier_homepage">Supplier Homepage</string>
     <string name="back">Back</string>
     <string name="statistics_level">Statistics Level</string>
@@ -125,5 +126,25 @@
     <string name="bottle_bought">Total Bottle bought(76)</string>
     <string name="bottle_remaining">Total Bottle remaining(76)</string>
     <string name="modal_button">Send a Reminder</string>
-    <string name="product_details">product_details</string>
+    <string name="product_details">Product Details</string>
+    <string name="pearl_somto">Pearl Somto</string>
+    <string name="egbeda_lagos">Egbeda, Lagos</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="filter">Filter</string>
+    <string name="time">Time</string>
+    <string name="items">Items</string>
+    <string name="order_details">Order details</string>
+    <string name="bottle_water_pack">Bottle water pack</string>
+    <string name="requester">Requester:</string>
+    <string name="abimbola_thomas">Abimbola Thomas</string>
+    <string name="quantity">Quantity:</string>
+    <string name="_10_packs_of_bottle_water">10 packs of bottle water</string>
+    <string name="number">Phone number:</string>
+    <string name="addressno">Address:</string>
+    <string name="_09088764533">09088764533</string>
+    <string name="_44_alidada_street_okota_lagos">44, Alidada Street, Okota, Lagos</string>
+    <string name="description">Description</string>
+    <string name="lorem_ispsum_ruh_un_tehs_jsh_rem_kahk_isurem">Lorem ispsum ruh\'un tehs jsh rem kahk isurem.</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="sign_up_to_your_account">Sign up to your account</string>
 </resources>

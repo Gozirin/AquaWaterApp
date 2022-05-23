@@ -1,4 +1,4 @@
-package com.decagon.aqua.feature.supplier
+package com.decagon.aqua.feature.onboarding.screens
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +12,7 @@ import com.example.tablayout.Adapter
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.tabs.TabLayoutMediator
 
-class SupplierOrderHistoryMainActivity : AppCompatActivity() {
+class IncomingOrderHistoryMainActivity : AppCompatActivity() {
 
     private lateinit var binding: IncomingOrderHistoryMainActivityBinding
 

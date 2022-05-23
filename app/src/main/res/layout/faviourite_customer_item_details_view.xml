@@ -3,72 +3,75 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="5dp"
+    android:layout_margin="8dp"
     android:layout_width="match_parent"
-    android:id="@+id/consumer_modal_item_details_view"
-    android:layout_margin="15dp"
-    android:layout_height="70dp">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/consumer_modal_card_image_view_image"
-            android:layout_width="33dp"
-            android:layout_height="39dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/imageamaka"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintHorizontal_bias="0.081"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.32" />
+            app:layout_constraintVertical_bias="0.533"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/consumer_modal_card_text_view_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pearl Somto"
+            android:text="@string/pearl_somto"
             android:fontFamily="@font/manrope_bold"
             android:textFontWeight="700"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.061"
             app:layout_constraintStart_toEndOf="@+id/consumer_modal_card_image_view_image"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.279" />
+            app:layout_constraintVertical_bias="0.279"
+            tools:targetApi="p" />
 
         <TextView
             android:id="@+id/consumer_modal_card_text_view_street_name"
-            android:layout_width="69dp"
-            android:layout_height="16dp"
+            android:layout_width="119dp"
+            android:layout_height="21dp"
             android:layout_marginBottom="4dp"
-            android:fontFamily="@font/manrope"
-            android:text="Egbeda, Lagos"
+            android:text="@string/egbeda_lagos"
             android:textColor="@color/black"
             android:textFontWeight="400"
-            android:textSize="10sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/consumer_modal_card_text_view_name"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/consumer_modal_card_text_view_name"
             app:layout_constraintTop_toBottomOf="@+id/consumer_modal_card_text_view_name"
-            app:layout_constraintVertical_bias="0.19" />
+            app:layout_constraintVertical_bias="0.19"
+            tools:targetApi="p" />
 
         <ImageView
             android:id="@+id/consumer_modal_card_image_view_next_icon"
-            android:layout_width="21dp"
-            android:layout_height="22dp"
-            android:src="@drawable/next_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_navigate_next_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.946"
             app:layout_constraintStart_toEndOf="@+id/consumer_modal_card_image_view_image"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.307" />
+            app:layout_constraintVertical_bias="0.307"
+            tools:ignore="ContentDescription" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

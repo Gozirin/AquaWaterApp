@@ -20,7 +20,7 @@ class SupplierSignUpFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentSupplierSignUpBinding.inflate(inflater, container, false)
         return binding.root
@@ -30,9 +30,6 @@ class SupplierSignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.supplierSignupTextViewSignIn.setOnClickListener {
-            findNavController().navigate(R.id.action_supplierSignUpFragment_to_supplierLoginFragment)
-        }
-        binding.supplierSignupTextViewBack.setOnClickListener {
             findNavController().navigate(R.id.action_supplierSignUpFragment_to_supplierLoginFragment)
         }
     }

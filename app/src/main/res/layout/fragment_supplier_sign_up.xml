@@ -14,15 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/signFragment"
-        tools:context=".fragment.SignUpFragment">
+        tools:context=".fragment.SignUpFragment"
+        tools:ignore="ScrollViewSize">
 
         <TextView
-            android:id="@+id/supplier_signup_text_view_back"
+            android:id="@+id/favorite_customer_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/arrow"
+            android:drawableStart="@drawable/arrow"
             android:fontFamily="@font/manrope"
-            android:text="Back"
+            android:text="@string/back"
             android:layout_margin="5dp"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -31,7 +32,8 @@
             app:layout_constraintHorizontal_bias="0.028"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.019" />
+            app:layout_constraintVertical_bias="0.019"
+            tools:ignore="UseCompatTextViewDrawableXml" />
 
         <ImageView
             android:id="@+id/image"
@@ -43,7 +45,8 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.019" />
+            app:layout_constraintVertical_bias="0.019"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/supplier_signup_text_view_signup_account"
@@ -51,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/manrope_bold"
-            android:text="Sign up to your account"
+            android:text="@string/sign_up_to_your_account"
             android:textColor="@color/black"
             android:textFontWeight="700"
             android:textSize="20sp"
@@ -59,7 +62,8 @@
             app:layout_constraintEnd_toEndOf="@+id/image"
             app:layout_constraintHorizontal_bias="0.371"
             app:layout_constraintStart_toStartOf="@+id/image"
-            app:layout_constraintTop_toBottomOf="@+id/image" />
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            tools:ignore="UnusedAttribute" />
 
         <TextView
             android:id="@+id/supplier_signup_text_view_companyName"
@@ -72,11 +76,12 @@
             android:layout_height="wrap_content"
             android:textFontWeight="400"
             android:layout_margin="10dp"
-            android:text="Company Name"
+            android:text="@string/consumer_signup_text_company_name"
             android:textSize="14sp"
             android:textColor="@color/black"
             tools:layout_editor_absoluteX="28dp"
-            tools:layout_editor_absoluteY="46dp" />
+            tools:layout_editor_absoluteY="46dp"
+            tools:ignore="UnusedAttribute" />
 
         <EditText
             android:id="@+id/supplier_signup_edit_text_companyName"
@@ -91,10 +96,11 @@
             android:fontFamily="@font/manrope"
             android:textColor="@color/black"
             android:background="@drawable/shapes"
-            android:hint="Company Name"
+            android:hint="@string/consumer_signup_text_company_name"
             android:textSize="14sp"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="55dp" />
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="Autofill,TextFields,UnusedAttribute" />
 
         <TextView
             android:id="@+id/supplier_signup_text_view_email"
@@ -108,9 +114,10 @@
             android:textSize="14sp"
             android:fontFamily="@font/manrope"
             android:textColor="@color/black"
-            android:text="Email"
+            android:text="@string/consumer_login_text_view_email"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="47dp" />
+            tools:layout_editor_absoluteY="47dp"
+            tools:ignore="UnusedAttribute" />
 
         <EditText
             android:id="@+id/supplier_signup_edit_text_email"
@@ -124,12 +131,13 @@
             android:inputType="textEmailAddress"
             android:background="@drawable/shapes"
             android:padding="15dp"
-            android:hint="Email"
+            android:hint="@string/consumer_login_text_view_email"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/supplier_signup_text_view_email"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/supplier_signup_text_view_email"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_email" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_email"
+            tools:ignore="Autofill,UnusedAttribute" />
 
         <TextView
             android:id="@+id/supplier_signup_text_view_password"
@@ -143,9 +151,10 @@
             android:textColor="@color/black"
             android:layout_margin="10dp"
             android:textSize="14sp"
-            android:text="Password"
+            android:text="@string/consumer_login_edit_text_password"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="47dp" />
+            tools:layout_editor_absoluteY="47dp"
+            tools:ignore="UnusedAttribute" />
 
         <EditText
             android:id="@+id/text_Input_SignUpPassword"
@@ -159,12 +168,13 @@
             android:textColor="@color/black"
             android:inputType="textPassword"
             android:background="@drawable/shapes"
-            android:hint="Password"
+            android:hint="@string/consumer_login_edit_text_password"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/supplier_signup_text_view_password"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/supplier_signup_text_view_password"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_password"/>
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_password"
+            tools:ignore="Autofill,UnusedAttribute" />
         <TextView
             android:id="@+id/supplier_signup_text_view_email2"
             app:layout_constraintEnd_toEndOf="@+id/text_Input_SignUpPassword"
@@ -177,9 +187,10 @@
             android:textColor="@color/black"
             android:layout_margin="10dp"
             android:textSize="14sp"
-            android:text="Email"
+            android:text="@string/consumer_login_text_view_email"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="47dp" />
+            tools:layout_editor_absoluteY="47dp"
+            tools:ignore="UnusedAttribute" />
 
         <EditText
             android:id="@+id/supplier_signup_edit_text_email2"
@@ -193,12 +204,13 @@
             android:background="@drawable/shapes"
             android:padding="15dp"
             android:inputType="textEmailAddress"
-            android:hint="Email"
+            android:hint="@string/consumer_login_text_view_email"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/supplier_signup_text_view_email2"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/supplier_signup_text_view_email2"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_email2"/>
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_email2"
+            tools:ignore="Autofill,UnusedAttribute" />
 
         <TextView
             android:id="@+id/supplier_signup_text_view_phone_number"
@@ -212,9 +224,10 @@
             android:fontFamily="@font/manrope"
             android:textFontWeight="400"
             android:textColor="@color/black"
-            android:text="Phone Number"
+            android:text="@string/consumer_signup_edit_text_phoneNumber"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="47dp" />
+            tools:layout_editor_absoluteY="47dp"
+            tools:ignore="UnusedAttribute" />
 
         <EditText
             android:id="@+id/supplier_signup_edit_text_phone_number"
@@ -224,7 +237,7 @@
             android:layout_marginTop="4dp"
             android:background="@drawable/shapes"
             android:fontFamily="@font/manrope"
-            android:hint="Phone Number"
+            android:hint="@string/consumer_signup_edit_text_phoneNumber"
             android:inputType="phone"
             android:padding="15dp"
             android:textColor="@color/black"
@@ -233,7 +246,8 @@
             app:layout_constraintEnd_toEndOf="@+id/supplier_signup_text_view_phone_number"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/supplier_signup_text_view_phone_number"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_phone_number" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_phone_number"
+            tools:ignore="Autofill,UnusedAttribute" />
 
         <TextView
             android:id="@+id/supplier_signup_text_view_location"
@@ -244,13 +258,14 @@
             android:fontFamily="@font/manrope"
             android:textFontWeight="400"
             android:textColor="@color/black"
-            android:text="Location"
+            android:text="@string/consumer"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/supplier_signup_edit_text_phone_number"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/supplier_signup_edit_text_phone_number"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_edit_text_phone_number" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_edit_text_phone_number"
+            tools:ignore="UnusedAttribute" />
 
         <EditText
             android:id="@+id/supplier_signup_edit_text_location"
@@ -269,7 +284,8 @@
             app:layout_constraintEnd_toEndOf="@+id/supplier_signup_text_view_location"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/supplier_signup_text_view_location"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_location"/>
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_text_view_location"
+            tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextFields,UnusedAttribute" />
 
         <Button
             android:id="@+id/supplier_signup_button_signup"
@@ -283,7 +299,8 @@
             app:layout_constraintEnd_toEndOf="@+id/supplier_signup_edit_text_location"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/supplier_signup_edit_text_location"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_edit_text_location" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_edit_text_location"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/supplier_signup_text_view_have_an_account"
@@ -299,24 +316,25 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.313"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_button_signup" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_button_signup"
+            tools:ignore="HardcodedText,UnusedAttribute" />
 
         <TextView
             android:id="@+id/supplier_signup_text_view_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="104dp"
             android:fontFamily="@font/manrope_bold"
             android:text="Sign in"
             android:textColor="#047DDD"
             android:textFontWeight="700"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="7dp"
             app:layout_constraintStart_toEndOf="@id/supplier_signup_text_view_have_an_account"
-            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_button_signup" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_signup_button_signup"
+            tools:ignore="HardcodedText,UnusedAttribute" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

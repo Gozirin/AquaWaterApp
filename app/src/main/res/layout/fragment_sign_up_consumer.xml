@@ -46,7 +46,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.06" />
+            app:layout_constraintVertical_bias="0.06"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/consumer_signup_layout_text_view_signup_account"
@@ -92,7 +93,8 @@
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_first_name"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_first_name"
-            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_first_name" />
+            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_first_name"
+            tools:ignore="Autofill,TextFields" />
 
         <TextView
             android:id="@+id/consumer_signup_layout_text_view_last_name"
@@ -124,7 +126,8 @@
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_last_name"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_last_name"
-            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_last_name" />
+            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_last_name"
+            tools:ignore="Autofill" />
 
         <TextView
             android:id="@+id/consumer_signup_layout_text_view_email"
@@ -156,7 +159,8 @@
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_email"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_email"
-            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_email"/>
+            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_email"
+            tools:ignore="Autofill" />
         <TextView
             android:id="@+id/consumer_signup_layout_text_view_password"
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_edit_text_email"
@@ -187,7 +191,8 @@
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_password"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_password"
-            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_password" />
+            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_password"
+            tools:ignore="Autofill" />
 
         <TextView
             android:id="@+id/consumer_signup_layout_text_view_phoneNumber"
@@ -219,7 +224,8 @@
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_phoneNumber"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_phoneNumber"
-            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_phoneNumber" />
+            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_phoneNumber"
+            tools:ignore="Autofill" />
 
         <TextView
             android:id="@+id/consumer_signup_layout_text_view_address"
@@ -251,7 +257,8 @@
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_address"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_address"
-            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_address"/>
+            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_address"
+            tools:ignore="Autofill,TextFields" />
 
 
         <TextView
@@ -285,7 +292,8 @@
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_number_of_bottles"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_number_of_bottles"
-            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_number_of_bottles"/>
+            app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_text_view_number_of_bottles"
+            tools:ignore="Autofill" />
 
         <Button
             android:id="@+id/consumer_signup_layout_button_sign_in"
@@ -317,15 +325,16 @@
 
         <TextView
             android:id="@+id/consumer_signup_layout_text_view_sign_in"
-            android:layout_width="63dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/manrope_bold"
             android:text="@string/consumer_signup_text_view_sign_in"
             android:textColor="#047DDD"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_button_sign_in"
-            app:layout_constraintHorizontal_bias="0.732"
+            app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_already_have_an_account"
+            app:layout_constraintHorizontal_bias="0.933"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_already_have_an_account"
             app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_button_sign_in" />
 
