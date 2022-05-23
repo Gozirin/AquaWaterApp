@@ -31,7 +31,7 @@ class YearFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        chart = requireView().findViewById(R.id.consumptionChart)
+        chart = requireView().findViewById(R.id.chart1)
         configChart()
     }
 
@@ -46,4 +46,5 @@ class YearFragment : Fragment() {
         pie.title("12 Tuesday 2022")
         chart?.setChart(pie)
     }
+
 }

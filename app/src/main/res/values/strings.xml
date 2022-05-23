@@ -28,6 +28,12 @@
     <string name="consumer_signup_button_login">SignUp</string>
     <string name="consumer_signup_text_view_already_have_an_account">Already have an account?</string>
     <string name="consumer_signup_text_view_sign_in">Sign in</string>
+    <string-array name="timeLeft">
+        <item>7 days</item>
+        <item>2 weeks</item>
+        <item>1 month</item>
+        <item>6 months</item>
+    </string-array>
 
     <string name="firstOBTitle">Find the best deals and special offers!</string>
     <string name="firstOBText">Signing up and receiving your order is straightforward and effortless. There is no need to contact the seller or sign a contract.</string>
@@ -101,4 +107,14 @@
     <string name="open_mail_app">Open mail app</string>
     <string name="did_not_receive_the_email_check_your_spam_filter_or">Did not receive the email check your spam filter or</string>
     <string name="try_another_email">try another email</string>
+    <string name="supply_made">Supply made</string>
+    <string name="_112">112</string>
+    <string name="_24">24</string>
+    <string name="_7">7</string>
+    <string name="showing_all_supplies_failed_and_delivered">Showing all supplies failed and delivered</string>
+    <string name="activity_overview">Activity overview</string>
+    <string name="bottles_delivered_successful">Bottles delivered successful</string>
+    <string name="defaulted_bottles">Defaulted Bottles</string>
+    <string name="failed_delivery">Failed delivery</string>
+    <string name="in_the_past">in the past</string>
 </resources>
