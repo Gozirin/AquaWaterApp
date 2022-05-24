@@ -10,8 +10,6 @@ import java.io.Serializable
 data class Supplier(
     @PrimaryKey(autoGenerate = true)
     var supplierID: Int,
-    val businessEmail: String,
-    val businessPhoneNumber: String,
     val companyId: String,
     val user: UserX
 ) : Serializable
