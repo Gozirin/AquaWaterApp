@@ -138,4 +138,15 @@
     <string name="failed_delivery">Failed delivery</string>
     <string name="total_norders_received">Total\nOrders Received</string>
     <string name="favourite_customers">Favourite Customers</string>
+    <string name="user_type">User Type</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_signup">Email</string>
+    <string name="number_of_water_bottles">Number of Water Bottles</string>
+    <string name="address_tv">Address</string>
+    <string name="location_et">Location</string>
+    <string name="first_name_hint">First name</string>
+    <string name="last_name_hint">Last name</string>
+    <string name="_1">1</string>
+    <string name="required">Required</string>
 </resources>
