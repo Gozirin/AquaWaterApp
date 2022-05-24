@@ -86,7 +86,7 @@ class ConsumerSignUpFragment : Fragment() {
             .setTitle("Invalid form")
             .setMessage(message)
             .setPositiveButton("Okay") { _, _ ->
-                //do nothing
+                // do nothing
             }
             .show()
     }
@@ -103,12 +103,12 @@ class ConsumerSignUpFragment : Fragment() {
         AlertDialog.Builder(this.requireContext())
             .setTitle("Form submitted")
             .setMessage(message)
-            .setPositiveButton("Okay"){_,_ ->
-                binding.etEmailConsumerSignUp.text= null
+            .setPositiveButton("Okay") { _, _ ->
+                binding.etEmailConsumerSignUp.text = null
                 binding.etPhoneConsumerSignUp.text = null
-                binding.etPasswordConsumerSignUp.text= null
+                binding.etPasswordConsumerSignUp.text = null
                 binding.etFirstNameConsumerSignUp.text = null
-                binding.etLastNameConsumerSignUp.text= null
+                binding.etLastNameConsumerSignUp.text = null
                 binding.etAddressConsumerSignUp.text = null
 
                 binding.emailContainer.helperText = getString(R.string.required)
