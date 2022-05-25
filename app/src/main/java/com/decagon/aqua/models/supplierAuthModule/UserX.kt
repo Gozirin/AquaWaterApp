@@ -1,4 +1,6 @@
-package com.decagon.aqua.models
+package com.decagon.aqua.models.supplierAuthModule
+
+import com.decagon.aqua.models.LocationX
 
 data class UserX(
     val age: Int,

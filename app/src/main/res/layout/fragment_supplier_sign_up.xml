@@ -152,6 +152,14 @@
                 android:hint="Sex"
                 android:fontFamily="@font/manrope_regular"
                 android:inputType="none"/>
+
+            <TextView
+                android:id="@+id/gender_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender must be male or female"
+                android:textColor="#ED4639"
+                android:visibility="gone"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

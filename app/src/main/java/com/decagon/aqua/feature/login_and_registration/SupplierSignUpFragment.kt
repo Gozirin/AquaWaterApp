@@ -1,17 +1,24 @@
 package com.decagon.aqua.feature.login_and_registration
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
+import com.decagon.aqua.commons.ConnectivityLiveData
 import com.decagon.aqua.databinding.FragmentSupplierSignUpBinding
+import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
 import com.decagon.aqua.models.LocationX
-import com.decagon.aqua.models.UserX
+import com.decagon.aqua.models.Supplier
+import com.decagon.aqua.models.supplierAuthModule.UserX
 import com.decagon.aqua.validations.SupplierRegistration
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -19,8 +26,10 @@ class SupplierSignUpFragment : Fragment() {
 
     private var _binding: FragmentSupplierSignUpBinding? = null
     private val binding get() = _binding!!
-    val function = SupplierRegistration
-    private lateinit var userInfo: UserX
+    private val function = SupplierRegistration
+    private lateinit var connectivityLiveData: ConnectivityLiveData
+    private val viewModel: AuthenticationViewModel by viewModels()
+    private lateinit var userInfo: Supplier
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,8 +51,8 @@ class SupplierSignUpFragment : Fragment() {
             findNavController().navigate(R.id.action_supplierSignUpFragment_to_supplierLoginFragment)
         }
 
-        binding.supplierSignupBtn.setEnabled(false)
         binding.supplierSignupBtn.setOnClickListener {
+            binding.supplierSignupBtn.setEnabled(false)
             binding.supplierSignupBtn.text = "Registering"
             binding.supplierRegistrationProgressBar.visibility = View.VISIBLE
             val firstName = binding.etFirstNameSupplierSignUp.text.toString()
@@ -52,15 +61,20 @@ class SupplierSignUpFragment : Fragment() {
             val gender = binding.sexAutoTextView.text.toString()
             val email = binding.etEmailSupplierSignUp.text.toString()
             val password = binding.etPasswordSupplierSignUp.text.toString()
-            val confrimPassword = binding.etConfirmPasswordSupplierSignUp.toString()
+            val confirmPassword = binding.etConfirmPasswordSupplierSignUp.text.toString()
             val phoneNumber = binding.etPhoneSupplierSignUp.text.toString()
-            userInfo = UserX(
-                age, confrimPassword, email, firstName, gender, lastName,
-                location = LocationX(
-                    "", "", "", "", "", "", "", ""
-                ),
-                password, phoneNumber, profilePictureUrl = ""
+            userInfo = Supplier(
+                "ab278d49-50ed-403e-9a4a-e8ad2570766f",
+                user = UserX(
+                    age, confirmPassword, email, firstName, gender, lastName,
+                    location = LocationX(
+                        "Lagos", "Nigeria", "11", "3.60", "9.60", "nil", "Lagos", ""
+                    ),
+                    password, phoneNumber, profilePictureUrl = ""
+                )
+
             )
+            Log.d("check", "onViewCreated: $userInfo ")
 
             if (!function.validateFirstNameInput(firstName)) {
                 binding.etFirstNameSupplierSignUp.error = "Should start with a capital letter, at least 3 character"
@@ -86,22 +100,22 @@ class SupplierSignUpFragment : Fragment() {
                 binding.supplierSignupBtn.text = "Register"
                 binding.supplierRegistrationProgressBar.visibility = View.GONE
             }
-//            if (!function.validateSexInput(gender)) {
-//                binding.genderError.visibility = View.VISIBLE
-//                binding.supplierSignupBtn.setEnabled(true)
-//                binding.supplierSignupBtn.text = "Register"
-//                binding.fragmentRegisterProgressBarPb.visibility = View.GONE
-//            }
-//            if (function.validateSexInput(gender)) {
-//                binding.genderError.visibility = View.GONE
-//            }
+            if (!function.validateSex(gender)) {
+                binding.genderError.visibility = View.VISIBLE
+                binding.supplierSignupBtn.setEnabled(true)
+                binding.supplierSignupBtn.text = "Register"
+                binding.supplierRegistrationProgressBar.visibility = View.GONE
+            }
+            if (function.validateSex(gender)) {
+                binding.genderError.visibility = View.GONE
+            }
             if (!function.validatePasswordInput(password)) {
                 binding.etPasswordSupplierSignUp.error = "At least 1 uppercase, 1 lowercase, 1 special character 1 digit and at least 8 characters"
                 binding.supplierSignupBtn.setEnabled(true)
                 binding.supplierSignupBtn.text = "Register"
                 binding.supplierRegistrationProgressBar.visibility = View.GONE
             }
-            if (!function.validateConfirmPassword(password, confrimPassword)) {
+            if (!function.validateConfirmPassword(password, confirmPassword)) {
                 binding.etConfirmPasswordSupplierSignUp.error = "Password doesn't match"
                 binding.supplierSignupBtn.setEnabled(true)
                 binding.supplierSignupBtn.text = "Register"
@@ -111,39 +125,31 @@ class SupplierSignUpFragment : Fragment() {
                 function.validateLastNameInput(lastName) &&
                 function.validateEmailInput(email) &&
                 function.validatePasswordInput(password) &&
-                function.validatePhoneInput(phoneNumber)
-//                function.validateSexInput(gender)
+                function.validatePhoneInput(phoneNumber) &&
+                function.validateSex(gender)
             ) {
-                binding.supplierSignupBtn.setEnabled(true)
+                viewModel.registerSupplier(userInfo)
+                viewModel.registerResponse.observe(viewLifecycleOwner) {
+                    if (it.success) {
+                        binding.supplierRegistrationProgressBar.visibility = View.GONE
+                        val action = SupplierSignUpFragmentDirections.actionSupplierSignUpFragmentToConsumerCheckMailFragment()
+                        findNavController().navigate(action)
+                        binding.etFirstNameSupplierSignUp.text?.clear()
+                        binding.etLastNameSupplierSignUp.text?.clear()
+                        binding.supplierSignupBtn.text = "Register"
+                        binding.etPasswordSupplierSignUp.text?.clear()
+                        binding.etConfirmPasswordSupplierSignUp.text?.clear()
+                        binding.etPhoneSupplierSignUp.text?.clear()
+                        binding.etAgeSupplierSignUp.text?.clear()
+                        binding.etEmailSupplierSignUp.text?.clear()
+                    } else {
+                        binding.supplierSignupBtn.isEnabled = true
+                        binding.supplierSignupBtn.text = "Register"
+                        binding.supplierRegistrationProgressBar.visibility = View.GONE
+                        Snackbar.make(view, it.message, Snackbar.LENGTH_SHORT).show()
+                    }
+                }
             }
-//            {
-//                viewModel.addUser(userInfo)
-//                viewModel.addUserResponse.observe(viewLifecycleOwner) {
-//                    if (it.statusCode == 201) {
-//                        binding.fragmentRegisterProgressBarPb.visibility = View.GONE
-//                        binding.radioButtonMustBeCheckedErr.visibility = View.GONE
-//                        val action =
-//                            RegisterFragmentDirections.actionRegisterFragmentToPendingConfirmation(
-//                                email
-//                            )
-//                        findNavController().navigate(action)
-//                        binding.fragmentRegisterPhoneNumberEtv.text?.clear()
-//                        binding.tvEmailText.text?.clear()
-//                        binding.btnRegister.text = "Register"
-//                        binding.tvConfirmPasswordResetPassword.text?.clear()
-//                        binding.fragmentRegisterFirstNameEtv.text?.clear()
-//                        binding.fragmentRegisterLastNameEtv.text?.clear()
-//                        binding.fragmentRegisterUserNameEtv.text?.clear()
-//                        binding.RegisterTickButton.isChecked = false
-//                    } else {
-//                        binding.btnRegister.setEnabled(true)
-//                        binding.btnRegister.text = "Register"
-//                        binding.radioButtonMustBeCheckedErr.visibility = View.GONE
-//                        binding.fragmentRegisterProgressBarPb.visibility = View.GONE
-//                        Snackbar.make(view, it.message, Snackbar.LENGTH_SHORT).show()
-//                    }
-//                }
-//            }
         }
     }
     private fun dropDown() {

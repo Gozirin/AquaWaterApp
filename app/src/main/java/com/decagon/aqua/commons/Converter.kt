@@ -3,8 +3,8 @@ package com.decagon.aqua.commons
 import androidx.room.TypeConverter
 import com.decagon.aqua.models.Location
 import com.decagon.aqua.models.LocationX
-import com.decagon.aqua.models.User
-import com.decagon.aqua.models.UserX
+import com.decagon.aqua.models.consumerAuthModule.User
+import com.decagon.aqua.models.supplierAuthModule.UserX
 import com.google.gson.Gson
 
 class Converter {

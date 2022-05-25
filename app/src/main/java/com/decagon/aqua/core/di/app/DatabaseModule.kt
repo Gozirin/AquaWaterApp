@@ -12,9 +12,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
-
-    val BASE_URL = ""
+object DatabaseModule {
 
     @Singleton
     @Provides

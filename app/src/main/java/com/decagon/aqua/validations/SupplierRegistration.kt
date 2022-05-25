@@ -43,4 +43,11 @@ object SupplierRegistration {
         }
         return true
     }
+    fun validateSex(gender: String): Boolean {
+        return when (gender) {
+            "Male" -> true
+            "Female" -> true
+            else -> false
+        }
+    }
 }

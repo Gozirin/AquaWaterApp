@@ -95,6 +95,9 @@
         <action
             android:id="@+id/action_supplierSignUpFragment_to_supplierLoginFragment"
             app:destination="@id/supplierLoginFragment" />
+        <action
+            android:id="@+id/action_supplierSignUpFragment_to_consumerCheckMailFragment"
+            app:destination="@id/consumerCheckMailFragment" />
     </fragment>
     <fragment
         android:id="@+id/supplierLoginFragment"
