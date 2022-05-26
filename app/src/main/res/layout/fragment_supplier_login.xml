@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".feature.login_and_registration.SupplierLoginFragment">
 
@@ -17,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/supplier_login_layout_login_account"
@@ -33,7 +35,8 @@
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_image_view_image_icon"
         app:layout_constraintHorizontal_bias="0.371"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_image_view_image_icon"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_image_view_image_icon" />
+        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_image_view_image_icon"
+        tools:ignore="UnusedAttribute" />
 
     <TextView
         android:id="@+id/supplier_login_layout_text_view_email"
@@ -49,7 +52,8 @@
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_login_account"
         app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_login_account"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_login_account" />
+        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_login_account"
+        tools:ignore="UnusedAttribute" />
 
     <EditText
         android:id="@+id/supplier_login_layout_edit_text_Email"
@@ -67,7 +71,8 @@
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_text_view_email"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_text_view_email"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_text_view_email" />
+        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_text_view_email"
+        tools:ignore="Autofill,UnusedAttribute" />
 
     <TextView
         android:id="@+id/supplier_login_layout_text_view_password"
@@ -83,7 +88,8 @@
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_edit_text_Email"
         app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_edit_text_Email"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_edit_text_Email" />
+        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_edit_text_Email"
+        tools:ignore="UnusedAttribute" />
 
     <EditText
         android:id="@+id/supplier_login_layout_edit_text_password"
@@ -102,7 +108,8 @@
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_text_view_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_text_view_password"
-        tools:layout_editor_absoluteY="113dp" />
+        tools:layout_editor_absoluteY="113dp"
+        tools:ignore="Autofill,UnusedAttribute" />
 
     <ImageView
         android:id="@+id/supplier_login_layout_image_icon"
@@ -113,7 +120,8 @@
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_edit_text_password"
         app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_edit_text_password"
-        app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_edit_text_password" />
+        app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_edit_text_password"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/supplier_login_layout_text_view_forget_password"
@@ -126,7 +134,8 @@
         android:textColor="#4C9EDF"
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_edit_text_password"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_edit_text_password"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_edit_text_password" />
+        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_edit_text_password"
+        tools:ignore="UnusedAttribute" />
 
     <Button
         android:id="@+id/supplier_login_layout_login_button"
@@ -154,18 +163,21 @@
         android:textFontWeight="700"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_login_button"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_login_button" />
+        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_login_button"
+        tools:ignore="HardcodedText,UnusedAttribute" />
 
     <TextView
         android:id="@+id/supplier_login_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
         android:text="@string/consumer_login_text_view_signup"
         android:textColor="#4C9EDF"
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_login_button"
-        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_create_account"
-        app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_create_account" />
+        app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_create_account"
+        tools:ignore="RtlHardcoded" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

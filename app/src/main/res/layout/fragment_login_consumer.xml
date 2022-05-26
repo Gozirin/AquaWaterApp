@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".feature.login_and_registration.ConsumerLoginFragment">
 
     <ImageView
@@ -159,12 +160,12 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/manrope_bold"
-        android:text="@string/don_t_have_an_account"
+        android:text="Don't have an account?"
         android:textFontWeight="700"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_login_button"
         app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_login_button"
-        tools:ignore="UnusedAttribute" />
+        tools:ignore="HardcodedText,UnusedAttribute" />
 
     <TextView
         android:id="@+id/consumer_login_layout_login_signup"
@@ -172,8 +173,9 @@
         android:layout_height="wrap_content"
         android:text="@string/consumer_login_text_view_signup"
         android:textColor="#4C9EDF"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_login_button"
-        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_create_account"
         app:layout_constraintTop_toTopOf="@+id/consumer_login_layout_create_account" />
 

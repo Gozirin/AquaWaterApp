@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
+    android:background="@color/white"
     android:scrollbarStyle="insideInset"
     android:layout_width="match_parent"
     android:scrollbarThumbVertical="@null"
@@ -330,11 +331,12 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/manrope_bold"
+            android:padding="1dp"
             android:text="@string/consumer_signup_text_view_sign_in"
             android:textColor="#047DDD"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="@+id/consumer_signup_layout_text_view_already_have_an_account"
-            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintHorizontal_bias="0.943"
             app:layout_constraintStart_toStartOf="@+id/consumer_signup_layout_text_view_already_have_an_account"
             app:layout_constraintTop_toBottomOf="@+id/consumer_signup_layout_button_sign_in" />
 
