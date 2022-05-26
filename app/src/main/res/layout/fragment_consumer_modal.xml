@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/consumer_modal_bottomSheet"
+    android:background="@color/white"
     android:layout_width="match_parent"
-    android:background="@drawable/round"
     android:layout_height="wrap_content"
     >
 
@@ -133,12 +133,13 @@
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_info"
         tools:ignore="ContentDescription" />
 
+
     <TextView
         android:id="@+id/consumer_modal_text_view_location_name"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:text="@string/location_name"
         android:textColor="#21334F"
         android:textFontWeight="400"
@@ -148,7 +149,6 @@
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_info"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_info"
         tools:targetApi="p" />
-
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_phone"
