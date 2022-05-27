@@ -4,10 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/consumer_modal_bottomSheet"
-    android:background="@color/white"
     android:layout_width="match_parent"
+    android:background="@drawable/round"
     android:layout_height="wrap_content"
-    >
+    tools:context=".feature.supplier.SupplierMainActivity">
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_rectangle"
@@ -40,10 +40,10 @@
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_close"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
         android:layout_marginTop="12dp"
-        android:src="@drawable/ic_close"
+        android:src="@drawable/close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toEndOf="@+id/consumer_modal_text_view_product_details"
@@ -67,13 +67,12 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginTop="10dp"
-        android:src="@drawable/man_pic"
+        android:src="@drawable/image8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_horizontal_line"
         tools:ignore="ContentDescription" />
-
 
     <TextView
         android:id="@+id/consumer_modal_text_view_name"
@@ -82,12 +81,12 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/manrope_bold"
         android:text="@string/Pearl"
-        android:textColor="#21334F"
+        android:textColor="@color/black"
         android:textFontWeight="700"
-        android:textSize="17sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toEndOf="@+id/consumer_modal_image_view_image"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_horizontal_line"
         tools:ignore="UnusedAttribute" />
@@ -97,13 +96,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:textColor="#21334F"
+        android:fontFamily="@font/manrope"
         android:text="@string/Egbeda"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_name"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/consumer_modal_image_view_image"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_name" />
+
 
     <TextView
         android:id="@+id/consumer_modal_text_view_info"
@@ -119,54 +120,55 @@
         app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_image"
-        tools:targetApi="p" />
+        tools:ignore="UnusedAttribute" />
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_location"
         android:layout_width="25dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_location1"
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_info"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_info"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_info"
         tools:ignore="ContentDescription" />
-
 
     <TextView
         android:id="@+id/consumer_modal_text_view_location_name"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/manrope"
         android:text="@string/location_name"
-        android:textColor="#21334F"
+        android:textColor="@color/black"
         android:textFontWeight="400"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_info"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_info"
-        tools:targetApi="p" />
+        tools:ignore="UnusedAttribute" />
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_phone"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_mobile_phone_line"
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_location"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_location"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_location"
         tools:ignore="ContentDescription" />
+
 
     <TextView
         android:id="@+id/consumer_modal_text_view_phone_number"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope"
         android:text="@string/phone_number"
         android:textColor="@color/black"
         android:textFontWeight="400"
@@ -178,8 +180,8 @@
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_email"
-        android:layout_width="25dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_mail"
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_phone"
@@ -191,7 +193,8 @@
         android:id="@+id/consumer_modal_text_view_email_name"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/manrope"
         android:text="@string/Emeka_email"
         android:textColor="@color/black"
         android:textFontWeight="400"
@@ -199,12 +202,12 @@
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_phone_number"
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_phone_number"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_phone_number"
-        tools:targetApi="p" />
+        tools:ignore="UnusedAttribute" />
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_line"
         android:layout_width="30dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_consumption"
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_email"
@@ -218,6 +221,7 @@
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/manrope"
         android:text="@string/view_consumption"
         android:textColor="@color/black"
         android:textFontWeight="400"
@@ -225,26 +229,26 @@
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_email_name"
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_email_name"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_email_name"
-        tools:targetApi="p" />
-
+        tools:ignore="UnusedAttribute" />
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_bottle"
-        android:layout_width="28dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/ic_bottlelevel"
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_line"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_line"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_line"
-        android:contentDescription="@null" />
+        tools:ignore="ContentDescription" />
+
 
     <TextView
         android:id="@+id/consumer_modal_text_view_bottle_bought"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/manrope"
         android:text="@string/bottle_bought"
         android:textColor="@color/black"
         android:textFontWeight="400"
@@ -253,25 +257,25 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_consumption"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_consumption"
-        tools:targetApi="p" />
+        tools:ignore="UnusedAttribute" />
 
     <ImageView
         android:id="@+id/consumer_modal_image_view_bottle2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_bottlelevel"
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_bottle"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_bottle"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_bottle"
-        android:contentDescription="@null" />
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/consumer_modal_text_view_bottle_remaining"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/manrope"
         android:text="@string/bottle_remaining"
         android:textColor="@color/black"
         android:textFontWeight="400"
@@ -280,7 +284,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/consumer_modal_image_view_bottle"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_bottle_bought"
-        tools:targetApi="p" />
+        tools:ignore="UnusedAttribute" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/consumer_modal_button"
