@@ -4,6 +4,7 @@ import androidx.room.TypeConverter
 import com.decagon.aqua.models.Location
 import com.decagon.aqua.models.LocationX
 import com.decagon.aqua.models.consumerAuthModule.User
+import com.decagon.aqua.models.supplierAuthModule.Data
 import com.decagon.aqua.models.supplierAuthModule.UserX
 import com.google.gson.Gson
 
@@ -36,4 +37,11 @@ class Converter {
     @TypeConverter
     fun jsonStringToLocationX(value: String): LocationX =
         Gson().fromJson(value, LocationX::class.java)
+
+    @TypeConverter
+    fun fromDataToJsonString(value: Data): String = Gson().toJson(value)
+
+    @TypeConverter
+    fun jsonStringToData(value: String): Data =
+        Gson().fromJson(value, Data::class.java)
 }

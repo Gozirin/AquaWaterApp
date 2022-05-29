@@ -73,6 +73,18 @@
                 android:inputType="none"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_companyId"
+            android:background="@drawable/border_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:hint="company id"
+            android:fontFamily="@font/manrope_regular"
+            android:lines="1"
+            android:inputType="text"/>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/supplier_first_name_container"
             style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"

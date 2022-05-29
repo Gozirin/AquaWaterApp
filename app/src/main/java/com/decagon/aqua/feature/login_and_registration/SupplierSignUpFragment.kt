@@ -1,6 +1,5 @@
 package com.decagon.aqua.feature.login_and_registration
 
-import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -43,6 +42,8 @@ class SupplierSignUpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val companies = viewModel.getCompanies()
+        Log.d("companies", "onViewCreated: $companies ")
         dropDown()
         binding.supplierSignupLayoutTextViewSignIn.setOnClickListener {
             findNavController().navigate(R.id.action_supplierSignUpFragment_to_supplierLoginFragment)
