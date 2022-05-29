@@ -75,15 +75,16 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_companyId"
-            android:background="@drawable/border_edittext"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:hint="company id"
+            android:background="@drawable/border_edittext"
             android:fontFamily="@font/manrope_regular"
-            android:lines="1"
-            android:inputType="text"/>
+            android:hint="company id"
+            android:visibility="gone"
+            android:inputType="none"
+            android:lines="1" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/supplier_first_name_container"
@@ -125,6 +126,12 @@
                 android:inputType="text"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/supplier_registration_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/supplier_age_container"
@@ -292,11 +299,6 @@
             android:text="@string/consumer_signup_button_login"
             android:textAppearance="@style/TextAppearance.AppCompat" />
 
-        <ProgressBar
-            android:id="@+id/supplier_registration_progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"/>
 
         <LinearLayout
             android:layout_width="match_parent"

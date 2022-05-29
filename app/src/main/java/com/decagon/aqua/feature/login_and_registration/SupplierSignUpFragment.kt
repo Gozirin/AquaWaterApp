@@ -5,9 +5,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.commons.ConnectivityLiveData
@@ -29,6 +31,7 @@ class SupplierSignUpFragment : Fragment() {
     private lateinit var connectivityLiveData: ConnectivityLiveData
     private val viewModel: AuthenticationViewModel by viewModels()
     private lateinit var userInfo: Supplier
+    private val companies = hashMapOf<String, String>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,9 +45,18 @@ class SupplierSignUpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val companies = viewModel.getCompanies()
-        Log.d("companies", "onViewCreated: $companies ")
+        val getCompanies = viewModel.getCompanies()
+        viewModel.companyList.observe(
+            viewLifecycleOwner,
+            Observer { list ->
+                list.data.map { company ->
+                    companies.put(company.companyName, company.id)
+                }
+                companyDropDown()
+            }
+        )
         dropDown()
+
         binding.supplierSignupLayoutTextViewSignIn.setOnClickListener {
             findNavController().navigate(R.id.action_supplierSignUpFragment_to_supplierLoginFragment)
         }
@@ -61,11 +73,13 @@ class SupplierSignUpFragment : Fragment() {
             val age = binding.etAgeSupplierSignUp.text.toString().toInt()
             val gender = binding.sexAutoTextView.text.toString()
             val email = binding.etEmailSupplierSignUp.text.toString()
+            val companyName = binding.companyAutoTextView.text.toString()
+            val companyId = binding.etCompanyId.text.toString()
             val password = binding.etPasswordSupplierSignUp.text.toString()
             val confirmPassword = binding.etConfirmPasswordSupplierSignUp.text.toString()
             val phoneNumber = binding.etPhoneSupplierSignUp.text.toString()
             userInfo = Supplier(
-                "ab278d49-50ed-403e-9a4a-e8ad2570766f",
+                companyId,
                 user = UserX(
                     age, confirmPassword, email, firstName, gender, lastName,
                     location = LocationX(
@@ -159,5 +173,17 @@ class SupplierSignUpFragment : Fragment() {
         with(binding.sexAutoTextView) {
             setAdapter(adapter)
         }
+    }
+
+    private fun companyDropDown() {
+        val xyz = companies.keys.toTypedArray()
+        val adapter = ArrayAdapter(requireContext(), R.layout.company_list, xyz)
+        with(binding.companyAutoTextView) {
+            setAdapter(adapter)
+        }
+        binding.companyAutoTextView.onItemClickListener =
+            AdapterView.OnItemClickListener { parent, view, position, id ->
+                binding.etCompanyId.setText(companies.getValue(parent?.getItemAtPosition(position).toString()))
+            }
     }
 }

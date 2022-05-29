@@ -36,7 +36,7 @@ class AuthenticationViewModel @Inject constructor(private val authRepository: Au
         viewModelScope.launch {
             val response = authRepository.getCompanies()
             if (response.isSuccessful) {
-                _companyList.value = response.body()
+                _companyList.postValue(response.body())
             }
         }
     }
