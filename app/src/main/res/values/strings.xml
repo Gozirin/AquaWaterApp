@@ -25,7 +25,7 @@
     <string name="consumer_signup_edit_text_address">Location</string>
     <string name="consumer_signup_text_view_number_of_bottles">Number Of Bottle</string>
     <string name="consumer_signup_edit_text_number_of_bottles">1</string>
-    <string name="consumer_signup_button_login">SignUp</string>
+    <string name="consumer_signup_button_login">Sign Up</string>
     <string name="consumer_signup_text_view_already_have_an_account">Already have an account?</string>
     <string name="consumer_signup_text_view_sign_in">Sign in</string>
 
@@ -149,4 +149,7 @@
     <string name="last_name_hint">Last name</string>
     <string name="_1">1</string>
     <string name="required">Required</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
 </resources>

@@ -91,7 +91,7 @@
         <entry key="app/src/main/res/layout/fragment_password_account_successful.xml" value="0.2515625" />
         <entry key="app/src/main/res/layout/fragment_second_onboarding_screen.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
-        <entry key="app/src/main/res/layout/fragment_sign_up_consumer.xml" value="0.21701812744140625" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_consumer.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_supplier_account_layout.xml" value="0.2453125" />
         <entry key="app/src/main/res/layout/fragment_supplier_add_product.xml" value="0.19021739130434784" />
