@@ -91,6 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_horizontal_line"
         tools:ignore="UnusedAttribute" />
 
+
     <TextView
         android:id="@+id/consumer_modal_text_view_street_name"
         android:layout_width="wrap_content"
@@ -101,10 +102,9 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_name"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toEndOf="@+id/consumer_modal_image_view_image"
         app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_name" />
-
 
     <TextView
         android:id="@+id/consumer_modal_text_view_info"
@@ -247,7 +247,7 @@
         android:id="@+id/consumer_modal_text_view_bottle_bought"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/manrope"
         android:text="@string/bottle_bought"
         android:textColor="@color/black"
@@ -274,7 +274,7 @@
         android:id="@+id/consumer_modal_text_view_bottle_remaining"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="23dp"
         android:fontFamily="@font/manrope"
         android:text="@string/bottle_remaining"
         android:textColor="@color/black"
