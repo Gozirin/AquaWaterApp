@@ -14,10 +14,6 @@
         tools:replace="android:label">
 
         <activity
-            android:name=".feature.supplier.SupplierOrderHistoryMainActivity"
-            android:exported="true"/>
-
-        <activity
             android:name=".feature.supplier.SupplierMainActivity"
             android:exported="false"/>
         <activity

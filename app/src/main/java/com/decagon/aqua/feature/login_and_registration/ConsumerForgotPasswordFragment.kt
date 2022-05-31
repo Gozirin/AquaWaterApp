@@ -14,6 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ConsumerForgotPasswordFragment : Fragment() {
 
     private lateinit var binding: FragmentConsumerForgotPasswordBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,16 +24,17 @@ class ConsumerForgotPasswordFragment : Fragment() {
         val binding = inflater.inflate(R.layout.fragment_consumer_forgot_password, container, false)
         return binding.rootView
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // initializing view binding
+
         binding = FragmentConsumerForgotPasswordBinding.bind(view)
 
         // Back button to return to Login page
         binding.forgotPasswordImageButton1.setOnClickListener {
             findNavController().navigate(R.id.action_consumerForgotPasswordFragment_to_loginFragment)
         }
-
         // navigate to consumer check mail page
         binding.forgotPasswordButton1.setOnClickListener {
             findNavController().navigate(R.id.action_consumerForgotPasswordFragment_to_consumerCheckMailFragment)

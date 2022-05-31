@@ -30,15 +30,12 @@
     <string name="consumer_signup_button_login">SignUp</string>
     <string name="consumer_signup_text_view_already_have_an_account">Already have an account?</string>
     <string name="consumer_signup_text_view_sign_in">Sign in</string>
-
     <string name="firstOBTitle">Find the best deals and special offers!</string>
     <string name="firstOBText">Signing up and receiving your order is straightforward and effortless. There is no need to contact the seller or sign a contract.</string>
     <string name="secondOBTitle">Transparent pricing</string>
     <string name="secondOBText">Before placing an order, customers will input their address for delivery and receive detailed pricing information. There are no hidden costs!</string>
     <string name="thirdOBTitle">Timely delivery</string>
     <string name="thirdOBText">Depending on the customer\'s needs, delivery can be one time or long running.</string>
-
-
     <!--For customer bottom navigation-->
     <string name="home_tab">Home</string>
     <string name="transaction_tab">Transaction</string>
@@ -147,4 +144,6 @@
     <string name="lorem_ispsum_ruh_un_tehs_jsh_rem_kahk_isurem">Lorem ispsum ruh\'un tehs jsh rem kahk isurem.</string>
     <string name="confirm_order">Confirm Order</string>
     <string name="sign_up_to_your_account">Sign up to your account</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="abayomitunde_gmail_com">abayomitunde@gmail.com</string>
 </resources>

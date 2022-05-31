@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentFavouriteConsumerBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerModalAdapter
@@ -40,6 +41,10 @@ class FavouriteConsumerFragment : Fragment(), ConsumerModalAdapter.OnItemClickLi
         // displaying the recyclerView?/
         val adapter = ConsumerModalAdapter(ConsumerModalItem().consumerModalItem, this)
         binding.favoriteCustomerRecyclerView.adapter = adapter
+
+        binding.favoriteCustomerBack.setOnClickListener {
+            findNavController().navigate(R.id.action_favouriteConsumerFragment2_to_supplierHomePage)
+        }
     }
 
     override fun onItemClick(position: Int) {

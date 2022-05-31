@@ -13,7 +13,7 @@ import retrofit2.http.* // ktlint-disable no-wildcard-imports
  */
 interface AuthAppModule {
 
-    @PATCH("/api/v1/Account/Reset-Password")
+    @POST("/api/v1/Account/Reset-Password")
     suspend fun resetPassword(
         @Body resetPasswordModel: ResetPasswordModel
     ): Response<ResetPasswordResponseModel>

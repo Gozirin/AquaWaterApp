@@ -2,7 +2,6 @@
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/supplier_activity_nav_graph"
     app:startDestination="@id/supplierHomePage">
 
@@ -66,6 +65,9 @@
         <action
             android:id="@+id/action_favouriteConsumerFragment2_to_consumerModalFragment"
             app:destination="@id/consumerModalFragment" />
+        <action
+            android:id="@+id/action_favouriteConsumerFragment2_to_supplierHomePage"
+            app:destination="@id/supplierHomePage" />
     </fragment>
     <fragment
         android:id="@+id/consumerModalFragment"
@@ -75,10 +77,6 @@
             android:id="@+id/action_consumerModalFragment_to_consumerModal2Fragment"
             app:destination="@id/consumerModal2Fragment" />
     </fragment>
-    <fragment
-        android:id="@+id/consumerModal2Fragment"
-        android:name="com.example.sprint2.ConsumerModal2Fragment"
-        android:label="ConsumerModal2Fragment" />
     <fragment
         android:id="@+id/orderFragment2"
         android:name="com.example.tablayout.fragment.OrderFragment"
@@ -103,5 +101,9 @@
             android:id="@+id/action_orderDetails_to_supplierOrdersPage"
             app:destination="@id/supplierOrdersPage" />
     </dialog>
+    <fragment
+        android:id="@+id/consumerModal2Fragment"
+        android:name="com.example.sprint2.ConsumerModal2Fragment"
+        android:label="ConsumerModal2Fragment" />
 
 </navigation>
