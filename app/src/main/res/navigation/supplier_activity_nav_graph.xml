@@ -45,7 +45,11 @@
     <fragment
         android:id="@+id/suppliesMadeFragment"
         android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.SuppliesMadeFragment"
-        android:label="SuppliesMadeFragment" />
+        android:label="SuppliesMadeFragment" >
+        <action
+            android:id="@+id/action_suppliesMadeFragment_to_supplierHomePage"
+            app:destination="@id/supplierHomePage" />
+    </fragment>
     <fragment
         android:id="@+id/pastSuppilesFragement"
         android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.PastSuppliesFragment"
