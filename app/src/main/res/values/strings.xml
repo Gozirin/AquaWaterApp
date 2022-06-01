@@ -54,6 +54,10 @@
     <string name="profile_name">Abimbola Thomas</string>
     <string name="profile_image">profile Image</string>
     <string name="title">My Profile</string>
+    <string name="favourite_customers">My Profile</string>
+    <string name="supply_made"> Profile</string>
+    <string name="_24"> 24</string>
+    <string name="in_the_past"> Profile</string>
     <string name="greeting">Hi, Godswill</string>
     <string name="search_hint">Search for supplier</string>
     <string name="consumtion_text">Your consumption level is 65.89%</string>
