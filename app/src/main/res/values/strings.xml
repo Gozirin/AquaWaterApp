@@ -111,7 +111,7 @@
     <string name="reminder">Reminder sent successfully</string>
     <string name="reminder_message">You’ve successfully sent a reminder to Pearl Somto he will get a notification to place order</string>
     <string name="back_home">Back Home</string>
-    <string name="favourite">Favourite Customers</string>
+    <string name="favourite_customer">Favourite Customers</string>
     <string name="Filter">Filter</string>
     <string name="Pearl">Pearl Somto</string>
     <string name="Egbeda">Egbeda, Lagos</string>
@@ -138,6 +138,14 @@
     <string name="_10_packs_of_bottle_water">10 packs of bottle water</string>
     <string name="number">Phone number:</string>
     <string name="addressno">Address:</string>
+    <string name="activity_overview">Activity</string>
+    <string name="showing_all_supplies_failed_and_delivered">showing_all_supplies_failed_and_delivered</string>
+    <string name="ain_the_past">in the past</string>
+    <string name="_112">112</string>
+    <string name="bottles_delivered_successful">bottles_delivered_successful</string>
+    <string name="defaulted_bottles">defaulted_bottles</string>
+    <string name="_7">7</string>
+    <string name="failed_delivery">failed delivery</string>
     <string name="_09088764533">09088764533</string>
     <string name="_44_alidada_street_okota_lagos">44, Alidada Street, Okota, Lagos</string>
     <string name="description">Description</string>
@@ -146,4 +154,5 @@
     <string name="sign_up_to_your_account">Sign up to your account</string>
     <string name="reset_password">Reset Password</string>
     <string name="abayomitunde_gmail_com">abayomitunde@gmail.com</string>
+    <string name="past_supplies">Past Supplies</string>
 </resources>
