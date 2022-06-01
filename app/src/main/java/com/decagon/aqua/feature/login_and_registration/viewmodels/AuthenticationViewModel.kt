@@ -5,8 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.decagon.aqua.models.Supplier
-import com.decagon.aqua.models.supplierAuthModule.CompanyList
-import com.decagon.aqua.models.supplierAuthModule.RegisterResponse
+import com.decagon.aqua.models.supplierAuthModule.*
 import com.decagon.aqua.repositories.AuthRepositoryInterface
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -18,6 +17,10 @@ class AuthenticationViewModel @Inject constructor(private val authRepository: Au
     // register supplier
     private val _registerResponse: MutableLiveData<RegisterResponse> = MutableLiveData()
     val registerResponse: LiveData<RegisterResponse> = _registerResponse
+
+    // login supplier
+    private val _loginResponse: MutableLiveData<LoginResponse> = MutableLiveData()
+    val loginResponse: LiveData<LoginResponse> = _loginResponse
 
     // get companies
     private val _companyList: MutableLiveData<CompanyList> = MutableLiveData()
@@ -37,6 +40,24 @@ class AuthenticationViewModel @Inject constructor(private val authRepository: Au
             val response = authRepository.getCompanies()
             if (response.isSuccessful) {
                 _companyList.postValue(response.body())
+            }
+        }
+    }
+
+    fun confirmEmail(confirmEmailModel: ConfirmEmailModel) {
+        viewModelScope.launch {
+            val response = authRepository.confirmEmail(confirmEmailModel)
+            if (response.isSuccessful) {
+                _registerResponse.postValue(response.body())
+            }
+        }
+    }
+
+    fun loginUser(loginModel: LoginModel) {
+        viewModelScope.launch {
+            val response = authRepository.loginUser(loginModel)
+            if (response.isSuccessful) {
+                _loginResponse.value = response.body()
             }
         }
     }

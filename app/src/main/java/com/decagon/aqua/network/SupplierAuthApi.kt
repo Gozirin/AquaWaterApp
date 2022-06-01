@@ -1,8 +1,7 @@
 package com.decagon.aqua.network
 
 import com.decagon.aqua.models.Supplier
-import com.decagon.aqua.models.supplierAuthModule.CompanyList
-import com.decagon.aqua.models.supplierAuthModule.RegisterResponse
+import com.decagon.aqua.models.supplierAuthModule.*
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -18,4 +17,16 @@ interface SupplierAuthApi {
 
     @GET("/api/Company/GetAllCompanies")
     suspend fun getCompanies(): Response<CompanyList>
+
+    @POST("/api/v1/Account/confirm-email")
+    suspend fun confirmEmail(
+        @Body
+        confirmEmailModel: ConfirmEmailModel
+    ): Response<RegisterResponse>
+
+    @POST("/api/v1/Account/login")
+    suspend fun logIn(
+        @Body
+        loginModel: LoginModel
+    ): Response<LoginResponse>
 }

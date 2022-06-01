@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
-    android:background="@color/white"
     android:scrollbarStyle="insideInset"
     android:layout_width="match_parent"
     android:scrollbarThumbVertical="@null"
@@ -28,7 +27,6 @@
             android:text="@string/consumer_sign_up_text_view_back"
             android:drawablePadding="10dp"
             android:layout_margin="16dp"
-            android:textColor="@color/black"
             android:textSize="18sp"
             app:drawableLeftCompat="@drawable/arrow" />
 
@@ -49,7 +47,6 @@
             android:fontFamily="@font/manrope_bold"
             android:layout_marginTop="40dp"
             android:text="@string/consumer_sign_up_fragment"
-            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
 

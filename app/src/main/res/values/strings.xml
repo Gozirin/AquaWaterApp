@@ -142,4 +142,5 @@
     <string name="failed_delivery">Failed delivery</string>
     <string name="total_norders_received">Total\nOrders Received</string>
     <string name="favourite_customers">Favourite Customers</string>
+    <string name="confrim_email_text">Click on the link below to confirm your email address and start enjoying Aqua Water</string>
 </resources>

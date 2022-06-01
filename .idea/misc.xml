@@ -60,6 +60,7 @@
         <entry key="app/src/main/res/layout/favourite_customers2.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/filter_modal_layout.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/fragment_base.xml" value="0.19927536231884058" />
+        <entry key="app/src/main/res/layout/fragment_confirm_email.xml" value="0.2418478260869565" />
         <entry key="app/src/main/res/layout/fragment_consumer_account.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/fragment_consumer_check_mail.xml" value="0.2418478260869565" />
         <entry key="app/src/main/res/layout/fragment_consumer_consumption_level.xml" value="0.25" />

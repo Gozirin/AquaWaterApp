@@ -28,7 +28,6 @@ class SupplierSignUpFragment : Fragment() {
     private var _binding: FragmentSupplierSignUpBinding? = null
     private val binding get() = _binding!!
     private val function = SupplierRegistration
-    private lateinit var connectivityLiveData: ConnectivityLiveData
     private val viewModel: AuthenticationViewModel by viewModels()
     private lateinit var userInfo: Supplier
     private val companies = hashMapOf<String, String>()
@@ -37,7 +36,7 @@ class SupplierSignUpFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentSupplierSignUpBinding.inflate(inflater, container, false)
         return binding.root
@@ -167,6 +166,7 @@ class SupplierSignUpFragment : Fragment() {
             }
         }
     }
+
     private fun dropDown() {
         val gender = resources.getStringArray(R.array.gender)
         val adapter = ArrayAdapter(requireContext(), R.layout.gender_list, gender)
