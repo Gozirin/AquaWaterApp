@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.decagon.aqua.feature.repository.IResetPasswordRepository
-import com.decagon.hbapplicationgroupa.model.authmodule.resetpassword.ResetPasswordRequest
+import com.decagon.aqua.models.ResetPasswordRequest
 import com.decagon.hbapplicationgroupa.model.authmodule.resetpassword.ResetPasswordResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

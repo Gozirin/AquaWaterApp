@@ -1,5 +1,5 @@
 package com.decagon.aqua.core.service
-import com.decagon.hbapplicationgroupa.model.authmodule.resetpassword.ResetPasswordRequest
+import com.decagon.aqua.models.ResetPasswordRequest
 import com.decagon.hbapplicationgroupa.model.authmodule.resetpassword.ResetPasswordResponse
 import retrofit2.http.* // ktlint-disable no-wildcard-imports
 

@@ -1,4 +1,4 @@
-package com.decagon.hbapplicationgroupa.model.authmodule.resetpassword
+package com.decagon.aqua.models
 
 import com.google.gson.annotations.SerializedName
 

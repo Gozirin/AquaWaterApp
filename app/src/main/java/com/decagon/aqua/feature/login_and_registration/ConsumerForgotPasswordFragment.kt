@@ -13,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerForgotPasswordBinding
 import com.decagon.aqua.feature.viewModel.ResetPasswordViewModel
-import com.decagon.hbapplicationgroupa.model.authmodule.resetpassword.ResetPasswordRequest
+import com.decagon.aqua.models.ResetPasswordRequest
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
