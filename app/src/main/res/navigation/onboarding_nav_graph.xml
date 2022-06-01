@@ -119,22 +119,45 @@
         android:id="@+id/consumerCheckMailFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.ConsumerCheckMailFragment"
         android:label="fragment_consumer_check_mail"
-        tools:layout="@layout/fragment_consumer_check_mail" >
+        tools:layout="@layout/fragment_consumer_check_mail">
         <action
             android:id="@+id/action_consumerCheckMailFragment_to_consumerCreateNewPasswordFragment"
             app:destination="@id/consumerCreateNewPasswordFragment" />
+        <argument
+            android:name="email"
+            android:defaultValue="email"
+            app:argType="string" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="http://www.aqua-deca.com/Authentication/ConfirmEmail/{email}" />
     </fragment>
     <fragment
         android:id="@+id/consumerCreateNewPasswordFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.ConsumerCreateNewPasswordFragment"
         android:label="fragment_consumer_create_new_password"
-        tools:layout="@layout/fragment_consumer_create_new_password" >
+        tools:layout="@layout/fragment_consumer_create_new_password">
         <action
             android:id="@+id/action_consumerCreateNewPasswordFragment_to_supplierSignUpFragment"
             app:destination="@id/supplierSignUpFragment" />
         <action
             android:id="@+id/action_consumerCreateNewPasswordFragment_to_password_AccountSuccessfulFragment2"
             app:destination="@id/password_AccountSuccessfulFragment2" />
+        <argument
+            android:name="email"
+            android:defaultValue="noel.osarinmwian@gmail.com"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="token"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:action="android.intent.action.MY_ACTION"
+            app:mimeType="type/subtype"
+            app:uri="http://www.aqua-deca.com/Authentication/ResetPassword?email={email}/token={token}" />
+
+
     </fragment>
     <fragment
         android:id="@+id/password_AccountSuccessfulFragment2"
@@ -144,13 +167,16 @@
         android:id="@+id/consumerForgotPasswordFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.ConsumerForgotPasswordFragment"
         android:label="fragment_consumer_forgot_password"
-        tools:layout="@layout/fragment_consumer_forgot_password" >
+        tools:layout="@layout/fragment_consumer_forgot_password">
+
         <action
             android:id="@+id/action_consumerForgotPasswordFragment_to_consumerCheckMailFragment"
             app:destination="@id/consumerCheckMailFragment" />
         <action
             android:id="@+id/action_consumerForgotPasswordFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+
+
     </fragment>
 
 </navigation>

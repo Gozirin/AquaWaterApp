@@ -6,11 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerCheckMailBinding
 
 class ConsumerCheckMailFragment : Fragment() {
     private lateinit var binding: FragmentConsumerCheckMailBinding
+    private val args by navArgs<ConsumerCheckMailFragmentArgs>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
