@@ -1,7 +1,7 @@
 package com.decagon.aqua.repositories
 
 import com.decagon.aqua.models.Supplier
-import com.decagon.aqua.models.supplierAuthModule.*
+import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import com.decagon.aqua.network.SupplierAuthApi
 import retrofit2.Response
 import javax.inject.Inject
@@ -26,6 +26,4 @@ class AuthRepository @Inject constructor(
     override suspend fun loginUser(loginModel: LoginModel): Response<LoginResponse> {
         return supplierAuthApi.logIn(loginModel)
     }
-
-
 }

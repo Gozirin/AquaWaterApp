@@ -12,7 +12,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
-import com.decagon.aqua.commons.ConnectivityLiveData
 import com.decagon.aqua.databinding.FragmentSupplierSignUpBinding
 import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
 import com.decagon.aqua.models.LocationX

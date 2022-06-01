@@ -1,7 +1,6 @@
 package com.decagon.aqua.feature.login_and_registration
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,7 +47,7 @@ class SupplierLoginFragment : Fragment() {
             val password = binding.supplierLoginLayoutEditTextPassword.text.toString()
             userInfo = LoginModel(email = email, password = password)
             viewModel.loginUser(userInfo)
-         println(userInfo)
+            println(userInfo)
             viewModel.loginResponse.observe(viewLifecycleOwner) {
                 if (it.success) {
                     findNavController().navigate(R.id.action_supplierLoginFragment_to_supplier_mainActivity)

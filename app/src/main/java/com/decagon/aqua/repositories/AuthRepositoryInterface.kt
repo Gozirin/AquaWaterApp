@@ -1,7 +1,7 @@
 package com.decagon.aqua.repositories
 
 import com.decagon.aqua.models.Supplier
-import com.decagon.aqua.models.supplierAuthModule.*
+import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import retrofit2.Response
 
 interface AuthRepositoryInterface {

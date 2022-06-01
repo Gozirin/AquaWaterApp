@@ -1,7 +1,7 @@
 package com.decagon.aqua.network
 
 import com.decagon.aqua.models.Supplier
-import com.decagon.aqua.models.supplierAuthModule.*
+import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
