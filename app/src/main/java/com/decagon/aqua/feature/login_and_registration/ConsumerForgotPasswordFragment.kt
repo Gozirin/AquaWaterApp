@@ -19,6 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ConsumerForgotPasswordFragment : Fragment() {
     private val TAG = "ConsumerForgotPasswordFragment"
+    private lateinit var validEmail: String
     private lateinit var binding: FragmentConsumerForgotPasswordBinding
     private val resetPasswordViewModel: ResetPasswordViewModel by viewModels()
 
