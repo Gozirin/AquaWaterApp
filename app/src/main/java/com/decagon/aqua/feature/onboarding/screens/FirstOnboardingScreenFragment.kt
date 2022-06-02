@@ -37,7 +37,6 @@ class FirstOnboardingScreenFragment : Fragment() {
         }
         binding.tvSkip1.setOnClickListener {
             Log.d("xyz", "onCreateView: Onboarding Fragment ")
-            Toast.makeText(requireContext(), "skip button clicked", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_viewPagerFragment_to_loggingFragment)
         }
         return view

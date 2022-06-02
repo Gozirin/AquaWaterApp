@@ -1,31 +1,24 @@
 package com.decagon.aqua.feature.consumer.authentication
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.decagon.aqua.core.data.UserRequest
-import com.decagon.aqua.core.data.UserResponse
+import com.decagon.aqua.commons.util.Resource
+import com.decagon.aqua.core.data.UserLoginRequest
+import com.decagon.aqua.core.data.UserLoginResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import java.lang.Exception
 import javax.inject.Inject
 
 @HiltViewModel
-class AquaViewModel @Inject constructor(private val aquaRepository: AquaRepositoryInterface) : ViewModel() {
-    private var _loginResponse: MutableLiveData<UserResponse> = MutableLiveData()
-    val loginResponse: LiveData<UserResponse> = _loginResponse
+class AquaViewModel @Inject constructor(private val aquaRepositoryInt: AquaRepositoryInterface) : ViewModel() {
 
-    fun loginUser(email: String, password: String) {
-        val userLogin = UserRequest(email, password)
+    var loginLiveData: MutableLiveData<Resource<UserLoginResponse>> = MutableLiveData()
+        private set
 
+    fun loginUser(userLoginRequest: UserLoginRequest) {
         viewModelScope.launch {
-            try {
-                val response = aquaRepository.login(userLogin)
-                _loginResponse.value = response.body()
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
+            loginLiveData.value = aquaRepositoryInt.login(userLoginRequest)
         }
     }
 }

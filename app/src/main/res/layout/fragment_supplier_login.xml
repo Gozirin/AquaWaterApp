@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:fontFamily="@font/manrope_bold"
-        android:text="Login to your account"
+        android:text="@string/consumer_login_fragment"
         android:letterSpacing=".05"
         android:layout_marginTop="40dp"
         android:textColor="@color/black"
@@ -37,7 +37,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/manrope"
-        android:text="Email"
+        android:text="@string/consumer_login_text_view_email"
         android:textColor="@color/black"
         android:textFontWeight="600"
         android:textSize="15sp"
@@ -51,18 +51,17 @@
         android:layout_below="@id/supplier_login_layout_email_tv"
         android:layout_marginHorizontal="16dp"
         android:padding="1dp"
+        app:hintEnabled="false"
         app:helperText="Required"
-        app:helperTextTextColor="#ff0000"
-        app:hintEnabled="false">
-
+        app:helperTextTextColor="#ff0000">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/supplier_login_layout_edit_text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shapes"
+            android:imeOptions="actionGo"
             android:enabled="true"
             android:hint="Email"
-            android:imeOptions="actionGo"
             app:passwordToggleEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,21 +108,45 @@
         android:layout_margin="16dp"
         android:fontFamily="@font/manrope"
         android:textFontWeight="600"
-        android:text="Forogot Password?"
+        android:text="@string/consumer_login_text_view_forget_password"
         android:textColor="#4C9EDF"
         android:layout_below="@id/supplier_login_layout_password_lo"/>
+
+    <TextView
+        android:id="@+id/supplierLoginErrorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:layout_above="@id/supplier_login_layout_login_button"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:id="@+id/supplier_login_layout_login_button"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_margin="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_below="@id/supplier_login_layout_text_view_forget_password"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#047DDD"
         android:fontFamily="@font/manrope_bold"
         android:text="@string/consumer_login_button_login"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@id/supplier_login_layout_text_view_forget_password"/>
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <ProgressBar
+        android:id="@+id/supplierLoginProgressBar"
+        android:layout_width="63dp"
+        android:layout_height="37dp"
+        android:layout_alignStart="@id/supplier_login_layout_login_button"
+        android:layout_alignTop="@id/supplier_login_layout_login_button"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
+        android:elevation="40dp"
+        android:indeterminateTint="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute" />
 
     <TextView
         android:id="@+id/supplier_login_layout_create_account"
@@ -141,10 +164,10 @@
         android:id="@+id/supplier_login_layout_login_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/supplier_login_layout_create_account"
         android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/supplier_login_layout_create_account"
-        android:text="Sign Up"
-        android:textColor="#4C9EDF" />
+        android:text="@string/consumer_login_text_view_signup"
+        android:textColor="#4C9EDF"
+        android:layout_alignTop="@id/supplier_login_layout_create_account"
+        android:layout_toRightOf="@id/supplier_login_layout_create_account"/>
 
 </RelativeLayout>

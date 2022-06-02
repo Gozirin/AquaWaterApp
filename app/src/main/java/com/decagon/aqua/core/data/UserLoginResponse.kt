@@ -1,6 +1,6 @@
 package com.decagon.aqua.core.data
 
-data class UserResponse(
+data class UserLoginResponse(
     val success: Boolean,
     val data: Data,
     val message: String,

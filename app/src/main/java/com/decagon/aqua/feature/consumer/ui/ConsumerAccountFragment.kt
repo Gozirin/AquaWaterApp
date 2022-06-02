@@ -51,7 +51,7 @@ class ConsumerAccountFragment : Fragment() {
                 showDialog.dismiss()
             }
         }
-    }
+}
 
     override fun onResume() {
         super.onResume()

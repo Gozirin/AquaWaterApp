@@ -112,4 +112,16 @@
     <string name="total_nsupplies_made">Total \nSupplies Made</string>
     <string name="_111">111</string>
     <string name="total_norders_received">Total \norders received</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="_email">Email</string>
+    <string name="__email">Email</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="_don_t_have_an_account">Don\'t have an account?</string>
+    <string name="_sign_up">Sign Up</string>
+    <string name="forogot_password">Forogot Password?</string>
+    <string name="password">Password</string>
+    <string name="___email">Email</string>
+    <string name="emailtv">Email</string>
+    <string name="login_to_your_account_tv">Login to your account</string>
 </resources>

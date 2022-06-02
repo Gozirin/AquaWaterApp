@@ -1,5 +1,6 @@
 package com.decagon.aqua.feature.supplier.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSupplierAccountLayoutBinding
+import com.decagon.aqua.feature.login_and_registration.SupplierLoginFragment
+import com.decagon.aqua.feature.supplier.SupplierMainActivity
+import com.decagon.aqua.feature.supplier.ui.supplierFragments.ConsumerProfileFragment
+import com.decagon.aqua.feature.supplier.ui.supplierFragments.SuppliesMadeFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -42,8 +47,9 @@ class SupplierAccountPage : Fragment() {
             val logoutConfirmationDialogYesBtn: Button? =
                 logoutDialogLayout.findViewById(R.id.logout_confirmation_dialog_log_out_yes_btn)
             logoutConfirmationDialogYesBtn?.setOnClickListener {
+                findNavController().navigate(R.id.action_loggingFragment_to_supplierLoginFragment)
                 showDialog.dismiss()
-                findNavController().navigate(R.id.action_logoutConfirmationDialog_to_app_nav_graph)
+                // findNavController().navigate(R.id.action_logoutConfirmationDialog_to_app_nav_graph)
             }
             val logoutConfirmationDialogNoBtn: Button? =
                 logoutDialogLayout.findViewById(R.id.logout_confirmation_dialog_log_out_no_btn)

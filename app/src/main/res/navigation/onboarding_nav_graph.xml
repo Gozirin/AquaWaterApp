@@ -161,5 +161,16 @@
         android:id="@+id/password_AccountSuccessfulFragment2"
         android:name="com.decagon.aqua.feature.login_and_registration.Password_AccountSuccessfulFragment"
         android:label="Password_AccountSuccessfulFragment" />
+    <fragment
+        android:id="@+id/logoutConfirmationDialog2"
+        android:name="com.decagon.aqua.feature.consumer.ui.LogoutConfirmationDialog"
+        android:label="LogoutConfirmationDialog" >
+        <action
+            android:id="@+id/action_logoutConfirmationDialog2_to_supplierLoginFragment"
+            app:destination="@id/supplierLoginFragment" />
+        <action
+            android:id="@+id/action_logoutConfirmationDialog2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 
 </navigation>
