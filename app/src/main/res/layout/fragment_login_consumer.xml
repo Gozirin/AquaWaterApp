@@ -112,6 +112,14 @@
         android:textColor="#4C9EDF"
         android:layout_below="@id/consumer_login_layout_password_lo"/>
 
+    <TextView
+        android:id="@+id/supplierLoginErrorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:layout_above="@id/consumer_login_layout_login_button"
+        android:layout_centerHorizontal="true"/>
+
     <Button
         android:id="@+id/consumer_login_layout_login_button"
         android:layout_width="match_parent"
