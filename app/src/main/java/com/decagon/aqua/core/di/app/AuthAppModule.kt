@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.decagon.aqua.core.data.AquaDatabase
 import com.decagon.aqua.core.service.ApiService
-import com.decagon.aqua.feature.repository.AuthRepositoryInterface
+import com.decagon.aqua.feature.onboarding.ResetPasswordRepository
 import com.decagon.aqua.feature.repository.IResetPasswordRepositoryInterface
 import dagger.Module
 import dagger.Provides
@@ -79,6 +79,6 @@ object AuthAppModule {
     @Singleton
     @Provides
     fun provideResetPasswordRepository(apiService: ApiService): IResetPasswordRepositoryInterface {
-        return AuthRepositoryInterface(apiService)
+        return ResetPasswordRepository(apiService)
     }
 }

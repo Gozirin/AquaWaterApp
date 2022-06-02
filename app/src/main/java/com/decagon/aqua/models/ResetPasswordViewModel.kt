@@ -1,4 +1,4 @@
-package com.decagon.aqua.feature.viewModel
+package com.decagon.aqua.models
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -16,8 +16,6 @@ class ResetPasswordViewModel @Inject constructor(private val resetPasswordReposi
     var resetPasswordLiveData: MutableLiveData<ResetPasswordResponse> = MutableLiveData()
         private set
 
-//    private  val _resetPassword: MutableLiveData<ResetPasswordResponse> = MutableLiveData()
-// //    val resetPassword get() = _resetPassword
     fun resetPassword(resetPasswordRequest: ResetPasswordRequest) {
         viewModelScope.launch {
             resetPasswordLiveData.value = resetPasswordRepository.resetPassword(resetPasswordRequest)

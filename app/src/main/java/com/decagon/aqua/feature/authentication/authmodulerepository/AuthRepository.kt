@@ -1,3 +1,0 @@
-package com.decagon.hbapplicationgroupa.repository.authmodulerepository
-
-class AuthRepository
