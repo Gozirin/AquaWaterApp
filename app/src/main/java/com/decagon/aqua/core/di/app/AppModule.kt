@@ -13,7 +13,6 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
@@ -24,7 +23,6 @@ import javax.inject.Singleton
 object AppModule {
 
     private const val BASE_URL = "https://aquawaterapp.herokuapp.com"
-
 
     @Provides
     @Singleton
@@ -40,12 +38,12 @@ object AppModule {
     }
     @Provides
     @Singleton
-    fun provideConverterFactory(): GsonConverterFactory{
+    fun provideConverterFactory(): GsonConverterFactory {
         return GsonConverterFactory.create()
     }
     @Provides
     @Singleton
-    fun provideRetrofitInstance(converterFactory: GsonConverterFactory, okHttpClient: OkHttpClient): Retrofit{
+    fun provideRetrofitInstance(converterFactory: GsonConverterFactory, okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)
