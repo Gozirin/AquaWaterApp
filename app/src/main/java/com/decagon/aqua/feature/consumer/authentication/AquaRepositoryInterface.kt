@@ -6,5 +6,4 @@ import com.decagon.aqua.core.data.UserLoginResponse
 
 interface AquaRepositoryInterface {
     suspend fun login(userRequest: UserLoginRequest): Resource<UserLoginResponse>
-    // suspend fun login(userLoginRequest: UserLoginRequest): UserLoginResponse
 }

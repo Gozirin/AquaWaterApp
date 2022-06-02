@@ -63,7 +63,6 @@ class SupplierLoginFragment : Fragment() {
             if (!(InputValidation.ValidateEmail(receivedEmail) == null) || (!(InputValidation.validatePassword(receivedPassword) == ""))) {
                 Toast.makeText(requireContext(), "Login Credentials are Invalid.", Toast.LENGTH_SHORT).show()
             } else {
-                // findNavController().navigate(R.id.action_supplierLoginFragment_to_supplier_mainActivity)
                 aqua_view_model.loginUser(login_request)
                 binding.supplierLoginProgressBar.visibility = View.VISIBLE
             }
@@ -90,9 +89,6 @@ class SupplierLoginFragment : Fragment() {
         aqua_view_model.loginLiveData.observe(
             viewLifecycleOwner
         ) {
-//            findNavController().navigate(R.id.action_supplierLoginFragment_to_supplier_mainActivity)
-//            Log.d(TAG, "observeLoginResponse: $it")
-//            Toast.makeText(requireContext(), "$it", Toast.LENGTH_LONG).show()
             when (it) {
                 is Resource.Success -> {
                     Log.d("Login-succeed", it.value.message)

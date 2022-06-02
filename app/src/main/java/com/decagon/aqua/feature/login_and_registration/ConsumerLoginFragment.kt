@@ -25,7 +25,6 @@ class ConsumerLoginFragment : Fragment() {
     private val TAG = "ConsumerLoginFragment"
     private var _binding: FragmentLoginConsumerBinding? = null
     private val binding get() = _binding!!
-    // private val viewModel: AquaViewModel by viewModels()
     private val aqua_view_model: AquaViewModel by viewModels()
     private lateinit var errorMsg: TextView
     private lateinit var receivedEmail: String
@@ -91,46 +90,43 @@ class ConsumerLoginFragment : Fragment() {
         return true
     }
     fun observeLoginResponse() {
-            aqua_view_model.loginLiveData.observe(
-                viewLifecycleOwner
-            ) {
-//            findNavController().navigate(R.id.action_supplierLoginFragment_to_supplier_mainActivity)
-//            Log.d(TAG, "observeLoginResponse: $it")
-//            Toast.makeText(requireContext(), "$it", Toast.LENGTH_LONG).show()
-                when (it) {
-                    is Resource.Success -> {
-                        Log.d("Login-succeed", it.value.message)
-                        binding.consumerLoginProgressBar.visibility = View.GONE
-                        Toast.makeText(requireContext(), it.value.message, Toast.LENGTH_LONG).show()
-                        findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
-                        // Saving auth Token and Id to Shared Preference
-                        AuthenticationPreference.setToken(it.value.data.token)
-                        AuthenticationPreference.setId(it.value.data.id)
-                        //  AuthenticationPreference.setRefreshToken(it.data.refreshToken)
+        aqua_view_model.loginLiveData.observe(
+            viewLifecycleOwner
+        ) {
+            when (it) {
+                is Resource.Success -> {
+                    Log.d("Login-succeed", it.value.message)
+                    binding.consumerLoginProgressBar.visibility = View.GONE
+                    Toast.makeText(requireContext(), it.value.message, Toast.LENGTH_LONG).show()
+                    findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
+                    // Saving auth Token and Id to Shared Preference
+                    AuthenticationPreference.setToken(it.value.data.token)
+                    AuthenticationPreference.setId(it.value.data.id)
+                    //  AuthenticationPreference.setRefreshToken(it.data.refreshToken)
 
-                        // refreshing token from api after 8 mins
-                        val token =
-                            "Bearer ${AuthenticationPreference.getToken(AuthenticationPreference.TOKEN_KEY)}"
-                        val userId = AuthenticationPreference.getId(AuthenticationPreference.ID_KEY)
-                        val refreshKey =
-                            AuthenticationPreference.getRefreshToken(AuthenticationPreference.REFRESH_KEY)
-                        if (userId != null) {
-                            if (refreshKey != null) {
-                                //      refreshTokenCountDown(token, userId, refreshKey)
-                            }
+                    // refreshing token from api after 8 mins
+                    val token =
+                        "Bearer ${AuthenticationPreference.getToken(AuthenticationPreference.TOKEN_KEY)}"
+                    val userId = AuthenticationPreference.getId(AuthenticationPreference.ID_KEY)
+                    val refreshKey =
+                        AuthenticationPreference.getRefreshToken(AuthenticationPreference.REFRESH_KEY)
+                    if (userId != null) {
+                        if (refreshKey != null) {
+                            //      refreshTokenCountDown(token, userId, refreshKey)
                         }
-                        binding.consumerLoginLayoutLoginButton.text = "Login"
                     }
-                    is Resource.Error -> {
-                        binding.consumerLoginProgressBar.visibility = View.GONE
-                        errorMsg.text = it.error
-                        Log.d("Login400: ", it.error)
-                        binding.consumerLoginLayoutLoginButton.text = "Login"
-                    }
-                    is Resource.Loading -> {
-                        binding.consumerLoginProgressBar.visibility = View.VISIBLE
-                    }
+                    binding.consumerLoginLayoutLoginButton.text = "Login"
+                }
+                is Resource.Error -> {
+                    binding.consumerLoginProgressBar.visibility = View.GONE
+                    errorMsg.text = it.error
+                    Log.d("Login400: ", it.error)
+                    binding.consumerLoginLayoutLoginButton.text = "Login"
+                }
+                is Resource.Loading -> {
+                    binding.consumerLoginProgressBar.visibility = View.VISIBLE
                 }
             }
+        }
     }
 }
