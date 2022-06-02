@@ -1,4 +1,4 @@
-package com.decagon.aqua.feature.repository // ktlint-disable filename
+package com.decagon.aqua.feature.repository // kotlin-disable filename
 
 import com.decagon.aqua.core.service.ApiService
 import com.decagon.aqua.models.ResetPasswordRequest
