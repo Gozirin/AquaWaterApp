@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.room.Room
 import com.decagon.aqua.core.data.AquaDatabase
 import com.decagon.aqua.core.service.ApiService
-import com.decagon.aqua.feature.repository.IResetPasswordRepository
-import com.decagon.aqua.feature.repository.ResetPasswordRepository
+import com.decagon.aqua.feature.repository.AuthRepositoryInterface
+import com.decagon.aqua.feature.repository.IResetPasswordRepositoryInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +19,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object AuthAppModule {
 
     val BASE_URL = "https://aquawaterapp.herokuapp.com"
 
@@ -78,7 +78,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideResetPasswordRepository(apiService: ApiService): IResetPasswordRepository {
-        return ResetPasswordRepository(apiService)
+    fun provideResetPasswordRepository(apiService: ApiService): IResetPasswordRepositoryInterface {
+        return AuthRepositoryInterface(apiService)
     }
 }
