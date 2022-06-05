@@ -92,12 +92,12 @@
 
     <ImageView
         android:id="@+id/consumer_notification_screen_imageView7"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="20dp"
         android:contentDescription="@null"
-        android:src="@drawable/line"
+        android:src="@drawable/ic_line2"
         app:layout_constraintEnd_toEndOf="@+id/consumer_notification_screen_textView5"
         app:layout_constraintStart_toStartOf="@+id/consumer_notification_screen_textView5"
         app:layout_constraintTop_toBottomOf="@+id/consumer_notification_screen_textView5" />

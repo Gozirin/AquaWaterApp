@@ -99,6 +99,8 @@ dependencies {
     // retrofit
     implementation Dependencies.retrofit
     implementation Dependencies.retrofit_gson
+    implementation Dependencies.okHttp
+    implementation Dependencies.okHttp_logging_interceptor
 
     // unit test
     testImplementation TestDependencies.junit4
@@ -158,5 +160,8 @@ dependencies {
 
     //viewpager2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    //Activity KTX
+    implementation"androidx.activity:activity-ktx:1.4.0"
 
 }

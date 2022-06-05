@@ -25,6 +25,7 @@
         <entry key="app/src/main/res/drawable/ic_input_field_background.xml" value="0.2105" />
         <entry key="app/src/main/res/drawable/ic_invite_friends.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1705" />
+        <entry key="app/src/main/res/drawable/ic_line2.xml" value="0.126" />
         <entry key="app/src/main/res/drawable/ic_mail.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/ic_profile_icon.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_real_bell.xml" value="0.1205" />
@@ -39,7 +40,7 @@
         <entry key="app/src/main/res/font/manrope.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/font/manrope_bold.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/font/manrope_regular.xml" value="0.16458333333333333" />
-        <entry key="app/src/main/res/layout-v28/fragment_consumer_create_new_password.xml" value="0.10989583333333333" />
+        <entry key="app/src/main/res/layout-v28/fragment_consumer_create_new_password.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_consumer_main.xml" value="0.2554517133956386" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2484375" />

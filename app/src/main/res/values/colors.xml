@@ -30,4 +30,7 @@
     <color name="search_background_color">#D6DBDF</color>
     <color name="active_text_background_color">#2238B000</color>
     <color name="active_text_color">#38B000</color>
+    <color name="create_password_blue">#2196F3</color>
+    <color name="check_mail">#2196F3</color>
+    <color name="reset_password">#2196F3</color>
 </resources>

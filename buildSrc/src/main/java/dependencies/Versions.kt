@@ -1,6 +1,7 @@
 package dependencies
 
 object Versions {
+    const val okhttp3_version = "5.0.0-alpha.2"
     const val gradle = "3.5.3"
     const val compilesdk = 32
     const val minsdk = 21

@@ -106,4 +106,6 @@
     <string name="invite_more_friends">Invite more friends</string>
     <string name="save">Save</string>
     <string name="abayomitunde_gmail_com">abayomitunde@gmail.com</string>
+    <string name="passwordsuccessful">PasswordSuccessful</string>
+    <string name="password_reset_successfully">Password reset successfully</string>
 </resources>
