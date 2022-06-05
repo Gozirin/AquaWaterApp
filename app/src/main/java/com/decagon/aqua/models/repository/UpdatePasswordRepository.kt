@@ -1,6 +1,5 @@
 package com.decagon.aqua.models.repository
 
-
 import com.decagon.aqua.models.Util.ApiService
 import com.decagon.aqua.models.updatepassword.UpdatePasswordRequest
 import com.decagon.aqua.models.updatepassword.UpdatePasswordResponseModel
@@ -13,5 +12,3 @@ class UpdatePasswordRepository(
         return apiService.updatePassword(updatePasswordRequest)
     }
 }
-
-
