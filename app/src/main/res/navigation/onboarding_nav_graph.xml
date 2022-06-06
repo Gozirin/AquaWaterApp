@@ -98,6 +98,9 @@
         <action
             android:id="@+id/action_supplierSignUpFragment_to_consumerCheckMailFragment"
             app:destination="@id/consumerCheckMailFragment" />
+        <argument
+            android:name="list"
+            app:argType="com.decagon.aqua.models.supplierAuthModule.CompanyList" />
     </fragment>
     <fragment
         android:id="@+id/supplierLoginFragment"

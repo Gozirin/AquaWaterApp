@@ -43,11 +43,27 @@ object SupplierRegistration {
         }
         return true
     }
+    fun validateAgeInput(age: Int): Int {
+        if (age == 0)
+            return 1
+        else if (age < 17)
+            return 2
+        if (age > 99) {
+            return 3
+        }
+        return 0
+    }
     fun validateSex(gender: String): Boolean {
         return when (gender) {
             "Male" -> true
             "Female" -> true
             else -> false
         }
+    }
+    fun validateCompanySelection(companyId: String): Boolean {
+        if (companyId.isEmpty()) {
+            return false
+        }
+        return true
     }
 }

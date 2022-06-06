@@ -5,8 +5,6 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkRequest
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 
 class ConnectivityLiveData(private val connectivityManager: ConnectivityManager) : LiveData<Boolean>() {
@@ -19,8 +17,7 @@ class ConnectivityLiveData(private val connectivityManager: ConnectivityManager)
             as ConnectivityManager
     )
 
-    private val networkCallback = @RequiresApi(Build.VERSION_CODES.O)
-    object : ConnectivityManager.NetworkCallback() {
+    private val networkCallback = object : ConnectivityManager.NetworkCallback() {
         override fun onAvailable(network: Network) {
             super.onAvailable(network)
             postValue(true)
@@ -32,14 +29,12 @@ class ConnectivityLiveData(private val connectivityManager: ConnectivityManager)
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onActive() {
         super.onActive()
         val builder = NetworkRequest.Builder()
         connectivityManager.registerNetworkCallback(builder.build(), networkCallback)
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onInactive() {
         super.onInactive()
         connectivityManager.unregisterNetworkCallback(networkCallback)

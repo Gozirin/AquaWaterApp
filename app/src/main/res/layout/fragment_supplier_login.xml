@@ -6,7 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".feature.login_and_registration.SupplierLoginFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+</LinearLayout>
     <ImageView
         android:id="@+id/supplier_login_layout_image_view_image_icon"
         android:layout_width="65dp"
@@ -159,6 +164,5 @@
         app:layout_constraintHorizontal_bias="0.618"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_create_account"
         app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_create_account" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@
 
 
         <LinearLayout
-            android:id="@+id/signFragmentLayout"
+            android:id="@+id/signFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -63,7 +63,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false">
 
@@ -71,7 +71,7 @@
                     android:id="@+id/company_autoTextView"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:fontFamily="@font/manrope_regular"
                     android:hint="Company"
@@ -97,8 +97,7 @@
                 style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false">
 
@@ -119,7 +118,7 @@
                 style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false">
 
@@ -133,14 +132,13 @@
                     android:lines="1" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
+            
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/supplier_age_container"
                 style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false">
 
@@ -160,7 +158,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false">
 
@@ -189,15 +187,14 @@
                 style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_Email_supplier_sign_up"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:background="@drawable/border_edittext"
                     android:hint="@string/consumer_login_text_view_email"
                     android:inputType="textEmailAddress"
@@ -211,7 +208,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:counterMaxLength="16"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false"
                 app:passwordToggleEnabled="true">
@@ -219,7 +216,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_Password_supplier_sign_up"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:background="@drawable/border_edittext"
                     android:hint="@string/consumer_login_text_view_password"
                     android:inputType="textPassword"
@@ -233,7 +230,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:counterMaxLength="16"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false"
                 app:passwordToggleEnabled="true">
@@ -241,7 +238,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_confirmPassword_supplier_sign_up"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:background="@drawable/border_edittext"
                     android:hint="Confirm Password"
                     android:inputType="textPassword"
@@ -256,14 +253,14 @@
                 android:layout_height="wrap_content"
                 app:counterEnabled="true"
                 app:counterMaxLength="11"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_Phone_supplier_sign_up"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:background="@drawable/border_edittext"
                     android:hint="@string/consumer_signup_edit_text_phoneNumber"
                     android:inputType="phone"
@@ -272,66 +269,22 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/supplier_street_container"
+                android:id="@+id/supplier_address_container"
                 style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:helperText=""
+                app:helperText="Required"
                 app:helperTextTextColor="#a30306"
                 app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/supplier_street_editText"
+                    android:id="@+id/et_Address_supplier_sign_up"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:background="@drawable/border_edittext"
                     android:drawableStart="@drawable/location"
                     android:drawablePadding="15dp"
-                    android:hint="Street"
-                    android:inputType="text"
-                    android:lines="1" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/supplier_city_container"
-                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:helperText=""
-                app:helperTextTextColor="#a30306"
-                app:hintEnabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/supplier_city_editText"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/border_edittext"
-                    android:drawableStart="@drawable/location"
-                    android:drawablePadding="15dp"
-                    android:hint="City"
-                    android:inputType="text"
-                    android:lines="1" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/supplier_state_container"
-                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:helperText=""
-                app:helperTextTextColor="#a30306"
-                app:hintEnabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/supplier_state_editText"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/border_edittext"
-                    android:drawableStart="@drawable/location"
-                    android:drawablePadding="15dp"
-                    android:hint="State"
+                    android:hint="Location"
                     android:inputType="text"
                     android:lines="1" />
 
@@ -346,7 +299,7 @@
                 android:backgroundTint="#047DDD"
                 android:text="@string/consumer_signup_button_login"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
-
+            
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -384,23 +337,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.35000002" />
-
-        <TextView
-            android:id="@+id/Network_errorMsg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/main_blue"
-            android:text="Check your internet connection"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.35000002" />
-
+            app:layout_constraintVertical_bias="0.13999999" />
+        
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
