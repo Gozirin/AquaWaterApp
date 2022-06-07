@@ -2,6 +2,7 @@ package com.decagon.aqua.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.decagon.aqua.models.consumerAuthModule.User
 import java.io.Serializable
 
 @Entity(

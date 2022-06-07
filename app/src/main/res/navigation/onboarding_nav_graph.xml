@@ -95,6 +95,12 @@
         <action
             android:id="@+id/action_supplierSignUpFragment_to_supplierLoginFragment"
             app:destination="@id/supplierLoginFragment" />
+        <action
+            android:id="@+id/action_supplierSignUpFragment_to_consumerCheckMailFragment"
+            app:destination="@id/consumerCheckMailFragment" />
+        <argument
+            android:name="list"
+            app:argType="com.decagon.aqua.models.supplierAuthModule.CompanyList" />
     </fragment>
     <fragment
         android:id="@+id/supplierLoginFragment"
@@ -211,6 +217,29 @@
         <action
             android:id="@+id/action_favouriteConsumerFragment_to_consumerModalFragment"
             app:destination="@id/consumerModalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmEmailFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.ConfirmEmailFragment"
+        android:label="fragment_confirm_email"
+        tools:layout="@layout/fragment_confirm_email">
+        <argument
+            android:name="email"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="token"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            android:autoVerify="true"
+            app:uri="www.aqua-deca.com/Authentication/ConfirmEmail?email={email}/token={token}" />
+        <action
+            android:id="@+id/action_confirmEmailFragment_to_supplierLoginFragment"
+            app:destination="@id/supplierLoginFragment" />
     </fragment>
 
 </navigation>
