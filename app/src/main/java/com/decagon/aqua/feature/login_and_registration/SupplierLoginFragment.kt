@@ -15,6 +15,7 @@ import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.databinding.FragmentSupplierLoginBinding
 import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
 import com.decagon.aqua.models.supplierAuthModule.LoginModel
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -43,6 +44,17 @@ class SupplierLoginFragment : Fragment() {
         makeCompanyListCall()
 
         binding.supplierLoginSignup.setOnClickListener {
+            viewModel.companyList.observe(requireActivity()) {
+                when (it) {
+                    is Resource.Loading -> {
+                        binding.supplierLoginProgressBar.visibility = View.VISIBLE
+                    }
+                    is Resource.Error -> {
+                        Snackbar.make(view, it.message.toString(), Snackbar.LENGTH_SHORT).setAnchorView(binding.supplierLoginSignup).show()
+                        binding.supplierLoginProgressBar.visibility = View.GONE
+                    }
+                }
+            }
             if (bundle.isEmpty) {
                 Toast.makeText(requireContext(), "Please Check your Internet connection", Toast.LENGTH_SHORT).show()
             } else {
@@ -90,12 +102,6 @@ class SupplierLoginFragment : Fragment() {
                     bundle = Bundle().apply {
                         putSerializable("list", it.data)
                     }
-                }
-                is Resource.Loading -> {
-                    Toast.makeText(requireContext(), "Please Wait", Toast.LENGTH_SHORT).show()
-                }
-                is Resource.Error -> {
-                    Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
                 }
             }
         }

@@ -218,10 +218,9 @@ class SupplierSignUpFragment : Fragment() {
                 viewModel.registerResponse.observe(requireActivity()) {
                     when (it) {
                         is Resource.Success -> {
-                            Snackbar.make(view!!, it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.supplierSignupBtn).show()
+                            Snackbar.make(view!!, it.data?.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.supplierSignupBtn).show()
                             binding.supplierRegistrationProgressBar.visibility = View.GONE
-                            val action = SupplierSignUpFragmentDirections.actionSupplierSignUpFragmentToConsumerCheckMailFragment()
-                            findNavController().navigate(action)
+                            findNavController().navigate(R.id.action_supplierSignUpFragment_to_consumerCheckMailFragment)
                             binding.etFirstNameSupplierSignUp.text?.clear()
                             binding.etLastNameSupplierSignUp.text?.clear()
                             binding.supplierSignupBtn.text = "Register"
@@ -234,12 +233,10 @@ class SupplierSignUpFragment : Fragment() {
                             binding.supplierCityEditText?.text?.clear()
                             binding.supplierStateEditText?.text?.clear()
                         }
-                        is Resource.Loading -> {
-                            binding.supplierRegistrationProgressBar.visibility = View.VISIBLE
-                            binding.signFragmentLayout?.visibility = View.GONE
-                        }
                         is Resource.Error -> {
                             Snackbar.make(view!!, it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.supplierSignupBtn).show()
+                            binding.supplierSignupBtn.isEnabled = true
+                            binding.supplierRegistrationProgressBar.visibility = View.GONE
                         }
                     }
                 }

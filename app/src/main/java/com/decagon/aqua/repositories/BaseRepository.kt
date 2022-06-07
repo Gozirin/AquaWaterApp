@@ -1,11 +1,8 @@
 package com.decagon.aqua.repositories
 
 import com.decagon.aqua.commons.Resource
-import com.decagon.aqua.models.supplierAuthModule.RegisterResponse
-import com.squareup.moshi.Moshi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import okhttp3.ResponseBody
 import retrofit2.HttpException
 import retrofit2.Response
 import java.io.IOException
@@ -21,9 +18,9 @@ abstract class BaseRepository {
                 if (response.isSuccessful) {
                     Resource.Success(data = response.body()!!)
                 } else {
-                    val errorResponse = convertErrorBody(response.errorBody())
+                    val errorResponse = response.errorBody()?.charStream()?.readText()
                     Resource.Error(
-                        errorMessage = errorResponse?.toString() ?: "Unsuccessful. Try again"
+                        errorMessage = errorResponse.toString()
                     )
                 }
             } catch (e: HttpException) {
@@ -33,17 +30,6 @@ abstract class BaseRepository {
             } catch (e: Exception) {
                 Resource.Error(errorMessage = "Something went wrong")
             }
-        }
-    }
-
-    private fun convertErrorBody(errorBody: ResponseBody?): RegisterResponse? {
-        return try {
-            errorBody?.source()?.let {
-                val moshiAdapter = Moshi.Builder().build().adapter(RegisterResponse::class.java)
-                moshiAdapter.fromJson(it)
-            }
-        } catch (e: Exception) {
-            null
         }
     }
 }
