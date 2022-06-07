@@ -60,8 +60,9 @@ class SupplierLoginFragment : Fragment() {
             receivedPassword = binding.supplierLoginLayoutEditTextPassword.text.toString()
             val login_request = UserLoginRequest(receivedEmail, receivedPassword)
 
-            if (!(InputValidation.ValidateEmail(receivedEmail) == null) || (!(InputValidation.validatePassword(receivedPassword) == ""))) {
-                Toast.makeText(requireContext(), "Login Credentials are Invalid.", Toast.LENGTH_SHORT).show()
+            if (InputValidation.ValidateEmail(receivedEmail) != null || (InputValidation.validatePassword(receivedPassword) != "")) {
+                    binding.supplierLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
+                    binding.supplierLoginLayoutPasswordLo.helperText = "Enter a valid Password"
             } else {
                 aqua_view_model.loginUser(login_request)
                 binding.supplierLoginProgressBar.visibility = View.VISIBLE
@@ -78,7 +79,7 @@ class SupplierLoginFragment : Fragment() {
         observeLoginResponse()
     }
 
-    fun onPasswordTextChanged(received_Password: String) {
+    private fun onPasswordTextChanged(received_Password: String) {
         binding.supplierLoginLayoutPasswordLo.helperText = InputValidation.validatePassword(received_Password)
     }
 
@@ -95,22 +96,22 @@ class SupplierLoginFragment : Fragment() {
                     binding.supplierLoginProgressBar.visibility = View.GONE
                     Toast.makeText(requireContext(), it.value.message, Toast.LENGTH_LONG).show()
                     findNavController().navigate(R.id.action_supplierLoginFragment_to_supplier_mainActivity)
-                    // Saving auth Token and Id to Shared Preference
-                    AuthenticationPreference.setToken(it.value.data.token)
-                    AuthenticationPreference.setId(it.value.data.id)
-                    //  AuthenticationPreference.setRefreshToken(it.data.refreshToken)
+//                    // Saving auth Token and Id to Shared Preference
+//                    AuthenticationPreference.setToken(it.value.data.token)
+//                    AuthenticationPreference.setId(it.value.data.id)
+//                    //  AuthenticationPreference.setRefreshToken(it.data.refreshToken)
 
                     // refreshing token from api after 8 mins
-                    val token =
-                        "Bearer ${AuthenticationPreference.getToken(AuthenticationPreference.TOKEN_KEY)}"
-                    val userId = AuthenticationPreference.getId(AuthenticationPreference.ID_KEY)
-                    val refreshKey =
-                        AuthenticationPreference.getRefreshToken(AuthenticationPreference.REFRESH_KEY)
-                    if (userId != null) {
-                        if (refreshKey != null) {
-                            //      refreshTokenCountDown(token, userId, refreshKey)
-                        }
-                    }
+//                    val token =
+//                        "Bearer ${AuthenticationPreference.getToken(AuthenticationPreference.TOKEN_KEY)}"
+//                    val userId = AuthenticationPreference.getId(AuthenticationPreference.ID_KEY)
+//                    val refreshKey =
+//                        AuthenticationPreference.getRefreshToken(AuthenticationPreference.REFRESH_KEY)
+//                    if (userId != null) {
+//                        if (refreshKey != null) {
+//                            //      refreshTokenCountDown(token, userId, refreshKey)
+//                        }
+//                    }
                     binding.supplierLoginLayoutLoginButton.text = "Login"
                 }
                 is Resource.Error -> {

@@ -1,14 +1,19 @@
 package com.decagon.aqua.feature.consumer.adapters
 
+import android.opengl.Visibility
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.* // ktlint-disable no-wildcard-imports
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.graphics.toColor
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
 import com.decagon.aqua.feature.consumer.ui.consumptionFragments.snackbar.CustomSnackbar
 import com.decagon.aqua.models.SupplyDetailsItem
+import kotlinx.coroutines.NonDisposableHandle.parent
 
 class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDetailsItem>) :
     RecyclerView.Adapter<ConsumerSupplyDetailsAdapter.ProfileViewHolder>() {
@@ -18,6 +23,7 @@ class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDet
         return ProfileViewHolder(itemView)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ProfileViewHolder, position: Int) {
         val currentItem = consumerItem[position]
         holder.titleImage.setImageResource(currentItem.image)
@@ -31,6 +37,14 @@ class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDet
 
             CustomSnackbar.make(holder.itemView.rootView as ViewGroup).setAnchorView(R.id.supply_details_information).show()
         }
+        holder.likeBtn.setOnClickListener {
+            holder.likeBtn.visibility = View.GONE
+            holder.likeBtn2.visibility = View.VISIBLE
+        }
+        holder.likeBtn2.setOnClickListener {
+            holder.likeBtn2.visibility = View.GONE
+            holder.likeBtn.visibility = View.VISIBLE
+        }
     }
 
     class ProfileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -42,6 +56,8 @@ class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDet
         val starRating: RatingBar = itemView.findViewById(R.id.ratingBar)
         val isStocked: TextView = itemView.findViewById(R.id.consumer_suppliesDetail_adapterItem_stock_tv)
         val rating: TextView = itemView.findViewById(R.id.consumer_suppliesDetails_adapterItem_rating_tv)
+        val likeBtn: Button = itemView.findViewById(R.id.likebtn)
+        val likeBtn2: Button = itemView.findViewById(R.id.likebtn2)
     }
 
     override fun getItemCount(): Int = consumerItem.size

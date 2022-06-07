@@ -43,6 +43,7 @@ class ConsumerLoginFragment : Fragment() {
         Log.d(TAG, "onViewCreated: Login Fragment")
         binding.consumerLoginLayoutPasswordLo.helperText = ""
         binding.consumerLoginLayoutEmailLo.helperText = ""
+        errorMsg = binding.supplierLoginErrorMsg
 
         // Sign up if consumer don't have an account
         binding.consumerLoginLayoutLoginSignup.setOnClickListener {
@@ -59,11 +60,8 @@ class ConsumerLoginFragment : Fragment() {
             val login_request = UserLoginRequest(receivedEmail, receivedPassword)
 
             if (InputValidation.ValidateEmail(receivedEmail) != null || (InputValidation.validatePassword(receivedPassword) != "")) {
-                Toast.makeText(
-                    requireContext(),
-                    "Login Credentials are Invalid.",
-                    Toast.LENGTH_SHORT
-                ).show()
+                binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
+                binding.consumerLoginLayoutPasswordLo.helperText = "Enter a valid Password"
             } else {
                 aqua_view_model.loginUser(login_request)
                 binding.consumerLoginProgressBar.visibility = View.VISIBLE
@@ -99,22 +97,22 @@ class ConsumerLoginFragment : Fragment() {
                     binding.consumerLoginProgressBar.visibility = View.GONE
                     Toast.makeText(requireContext(), it.value.message, Toast.LENGTH_LONG).show()
                     findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
-                    // Saving auth Token and Id to Shared Preference
-                    AuthenticationPreference.setToken(it.value.data.token)
-                    AuthenticationPreference.setId(it.value.data.id)
-                    //  AuthenticationPreference.setRefreshToken(it.data.refreshToken)
-
-                    // refreshing token from api after 8 mins
-                    val token =
-                        "Bearer ${AuthenticationPreference.getToken(AuthenticationPreference.TOKEN_KEY)}"
-                    val userId = AuthenticationPreference.getId(AuthenticationPreference.ID_KEY)
-                    val refreshKey =
-                        AuthenticationPreference.getRefreshToken(AuthenticationPreference.REFRESH_KEY)
-                    if (userId != null) {
-                        if (refreshKey != null) {
-                            //      refreshTokenCountDown(token, userId, refreshKey)
-                        }
-                    }
+//                    // Saving auth Token and Id to Shared Preference
+//                    AuthenticationPreference.setToken(it.value.data.token)
+//                    AuthenticationPreference.setId(it.value.data.id)
+//                    //  AuthenticationPreference.setRefreshToken(it.data.refreshToken)
+//
+//                    // refreshing token from api after 8 mins
+//                    val token =
+//                        "Bearer ${AuthenticationPreference.getToken(AuthenticationPreference.TOKEN_KEY)}"
+//                    val userId = AuthenticationPreference.getId(AuthenticationPreference.ID_KEY)
+//                    val refreshKey =
+//                        AuthenticationPreference.getRefreshToken(AuthenticationPreference.REFRESH_KEY)
+//                    if (userId != null) {
+//                        if (refreshKey != null) {
+//                            //      refreshTokenCountDown(token, userId, refreshKey)
+//                        }
+//                    }
                     binding.consumerLoginLayoutLoginButton.text = "Login"
                 }
                 is Resource.Error -> {

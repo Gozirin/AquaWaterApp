@@ -68,6 +68,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
     // Koltin
     implementation Dependencies.kotlin_standard_library
     implementation Dependencies.kotlin_reflect

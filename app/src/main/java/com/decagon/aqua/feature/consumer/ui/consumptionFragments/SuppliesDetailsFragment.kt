@@ -13,12 +13,14 @@ import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSuppliesDetailsBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerSupplyDetailsAdapter
 import com.decagon.aqua.models.SupplyDetailsItem
+import com.like.LikeButton
 
 class SuppliesDetailsFragment : Fragment() {
     private lateinit var binding: FragmentSuppliesDetailsBinding
     private lateinit var newArrayList: ArrayList<SupplyDetailsItem>
     private lateinit var consumerSuppliesDetailAdapter: ConsumerSupplyDetailsAdapter
     private lateinit var recyclerView: RecyclerView
+    private lateinit var likebtn: LikeButton
 
     override fun onCreateView(
         inflater: LayoutInflater,
