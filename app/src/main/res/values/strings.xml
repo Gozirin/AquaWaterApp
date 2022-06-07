@@ -126,6 +126,10 @@
     <string name="bottle_remaining">Total Bottle remaining(76)</string>
     <string name="modal_button">Send a Reminder</string>
     <string name="product_details">product_details</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
     <string name="activity_overview">Activity overview</string>
     <string name="showing_all_supplies_failed_and_delivered">Showing all supplies, failed and delivered</string>
     <string name="supply_made">Supply made</string>
@@ -138,19 +142,5 @@
     <string name="failed_delivery">Failed delivery</string>
     <string name="total_norders_received">Total\nOrders Received</string>
     <string name="favourite_customers">Favourite Customers</string>
-    <string name="user_type">User Type</string>
-    <string name="first_name">First Name</string>
-    <string name="last_name">Last Name</string>
-    <string name="email_signup">Email</string>
-    <string name="number_of_water_bottles">Number of Water Bottles</string>
-    <string name="address_tv">Address</string>
-    <string name="location_et">Location</string>
-    <string name="first_name_hint">First name</string>
-    <string name="last_name_hint">Last name</string>
-    <string name="_1">1</string>
-    <string name="required">Required</string>
-    <string name="street">Street</string>
-    <string name="city">City</string>
-    <string name="state">State</string>
-    <string name="use_current_location">Use current location</string>
+    <string name="confrim_email_text">Click on the link below to confirm your email address and start enjoying Aqua Water</string>
 </resources>
