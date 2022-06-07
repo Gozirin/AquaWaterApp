@@ -125,6 +125,7 @@
         <entry key="app/src/main/res/layout/week_consumption_fragment.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/year_consumption_fragment.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/menu/consumer_bottom_navigation.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/supplier_bottom_nav_menu.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/menu/supplier_homepage_bottom_nav_menu.xml" value="0.13518518518518519" />
       </map>
     </option>

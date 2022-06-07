@@ -152,4 +152,5 @@
     <string name="street">Street</string>
     <string name="city">City</string>
     <string name="state">State</string>
+    <string name="use_current_location">Use current location</string>
 </resources>

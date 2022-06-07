@@ -255,26 +255,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/address_tv"
+            android:id="@+id/street_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/manrope_regular"
-            android:text="@string/address_tv"
+            android:text="@string/street"
             android:textColor="@color/all_text_color"
             android:textSize="14sp"
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phone_container" />
 
-<LinearLayout
-    android:id="@+id/address_layout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:weightSum="8"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/address_tv">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -284,18 +275,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:hintEnabled="false"
-            app:helperTextTextColor="#a30306">
+            app:helperTextTextColor="#a30306"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/street_tv">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_Street_Consumer_sign_up"
                 android:background="@drawable/border_edittext"
-                android:hint="@string/street"
+                android:hint="@string/use_current_location"
+                android:drawableStart="@drawable/location"
+                android:drawablePadding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:lines="1"
                 android:inputType="text"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/city_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/city"
+            android:textColor="@color/all_text_color"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/street_container" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/city_container"
@@ -304,18 +313,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hintEnabled="false"
-        app:helperTextTextColor="#a30306">
+        app:helperTextTextColor="#a30306"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_tv">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_City_Consumer_sign_up"
             android:background="@drawable/border_edittext"
-            android:hint="@string/city"
+            android:hint="@string/use_current_location"
+            android:drawableStart="@drawable/location"
+            android:drawablePadding="5dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:lines="1"
             android:inputType="text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/state"
+            android:textColor="@color/all_text_color"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/city_container" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/state_container"
@@ -324,21 +350,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hintEnabled="false"
-        app:helperTextTextColor="#a30306">
+        app:helperTextTextColor="#a30306"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/state_tv">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_State_Consumer_sign_up"
             android:background="@drawable/border_edittext"
-            android:hint="@string/state"
+            android:hint="@string/use_current_location"
+            android:drawableStart="@drawable/location"
+            android:drawablePadding="5dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:lines="1"
             android:inputType="text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
-
-
-</LinearLayout>
 
 
         <Button
@@ -352,7 +380,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/address_layout" />
+            app:layout_constraintTop_toBottomOf="@+id/state_container" />
 
 
         <LinearLayout
