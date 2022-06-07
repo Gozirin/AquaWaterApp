@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
-import com.decagon.aqua.commons.util.AuthenticationPreference
 import com.decagon.aqua.commons.util.Resource
 import com.decagon.aqua.core.data.UserLoginRequest
 import com.decagon.aqua.databinding.FragmentSupplierLoginBinding
@@ -61,8 +60,8 @@ class SupplierLoginFragment : Fragment() {
             val login_request = UserLoginRequest(receivedEmail, receivedPassword)
 
             if (InputValidation.ValidateEmail(receivedEmail) != null || (InputValidation.validatePassword(receivedPassword) != "")) {
-                    binding.supplierLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
-                    binding.supplierLoginLayoutPasswordLo.helperText = "Enter a valid Password"
+                binding.supplierLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
+                binding.supplierLoginLayoutPasswordLo.helperText = "Enter a valid Password"
             } else {
                 aqua_view_model.loginUser(login_request)
                 binding.supplierLoginProgressBar.visibility = View.VISIBLE

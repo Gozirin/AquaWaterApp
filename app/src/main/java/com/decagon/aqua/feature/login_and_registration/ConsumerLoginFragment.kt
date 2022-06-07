@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
-import com.decagon.aqua.commons.util.AuthenticationPreference
 import com.decagon.aqua.commons.util.Resource
 import com.decagon.aqua.core.data.UserLoginRequest
 import com.decagon.aqua.databinding.FragmentLoginConsumerBinding

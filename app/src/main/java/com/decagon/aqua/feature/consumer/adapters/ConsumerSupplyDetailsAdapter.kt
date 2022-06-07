@@ -1,6 +1,5 @@
 package com.decagon.aqua.feature.consumer.adapters
 
-import android.opengl.Visibility
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.* // ktlint-disable no-wildcard-imports
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.AppCompatButton
-import androidx.core.graphics.toColor
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
 import com.decagon.aqua.feature.consumer.ui.consumptionFragments.snackbar.CustomSnackbar
