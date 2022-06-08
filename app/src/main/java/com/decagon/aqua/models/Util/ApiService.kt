@@ -1,12 +1,13 @@
 package com.decagon.aqua.models.Util
 
-import com.decagon.aqua.models.updatepassword.UpdatePasswordRequest
+import com.decagon.aqua.models.updatepassword.UpdatePasswordModel
 import com.decagon.aqua.models.updatepassword.UpdatePasswordResponseModel
 import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.Header
+import retrofit2.http.PATCH
 
 interface ApiService {
 
-    @POST("/api/v1/Account/UpdatePassword")
-    suspend fun updatePassword(@Body updatePasswordRequest: UpdatePasswordRequest): UpdatePasswordResponseModel
+    @PATCH("/api/v1/Account/UpdatePassword")
+    suspend fun updatePassword(@Header("Authorization")authToken: String, @Body updatePasswordRequest: UpdatePasswordModel): UpdatePasswordResponseModel
 }

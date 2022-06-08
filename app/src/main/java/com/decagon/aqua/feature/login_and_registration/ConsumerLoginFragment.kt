@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentLoginConsumerBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerLoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginConsumerBinding
     override fun onCreateView(
@@ -30,7 +32,7 @@ class ConsumerLoginFragment : Fragment() {
         }
         // navigate to consumer forgot password page
         binding.consumerLoginLayoutTextViewForgetPassword.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_consumerForgotPasswordFragment)
+            findNavController().navigate(R.id.action_loginFragment_to_consumer_Change_Password_Screen_Fragment)
         }
         binding.consumerLoginLayoutLoginButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)

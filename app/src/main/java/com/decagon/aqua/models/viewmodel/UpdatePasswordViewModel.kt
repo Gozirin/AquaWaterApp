@@ -1,25 +1,39 @@
 package com.decagon.aqua.models.viewmodel
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.decagon.aqua.models.repository.IUpdatePasswordRepository
-import com.decagon.aqua.models.updatepassword.UpdatePasswordRequest
+import com.decagon.aqua.models.updatepassword.UpdatePasswordModel
 import com.decagon.aqua.models.updatepassword.UpdatePasswordResponseModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class UpdatePasswordViewModel @Inject constructor
-(private val updatePasswordRepository: IUpdatePasswordRepository) : ViewModel() {
+class UpdatePasswordViewModel @Inject constructor(
+    private val updatePasswordRepository: IUpdatePasswordRepository,
+    private val savedStateHandle: SavedStateHandle
+) : ViewModel() {
 
-    var updatePasswordLiveData: MutableLiveData<UpdatePasswordResponseModel> = MutableLiveData()
-        private set
+    private var _updatePasswordLiveData: MutableLiveData<UpdatePasswordResponseModel> =
+        MutableLiveData()
+    val updatePasswordLiveData: LiveData<UpdatePasswordResponseModel> = _updatePasswordLiveData
 
-    fun updatePassword(updatePasswordRequest: UpdatePasswordRequest) {
-        this.viewModelScope.launch {
-            updatePasswordLiveData.value = updatePasswordRepository.updatePassword(updatePasswordRequest)
+    fun updatePassword(
+        authToken: String,
+        updatePasswordRequest: UpdatePasswordModel
+    ) {
+        viewModelScope.launch {
+            try {
+                val response =
+                    updatePasswordRepository.updatePassword(authToken, updatePasswordRequest)
+                _updatePasswordLiveData.value = response
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 }
+
+
+
+

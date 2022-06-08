@@ -99,7 +99,7 @@
     <string name="allows_you_receive_the_eemail_notification_nfrom_the_app">Allows you receive the eemail notification \nfrom the app</string>
     <string name="my_referrals">My referrals</string>
     <string name="create_new_password">Create New Password</string>
-    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_password">Confirm New Password</string>
     <string name="reset_password">Reset Password</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="sign_up">Sign Up</string>

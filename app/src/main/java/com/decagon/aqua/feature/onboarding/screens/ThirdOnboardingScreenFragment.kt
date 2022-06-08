@@ -11,7 +11,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentThirdOnboardingScreenBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ThirdOnboardingScreenFragment : Fragment() {
     private var _binding: FragmentThirdOnboardingScreenBinding? = null
     private val binding get() = _binding!!

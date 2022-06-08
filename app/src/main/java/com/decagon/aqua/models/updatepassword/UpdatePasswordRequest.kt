@@ -6,7 +6,7 @@ data class UpdatePasswordRequest(
     @SerializedName("newPassword")
     val newPassword: String,
     @SerializedName("email")
-    val email: String,
+    val confirmPassword: String,
     @SerializedName("oldPassword")
-    val oldPassword: String?
+    val oldPassword: String
 )
