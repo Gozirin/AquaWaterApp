@@ -21,7 +21,7 @@ import com.decagon.aqua.models.viewmodel.UpdatePasswordViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
-//private const val AUTH_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjlhMjRhZjA0LTg2Y2MtNGZiMC1hZTY2LTk5OWNiYTE2YmQ2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImdvemllYW55YXNvOEBnbWFpbC5jb20iLCJGaXJzdE5hbWUiOiJQcmVjaW91cyIsIkxhc3ROYW1lIjoiQW55YXNvIiwiZXhwIjoxNjU0Njk5ODI1LCJpc3MiOiJ3d3cuc2VjdXJpdHkub3JnIiwiYXVkIjoid3d3LnNlY3VyaXR5Lm9yZyJ9.ajFbgdTk_IDglACnvUTSgnEY9NZXftz5_1wk4cs-5L0"
+private const val AUTH_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjlhMjRhZjA0LTg2Y2MtNGZiMC1hZTY2LTk5OWNiYTE2YmQ2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImdvemllYW55YXNvOEBnbWFpbC5jb20iLCJGaXJzdE5hbWUiOiJQcmVjaW91cyIsIkxhc3ROYW1lIjoiQW55YXNvIiwiZXhwIjoxNjU0Njk5ODI1LCJpc3MiOiJ3d3cuc2VjdXJpdHkub3JnIiwiYXVkIjoid3d3LnNlY3VyaXR5Lm9yZyJ9.ajFbgdTk_IDglACnvUTSgnEY9NZXftz5_1wk4cs-5L0"
 private val TAG = "TAG"
 @AndroidEntryPoint
 class ConsumerChangePasswordScreenFragment : Fragment() {
@@ -55,24 +55,53 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
             changePasswordScreenButton.setOnClickListener {
                 val newPassword = textInputLayout2.editText?.text.toString()
                 val confirmPassword = textInputLayout4.editText?.text.toString()
-
                 val currentPassword = changePasswordScreenTextInputLayout1.editText?.text.toString()
-                if (Inputvalidation.validatePassword(newPassword) == null &&
-                    validateCurrentPasswordAndOldPasswordAndConfirmPassword(newPassword,confirmPassword)
-                ){
 
+                if (!Inputvalidation.validateNewPassword(newPassword)  || !Inputvalidation.validateConfirmPassword(newPassword, confirmPassword)) {
+                        Toast.makeText(requireContext(), "Enter Valid Password", Toast.LENGTH_SHORT).show()
+                } else {
                     val updatePassword =
                         UpdatePasswordModel(newPassword, confirmPassword, email = "gozieanyaso8@gmail.com", currentPassword)
                     Log.d(TAG, "updatePassword: $updatePassword ")
 
-//                    updatePasswordModel.updatePassword(AUTH_TOKEN, updatePassword)
-
-                } else {
-                    Toast.makeText(requireContext(), "Enter Valid Password", Toast.LENGTH_SHORT)
-                            .show()
+                    updatePasswordModel.updatePassword(AUTH_TOKEN, updatePassword)
                 }
 
             }
+        }
+
+        /**
+         * add a textchangeListener
+         */
+
+
+        /**
+         * observe the response from the update password
+         */
+        updatePasswordModel.updatePasswordLiveData.observe(viewLifecycleOwner) { updatePasswordResponse ->
+            if (updatePasswordResponse.success) {
+                Snackbar.make(requireView(), updatePasswordResponse.Message, Snackbar.LENGTH_LONG).setAnchorView(binding.changePasswordScreenButton).show()
+            } else {
+                Snackbar.make(requireView(), updatePasswordResponse.errors.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.changePasswordScreenButton).show()
+            }
+        }
+    }
+    private fun onUpdateTextChanged(savedPassword: String) {
+
+//        binding.changePasswordScreenTextInputLayout1.helperText = Inputvalidation.validateNewPassword(savedPassword)
+//        binding.textInputLayout2.helperText = Inputvalidation.validatePassword(saved_Password)
+//        binding.textInputLayout4.helperText = Inputvalidation.validatePassword(saved_Password)
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -164,11 +193,12 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
 //                    }
 //                }
 //            }
-        }
+//        }
 
         /**
          * observe the response from the update password
          */
+/*
         updatePasswordModel.updatePasswordLiveData.observe(viewLifecycleOwner) { updatePasswordResponse ->
             if (updatePasswordResponse.success) {
                 Snackbar.make(requireView(), updatePasswordResponse.Message, Snackbar.LENGTH_LONG).setAnchorView(binding.changePasswordScreenButton).show()
@@ -183,6 +213,8 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
         binding.textInputLayout4.helperText = Inputvalidation.validatePassword(saved_Password)
     }
 }
+
+ */
 
 
 

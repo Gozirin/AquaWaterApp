@@ -86,6 +86,9 @@
         <action
             android:id="@+id/action_loginFragment_to_favouriteConsumerFragment2"
             app:destination="@id/favouriteConsumerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_consumer_Change_Password_Screen_Fragment"
+            app:destination="@id/consumer_Change_Password_Screen_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/supplierSignUpFragment"
