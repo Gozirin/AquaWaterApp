@@ -5,6 +5,8 @@ import androidx.room.Room
 import com.decagon.aqua.core.data.AquaDatabase
 import com.decagon.aqua.core.service.ApiService
 import com.decagon.aqua.feature.onboarding.ResetPasswordRepository
+import com.decagon.aqua.feature.repository.ForgotPasswordRepository
+import com.decagon.aqua.feature.repository.IForgotPasswordRepository
 import com.decagon.aqua.feature.repository.IResetPasswordRepositoryInterface
 import dagger.Module
 import dagger.Provides
@@ -53,11 +55,13 @@ object AuthAppModule {
             .addInterceptor(loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY))
             .build()
     }
+
     @Singleton
     @Provides
     fun provideConverterFactory(): GsonConverterFactory {
         return GsonConverterFactory.create()
     }
+
     @Singleton
     @Provides
     fun provideRetrofitInstance(
@@ -70,6 +74,7 @@ object AuthAppModule {
             .addConverterFactory(converterFactory)
             .build()
     }
+
     @Singleton
     @Provides
     fun provideApiService(retrofit: Retrofit): ApiService {
@@ -80,5 +85,11 @@ object AuthAppModule {
     @Provides
     fun provideResetPasswordRepository(apiService: ApiService): IResetPasswordRepositoryInterface {
         return ResetPasswordRepository(apiService)
+    }
+
+    @Singleton
+    @Provides
+    fun providesForgetPasswordRepository(apiService: ApiService): IForgotPasswordRepository {
+        return ForgotPasswordRepository(apiService)
     }
 }

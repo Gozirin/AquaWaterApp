@@ -147,15 +147,16 @@
             android:defaultValue="noel.osarinmwian@gmail.com"
             app:argType="string"
             app:nullable="true" />
-        <argument
-            android:name="token"
-            app:argType="string"
-            app:nullable="true" />
         <deepLink
             android:id="@+id/deepLink"
             app:action="android.intent.action.MY_ACTION"
             app:mimeType="type/subtype"
             app:uri="http://www.aqua-deca.com/Authentication/ResetPassword?email={email}/token={token}" />
+        <argument
+            android:name="token"
+            app:argType="string"
+            app:nullable="true"
+             />
 
 
     </fragment>
