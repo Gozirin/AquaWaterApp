@@ -1,5 +1,7 @@
 package com.decagon.aqua.network
 
+import com.decagon.aqua.core.data.UserSignUpResponse
+import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import retrofit2.Response
@@ -29,4 +31,10 @@ interface SupplierAuthApi {
         @Body
         loginModel: LoginModel
     ): Response<LoginResponse>
+
+    @POST("/api/v1/Customer")
+    suspend fun consumerSignUp(
+        @Body userSignUpRequest: Consumer
+    ): Response<UserSignUpResponse>
 }
+

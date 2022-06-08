@@ -10,11 +10,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSignUpConsumerBinding
-import com.decagon.aqua.feature.consumer.authentication.AquaViewModel
 import com.decagon.aqua.feature.consumer.validation.* // ktlint-disable no-wildcard-imports
+import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Location
-import com.decagon.aqua.models.User
+import com.decagon.aqua.models.consumerAuthModule.User
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +24,7 @@ class ConsumerSignUpFragment : Fragment() {
 
     private var _binding: FragmentSignUpConsumerBinding? = null
     private val binding get() = _binding!!
-    private val aquaViewModel: AquaViewModel by viewModels()
+    private val viewModel: AuthenticationViewModel by viewModels()
     private lateinit var firstName: String
     private lateinit var lastName: String
     private lateinit var email: String
@@ -103,17 +103,17 @@ class ConsumerSignUpFragment : Fragment() {
 
         if (validEmail && validFirstName && validLastName && validPhone && validPassword && validState && validCity && validStreet) {
 
-            aquaViewModel.signUp(signUpConsumer)
+            viewModel.signUp(signUpConsumer)
             Log.d(TAG, "submitForm: $signUpRequest")
         }
-        aquaViewModel.signUp.observe(viewLifecycleOwner) {
+        viewModel.signUp.observe(viewLifecycleOwner) {
             if (it.data?.success == true) {
                 Log.d(TAG, "submitFormrResponse: ${it.message}, ${it.data}")
-                Snackbar.make(view!!, "Consumer successfully created!", Snackbar.LENGTH_LONG).setAnchorView(binding.consumerSignupLayoutButtonSignIn).show()
+                Snackbar.make(requireView(), "Consumer successfully created!", Snackbar.LENGTH_LONG).setAnchorView(binding.consumerSignupLayoutButtonSignIn).show()
                 Log.d(TAG, "submitForm: ${it.data.message}")
-                findNavController().navigate(R.id.action_consumerSignUpFragment_to_loginFragment)
+                findNavController().navigate(R.id.action_consumerSignUpFragment_to_consumerCheckMailFragment)
             } else {
-                Snackbar.make(view!!, it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.consumerSignupLayoutButtonSignIn).show()
+                Snackbar.make(requireView(), it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.consumerSignupLayoutButtonSignIn).show()
                 Log.d(TAG, "submitForm: ${it.message}")
             }
         }
