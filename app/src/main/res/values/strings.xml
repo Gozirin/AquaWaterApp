@@ -25,7 +25,7 @@
     <string name="consumer_signup_edit_text_address">Location</string>
     <string name="consumer_signup_text_view_number_of_bottles">Number Of Bottle</string>
     <string name="consumer_signup_edit_text_number_of_bottles">1</string>
-    <string name="consumer_signup_button_login">SignUp</string>
+    <string name="consumer_signup_button_login">Sign Up</string>
     <string name="consumer_signup_text_view_already_have_an_account">Already have an account?</string>
     <string name="consumer_signup_text_view_sign_in">Sign in</string>
 
@@ -62,6 +62,7 @@
     <string name="date">Today 02 Apr 2022</string>
     <string name="recyclerview_title">Suppliers</string>
     <string name="company_name">Arizona Water Inc</string>
+    <string name="item">Bottle Water Pack</string>
     <string name="location">Ikeja, Lagos</string>
     <string name="price">N900.00 per/bottle</string>
     <string name="store">View store</string>
@@ -79,6 +80,20 @@
     <string name="water_with_excellence">water with excellence</string>
     <string name="explore_quality">Explore quality</string>
     <string name="the_water_quality_is_in_excellent_condition">The water quality is in excellent condition</string>
+    <string name="in_stock">in stock</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="per_bottle">per/bottle</string>
+    <string name="n900_00">N900.00</string>
+    <string name="company_name_detail">Arinzonal Water</string>
+    <string name="arizonal_water_inc">Arizonal Water Inc</string>
+    <string name="address">Ikeja, Lagos</string>
+    <string name="customer_rating">65% customer\'s rate</string>
+    <string name="contact_seller">Contact Seller</string>
+    <string name="products">Products</string>
+    <string name="sort_by_btn">Sort By</string>
+    <string name="filter_btn">Filter</string>
+    <string name="added">Successfully added to Cart</string>
+    <string name="_9">(9)</string>
     <string name="enter_the_email_associated_with_your_account_and_we_ll_send_an_email_with_instruction_to_reset_your_password">Enter the email associated with your account and we \'ll send an email with instruction to reset your password</string>
     <string name="enter_the_email_associated_with_your_account_and_nwe_ll_send_an_email_with_instruction_to_reset_your_npassword">Enter the email associated with your account and \nwe \'ll send an email with instruction to reset your \npassword</string>
     <string name="check_mail">Check Mail</string>
@@ -108,4 +123,46 @@
     <string name="abayomitunde_gmail_com">abayomitunde@gmail.com</string>
     <string name="passwordsuccessful">PasswordSuccessful</string>
     <string name="password_reset_successfully">Password reset successfully</string>
+    <string name="tabLayout">Tablayout</string>
+    <string name="person">Person</string>
+    <string name="order">Order</string>
+    <string name="home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="_23_3_2022">23/3/2022</string>
+    <string name="delivered">Delivered</string>
+    <string name="arizona_inc">Arizona Inc.</string>
+    <string name="_6_packs_of_big_bottle_water">6 packs of big bottle water</string>
+    <string name="reminder">Reminder sent successfully</string>
+    <string name="reminder_message">You’ve successfully sent a reminder to Pearl Somto he will get a notification to place order</string>
+    <string name="back_home">Back Home</string>
+    <string name="favourite">Favourite Customers</string>
+    <string name="Filter">Filter</string>
+    <string name="Pearl">Pearl Somto</string>
+    <string name="Egbeda">Egbeda, Lagos</string>
+    <string name="Info">More Info</string>
+    <string name="location_name">34, Arinza street, Magodo, Phase2, Lagos</string>
+    <string name="phone_number">07045763344</string>
+    <string name="Emeka_email">Emekachukwuebuka@gmail.com</string>
+    <string name="view_consumption">Consumption level (65.89%)</string>
+    <string name="bottle_bought">Total Bottle bought(76)</string>
+    <string name="bottle_remaining">Total Bottle remaining(76)</string>
+    <string name="modal_button">Send a Reminder</string>
+    <string name="product_details">product_details</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="activity_overview">Activity overview</string>
+    <string name="showing_all_supplies_failed_and_delivered">Showing all supplies, failed and delivered</string>
+    <string name="supply_made">Supply made</string>
+    <string name="in_the_past">in the past</string>
+    <string name="_112">112</string>
+    <string name="bottles_delivered_successful">Bottles delivered successful</string>
+    <string name="_24">24</string>
+    <string name="defaulted_bottles">Defaulted bottles</string>
+    <string name="_7">7</string>
+    <string name="failed_delivery">Failed delivery</string>
+    <string name="total_norders_received">Total\nOrders Received</string>
+    <string name="favourite_customers">Favourite Customers</string>
+    <string name="confrim_email_text">Click on the link below to confirm your email address and start enjoying Aqua Water</string>
 </resources>

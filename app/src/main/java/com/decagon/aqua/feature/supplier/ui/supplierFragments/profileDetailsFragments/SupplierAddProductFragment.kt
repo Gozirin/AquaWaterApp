@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagon.aqua.databinding.FragmentSupplierAddProductBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SupplierAddProductFragment : Fragment() {
 
     private lateinit var binding: FragmentSupplierAddProductBinding

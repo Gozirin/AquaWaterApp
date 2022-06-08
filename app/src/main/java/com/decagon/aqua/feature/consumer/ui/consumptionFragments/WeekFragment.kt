@@ -11,7 +11,9 @@ import com.anychart.chart.common.dataentry.DataEntry
 import com.anychart.chart.common.dataentry.ValueDataEntry
 import com.anychart.charts.Pie
 import com.decagon.aqua.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class WeekFragment : Fragment() {
 
     private var chart: AnyChartView? = null
@@ -29,7 +31,7 @@ class WeekFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        chart = requireView().findViewById(R.id.consumptionChart)
+        chart = requireView().findViewById(R.id.chart1)
         configChart()
     }
 

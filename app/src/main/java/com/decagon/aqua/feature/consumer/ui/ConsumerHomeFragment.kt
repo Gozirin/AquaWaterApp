@@ -12,7 +12,9 @@ import com.decagon.aqua.R
 import com.decagon.aqua.databinding.ConsumerHomeFragmentBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerHomeScreenAdapter
 import com.decagon.aqua.models.DummyConsumerItem
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConsumerHomeFragment : Fragment() {
 
     private lateinit var binding: ConsumerHomeFragmentBinding
@@ -46,13 +48,13 @@ class ConsumerHomeFragment : Fragment() {
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
     }
     private fun getProfiles() {
-        newArrayList.add(DummyConsumerItem(R.drawable.image1, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(DummyConsumerItem(R.drawable.image2, "Regal brothers", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(DummyConsumerItem(R.drawable.image3, "Ikechukwu Water Co.", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(DummyConsumerItem(R.drawable.image4, "Eva Bottling Co", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(DummyConsumerItem(R.drawable.image5, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(DummyConsumerItem(R.drawable.image6, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(DummyConsumerItem(R.drawable.image1, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
-        newArrayList.add(DummyConsumerItem(R.drawable.image3, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Regal brothers", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Ikechukwu Water Co.", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Eva Bottling Co", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
+        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
     }
 }
