@@ -41,3 +41,4 @@ interface SupplierAuthApi {
     @GET("/api/Company/GetAllCompaniesWithFeaturedProduct")
     suspend fun getCompaniesWithProducts(): Response<CompaniesWithProducts>
 }
+
