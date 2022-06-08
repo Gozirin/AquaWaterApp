@@ -33,7 +33,8 @@ object InputValidation {
         }
         return ""
     }
-    fun validateNewPassword(newPassword: String): Boolean{
+
+    fun validateNewPassword(newPassword: String): Boolean {
         // val checkedNewPassword = Regex("^(?=.*[A-Z].*[A-Z])(?=.*[!@#\$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}\$")
 
         val checkedNewPassword = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@,#$%^&*]).{8,}\$")
@@ -42,13 +43,12 @@ object InputValidation {
     }
 
     // function to check if the two fields are  equal
-    fun validateNewPasswordAndConfirmPassword(newPassword: String,confirmPassword: String): Boolean {
+    fun validateNewPasswordAndConfirmPassword(newPassword: String, confirmPassword: String): Boolean {
         result = newPassword == confirmPassword
         return result
     }
-    fun validateNotEmptyNewPasswordField(newPassword: String): Boolean{
+    fun validateNotEmptyNewPasswordField(newPassword: String): Boolean {
         result = newPassword.isNotEmpty()
         return result
     }
-
 }

@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerCreateNewPasswordBinding
 import com.decagon.aqua.feature.authentication.InputValidation
@@ -25,8 +26,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ConsumerCreateNewPasswordFragment : Fragment() {
     private val TAG = "ConsumerCreateNewPasswordFragment"
     private lateinit var binding: FragmentConsumerCreateNewPasswordBinding
-    private lateinit var  validPassword: String
-//    private val args by navArgs<ConsumerCreateNewPasswordFragmentArgs>()
+    private val args by navArgs<ConsumerCreateNewPasswordFragmentArgs>()
     private val resetPasswordViewModel: ResetPasswordViewModel by viewModels()
 
     override fun onCreateView(
@@ -42,102 +42,87 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // initializing view binding
         binding = FragmentConsumerCreateNewPasswordBinding.bind(view)
+
         binding.textInputLayout.helperText = ""
         binding.textInputLayout3.helperText = ""
 
-        Log.d(TAG, " email, token")
 
         // Don't have account signup to page.
-        binding.createNewTextView6.setOnClickListener {
-            findNavController().navigate(R.id.action_consumerCreateNewPasswordFragment_to_supplierSignUpFragment)
-        }
 
-        // navigate to password account successful
-        binding.createNewButton2.setOnClickListener {
-            findNavController().navigate(R.id.action_consumerCreateNewPasswordFragment_to_password_AccountSuccessfulFragment2)
-        }
         binding.apply {
+            /**
+             * Reset Password
+             */
+            resetPasswordButton.setOnClickListener {
 
-            createNewButton2.setOnClickListener {
-
-                validPassword = binding.textInputLayout.toString()
                 val newPassword = binding.textInputLayoutEditTextNewPassword.text.toString()
-                if (InputValidation.validatePassword(validPassword) == null)
-                else{
-                    Log.d(TAG, "observeForgotPasswordResponse")
-                }
-
                 val confirmPassword = binding.textInputLayoutEditTextConfirmPassword.text.toString()
-                if (InputValidation.validatePassword(validPassword) == null)
-
-                else {
+                
+                if ((InputValidation.validatePassword(newPassword)) == null) {
+                    Toast.makeText(requireContext(), "New Password Valid", Toast.LENGTH_SHORT).show()
+                } else {
                     resetPasswordViewModel.resetPassword(
                         ResetPasswordRequest(
-
-                            newPassword,
-                            confirmPassword
+                            email = String(),
+                            token = String(), newPassword, confirmPassword = String()
                         )
                     )
                 }
 
-            }
-            textInputLayoutEditTextNewPassword.addTextChangedListener {
-                validPassword = textInputLayoutEditTextNewPassword.text.toString()
-                onPasswordTextChanged(validPassword)
-            }
-            textInputLayoutEditTextConfirmPassword.addTextChangedListener {
-                validPassword = textInputLayoutEditTextConfirmPassword.text.toString()
-                onPasswordTextChanged(validPassword)
-            }
-            val newPassword = binding.textInputLayoutEditTextNewPassword.text.toString()
-            val confirmPassword = binding.textInputLayoutEditTextConfirmPassword.text.toString()
-
-            if (validateNotEmptyNewPasswordField(newPassword) &&
-                validateNewPassword(newPassword) &&
-                validateNewPasswordAndConfirmPassword(newPassword, confirmPassword)
-
-            ) {
-//                binding.fragmentResetPasswordProgressBarPb.visibility = View.VISIBLE
-                binding.textInputLayout.visibility = View.VISIBLE
-                binding.createNewButton2.text = "Reset Password"
-
-            } else {
-
-                if (InputValidation.validatePassword(newPassword) == null) {
+                if (validateNewPassword(newPassword) && validateNewPasswordAndConfirmPassword(
+                        newPassword,
+                        confirmPassword)
+                ) {
+                    Log.d(TAG, "message: ${newPassword}, ${confirmPassword}")
+                } else{
                     binding.textInputLayout.helperText = "Please enter your new password"
                     binding.textInputLayout.visibility = View.VISIBLE
-
-                }
-                if (InputValidation.validatePassword(confirmPassword) == null) {
-                    binding.textInputLayout.helperText = "Please enter valid password"
-                }
-
-                if  (validateNewPassword(newPassword) && !validateNewPasswordAndConfirmPassword(
-                        newPassword,
-                        confirmPassword
-                    )
-                ) {
                     binding.textInputLayout3.helperText = "Password does not match"
                     binding.textInputLayout3.visibility = View.VISIBLE
+                    Log.d(TAG, "message:${newPassword}, ${confirmPassword}, ${it.id} ")
                 }
-            }
-            observeForgotPasswordResponse()
-        }
+                
+               
 
+            }
+
+            /**
+             * using the text-watcher
+             */
+            binding.textInputLayoutEditTextNewPassword.addTextChangedListener {
+                val newPassword = textInputLayoutEditTextNewPassword.text.toString()
+                binding.textInputLayoutEditTextNewPassword.text.toString()
+                onPasswordTextChanged(newPassword)
+            }
+
+            binding.textInputLayoutEditTextConfirmPassword.addTextChangedListener {
+                val confirmPassword= textInputLayoutEditTextConfirmPassword.text.toString()
+                binding.textInputLayoutEditTextConfirmPassword.text.toString()
+                onPasswordTextChanged(confirmPassword)
+            }
+
+
+        }
+        observeForgotPasswordResponse()
+    }
+    private fun onPasswordTextChanged(receivedPassword: String) {
+        binding.textInputLayout.helperText = InputValidation.validatePassword(receivedPassword)
+        binding.textInputLayout3.helperText = InputValidation.validatePassword(receivedPassword)
     }
 
     private fun observeForgotPasswordResponse() {
 
-        resetPasswordViewModel.resetPasswordLiveData.observe(viewLifecycleOwner, Observer {
-            Log.d(TAG, "observeForgotPasswordResponse: ${it.message} ")
-            Toast.makeText(requireContext(), "ForgotPassword Successful", Toast.LENGTH_SHORT).show()
-        })
-    }
+        resetPasswordViewModel.resetPasswordLiveData.observe(
+            viewLifecycleOwner,
+            Observer {
+                Log.d(TAG, "observeForgotPasswordResponse: ${it.message} ")
+                if(it.success){
+                    Toast.makeText(requireContext(), "password successful", Toast.LENGTH_SHORT).show()
+                  //findNavController().navigate(R.id.action_consumerCreateNewPasswordFragment_to_supplierLoginFragment)
+                }
 
-    private fun onPasswordTextChanged(received_Password: String) {
-        binding.textInputLayout.helperText = InputValidation.validatePassword(received_Password)
-        binding.textInputLayout3.helperText =  InputValidation.validatePassword(received_Password)
+            }
+        )
     }
 
 }
-

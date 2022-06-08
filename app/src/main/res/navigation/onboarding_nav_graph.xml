@@ -21,7 +21,7 @@
         android:id="@+id/splashFragment"
         android:name="com.decagon.aqua.feature.onboarding.SplashScreenFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment"
@@ -32,7 +32,7 @@
         android:id="@+id/viewPagerFragment"
         android:name="com.decagon.aqua.feature.onboarding.ViewPagerFragment"
         android:label="fragment_view_pager"
-        tools:layout="@layout/fragment_view_pager" >
+        tools:layout="@layout/fragment_view_pager">
 
         <action
             android:id="@+id/action_viewPagerFragment_to_loggingFragment"
@@ -44,7 +44,7 @@
         android:id="@+id/loggingFragment"
         android:name="com.decagon.aqua.feature.onboarding.LoggingFragment"
         android:label="fragment_logging"
-        tools:layout="@layout/fragment_logging" >
+        tools:layout="@layout/fragment_logging">
         <action
             android:id="@+id/action_loggingFragment_to_supplierLoginFragment"
             app:destination="@id/supplierLoginFragment" />
@@ -58,7 +58,7 @@
     <fragment
         android:id="@+id/consumerSignUpFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.ConsumerSignUpFragment"
-        android:label="ConsumerSignUpFragment" >
+        android:label="ConsumerSignUpFragment">
         <action
             android:id="@+id/action_consumerSignUpFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -70,7 +70,7 @@
         android:id="@+id/loginFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.ConsumerLoginFragment"
         android:label="fragment_login_consumer"
-        tools:layout="@layout/fragment_login_consumer" >
+        tools:layout="@layout/fragment_login_consumer">
         <action
             android:id="@+id/action_loginFragment_to_consumerSignUpFragment"
             app:destination="@id/consumerSignUpFragment" />
@@ -81,17 +81,17 @@
             android:id="@+id/action_loginFragment_to_consumerSignUpFragment2"
             app:destination="@id/consumerSignUpFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_consumerForgotPasswordFragment"
-            app:destination="@id/consumerForgotPasswordFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_consumer_mainActivity2"
             app:destination="@id/consumer_mainActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_consumerForgotPasswordFragment"
+            app:destination="@id/consumerForgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/supplierSignUpFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.SupplierSignUpFragment"
         android:label="fragment_supplier_sign_up"
-        tools:layout="@layout/fragment_supplier_sign_up" >
+        tools:layout="@layout/fragment_supplier_sign_up">
         <action
             android:id="@+id/action_supplierSignUpFragment_to_supplierLoginFragment"
             app:destination="@id/supplierLoginFragment" />
@@ -100,7 +100,7 @@
         android:id="@+id/supplierLoginFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.SupplierLoginFragment"
         android:label="fragment_supplier_login"
-        tools:layout="@layout/fragment_supplier_login" >
+        tools:layout="@layout/fragment_supplier_login">
         <action
             android:id="@+id/action_supplierLoginFragment_to_supplierSignUpFragment"
             app:destination="@id/supplierSignUpFragment" />
@@ -120,16 +120,25 @@
         android:name="com.decagon.aqua.feature.login_and_registration.ConsumerCheckMailFragment"
         android:label="fragment_consumer_check_mail"
         tools:layout="@layout/fragment_consumer_check_mail">
+
+        <argument
+            android:name="newPassword"
+            android:defaultValue="noel@4me234"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="confirmPassword"
+            android:defaultValue="noel@4me234"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:action="android.intent.MY_ACTION"
+            app:mimeType="type/subtype"
+            app:uri="https://aquawaterapp.herokuapp.com/api/v1/Account/Forgot-Password?" />
         <action
             android:id="@+id/action_consumerCheckMailFragment_to_consumerCreateNewPasswordFragment"
             app:destination="@id/consumerCreateNewPasswordFragment" />
-        <argument
-            android:name="email"
-            android:defaultValue="email"
-            app:argType="string" />
-        <deepLink
-            android:id="@+id/deepLink3"
-            app:uri="http://www.aqua-deca.com/Authentication/ConfirmEmail/{email}" />
     </fragment>
     <fragment
         android:id="@+id/consumerCreateNewPasswordFragment"
@@ -155,8 +164,10 @@
         <argument
             android:name="token"
             app:argType="string"
-            app:nullable="true"
-             />
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_consumerCreateNewPasswordFragment_to_supplierLoginFragment"
+            app:destination="@id/supplierLoginFragment" />
 
 
     </fragment>
@@ -173,11 +184,23 @@
         <action
             android:id="@+id/action_consumerForgotPasswordFragment_to_consumerCheckMailFragment"
             app:destination="@id/consumerCheckMailFragment" />
-        <action
-            android:id="@+id/action_consumerForgotPasswordFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+        <argument
+            android:name="email"
+            android:defaultValue="chigozie@gmail.com"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="token"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:action="android.intent.MY_ACTION"
+            app:mimeType="type/subtype"
+            app:uri="http://www.aqua-deca.com/Authentication/ForgotPassword?email={email}/token={token}" />
 
 
     </fragment>
+
 
 </navigation>

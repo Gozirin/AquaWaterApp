@@ -29,9 +29,6 @@ class ConsumerCheckMailFragment : Fragment() {
         binding = FragmentConsumerCheckMailBinding.bind(view)
 
         // Try another email if message not received or check spam filter.
-        binding.consumerCheckMailTextView5.setOnClickListener {
-            findNavController().navigate(R.id.action_consumerCheckMailFragment_to_consumerCreateNewPasswordFragment)
-        }
 
         // navigate to consumer create new password page
         binding.consumerCheckMailButton.setOnClickListener {

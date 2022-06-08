@@ -18,13 +18,13 @@ class ResetPasswordViewModel @Inject constructor(private val resetPasswordReposi
 
     private val _resetPasswordLiveData: MutableLiveData<ResetPasswordResponse> = MutableLiveData()
     val resetPasswordLiveData: LiveData<ResetPasswordResponse>
-    get() = _resetPasswordLiveData
+        get() = _resetPasswordLiveData
 
     fun resetPassword(resetPasswordRequest: ResetPasswordRequest) {
         viewModelScope.launch {
             try {
                 val response = resetPasswordRepository.resetPassword(resetPasswordRequest)
-                Log.d(TAG, "is there a response tobe observed: ${response}")
+                Log.d(TAG, "is there a response tobe observed: $response")
                 _resetPasswordLiveData.value = response
             } catch (e: Exception) {
                 e.printStackTrace()
