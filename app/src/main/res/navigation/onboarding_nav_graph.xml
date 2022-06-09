@@ -89,6 +89,9 @@
         <action
             android:id="@+id/action_loginFragment_to_favouriteConsumerFragment2"
             app:destination="@id/favouriteConsumerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_consumer_Change_Password_Screen_Fragment"
+            app:destination="@id/consumer_Change_Password_Screen_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/supplierSignUpFragment"
@@ -170,6 +173,29 @@
         android:id="@+id/password_AccountSuccessfulFragment2"
         android:name="com.decagon.aqua.feature.login_and_registration.Password_AccountSuccessfulFragment"
         android:label="Password_AccountSuccessfulFragment" />
+    <fragment
+        android:id="@+id/consumer_Referral_Screen_Fragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerReferralScreenFragment"
+        android:label="fragment_consumer_referral_screen"
+        tools:layout="@layout/fragment_consumer_referral_screen" >
+        <action
+            android:id="@+id/action_consumer_Referral_Screen_Fragment_to_consumer_Change_Password_Screen_Fragment"
+            app:destination="@id/consumer_Change_Password_Screen_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumer_Change_Password_Screen_Fragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerChangePasswordScreenFragment"
+        android:label="fragment_consumer_change_password_screen"
+        tools:layout="@layout/fragment_consumer_change_password_screen" >
+        <action
+            android:id="@+id/action_consumer_Change_Password_Screen_Fragment_to_consumer_Notification_Screen_Fragment"
+            app:destination="@id/consumer_Notification_Screen_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumer_Notification_Screen_Fragment"
+        android:name="com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerNotificationScreenFragment"
+        android:label="fragment_consumer_notification_screen"
+        tools:layout="@layout/fragment_consumer_notification_screen" />
     <fragment
         android:id="@+id/incomingFragment"
         android:name="com.example.tablayout.fragment.IncomingFragment"

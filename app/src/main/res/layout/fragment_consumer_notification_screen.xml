@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".feature.consumer.ui.consumptionFragments.ConsumerNotificationScreenFragment">
+
+
+    <ImageView
+        android:id="@+id/consumer_notification_screen_imageButton"
+        android:layout_width="37dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="12dp"
+        android:contentDescription="@null"
+        android:layout_marginTop="52dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/consumer_notification_screen_textView2"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/manrope_light"
+        android:text="@string/back"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/consumer_notification_screen_imageButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/consumer_notification_screen_textView3"
+        android:layout_width="197dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/notifications"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/consumer_notification_screen_textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/consumer_notification_screen_textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/push_notification"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_notification_screen_textView3"
+        app:layout_constraintStart_toStartOf="@+id/consumer_notification_screen_imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_notification_screen_textView3" />
+
+    <TextView
+        android:id="@+id/consumer_notification_screen_textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/manrope_light"
+        android:text="@string/allows_you_receive_notification_on_nphone_screen"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_notification_screen_textView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/consumer_notification_screen_textView4"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_notification_screen_textView4" />
+
+    <ImageView
+        android:id="@+id/consumer_notification_screen_imageView6"
+        android:layout_width="40dp"
+        android:layout_height="29dp"
+        android:src="@drawable/toggle"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/consumer_notification_screen_textView5"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_notification_screen_textView5"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="@+id/consumer_notification_screen_textView5"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_notification_screen_textView4"
+        app:layout_constraintVertical_bias="0.592" />
+
+    <ImageView
+        android:id="@+id/consumer_notification_screen_imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_line2"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_notification_screen_textView5"
+        app:layout_constraintStart_toStartOf="@+id/consumer_notification_screen_textView5"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_notification_screen_textView5" />
+
+    <TextView
+        android:id="@+id/consumer_notification_screen_textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/email_notification"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_notification_screen_imageView6"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="@+id/consumer_notification_screen_imageView7"
+        app:layout_constraintTop_toTopOf="@+id/consumer_notification_screen_imageView7" />
+
+    <TextView
+        android:id="@+id/consumer_notification_screen_textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/manrope_light"
+        android:text="@string/allows_you_receive_the_eemail_notification_nfrom_the_app"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_notification_screen_textView8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/consumer_notification_screen_textView8"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_notification_screen_textView8" />
+
+    <ImageView
+        android:id="@+id/consumer_notification_screen_imageView10"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:src="@drawable/toggle2"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/consumer_notification_screen_textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consumer_notification_screen_textView9"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
