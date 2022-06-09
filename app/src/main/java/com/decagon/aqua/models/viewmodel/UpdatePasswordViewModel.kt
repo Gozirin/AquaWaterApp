@@ -1,6 +1,6 @@
 package com.decagon.aqua.models.viewmodel
 
-import androidx.lifecycle.*
+import androidx.lifecycle.* // ktlint-disable no-wildcard-imports
 import com.decagon.aqua.models.repository.IUpdatePasswordRepository
 import com.decagon.aqua.models.updatepassword.UpdatePasswordModel
 import com.decagon.aqua.models.updatepassword.UpdatePasswordResponseModel
