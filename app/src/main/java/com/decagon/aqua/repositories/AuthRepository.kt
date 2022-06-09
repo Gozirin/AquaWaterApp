@@ -1,6 +1,8 @@
 package com.decagon.aqua.repositories
 
 import com.decagon.aqua.commons.Resource
+import com.decagon.aqua.core.data.UserSignUpResponse
+import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import com.decagon.aqua.network.SupplierAuthApi
@@ -34,6 +36,14 @@ class AuthRepository @Inject constructor(
     override suspend fun loginUser(loginModel: LoginModel): Resource<LoginResponse> {
         return try {
             safeApiCall { supplierAuthApi.logIn(loginModel) }
+        } catch (e: Exception) {
+            Resource.Error(e.printStackTrace().toString())
+        }
+    }
+
+    override suspend fun addConsumer(signUpRequest: Consumer): Resource<UserSignUpResponse> {
+        return try {
+            safeApiCall { supplierAuthApi.consumerSignUp(signUpRequest) }
         } catch (e: Exception) {
             Resource.Error(e.printStackTrace().toString())
         }

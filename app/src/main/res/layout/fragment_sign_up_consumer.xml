@@ -98,7 +98,7 @@
                 android:background="@drawable/border_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="@string/first_name_hint"
+                android:hint="@string/first_name"
                 android:fontFamily="@font/manrope_regular"
                 android:lines="1"
                 android:inputType="text"/>
@@ -135,7 +135,7 @@
                 android:background="@drawable/border_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="@string/last_name_hint"
+                android:hint="@string/last_name"
                 android:lines="1"
                 android:inputType="text"/>
 
@@ -146,7 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/manrope_regular"
-            android:text="@string/email_signup"
+            android:text="@string/email_signUp"
             android:textColor="@color/all_text_color"
             android:textSize="14sp"
             android:layout_marginStart="16dp"
@@ -170,7 +170,7 @@
                 android:id="@+id/et_Email_Consumer_sign_up"
                 android:background="@drawable/border_edittext"
                 android:layout_width="match_parent"
-                android:hint="@string/email_signup"
+                android:hint="@string/email_signUp"
                 android:layout_height="50dp"
                 android:lines="1"
                 android:inputType="textEmailAddress"/>
