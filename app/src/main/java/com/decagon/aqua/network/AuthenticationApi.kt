@@ -43,4 +43,3 @@ interface SupplierAuthApi {
         @Query("PageSize") pageSize : Int = 10,
         @Query("Page") page : Int = 1): Response<AllCompaniesWithFeaturedProduct>
 }
-
