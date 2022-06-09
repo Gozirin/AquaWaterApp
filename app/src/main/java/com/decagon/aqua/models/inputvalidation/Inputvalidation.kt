@@ -1,24 +1,19 @@
 package com.decagon.aqua.models.inputvalidation
 
-import android.util.Patterns
-import com.decagon.aqua.feature.consumer.ui.consumptionFragments.ConsumerChangePasswordScreenFragment
 import com.decagon.aqua.models.inputvalidation.Inputvalidation.validatePassword
-
 
 object Inputvalidation {
 
     val validatePassword = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\\da-zA-Z]).{8,15}\$")
 
-
     fun validateNewPassword(password: String): Boolean {
-        return if (password.isEmpty()){
+        return if (password.isEmpty()) {
             false
-        } else if (!validatePassword.matches(password)){
+        } else if (!validatePassword.matches(password)) {
             false
         } else {
             true
         }
-
     }
     fun validateConfirmPassword(password: String, confirmPassword: String): Boolean {
         if (password != confirmPassword) {
@@ -27,20 +22,19 @@ object Inputvalidation {
         return true
     }
 
-
     // function to check if the two fields are  equal
-        fun validateCurrentPasswordAndOldPasswordAndConfirmPassword(
-            newPassword: String,
-            confirmPassword: String
-        ): Boolean {
-            val result = newPassword == confirmPassword
-            return result
-        }
+    fun validateCurrentPasswordAndOldPasswordAndConfirmPassword(
+        newPassword: String,
+        confirmPassword: String
+    ): Boolean {
+        val result = newPassword == confirmPassword
+        return result
+    }
 
-        fun validateNotEmptyNewPasswordField(newPassword: String): Boolean{
-            val result = newPassword.isNotEmpty()
-            return result
-        }
+    fun validateNotEmptyNewPasswordField(newPassword: String): Boolean {
+        val result = newPassword.isNotEmpty()
+        return result
+    }
 
     fun validatePasswordEntered(passwordText: String): String? {
         if (passwordText.isEmpty()) {
@@ -63,25 +57,11 @@ object Inputvalidation {
         }
         return ""
     }
+}
 
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//var result = false
+// var result = false
 //
-//object Inputvalidation {
+// object Inputvalidation {
 //
 //    fun ConsumerChangePasswordScreenFragment(email: String): String? {
 //        if (email.isEmpty()) {
@@ -120,7 +100,7 @@ object Inputvalidation {
 //        result = newPassword.contains(checkedNewPassword)
 //        return result
 //    }
-////
+// //
 //    // function to check if the two fields are  equal
 //    fun validateCurrentPasswordAndOldPasswordAndConfirmPassword(
 //        newPassword: String,
@@ -133,4 +113,4 @@ object Inputvalidation {
 //        result = newPassword.isNotEmpty()
 //        return result
 //    }
-//}
+// }

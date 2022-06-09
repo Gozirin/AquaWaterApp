@@ -25,7 +25,6 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
     private lateinit var binding: FragmentConsumerChangePasswordScreenBinding
     private val updatePasswordModel: UpdatePasswordViewModel by viewModels()
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -41,7 +40,6 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentConsumerChangePasswordScreenBinding.bind(view)
-
 
         binding.apply {
 
@@ -69,7 +67,6 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
 
                     updatePasswordModel.updatePassword(AUTH_TOKEN, updatePassword)
                 }
-
             }
         }
 
@@ -91,7 +88,6 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
             val confirmPassword = binding.confirmPasswordEditText.text.toString()
             onConfirmPasswordTextChange(newPassword, confirmPassword)
         }
-
 
         /**
          * observe the response from the update password
@@ -161,40 +157,4 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
             binding.textInputLayout4.helperText = ""
         }
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
