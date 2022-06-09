@@ -12,11 +12,7 @@ import androidx.fragment.app.viewModels
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerChangePasswordScreenBinding
 import com.decagon.aqua.models.inputvalidation.Inputvalidation
-import com.decagon.aqua.models.inputvalidation.Inputvalidation.validateCurrentPasswordAndOldPasswordAndConfirmPassword
-import com.decagon.aqua.models.inputvalidation.Inputvalidation.validateNewPassword
-import com.decagon.aqua.models.inputvalidation.Inputvalidation.validateNotEmptyNewPasswordField
 import com.decagon.aqua.models.updatepassword.UpdatePasswordModel
-import com.decagon.aqua.models.updatepassword.UpdatePasswordRequest
 import com.decagon.aqua.models.viewmodel.UpdatePasswordViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,8 +24,7 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
 
     private lateinit var binding: FragmentConsumerChangePasswordScreenBinding
     private val updatePasswordModel: UpdatePasswordViewModel by viewModels()
-    private lateinit var validPassword: String
-    private val updatePasswordViewModel: UpdatePasswordViewModel by viewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,9 +41,7 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentConsumerChangePasswordScreenBinding.bind(view)
-        binding.changePasswordScreenTextInputLayout1.helperText = ""
-        binding.textInputLayout2.helperText = ""
-        binding.textInputLayout4.helperText = ""
+
 
         binding.apply {
 

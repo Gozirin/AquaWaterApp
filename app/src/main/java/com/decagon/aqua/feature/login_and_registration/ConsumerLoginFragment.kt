@@ -32,7 +32,7 @@ class ConsumerLoginFragment : Fragment() {
         }
         // navigate to consumer forgot password page
         binding.consumerLoginLayoutTextViewForgetPassword.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_consumer_Change_Password_Screen_Fragment)
+
         }
         binding.consumerLoginLayoutLoginButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
