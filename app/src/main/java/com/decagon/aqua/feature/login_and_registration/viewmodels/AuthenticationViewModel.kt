@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.decagon.aqua.commons.Resource
+import com.decagon.aqua.core.data.UserSignUpResponse
+import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import com.decagon.aqua.repositories.AuthRepositoryInterface
@@ -18,6 +20,10 @@ class AuthenticationViewModel @Inject constructor(private val authRepository: Au
     // register supplier
     private val _registerResponse: MutableLiveData<Resource<RegisterResponse>> = MutableLiveData()
     val registerResponse: LiveData<Resource<RegisterResponse>> = _registerResponse
+
+    // register consumer
+    private val _signUp: MutableLiveData<Resource<UserSignUpResponse>> = MutableLiveData()
+    val signUp get() = _signUp
 
     // login supplier
     private val _loginResponse: MutableLiveData<Resource<LoginResponse>> = MutableLiveData()
@@ -52,6 +58,12 @@ class AuthenticationViewModel @Inject constructor(private val authRepository: Au
         _loginResponse.value = Resource.Loading()
         viewModelScope.launch {
             _loginResponse.value = authRepository.loginUser(loginModel)
+        }
+    }
+
+    fun signUp(userSignUpRequest: Consumer) {
+        viewModelScope.launch {
+            signUp.value = authRepository.addConsumer(userSignUpRequest)
         }
     }
 }
