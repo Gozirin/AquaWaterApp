@@ -37,3 +37,4 @@ interface SupplierAuthApi {
         @Body userSignUpRequest: Consumer
     ): Response<UserSignUpResponse>
 }
+

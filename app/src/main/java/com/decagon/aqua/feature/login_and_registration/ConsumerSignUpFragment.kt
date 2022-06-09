@@ -109,11 +109,11 @@ class ConsumerSignUpFragment : Fragment() {
         viewModel.signUp.observe(viewLifecycleOwner) {
             if (it.data?.success == true) {
                 Log.d(TAG, "submitFormrResponse: ${it.message}, ${it.data}")
-                Snackbar.make(view!!, "Consumer successfully created!", Snackbar.LENGTH_LONG).setAnchorView(binding.consumerSignupLayoutButtonSignIn).show()
+                Snackbar.make(requireView(), "Consumer successfully created!", Snackbar.LENGTH_LONG).setAnchorView(binding.consumerSignupLayoutButtonSignIn).show()
                 Log.d(TAG, "submitForm: ${it.data.message}")
                 findNavController().navigate(R.id.action_consumerSignUpFragment_to_consumerCheckMailFragment)
             } else {
-                Snackbar.make(view!!, it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.consumerSignupLayoutButtonSignIn).show()
+                Snackbar.make(requireView(), it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.consumerSignupLayoutButtonSignIn).show()
                 Log.d(TAG, "submitForm: ${it.message}")
             }
         }
