@@ -25,7 +25,7 @@ class ConsumerForgotPasswordFragment : Fragment() {
     private lateinit var validEmail: String
     private lateinit var binding: FragmentConsumerForgotPasswordBinding
     private val forgotPasswordViewModel: ForgotPasswordViewModel by viewModels()
-    private  val args by  navArgs<ConsumerForgotPasswordFragmentArgs>()
+    private val args by navArgs<ConsumerForgotPasswordFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,7 +46,6 @@ class ConsumerForgotPasswordFragment : Fragment() {
         binding.apply {
 
             forgotPasswordButton1.setOnClickListener {
-
 
                 if (InputValidation.validateEmail(validEmail) != null)
                     Toast.makeText(requireContext(), "Enter Valid Email", Toast.LENGTH_SHORT).show()
@@ -73,20 +72,19 @@ class ConsumerForgotPasswordFragment : Fragment() {
             viewLifecycleOwner,
             Observer {
                 Log.d(TAG, "observeForgotPasswordResponse: ${it.message()} ")
-                if(it.isSuccessful) {
+                if (it.isSuccessful) {
                     Toast.makeText(
                         requireContext(),
                         "ForgotPassword Successful",
                         Toast.LENGTH_SHORT
                     ).show()
                     findNavController().navigate(R.id.action_consumerForgotPasswordFragment_to_consumerCheckMailFragment)
-                }else{
+                } else {
                     Toast.makeText(
                         requireContext(),
                         "Enter Valid Email",
                         Toast.LENGTH_SHORT
                     ).show()
-
                 }
             }
         )

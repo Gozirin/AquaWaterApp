@@ -10,14 +10,12 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerCreateNewPasswordBinding
 import com.decagon.aqua.feature.authentication.InputValidation
 import com.decagon.aqua.feature.authentication.InputValidation.validateNewPassword
 import com.decagon.aqua.feature.authentication.InputValidation.validateNewPasswordAndConfirmPassword
-import com.decagon.aqua.feature.authentication.InputValidation.validateNotEmptyNewPasswordField
 import com.decagon.aqua.feature.viewModel.ResetPasswordViewModel
 import com.decagon.aqua.resetpassword.ResetPasswordRequest
 import dagger.hilt.android.AndroidEntryPoint
@@ -46,7 +44,6 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
         binding.textInputLayout.helperText = ""
         binding.textInputLayout3.helperText = ""
 
-
         // Don't have account signup to page.
 
         binding.apply {
@@ -57,7 +54,7 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
 
                 val newPassword = binding.textInputLayoutEditTextNewPassword.text.toString()
                 val confirmPassword = binding.textInputLayoutEditTextConfirmPassword.text.toString()
-                
+
                 if ((InputValidation.validatePassword(newPassword)) == null) {
                     Toast.makeText(requireContext(), "New Password Valid", Toast.LENGTH_SHORT).show()
                 } else {
@@ -71,19 +68,17 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
 
                 if (validateNewPassword(newPassword) && validateNewPasswordAndConfirmPassword(
                         newPassword,
-                        confirmPassword)
+                        confirmPassword
+                    )
                 ) {
-                    Log.d(TAG, "message: ${newPassword}, ${confirmPassword}")
-                } else{
+                    Log.d(TAG, "message: $newPassword, $confirmPassword")
+                } else {
                     binding.textInputLayout.helperText = "Please enter your new password"
                     binding.textInputLayout.visibility = View.VISIBLE
                     binding.textInputLayout3.helperText = "Password does not match"
                     binding.textInputLayout3.visibility = View.VISIBLE
-                    Log.d(TAG, "message:${newPassword}, ${confirmPassword}, ${it.id} ")
+                    Log.d(TAG, "message:$newPassword, $confirmPassword, ${it.id} ")
                 }
-                
-               
-
             }
 
             /**
@@ -96,12 +91,10 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
             }
 
             binding.textInputLayoutEditTextConfirmPassword.addTextChangedListener {
-                val confirmPassword= textInputLayoutEditTextConfirmPassword.text.toString()
+                val confirmPassword = textInputLayoutEditTextConfirmPassword.text.toString()
                 binding.textInputLayoutEditTextConfirmPassword.text.toString()
                 onPasswordTextChanged(confirmPassword)
             }
-
-
         }
         observeForgotPasswordResponse()
     }
@@ -116,13 +109,11 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
             viewLifecycleOwner,
             Observer {
                 Log.d(TAG, "observeForgotPasswordResponse: ${it.message} ")
-                if(it.success){
+                if (it.success) {
                     Toast.makeText(requireContext(), "password successful", Toast.LENGTH_SHORT).show()
-                  //findNavController().navigate(R.id.action_consumerCreateNewPasswordFragment_to_supplierLoginFragment)
+                    // findNavController().navigate(R.id.action_consumerCreateNewPasswordFragment_to_supplierLoginFragment)
                 }
-
             }
         )
     }
-
 }
