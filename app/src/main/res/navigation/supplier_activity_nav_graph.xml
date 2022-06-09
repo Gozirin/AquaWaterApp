@@ -57,10 +57,17 @@
         <action
             android:id="@+id/action_pastSuppilesFragement_to_supplierHomePage"
             app:destination="@id/supplierHomePage" />
+        <action
+            android:id="@+id/action_pastSuppilesFragement_to_filterModal"
+            app:destination="@id/filterModal" />
     </fragment>
     <fragment
         android:id="@+id/supplierProfileDetailsFragment"
         android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.profileDetailsFragments.SupplierProfileDetailsFragment"
         android:label="SupplierProfileDetailsFragment" />
+    <dialog
+        android:id="@+id/filterModal"
+        android:name="com.decagon.aqua.feature.supplier.ui.FilterModal"
+        android:label="FilterModal" />
 
 </navigation>

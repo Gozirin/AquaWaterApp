@@ -160,6 +160,7 @@
         android:layout_height="wrap_content"
         android:text="@string/consumer_login_text_view_signup"
         android:textColor="#4C9EDF"
+        android:layout_marginStart="5dp"
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_login_button"
         app:layout_constraintHorizontal_bias="0.618"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_create_account"

@@ -176,6 +176,7 @@
         android:id="@+id/consumer_supply_details_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="250dp"
         app:layoutManager="GridLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
