@@ -48,4 +48,8 @@ class AuthRepository @Inject constructor(
             Resource.Error(e.printStackTrace().toString())
         }
     }
+
+    override suspend fun getCompaniesProducts(): Resource<AllCompaniesWithFeaturedProduct> {
+       return safeApiCall { supplierAuthApi.getCompaniesWithProducts() }
+    }
 }
