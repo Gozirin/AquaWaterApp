@@ -27,14 +27,14 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/consumer_suppliesDetail_adapterItem_imageView"
+                    android:id="@+id/consumer_adapterItem_imageView"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:layout_weight="1"
                     android:src="@drawable/image_1" />
                 <TextView
-                    android:id="@+id/consumer_suppliesDetails_adapterItem_itemName_tv"
+                    android:id="@+id/consumer_adapterItem_itemName_tv"
                     android:layout_width="match_parent"
                     android:fontFamily="@font/manrope_regular"
                     android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
                     android:textColor="#21334F"
                     android:textSize="18sp"/>
                 <TextView
-                    android:id="@+id/consumer_suppliesDetails_adapterItem_rating_tv"
+                    android:id="@+id/consumer_adapterItem_rating_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/manrope_regular"
@@ -50,7 +50,7 @@
                     android:text="@string/location"
                     android:textSize="15sp"/>
                 <TextView
-                    android:id="@+id/consumer_suppliesDetail_adapterItem_price_tv"
+                    android:id="@+id/consumer_adapterItem_price_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/manrope_bold"
@@ -61,7 +61,7 @@
             </LinearLayout>
 
             <TextView
-                    android:id="@+id/consumer_homescreen_adapterItem_store_tv"
+                    android:id="@+id/consumer_adapterItem_store_tv"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"

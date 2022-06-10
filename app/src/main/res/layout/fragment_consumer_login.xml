@@ -13,7 +13,7 @@
 
     </LinearLayout>
     <ImageView
-        android:id="@+id/supplier_login_layout_image_view_image_icon"
+        android:id="@+id/consumer_login_layout_image_view_image_icon"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginTop="50dp"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/supplier_login_layout_login_account"
+        android:id="@+id/consumer_login_layout_login_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -34,13 +34,13 @@
         android:text="@string/consumer_login_fragment"
         android:textFontWeight="700"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_image_view_image_icon"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_image_view_image_icon"
         app:layout_constraintHorizontal_bias="0.371"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_image_view_image_icon"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_image_view_image_icon" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_image_view_image_icon"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_image_view_image_icon" />
 
     <TextView
-        android:id="@+id/supplier_login_layout_text_view_email"
+        android:id="@+id/consumer_login_layout_text_view_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -49,13 +49,13 @@
         android:text="@string/consumer_login_text_view_email"
         android:textFontWeight="400"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_login_account"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_login_account"
         app:layout_constraintHorizontal_bias="0.345"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_login_account"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_login_account" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_login_account"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_login_account" />
 
     <EditText
-        android:id="@+id/supplier_login_layout_edit_text_Email"
+        android:id="@+id/consumer_login_layout_edit_text_Email"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_margin="16dp"
@@ -64,13 +64,13 @@
         android:background="@drawable/shapes"
         android:hint="@string/consumer_login_edit_text_email"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_text_view_email"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_text_view_email"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_text_view_email"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_text_view_email" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_text_view_email"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_text_view_email" />
 
     <TextView
-        android:id="@+id/supplier_login_layout_text_view_password"
+        android:id="@+id/consumer_login_layout_text_view_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -79,13 +79,13 @@
         android:layout_marginTop="76dp"
         android:text="@string/consumer_login_text_view_password"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_edit_text_Email"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_edit_text_Email"
         app:layout_constraintHorizontal_bias="0.345"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_edit_text_Email"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_edit_text_Email" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_edit_text_Email"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_edit_text_Email" />
 
     <EditText
-        android:id="@+id/supplier_login_layout_edit_text_password"
+        android:id="@+id/consumer_login_layout_edit_text_password"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_margin="16dp"
@@ -97,24 +97,24 @@
         android:inputType="textPassword"
         android:padding="15dp"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_text_view_password"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_text_view_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_text_view_password"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_text_view_password"
         tools:layout_editor_absoluteY="113dp" />
 
     <ImageView
-        android:id="@+id/supplier_login_layout_image_icon"
+        android:id="@+id/consumer_login_layout_image_icon"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_hidden"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_edit_text_password"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_edit_text_password"
         app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_edit_text_password"
-        app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_edit_text_password" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_edit_text_password"
+        app:layout_constraintTop_toTopOf="@+id/consumer_login_layout_edit_text_password" />
 
     <TextView
-        android:id="@+id/supplier_login_layout_text_view_forget_password"
+        android:id="@+id/consumer_login_layout_text_view_forget_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -122,12 +122,12 @@
         android:textFontWeight="400"
         android:text="@string/consumer_login_text_view_forget_password"
         android:textColor="#4C9EDF"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_edit_text_password"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_edit_text_password"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_edit_text_password" />
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_edit_text_password"
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_edit_text_password"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_edit_text_password" />
 
     <Button
-        android:id="@+id/supplier_login_layout_login_button"
+        android:id="@+id/consumer_login_layout_login_button"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_margin="16dp"
@@ -135,39 +135,39 @@
         android:fontFamily="@font/manrope_bold"
         android:text="@string/consumer_login_button_login"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_text_view_forget_password"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_text_view_forget_password"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_text_view_forget_password"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_text_view_forget_password"
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_text_view_forget_password"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_text_view_forget_password"
         />
 
     <TextView
-        android:id="@+id/supplier_login_layout_create_account"
-        android:layout_width="173dp"
-        android:layout_height="19dp"
+        android:id="@+id/consumer_login_layout_create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/manrope_bold"
         android:text="Don't have an account?"
         android:textFontWeight="700"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_login_button"
-        app:layout_constraintTop_toBottomOf="@+id/supplier_login_layout_login_button" />
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_login_button"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_login_layout_login_button" />
 
     <TextView
-        android:id="@+id/supplier_login_signup"
+        android:id="@+id/consumer_login_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/consumer_login_text_view_signup"
         android:textColor="#4C9EDF"
-        app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_login_button"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_login_layout_login_button"
         app:layout_constraintHorizontal_bias="0.618"
-        android:layout_marginStart="5dp"
-        app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_create_account"
-        app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_create_account" />
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@+id/consumer_login_layout_create_account"
+        app:layout_constraintTop_toTopOf="@+id/consumer_login_layout_create_account" />
 
     <ProgressBar
-        android:id="@+id/supplier_login_progressBar"
+        android:id="@+id/consumer_login_progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"

@@ -78,16 +78,16 @@
         android:label="fragment_login_consumer"
         tools:layout="@layout/fragment_consumer_login" >
         <action
-            android:id="@+id/action_loginFragment_to_consumerSignUpFragment"
-            app:destination="@id/consumerSignUpFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_consumerForgotPasswordFragment"
-            app:destination="@id/consumerForgotPasswordFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_consumer_mainActivity"
+            android:id="@+id/action_consumerLoginFragment_to_consumer_mainActivity"
             app:destination="@id/consumer_mainActivity" />
         <action
-            android:id="@+id/action_loginFragment_to_favouriteConsumerFragment2"
+            android:id="@+id/action_consumerLoginFragment_to_consumerSignUpFragment"
+            app:destination="@id/consumerSignUpFragment" />
+        <action
+            android:id="@+id/action_consumerLoginFragment_to_consumerForgotPasswordFragment"
+            app:destination="@id/consumerForgotPasswordFragment" />
+        <action
+            android:id="@+id/action_consumerLoginFragment_to_favouriteConsumerFragment2"
             app:destination="@id/favouriteConsumerFragment" />
     </fragment>
     <fragment
