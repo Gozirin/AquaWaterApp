@@ -13,7 +13,7 @@ import retrofit2.http.* // ktlint-disable no-wildcard-imports
  * @PATCH and @PUT updates data in API.
  * @PATCH modifies while @PUT replaces.
  */
-interface ApiService {
+interface ForgotResetPassWordAPI {
 
     @POST("/api/v1/Account/Reset-Password")
     suspend fun resetPassword(

@@ -43,7 +43,7 @@ class ConsumerForgotPasswordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // initializing view binding
         binding = FragmentConsumerForgotPasswordBinding.bind(view)
-
+        binding.forgotPasswordTextInputLayout5.helperText = ""
 
         binding.apply {
 
