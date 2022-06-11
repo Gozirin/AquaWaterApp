@@ -21,8 +21,10 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ConsumerForgotPasswordFragment : Fragment() {
+    /**
+     * declare variable and views
+     */
     private val TAG = "ConsumerForgotPasswordFragment"
-    private lateinit var validEmail: String
     private lateinit var binding: FragmentConsumerForgotPasswordBinding
     private val forgotPasswordViewModel: ForgotPasswordViewModel by viewModels()
     private val args by navArgs<ConsumerForgotPasswordFragmentArgs>()
@@ -41,16 +43,16 @@ class ConsumerForgotPasswordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // initializing view binding
         binding = FragmentConsumerForgotPasswordBinding.bind(view)
-        binding.forgotPasswordTextInputLayout5.helperText = ""
+
 
         binding.apply {
 
             forgotPasswordButton1.setOnClickListener {
                 val userEmail = forgotPasswordEditTextInputLayout5.text.toString()
-                if (InputValidation.validateEmail(validEmail) != null)
+                if (!InputValidation.validateEmailInput(userEmail))
                     Toast.makeText(requireContext(), "Enter Valid Email", Toast.LENGTH_SHORT).show()
                 else {
-                    forgotPasswordViewModel.forgotPassword(ForgotPasswordRequest(validEmail))
+                    forgotPasswordViewModel.forgotPassword(ForgotPasswordRequest(userEmail))
                 }
             }
 
@@ -58,8 +60,8 @@ class ConsumerForgotPasswordFragment : Fragment() {
              * add Text changed listener
              */
             forgotPasswordEditTextInputLayout5.addTextChangedListener {
-                validEmail = forgotPasswordEditTextInputLayout5.text.toString()
-                onEmailTextChanged(validEmail)
+                val enteredUserEmail = forgotPasswordEditTextInputLayout5.text.toString()
+                onEmailTextChanged(enteredUserEmail)
             }
         }
         binding.forgotPasswordButton1.setOnClickListener {
@@ -75,18 +77,17 @@ class ConsumerForgotPasswordFragment : Fragment() {
         forgotPasswordViewModel.forgotPasswordLiveData.observe(
             viewLifecycleOwner,
             Observer {
-                Log.d(TAG, "observeForgotPasswordResponse: ${it.message()} ")
                 if (it.isSuccessful) {
                     Toast.makeText(
                         requireContext(),
-                        "ForgotPassword Successful",
+                        "Request Successful",
                         Toast.LENGTH_SHORT
                     ).show()
                     findNavController().navigate(R.id.action_consumerForgotPasswordFragment_to_consumerCheckMailFragment)
                 } else {
                     Toast.makeText(
                         requireContext(),
-                        "Enter Valid Email",
+                        "${it.errorBody()}",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -94,7 +95,13 @@ class ConsumerForgotPasswordFragment : Fragment() {
         )
     }
 
-    private fun onEmailTextChanged(received_Email: String) {
-        binding.forgotPasswordTextInputLayout5.helperText = InputValidation.validateEmail(received_Email)
+    private fun onEmailTextChanged(receivedEmail: String) {
+        if (InputValidation.validateEmail(receivedEmail) == "Enter a valid Email Address"){
+            binding.forgotPasswordTextInputLayout5.helperText = "Enter a valid Email Address"
+        } else if (InputValidation.validateEmail(receivedEmail) == "Invalid Email Address"){
+            binding.forgotPasswordTextInputLayout5.helperText = "Invalid Email Address"
+        } else {
+            binding.forgotPasswordTextInputLayout5.helperText = ""
+        }
     }
 }

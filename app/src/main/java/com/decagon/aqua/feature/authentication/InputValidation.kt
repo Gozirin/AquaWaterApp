@@ -15,10 +15,10 @@ object InputValidation {
 
     fun validateEmail(email: String): String? {
         if (email.isEmpty()) {
-            return " Enter a valid Email Address."
+            return "Enter a valid Email Address"
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            return "Invalid Email Address."
+        if (!email.matches(EMAIL_PATTERN)) {
+            return "Invalid Email Address"
         }
         return null
     }
