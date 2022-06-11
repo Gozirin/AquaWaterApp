@@ -46,13 +46,17 @@ class ConsumerForgotPasswordFragment : Fragment() {
         binding.apply {
 
             forgotPasswordButton1.setOnClickListener {
-
+                val userEmail = forgotPasswordEditTextInputLayout5.text.toString()
                 if (InputValidation.validateEmail(validEmail) != null)
                     Toast.makeText(requireContext(), "Enter Valid Email", Toast.LENGTH_SHORT).show()
                 else {
                     forgotPasswordViewModel.forgotPassword(ForgotPasswordRequest(validEmail))
                 }
             }
+
+            /**
+             * add Text changed listener
+             */
             forgotPasswordEditTextInputLayout5.addTextChangedListener {
                 validEmail = forgotPasswordEditTextInputLayout5.text.toString()
                 onEmailTextChanged(validEmail)

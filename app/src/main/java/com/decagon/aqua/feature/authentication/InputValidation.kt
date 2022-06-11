@@ -3,6 +3,16 @@ package com.decagon.aqua.feature.authentication
 import android.util.Patterns
 var result = false
 object InputValidation {
+
+    private var EMAIL_PATTERN = Regex("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+\$")
+
+    fun validateEmailInput(email: String): Boolean {
+        if (email.isEmpty() || !email.matches(EMAIL_PATTERN)) {
+            return false
+        }
+        return true
+    }
+
     fun validateEmail(email: String): String? {
         if (email.isEmpty()) {
             return " Enter a valid Email Address."
