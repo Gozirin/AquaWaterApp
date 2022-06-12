@@ -3,7 +3,7 @@ package com.decagon.aqua.core.di.app
 import android.content.Context
 import androidx.room.Room
 import com.decagon.aqua.core.data.AquaDatabase
-import com.decagon.aqua.core.service.ApiService
+import com.decagon.aqua.core.service.ForgotResetPassWordAPI
 import com.decagon.aqua.feature.onboarding.ResetPasswordRepository
 import com.decagon.aqua.feature.repository.ForgotPasswordRepository
 import com.decagon.aqua.feature.repository.IForgotPasswordRepository
@@ -77,19 +77,19 @@ object AuthAppModule {
 
     @Singleton
     @Provides
-    fun provideApiService(retrofit: Retrofit): ApiService {
-        return retrofit.create(ApiService::class.java)
+    fun provideApiService(retrofit: Retrofit): ForgotResetPassWordAPI {
+        return retrofit.create(ForgotResetPassWordAPI::class.java)
     }
 
     @Singleton
     @Provides
-    fun provideResetPasswordRepository(apiService: ApiService): IResetPasswordRepositoryInterface {
-        return ResetPasswordRepository(apiService)
+    fun provideResetPasswordRepository(forgotResetPassWordAPI: ForgotResetPassWordAPI): IResetPasswordRepositoryInterface {
+        return ResetPasswordRepository(forgotResetPassWordAPI)
     }
 
     @Singleton
     @Provides
-    fun providesForgetPasswordRepository(apiService: ApiService): IForgotPasswordRepository {
-        return ForgotPasswordRepository(apiService)
+    fun providesForgetPasswordRepository(forgotResetPassWordAPI: ForgotResetPassWordAPI): IForgotPasswordRepository {
+        return ForgotPasswordRepository(forgotResetPassWordAPI)
     }
 }
