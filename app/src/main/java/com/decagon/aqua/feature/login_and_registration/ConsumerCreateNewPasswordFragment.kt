@@ -14,8 +14,6 @@ import androidx.navigation.fragment.navArgs
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerCreateNewPasswordBinding
 import com.decagon.aqua.feature.authentication.InputValidation
-import com.decagon.aqua.feature.authentication.InputValidation.validateNewPassword
-import com.decagon.aqua.feature.authentication.InputValidation.validateNewPasswordAndConfirmPassword
 import com.decagon.aqua.feature.viewModel.ResetPasswordViewModel
 import com.decagon.aqua.resetpassword.ResetPasswordRequest
 import dagger.hilt.android.AndroidEntryPoint
@@ -55,30 +53,18 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
                 val newPassword = binding.textInputLayoutEditTextNewPassword.text.toString()
                 val confirmPassword = binding.textInputLayoutEditTextConfirmPassword.text.toString()
 
-                if ((InputValidation.validatePassword(newPassword)) == null) {
-                    Toast.makeText(requireContext(), "New Password Valid", Toast.LENGTH_SHORT).show()
+                if (!InputValidation.validateNewPassword(newPassword) || !InputValidation.validateConfirmPassword(newPassword, confirmPassword)) {
+                    Toast.makeText(requireContext(), "Enter a valid password", Toast.LENGTH_SHORT).show()
                 } else {
                     resetPasswordViewModel.resetPassword(
                         ResetPasswordRequest(
-                            email = String(),
-                            token = String(), newPassword, confirmPassword = String()
+                            email = args.email.toString(),
+                            token = args.token.toString(), newPassword, confirmPassword
                         )
                     )
                 }
 
-                if (validateNewPassword(newPassword) && validateNewPasswordAndConfirmPassword(
-                        newPassword,
-                        confirmPassword
-                    )
-                ) {
-                    Log.d(TAG, "message: $newPassword, $confirmPassword")
-                } else {
-                    binding.textInputLayout.helperText = "Please enter your new password"
-                    binding.textInputLayout.visibility = View.VISIBLE
-                    binding.textInputLayout3.helperText = "Password does not match"
-                    binding.textInputLayout3.visibility = View.VISIBLE
-                    Log.d(TAG, "message:$newPassword, $confirmPassword, ${it.id} ")
-                }
+
             }
 
             /**
@@ -86,14 +72,13 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
              */
             binding.textInputLayoutEditTextNewPassword.addTextChangedListener {
                 val newPassword = textInputLayoutEditTextNewPassword.text.toString()
-                binding.textInputLayoutEditTextNewPassword.text.toString()
-                onPasswordTextChanged(newPassword)
+                onNewPassword(newPassword)
             }
 
             binding.textInputLayoutEditTextConfirmPassword.addTextChangedListener {
                 val confirmPassword = textInputLayoutEditTextConfirmPassword.text.toString()
-                binding.textInputLayoutEditTextConfirmPassword.text.toString()
-                onPasswordTextChanged(confirmPassword)
+                val newPassword = textInputLayoutEditTextNewPassword.text.toString()
+                onConfirmPasswordTextChange(newPassword, confirmPassword)
             }
         }
         observeForgotPasswordResponse()
@@ -115,5 +100,36 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
                 }
             }
         )
+    }
+
+    private fun onNewPassword(newPassword: String){
+        if (InputValidation.validatePassword(newPassword) == "Password cannot be empty") {
+            binding.textInputLayout.helperText = "Password cannot be empty"
+        } else if (InputValidation.validatePassword(newPassword) == "Password must have a minimum of 8 characters.") {
+            binding.textInputLayout.helperText = "Password must have a minimum of 8 characters."
+
+        } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 number.") {
+            binding.textInputLayout.helperText  = "Password must contain at least 1 number."
+
+        } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 upper case character.") {
+            binding.textInputLayout.helperText  = "Password must contain at least 1 upper case character."
+
+        } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 lower case character.") {
+            binding.textInputLayout.helperText = "Password must contain at least 1 lower case character."
+
+        } else if (InputValidation.validatePassword(newPassword)== "Password must contain at least 1 special character (@#$%&?!).") {
+            binding.textInputLayout.helperText = "Password must contain at least 1 special character (@#$%&?!)."
+
+        } else {
+            binding.textInputLayout.helperText = ""
+        }
+    }
+
+    fun onConfirmPasswordTextChange(newPassword: String, confirmPassword: String) {
+        if (!InputValidation.validateConfirmPassword(newPassword,confirmPassword)) {
+            binding.textInputLayout3.helperText = "Invalid Password Entered"
+        } else {
+            binding.textInputLayout3.helperText = ""
+        }
     }
 }

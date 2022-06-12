@@ -5,6 +5,24 @@ var result = false
 object InputValidation {
 
     private var EMAIL_PATTERN = Regex("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+\$")
+    private val validatePassword = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\\da-zA-Z]).{8,15}\$")
+
+    fun validateNewPassword(password: String): Boolean {
+        return if (password.isEmpty()) {
+            false
+        } else if (!validatePassword.matches(password)) {
+            false
+        } else {
+            true
+        }
+    }
+
+    fun validateConfirmPassword(password: String, confirmPassword: String): Boolean {
+        if (password != confirmPassword) {
+            return false
+        }
+        return true
+    }
 
     fun validateEmailInput(email: String): Boolean {
         if (email.isEmpty() || !email.matches(EMAIL_PATTERN)) {
@@ -44,19 +62,20 @@ object InputValidation {
         return ""
     }
 
-    fun validateNewPassword(newPassword: String): Boolean {
-        // val checkedNewPassword = Regex("^(?=.*[A-Z].*[A-Z])(?=.*[!@#\$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}\$")
 
-        val checkedNewPassword = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@,#$%^&*]).{8,}\$")
-        result = newPassword.contains(checkedNewPassword)
-        return result
-    }
+//    fun validateNewPassword(newPassword: String): Boolean {
+//        // val checkedNewPassword = Regex("^(?=.*[A-Z].*[A-Z])(?=.*[!@#\$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}\$")
+//
+//        val checkedNewPassword = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@,#$%^&*]).{8,}\$")
+//        result = newPassword.contains(checkedNewPassword)
+//        return result
+//    }
 
     // function to check if the two fields are  equal
-    fun validateNewPasswordAndConfirmPassword(newPassword: String, confirmPassword: String): Boolean {
-        result = newPassword == confirmPassword
-        return result
-    }
+//    fun validateNewPasswordAndConfirmPassword(newPassword: String, confirmPassword: String): Boolean {
+//        result = newPassword == confirmPassword
+//        return result
+//    }
     fun validateNotEmptyNewPasswordField(newPassword: String): Boolean {
         result = newPassword.isNotEmpty()
         return result
