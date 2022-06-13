@@ -18,7 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ConfirmEmailFragment : Fragment() {
 
-//    private val args: ConfirmEmailFragmentArgs by navArgs()
+    private val args: ConfirmEmailFragmentArgs by navArgs()
     private lateinit var binding: FragmentConfirmEmailBinding
     private val viewModel: AuthenticationViewModel by viewModels()
     private lateinit var userInfo: ConfirmEmailModel
@@ -36,9 +36,9 @@ class ConfirmEmailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val email = args.email.toString()
-//        val token = args.token.toString()
-//        userInfo = ConfirmEmailModel(emailAddress = email, token = token)
+        val email = args.email.toString()
+        val token = args.token.toString()
+        userInfo = ConfirmEmailModel(emailAddress = email, token = token)
 
         binding.confirmEmailFragmentConfirmEmailButton.setOnClickListener {
             viewModel.confirmEmail(userInfo)
@@ -46,7 +46,7 @@ class ConfirmEmailFragment : Fragment() {
                 when (it) {
                     is Resource.Success -> {
                         Snackbar.make(view, it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.confirmEmailFragmentConfirmEmailButton).show()
-//                        findNavController().navigate(ConfirmEmailFragmentDirections.actionConfirmEmailFragmentToSupplierLoginFragment())
+                        findNavController().navigate(ConfirmEmailFragmentDirections.actionConfirmEmailFragmentToSupplierLoginFragment())
                     }
 
                     is Resource.Error -> {

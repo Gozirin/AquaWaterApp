@@ -177,5 +177,16 @@
     <string name="fragment_consumer_setting_refer_invite">Invite more friends</string>
     <string name="fragment_password_successful">Password Successful</string>
     <string name="fragment_password_reset_successfully">Password reset successfully</string>
+    <string name="street">Street</string>
+    <string name="use_current_location">Use current location</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_signUp">Email</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 
 </resources>

@@ -65,6 +65,9 @@
         <action
             android:id="@+id/action_consumerSignUpFragment_to_consumer_mainActivity"
             app:destination="@id/consumer_mainActivity" />
+        <action
+            android:id="@+id/action_consumerSignUpFragment_to_consumerCheckMailFragment"
+            app:destination="@id/consumerCheckMailFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -95,6 +98,12 @@
         <action
             android:id="@+id/action_supplierSignUpFragment_to_supplierLoginFragment"
             app:destination="@id/supplierLoginFragment" />
+        <action
+            android:id="@+id/action_supplierSignUpFragment_to_consumerCheckMailFragment"
+            app:destination="@id/consumerCheckMailFragment" />
+        <argument
+            android:name="list"
+            app:argType="com.decagon.aqua.models.supplierAuthModule.CompanyList" />
     </fragment>
     <fragment
         android:id="@+id/supplierLoginFragment"
@@ -200,6 +209,44 @@
             app:uri="http://www.aqua-deca.com/Authentication/ForgotPassword?email={email}/token={token}" />
 
 
+    </fragment>
+    <fragment
+        android:id="@+id/confirmEmailFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.ConfirmEmailFragment"
+        android:label="fragment_confirm_email"
+        tools:layout="@layout/fragment_confirm_email">
+        <argument
+            android:name="email"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="token"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            android:autoVerify="true"
+            app:uri="www.aqua-deca.com/Authentication/ConfirmEmail?email={email}/token={token}" />
+        <action
+            android:id="@+id/action_confirmEmailFragment_to_supplierLoginFragment"
+            app:destination="@id/supplierLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumerLoginFragment"
+        android:name="com.decagon.aqua.feature.login_and_registration.ConsumerLoginFragment"
+        android:label="fragment_login_consumer"
+        tools:layout="@layout/fragment_consumer_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_consumerSignUpFragment"
+            app:destination="@id/consumerSignUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_consumerForgotPasswordFragment"
+            app:destination="@id/consumerForgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_consumer_mainActivity"
+            app:destination="@id/consumer_mainActivity" />
     </fragment>
 
 
