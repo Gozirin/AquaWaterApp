@@ -28,7 +28,7 @@ class ConsumerReferralScreenFragment : Fragment() {
 
         // Back button to return to Change Password page
         binding.consumerReferralScreenImageButton1.setOnClickListener {
-            findNavController().navigate(R.id.action_consumer_Referral_Screen_Fragment_to_consumer_Change_Password_Screen_Fragment)
+//            findNavController().navigate(R.id.action_consumer_Referral_Screen_Fragment_to_consumer_Change_Password_Screen_Fragment)
         }
     }
 }

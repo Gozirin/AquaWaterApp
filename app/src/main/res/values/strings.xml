@@ -159,4 +159,23 @@
     <string name="reset_password">Reset Password</string>
     <string name="abayomitunde_gmail_com">abayomitunde@gmail.com</string>
     <string name="past_supplies">Past Supplies</string>
+    <!--confirm email-->
+    <string name="confirm_email_msg">Click on the link below to confirm your email address and start enjoying Aqua app</string>
+    <string name="fragment_change_password">Change Password</string>
+    <string name="fragment_current_password">Current Password</string>
+    <string name="fragment_new_password">New Password</string>
+    <string name="fragment_confirm_password">Confirm Password</string>
+    <string name="fragment_save_password">Save</string>
+    <string name="fragment_consumer_notification">Notifications</string>
+    <string name="fragment_consumer_notification_push_notification">Push Notification</string>
+    <string name="fragment_consumer_notification_allow_push">Allows you receive notification on phone screen</string>
+    <string name="fragment_consumer_notification_email">Allows you receive email notification from the app</string>
+    <string name="fragment_consumer_email_notification">Email notifications</string>
+    <string name="fragment_consumer_setting_refer">Refer your friends &amp; earn cash back</string>
+    <string name="fragment_consumer_setting_refer_msg">Invite your friends to join Aqua and get N500 cash back for each friends that joins using your referral code.</string>
+    <string name="fragment_consumer_setting_my_referrals">My Referrals</string>
+    <string name="fragment_consumer_setting_refer_invite">Invite more friends</string>
+    <string name="fragment_password_successful">Password Successful</string>
+    <string name="fragment_password_reset_successfully">Password reset successfully</string>
+
 </resources>
