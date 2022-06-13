@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -179,6 +180,7 @@ class ConsumerSignUpFragment : Fragment() {
         binding.etStreetConsumerSignUp.setOnFocusChangeListener { _, focused ->
             if (!focused) {
                 binding.streetContainer.helperText = validateState(binding.etStreetConsumerSignUp.text.toString())
+                Toast.makeText(this.requireContext(), "Message", Toast.LENGTH_SHORT).show()
             }
         }
     }
