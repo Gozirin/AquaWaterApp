@@ -8,7 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_blue">#147DF5</color>
-
     <color name="md_blue_50">#E3F2FD</color>
     <color name="md_blue_100">#BBDEFB</color>
     <color name="md_blue_200">#90CAF9</color>
@@ -23,11 +22,13 @@
     <color name="md_blue_A200">#448AFF</color>
     <color name="md_blue_A400">#2979FF</color>
     <color name="md_blue_A700">#2962FF</color>
-
     <color name="secondary_blue">#0268DC</color>
     <color name="app_primary_color_light">#147DF5</color>
     <color name="all_text_color">#21334F</color>
     <color name="search_background_color">#D6DBDF</color>
     <color name="active_text_background_color">#2238B000</color>
     <color name="active_text_color">#38B000</color>
+    <color name="create_password_blue">#2196F3</color>
+    <color name="check_mail">#2196F3</color>
+    <color name="reset_password">#2196F3</color>
 </resources>

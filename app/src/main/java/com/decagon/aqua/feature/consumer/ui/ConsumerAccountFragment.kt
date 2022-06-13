@@ -52,8 +52,4 @@ class ConsumerAccountFragment : Fragment() {
             }
         }
     }
-
-    override fun onResume() {
-        super.onResume()
-    }
 }

@@ -17,6 +17,7 @@ class SupplierMainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_Aqua)
         binding = ActivitySupplierMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

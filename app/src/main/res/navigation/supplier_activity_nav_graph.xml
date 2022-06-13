@@ -2,7 +2,6 @@
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/supplier_activity_nav_graph"
     app:startDestination="@id/supplierHomePage">
 
@@ -10,9 +9,6 @@
         android:id="@+id/supplierHomePage"
         android:name="com.decagon.aqua.feature.supplier.ui.SupplierHomePage"
         android:label="SupplierHomePage" >
-        <action
-            android:id="@+id/action_supplierHomePage_to_favouriteCustomersFragment"
-            app:destination="@id/favouriteCustomersFragment" />
         <action
             android:id="@+id/action_supplierHomePage_to_ordersReceivedFragment"
             app:destination="@id/ordersReceivedFragment" />
@@ -22,11 +18,18 @@
         <action
             android:id="@+id/action_supplierHomePage_to_pastSuppilesFragement"
             app:destination="@id/pastSuppilesFragement" />
+        <action
+            android:id="@+id/action_supplierHomePage_to_favouriteConsumerFragment2"
+            app:destination="@id/favouriteConsumerFragment2" />
     </fragment>
     <fragment
         android:id="@+id/supplierOrdersPage"
         android:name="com.decagon.aqua.feature.supplier.ui.SupplierOrdersPage"
-        android:label="SupplierOrdersPage" />
+        android:label="SupplierOrdersPage" >
+        <action
+            android:id="@+id/action_supplierOrdersPage_to_supplierAccountPage"
+            app:destination="@id/supplierAccountPage" />
+    </fragment>
     <fragment
         android:id="@+id/supplierAccountPage"
         android:name="com.decagon.aqua.feature.supplier.ui.SupplierAccountPage"
@@ -36,17 +39,17 @@
             app:destination="@id/supplierProfileDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/favouriteCustomersFragment"
-        android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.FavouriteCustomersFragment"
-        android:label="FavouriteCustomersFragment" />
-    <fragment
         android:id="@+id/ordersReceivedFragment"
         android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.OrdersReceivedFragment"
         android:label="OrdersReceivedFragment" />
     <fragment
         android:id="@+id/suppliesMadeFragment"
-        android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.SuppliesMadeFragment"
-        android:label="SuppliesMadeFragment" />
+        android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments."
+        android:label="SuppliesMadeFragment" >
+        <action
+            android:id="@+id/action_suppliesMadeFragment_to_supplierHomePage"
+            app:destination="@id/supplierHomePage" />
+    </fragment>
     <fragment
         android:id="@+id/pastSuppilesFragement"
         android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.PastSuppliesFragment"
@@ -59,5 +62,52 @@
         android:id="@+id/supplierProfileDetailsFragment"
         android:name="com.decagon.aqua.feature.supplier.ui.supplierFragments.profileDetailsFragments.SupplierProfileDetailsFragment"
         android:label="SupplierProfileDetailsFragment" />
+    <fragment
+        android:id="@+id/favouriteConsumerFragment2"
+        android:name="com.decagon.aqua.feature.supplier.FavouriteConsumerFragment"
+        android:label="FavouriteConsumerFragment" >
+        <action
+            android:id="@+id/action_favouriteConsumerFragment2_to_consumerModalFragment"
+            app:destination="@id/consumerModalFragment" />
+        <action
+            android:id="@+id/action_favouriteConsumerFragment2_to_supplierHomePage"
+            app:destination="@id/supplierHomePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumerModalFragment"
+        android:name="com.example.sprint2.ConsumerModalFragment"
+        android:label="ConsumerModalFragment" >
+        <action
+            android:id="@+id/action_consumerModalFragment_to_consumerModal2Fragment"
+            app:destination="@id/consumerModal2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment2"
+        android:name="com.example.tablayout.fragment.OrderFragment"
+        android:label="OrderFragment" >
+        <action
+            android:id="@+id/action_orderFragment2_to_supplierOrdersPage"
+            app:destination="@id/supplierOrdersPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomingFragment"
+        android:name="com.example.tablayout.fragment.IncomingFragment"
+        android:label="IncomingFragment" >
+        <action
+            android:id="@+id/action_incomingFragment_to_supplierOrdersPage"
+            app:destination="@id/supplierOrdersPage" />
+    </fragment>
+    <dialog
+        android:id="@+id/orderDetails"
+        android:name="com.example.tablayout.fragment.OrderDetails"
+        android:label="OrderDetails" >
+        <action
+            android:id="@+id/action_orderDetails_to_supplierOrdersPage"
+            app:destination="@id/supplierOrdersPage" />
+    </dialog>
+    <fragment
+        android:id="@+id/consumerModal2Fragment"
+        android:name="com.example.sprint2.ConsumerModal2Fragment"
+        android:label="ConsumerModal2Fragment" />
 
 </navigation>

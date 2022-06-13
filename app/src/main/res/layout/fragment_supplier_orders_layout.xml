@@ -1,20 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".feature.supplier.SupplierMainActivity">
 
+    <TextView
+        android:id="@+id/consumer_incoming_order_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/black"
+        android:drawableStart="@drawable/back_icon"
+        android:text="@string/back"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/consumer_incoming_order_heading"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Suppliers Orders"
-        android:textSize="35sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/orders"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_incoming_order_back"
+        tools:targetApi="p" />
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="650dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/consumer_incoming_order_heading"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/consumer_incoming_order_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textFontWeight="400"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.188"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            android:fontFamily="@font/manrope_bold"
+            tools:targetApi="p">
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/consumer_incoming_oder_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consumer_incoming_order_tabLayout" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

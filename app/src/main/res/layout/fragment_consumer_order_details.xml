@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_detail_page"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rounded">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#EBEBEB"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_bar_icon"
+        tools:ignore="ContentDescription"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/consumer_order_detail_modal_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/consumer_order_detail_modal_detail_order"
+            android:layout_marginLeft="100dp"
+            android:layout_toEndOf="@id/consumer_order_detail_modal_detail_order"
+            android:src="@drawable/ic_close"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+        <TextView
+            android:id="@+id/consumer_order_detail_modal_detail_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/order_details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="18sp"
+            tools:ignore="UnusedAttribute" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_comsumer_profile_modal_line"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/profileDetail_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="0dp"
+        android:paddingBottom="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/order_details_image_constLO"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="7dp"
+            android:background="#2221334F">
+
+            <ImageView
+                android:id="@+id/consumer_order_detail_modal_pack_image"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.19999999"
+                app:roundPercent="1"
+                app:srcCompat="@drawable/water_can"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/consumer_order_detail_modal_detail_water_packs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bottle_water_pack"
+                android:fontFamily="@font/manrope_medium"
+                android:textFontWeight="700"
+                android:textColor="#21334F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/consumer_order_detail_modal_pack_image"
+                tools:ignore="UnusedAttribute" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/consumer_order_detail_modal_image"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/order_details_image_constLO"
+            android:scaleType="fitXY"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/ic_comsumer_profile_modalsec_line2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:id="@+id/order_details_bottom_sheet_requester_name_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/consumer_order_detail_modal_image"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/order_details_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingVertical="5dp"
+                android:paddingStart="0dp"
+                android:text="@string/requester"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+
+
+            <TextView
+                android:id="@+id/consumer_order_detail_modal_requester_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:ellipsize="end"
+                android:ems="11"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="end"
+                android:maxLines="1"
+                android:paddingVertical="5dp"
+                android:paddingEnd="0dp"
+                android:scrollHorizontally="true"
+                android:text="@string/abimbola_thomas"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap,RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/order_details_bottom_sheet_quantity_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_details_bottom_sheet_requester_name_lo"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/order_details_quantity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingVertical="5dp"
+                android:paddingStart="0dp"
+                android:text="@string/quantity"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/consumer_order_detail_modal_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:ellipsize="end"
+                android:ems="11"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="end"
+                android:paddingVertical="5dp"
+                android:paddingEnd="0dp"
+                android:scrollHorizontally="true"
+                android:text="@string/_10_packs_of_bottle_water"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap,RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_details_bottom_sheet_phone_number_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_details_bottom_sheet_quantity_lo"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/order_details_phone_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingVertical="5dp"
+                android:paddingStart="0dp"
+                android:text="@string/number"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/consumer_order_detail_modal_phone_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingVertical="5dp"
+                android:paddingEnd="0dp"
+                android:text="@string/_09088764533"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap,RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/order_details_bottom_sheet_address_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_details_bottom_sheet_phone_number_lo"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/order_details_address_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingVertical="5dp"
+                android:paddingStart="0dp"
+                android:text="@string/addressno"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/consumer_order_detail_modal_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="30dp"
+                android:ellipsize="end"
+                android:ems="11"
+                android:fontFamily="@font/manrope_medium"
+                android:maxLines="1"
+                android:paddingVertical="5dp"
+                android:scrollHorizontally="true"
+                android:text="@string/_44_alidada_street_okota_lagos"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                android:gravity="end"
+                tools:ignore="RelativeOverlap,RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_details_bottom_sheet_description_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_details_bottom_sheet_address_lo"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/order_details_description_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingVertical="5dp"
+                android:paddingStart="0dp"
+                android:text="@string/description"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/consumer_order_detail_modal_description_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="30dp"
+                android:ellipsize="end"
+                android:ems="10"
+                android:fontFamily="@font/manrope_medium"
+                android:maxLines="2"
+                android:paddingVertical="5dp"
+                android:scrollHorizontally="true"
+                android:text="@string/lorem_ispsum_ruh_un_tehs_jsh_rem_kahk_isurem"
+                android:textColor="@color/all_text_color"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RelativeOverlap,RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/consumer_order_detail_modal__button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_details_bottom_sheet_description_lo"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#147DF5"
+            android:paddingVertical="15dp"
+            android:text="@string/confirm_order"
+            android:textAllCaps="false"
+            android:textSize="17sp" />
+    </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

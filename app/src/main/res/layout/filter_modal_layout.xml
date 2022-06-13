@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/filter_modal_LO"
     android:background="@drawable/consumer_details_modal_bg">
@@ -12,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/ic_comsumer_profile_modal_line" />
+        android:src="@drawable/ic_comsumer_profile_modal_line"
+        tools:ignore="ContentDescription" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -24,7 +24,8 @@
             android:layout_alignTop="@id/consumer_detail_modal_profile_detail"
             android:layout_marginLeft="130dp"
             android:layout_toEndOf="@id/consumer_detail_modal_profile_detail"
-            android:src="@drawable/ic_close_24" />
+            android:src="@drawable/ic_close_24"
+            tools:ignore="ContentDescription,RtlHardcoded" />
 
 
         <TextView
@@ -34,11 +35,12 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/manrope_bold"
-            android:text="Filter"
+            android:text="@string/filter"
             android:textAlignment="center"
             android:textColor="@color/all_text_color"
             android:textFontWeight="700"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            tools:ignore="UnusedAttribute" />
 
     </RelativeLayout>
 
@@ -47,10 +49,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/consumer_detail_modal_profile_detail"
         android:layout_marginTop="15dp"
-        android:src="@drawable/ic_comsumer_profile_modal_line2" />
+        android:src="@drawable/ic_comsumer_profile_modal_line2"
+        tools:ignore="ContentDescription,ObsoleteLayoutParam" />
 
     <RelativeLayout
-        android:id="@+id/filter_modal_name_lo"
+        android:id="@+id/order_details_bottom_sheet_requester_name_lo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
@@ -65,80 +68,85 @@
             android:text="Name"
             android:textColor="@color/all_text_color"
             android:textFontWeight="400"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
 
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/filter_modal_date_lo"
+        android:id="@+id/order_details_bottom_sheet_quantity_lo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/filter_modal_date_tv"
+            android:id="@+id/order_details_quantity_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/manrope_medium"
             android:padding="5dp"
-            android:text="Date"
+            android:text="@string/date"
             android:textColor="@color/all_text_color"
             android:textFontWeight="400"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/filter_modal_time_lo"
+        android:id="@+id/order_details_bottom_sheet_phone_number_lo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/filter_modal_time_tv"
+            android:id="@+id/order_details_phone_number_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/manrope_medium"
             android:padding="5dp"
-            android:text="Time"
+            android:text="@string/time"
             android:textColor="@color/all_text_color"
             android:textFontWeight="400"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded,UnusedAttribute" />
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/filter_modal_items_lo"
+        android:id="@+id/order_details_bottom_sheet_address_lo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/filter_modal_items_tv"
+            android:id="@+id/order_details_address_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/manrope_medium"
             android:padding="5dp"
-            android:text="Items"
+            android:text="@string/items"
             android:textColor="@color/all_text_color"
             android:textFontWeight="400"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded,UnusedAttribute" />
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/filter_modal_price_lo"
+        android:id="@+id/order_details_bottom_sheet_description_lo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/filter_modal_price_tv"
+            android:id="@+id/order_details_description_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/manrope_medium"
             android:padding="5dp"
-            android:text="Price"
+            android:text="@string/price"
             android:textColor="@color/all_text_color"
             android:textFontWeight="400"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded,UnusedAttribute" />
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/filter_modal_location_lo"
@@ -153,10 +161,11 @@
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/manrope_medium"
             android:padding="5dp"
-            android:text="Location"
+            android:text="@string/location"
             android:textColor="@color/all_text_color"
             android:textFontWeight="400"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
     </RelativeLayout>
 
 </LinearLayout>

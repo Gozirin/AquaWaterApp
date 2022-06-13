@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/consumer_modal_bottomSheet"
+    android:layout_width="match_parent"
+    android:background="@drawable/round"
+    android:layout_height="wrap_content"
+    tools:context=".feature.supplier.SupplierMainActivity">
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_product_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/product_details"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_rectangle" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_close"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toEndOf="@+id/consumer_modal_text_view_product_details"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_rectangle"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/horizontal_line"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_close"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_product_details"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_product_details"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_image"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_horizontal_line"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/Pearl"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toEndOf="@+id/consumer_modal_image_view_image"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_horizontal_line"
+        tools:ignore="UnusedAttribute" />
+
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_street_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:fontFamily="@font/manrope"
+        android:text="@string/Egbeda"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_name"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toEndOf="@+id/consumer_modal_image_view_image"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_name" />
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/manrope"
+        android:text="@string/Info"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_image"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_location"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_location1"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_info"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_info"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_info"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_location_name"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/manrope"
+        android:text="@string/location_name"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_info"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_info"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_phone"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_mobile_phone_line"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_location"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_location"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_location"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_phone_number"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope"
+        android:text="@string/phone_number"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_location_name"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_location_name"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_location_name"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_email"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_mail"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_phone"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_phone"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_phone"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_email_name"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/manrope"
+        android:text="@string/Emeka_email"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_phone_number"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_line"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_consumption"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_email"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_email"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_email"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_consumption"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/manrope"
+        android:text="@string/view_consumption"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_email_name"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_email_name"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_email_name"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_bottle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_bottlelevel"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_line"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_line"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_line"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_bottle_bought"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/manrope"
+        android:text="@string/bottle_bought"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_consumption"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_text_view_consumption"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_consumption"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/consumer_modal_image_view_bottle2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_bottlelevel"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_bottle"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_bottle"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_image_view_bottle"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/consumer_modal_text_view_bottle_remaining"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/manrope"
+        android:text="@string/bottle_remaining"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_bottle_bought"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/consumer_modal_image_view_bottle"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_bottle_bought"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/consumer_modal_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="15dp"
+        android:backgroundTint="#047DDD"
+        android:text="@string/modal_button"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:icon="@drawable/clock"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/consumer_modal_text_view_bottle_remaining"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="@+id/consumer_modal_image_view_bottle2"
+        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_text_view_bottle_remaining"
+        app:layout_constraintVertical_bias="0.596" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
