@@ -22,7 +22,7 @@ class FirstOnboardingScreenFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentFirstOnboardingScreenBinding.inflate(inflater, container, false)
         val view = binding.root

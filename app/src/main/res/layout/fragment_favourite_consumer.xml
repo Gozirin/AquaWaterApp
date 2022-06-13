@@ -3,116 +3,88 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/consumer_modal_favourite_customer"
-    tools:context=".FavouriteConsumerFragment">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/consumer_modal_card_linearLayout"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="128dp"
-        android:layout_margin="16dp"
-       app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+
+    <TextView
+        android:id="@+id/favorite_customer_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/arrow"
+        android:fontFamily="@font/manrope"
+        android:text="@string/back"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/consumer_modal_customer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:fontFamily="@font/manrope_bold"
-                android:text="@string/favourite"
-                android:textColor="@color/black"
-                android:textFontWeight="700"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/consumer_modal_searchView"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/consumer_modal_searchView" />
-
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/consumer_modal_searchView"
-                android:layout_width="298dp"
-                android:layout_height="59dp"
-                android:background="@drawable/shapes"
-                android:backgroundTint="#F5F5F5"
-                app:iconifiedByDefault="false"
-                app:layout_constraintBottom_toBottomOf="@+id/consumer_modal_customer"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.046"
-                app:queryHint="search"
-                app:searchIcon="@drawable/icon_search" />
+        tools:ignore="UseCompatTextViewDrawableXml" />
 
 
-            <TextView
-                android:id="@+id/consumer_modal_text_view_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/manrope"
-                android:text="@string/Filter"
-                android:textSize="17sp"
-                android:textColor="@color/black"
-                android:textFontWeight="400"
-                app:layout_constraintBottom_toTopOf="@+id/consumer_modal_customer"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.245"
-                app:layout_constraintStart_toEndOf="@+id/consumer_modal_searchView"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <ImageView
-                android:id="@+id/consumer_modal_image_view_straight_line"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/horizontal_line"
-                app:layout_constraintBottom_toTopOf="@+id/consumer_modal_customer"
-                app:layout_constraintEnd_toEndOf="@+id/consumer_modal_image_view_filter"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/consumer_modal_searchView"
-                app:layout_constraintTop_toBottomOf="@+id/consumer_modal_searchView"
-                app:layout_constraintVertical_bias="0.75" />
-
-            <ImageView
-                android:id="@+id/consumer_modal_image_view_filter"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/filter"
-                app:layout_constraintBottom_toBottomOf="@+id/consumer_modal_text_view_filter"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/consumer_modal_text_view_filter"
-                app:layout_constraintTop_toTopOf="@+id/consumer_modal_text_view_filter" />
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/favorite_customer_searchView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:queryBackground="@null"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/square"
+        android:backgroundTint="#F5F5F5"
+        app:iconifiedByDefault="false"
+        app:layout_constraintStart_toStartOf="@id/favorite_customer_back"
+        app:layout_constraintEnd_toStartOf="@id/consumer_modal_text_view_filter"
+        app:layout_constraintTop_toBottomOf="@+id/favorite_customer_back"
+        app:queryHint="search"
+        app:searchIcon="@drawable/icon_search" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/consumer_modal_text_view_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_path_33"
+        android:fontFamily="@font/manrope"
+        android:text="@string/Filter"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="17sp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="@id/favorite_customer_searchView"
+        app:layout_constraintBottom_toBottomOf="@id/favorite_customer_searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UnusedAttribute,UseCompatTextViewDrawableXml" />
 
+    <TextView
+        android:id="@+id/favourite_customer_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/favourite_customer"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="20dp"
 
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="@+id/favorite_customer_searchView"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/favorite_customer_searchView"
+        app:layout_constraintTop_toBottomOf="@+id/favorite_customer_searchView"
+        tools:ignore="SpUsage,UnusedAttribute" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/consumer_modal_recyclerView"
-        android:layout_width="408dp"
-        android:layout_height="596dp"
+        android:id="@+id/favorite_customer_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        android:layout_margin="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consumer_modal_card_linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/favourite_customer_text_view"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/faviourite_consumer_item_details_view" />
+        tools:listitem="@layout/faviourite_customer_item_details_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

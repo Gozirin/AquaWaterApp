@@ -103,7 +103,7 @@
                 android:lines="1"
                 android:inputType="text"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/last_name_tv"
@@ -306,30 +306,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/street_container" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/city_container"
-        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-        android:layout_weight="3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:hintEnabled="false"
-        app:helperTextTextColor="#a30306"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/city_tv">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_City_Consumer_sign_up"
-            android:background="@drawable/border_edittext"
-            android:hint="@string/use_current_location"
-            android:drawableStart="@drawable/location"
-            android:drawablePadding="5dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/city_container"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_weight="3"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:lines="1"
-            android:inputType="text"/>
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:helperTextTextColor="#a30306"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/city_tv">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_City_Consumer_sign_up"
+                android:background="@drawable/border_edittext"
+                android:hint="@string/use_current_location"
+                android:drawableStart="@drawable/location"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:lines="1"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/state_tv"
@@ -343,30 +343,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/city_container" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/state_container"
-        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-        android:layout_weight="3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:hintEnabled="false"
-        app:helperTextTextColor="#a30306"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/state_tv">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_State_Consumer_sign_up"
-            android:background="@drawable/border_edittext"
-            android:hint="@string/use_current_location"
-            android:drawableStart="@drawable/location"
-            android:drawablePadding="5dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/state_container"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_weight="3"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:lines="1"
-            android:inputType="text"/>
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:helperTextTextColor="#a30306"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state_tv">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_State_Consumer_sign_up"
+                android:background="@drawable/border_edittext"
+                android:hint="@string/use_current_location"
+                android:drawableStart="@drawable/location"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:lines="1"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <Button

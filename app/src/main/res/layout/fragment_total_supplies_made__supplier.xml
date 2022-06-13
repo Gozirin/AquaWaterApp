@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="">
+    tools:context=".feature.supplier.SupplierMainActivity">
 
     <TextView
         android:id="@+id/totalSupplyMade_supplier_back_tv"
@@ -15,12 +15,13 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="17dp"
-        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:drawableStart="@drawable/ic_baseline_arrow_back_24"
         android:fontFamily="@font/manrope_bold"
-        android:text=" Back"
+        android:text="@string/back"
         android:textColor="@color/all_text_color"
         android:textFontWeight="500"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:ignore="UnusedAttribute,UseCompatTextViewDrawableXml" />
 
     <SearchView
         android:id="@+id/totalSupplyMade_supplier_searchview"
@@ -40,22 +41,24 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/totalSupplyMade_supplier_searchview"
         android:layout_marginTop="15dp"
-        android:src="@drawable/ic_comsumer_profile_modal_line2" />
+        android:src="@drawable/ic_comsumer_profile_modal_line2"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/totalSupplyMade_supplier_filter_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/totalSupplyMade_supplier_searchview"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/totalSupplyMade_supplier_searchview"
         android:fontFamily="@font/manrope_medium"
-        android:text="Filter  "
+        android:text="@string/Filter"
         android:textColor="@color/all_text_color"
         android:textFontWeight="500"
         android:textSize="20sp"
-        app:drawableEndCompat="@drawable/ic_path_33" />
+        app:drawableEndCompat="@drawable/ic_path_33"
+        tools:ignore="UnusedAttribute" />
 
     <TextView
         android:id="@+id/totalSupplyMade_supplier_past_supplies_tv"
@@ -66,9 +69,10 @@
         android:layout_marginTop="32dp"
         android:fontFamily="@font/manrope_bold"
         android:textFontWeight="700"
-        android:text="Past Supplies"
+        android:text="@string/past_supplies"
         android:textColor="@color/all_text_color"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:ignore="RtlHardcoded,UnusedAttribute" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/totalSupplyMade_supplier_past_supplies_RV"

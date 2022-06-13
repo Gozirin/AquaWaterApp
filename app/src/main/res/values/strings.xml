@@ -23,25 +23,23 @@
     <string name="consumer_signup_edit_text_phoneNumber">Phone number</string>
     <string name="consumer_signup_text_view_address">Address</string>
     <string name="consumer_signup_edit_text_address">Location</string>
+    <string name="consumer_signup_text_company_name">Company Name</string>
+    <string name="consumer_signup_text_location">Location</string>
     <string name="consumer_signup_text_view_number_of_bottles">Number Of Bottle</string>
     <string name="consumer_signup_edit_text_number_of_bottles">1</string>
-    <string name="consumer_signup_button_login">Sign Up</string>
+    <string name="consumer_signup_button_login">SignUp</string>
     <string name="consumer_signup_text_view_already_have_an_account">Already have an account?</string>
     <string name="consumer_signup_text_view_sign_in">Sign in</string>
-
     <string name="firstOBTitle">Find the best deals and special offers!</string>
     <string name="firstOBText">Signing up and receiving your order is straightforward and effortless. There is no need to contact the seller or sign a contract.</string>
     <string name="secondOBTitle">Transparent pricing</string>
     <string name="secondOBText">Before placing an order, customers will input their address for delivery and receive detailed pricing information. There are no hidden costs!</string>
     <string name="thirdOBTitle">Timely delivery</string>
     <string name="thirdOBText">Depending on the customer\'s needs, delivery can be one time or long running.</string>
-
-
     <!--For customer bottom navigation-->
     <string name="home_tab">Home</string>
     <string name="transaction_tab">Transaction</string>
     <string name="account_tab">Account</string>
-
     <string name="supplier_homepage">Supplier Homepage</string>
     <string name="back">Back</string>
     <string name="statistics_level">Statistics Level</string>
@@ -56,6 +54,10 @@
     <string name="profile_name">Abimbola Thomas</string>
     <string name="profile_image">profile Image</string>
     <string name="title">My Profile</string>
+    <string name="favourite_customers">My Profile</string>
+    <string name="supply_made"> Profile</string>
+    <string name="_24"> 24</string>
+    <string name="in_the_past"> Profile</string>
     <string name="greeting">Hi, Godswill</string>
     <string name="search_hint">Search for supplier</string>
     <string name="consumtion_text">Your consumption level is 65.89%</string>
@@ -101,28 +103,6 @@
     <string name="open_mail_app">Open mail app</string>
     <string name="did_not_receive_the_email_check_your_spam_filter_or">Did not receive the email check your spam filter or</string>
     <string name="try_another_email">try another email</string>
-    <string name="refer_your_friends_earn_ncash_back"><![CDATA[Refer your friends & earn \ncash back]]></string>
-    <string name="invite_your_friends_to_join_aqua_and_get_500_ncash_back_for_each_friend_that_joins_using_nyour_referral_code">Invite your friends to join aqua and get 500 \ncash back for each friend that joins using \nyour referral code</string>
-    <string name="change_password">Change password</string>
-    <string name="current_password">Current Password</string>
-    <string name="new_password">New Password</string>
-    <string name="comfirm_password">Comfirm password</string>
-    <string name="notifications">Notifications</string>
-    <string name="push_notification">Push Notification</string>
-    <string name="allows_you_receive_notification_on_nphone_screen">Allows you receive notification on \nphone screen</string>
-    <string name="email_notification">Email notification</string>
-    <string name="allows_you_receive_the_eemail_notification_nfrom_the_app">Allows you receive the eemail notification \nfrom the app</string>
-    <string name="my_referrals">My referrals</string>
-    <string name="create_new_password">Create New Password</string>
-    <string name="confirm_password">Confirm New Password</string>
-    <string name="reset_password">Reset Password</string>
-    <string name="don_t_have_an_account">Don\'t have an account?</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="invite_more_friends">Invite more friends</string>
-    <string name="save">Save</string>
-    <string name="abayomitunde_gmail_com">abayomitunde@gmail.com</string>
-    <string name="passwordsuccessful">PasswordSuccessful</string>
-    <string name="password_reset_successfully">Password reset successfully</string>
     <string name="tabLayout">Tablayout</string>
     <string name="person">Person</string>
     <string name="order">Order</string>
@@ -135,7 +115,7 @@
     <string name="reminder">Reminder sent successfully</string>
     <string name="reminder_message">You’ve successfully sent a reminder to Pearl Somto he will get a notification to place order</string>
     <string name="back_home">Back Home</string>
-    <string name="favourite">Favourite Customers</string>
+    <string name="favourite_customer">Favourite Customers</string>
     <string name="Filter">Filter</string>
     <string name="Pearl">Pearl Somto</string>
     <string name="Egbeda">Egbeda, Lagos</string>
@@ -147,29 +127,66 @@
     <string name="bottle_bought">Total Bottle bought(76)</string>
     <string name="bottle_remaining">Total Bottle remaining(76)</string>
     <string name="modal_button">Send a Reminder</string>
-    <string name="product_details">product_details</string>
-    <string-array name="gender">
-        <item>Male</item>
-        <item>Female</item>
-    </string-array>
-    <string name="activity_overview">Activity overview</string>
-    <string name="showing_all_supplies_failed_and_delivered">Showing all supplies, failed and delivered</string>
-    <string name="supply_made">Supply made</string>
-    <string name="in_the_past">in the past</string>
+    <string name="product_details">Product Details</string>
+    <string name="pearl_somto">Pearl Somto</string>
+    <string name="egbeda_lagos">Egbeda, Lagos</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="filter">Filter</string>
+    <string name="time">Time</string>
+    <string name="items">Items</string>
+    <string name="order_details">Order details</string>
+    <string name="bottle_water_pack">Bottle water pack</string>
+    <string name="requester">Requester:</string>
+    <string name="abimbola_thomas">Abimbola Thomas</string>
+    <string name="quantity">Quantity:</string>
+    <string name="_10_packs_of_bottle_water">10 packs of bottle water</string>
+    <string name="number">Phone number:</string>
+    <string name="addressno">Address:</string>
+    <string name="activity_overview">Activity</string>
+    <string name="showing_all_supplies_failed_and_delivered">showing_all_supplies_failed_and_delivered</string>
+    <string name="ain_the_past">in the past</string>
     <string name="_112">112</string>
-    <string name="bottles_delivered_successful">Bottles delivered successful</string>
-    <string name="_24">24</string>
-    <string name="defaulted_bottles">Defaulted bottles</string>
+    <string name="bottles_delivered_successful">bottles_delivered_successful</string>
+    <string name="defaulted_bottles">defaulted_bottles</string>
     <string name="_7">7</string>
-    <string name="failed_delivery">Failed delivery</string>
-    <string name="total_norders_received">Total\nOrders Received</string>
-    <string name="favourite_customers">Favourite Customers</string>
-    <string name="confrim_email_text">Click on the link below to confirm your email address and start enjoying Aqua Water</string>
-    <string name="first_name">First Name</string>
-    <string name="last_name">Last Name</string>
-    <string name="email_signUp">Email</string>
+    <string name="failed_delivery">failed delivery</string>
+    <string name="_09088764533">09088764533</string>
+    <string name="_44_alidada_street_okota_lagos">44, Alidada Street, Okota, Lagos</string>
+    <string name="description">Description</string>
+    <string name="lorem_ispsum_ruh_un_tehs_jsh_rem_kahk_isurem">Lorem ispsum ruh\'un tehs jsh rem kahk isurem.</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="sign_up_to_your_account">Sign up to your account</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="abayomitunde_gmail_com">abayomitunde@gmail.com</string>
+    <string name="past_supplies">Past Supplies</string>
+    <!--confirm email-->
+    <string name="confirm_email_msg">Click on the link below to confirm your email address and start enjoying Aqua app</string>
+    <string name="fragment_change_password">Change Password</string>
+    <string name="fragment_current_password">Current Password</string>
+    <string name="fragment_new_password">New Password</string>
+    <string name="fragment_confirm_password">Confirm Password</string>
+    <string name="fragment_save_password">Save</string>
+    <string name="fragment_consumer_notification">Notifications</string>
+    <string name="fragment_consumer_notification_push_notification">Push Notification</string>
+    <string name="fragment_consumer_notification_allow_push">Allows you receive notification on phone screen</string>
+    <string name="fragment_consumer_notification_email">Allows you receive email notification from the app</string>
+    <string name="fragment_consumer_email_notification">Email notifications</string>
+    <string name="fragment_consumer_setting_refer">Refer your friends &amp; earn cash back</string>
+    <string name="fragment_consumer_setting_refer_msg">Invite your friends to join Aqua and get N500 cash back for each friends that joins using your referral code.</string>
+    <string name="fragment_consumer_setting_my_referrals">My Referrals</string>
+    <string name="fragment_consumer_setting_refer_invite">Invite more friends</string>
+    <string name="fragment_password_successful">Password Successful</string>
+    <string name="fragment_password_reset_successfully">Password reset successfully</string>
     <string name="street">Street</string>
     <string name="use_current_location">Use current location</string>
     <string name="city">City</string>
     <string name="state">State</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_signUp">Email</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
 </resources>

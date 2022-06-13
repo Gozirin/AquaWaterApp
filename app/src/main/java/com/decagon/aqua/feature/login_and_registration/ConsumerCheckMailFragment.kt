@@ -8,12 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerCheckMailBinding
 
 class ConsumerCheckMailFragment : Fragment() {
     private lateinit var binding: FragmentConsumerCheckMailBinding
+    private val args by navArgs<ConsumerCheckMailFragmentArgs>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,9 +31,6 @@ class ConsumerCheckMailFragment : Fragment() {
         binding = FragmentConsumerCheckMailBinding.bind(view)
 
         // Try another email if message not received or check spam filter.
-        binding.consumerCheckMailTextView5.setOnClickListener {
-            findNavController().navigate(R.id.action_consumerCheckMailFragment_to_consumerForgotPasswordFragment)
-        }
 
         // navigate to consumer create new password page
         binding.consumerCheckMailButton.setOnClickListener {

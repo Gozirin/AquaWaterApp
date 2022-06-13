@@ -18,6 +18,12 @@ class SupplierOrderHistoryAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val orderHistoryItem = orderHistoryList[position]
+        holder.tvOrderName.text = orderHistoryItem.supplierOrderName
+        holder.tvOrderQuantity.text = orderHistoryItem.supplierOrderQuantity
+        holder.tvOrderStatus.text = orderHistoryItem.supplierOrderStatus
+        holder.tvOrderDate.text = orderHistoryItem.supplierOrderDate
+        holder.tvOrderImage.setImageResource(orderHistoryItem.supplierOrderImage)
     }
 
     override fun getItemCount() = orderHistoryList.size

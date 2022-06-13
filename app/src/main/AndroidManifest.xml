@@ -18,6 +18,7 @@
 
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:name = ".core.di.BaseApplication"
@@ -36,6 +37,7 @@
         <activity
             android:name="com.decagon.aqua.feature.onboarding.OnboardingMainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -43,6 +45,7 @@
             </intent-filter>
             <nav-graph android:value="@navigation/onboarding_nav_graph"/>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

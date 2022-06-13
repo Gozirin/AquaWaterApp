@@ -19,7 +19,7 @@ class ConsumerAccountFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = ConsumerAccountFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -33,9 +33,5 @@ class ConsumerAccountFragment : Fragment() {
 
         binding.consumerAccountFragmentLogoutTv.setOnClickListener {
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
     }
 }

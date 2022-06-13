@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.decagon.aqua.feature.supplier.FavouriteConsumerFragment
 import com.example.sprint2.ConsumerModalFragment
-import com.example.sprint2.FavouriteConsumerFragment
 
 class ModalAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {

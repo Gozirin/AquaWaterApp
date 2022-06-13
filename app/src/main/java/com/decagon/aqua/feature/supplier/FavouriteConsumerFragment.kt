@@ -1,4 +1,4 @@
-package com.example.sprint2
+package com.decagon.aqua.feature.supplier
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,7 +14,9 @@ import com.decagon.aqua.databinding.FragmentFavouriteConsumerBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerModalAdapter
 import com.decagon.aqua.feature.supplier.adapter.ConsumerModalItem
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FavouriteConsumerFragment : Fragment(), ConsumerModalAdapter.OnItemClickListener {
     private lateinit var binding: FragmentFavouriteConsumerBinding
 
@@ -38,49 +40,30 @@ class FavouriteConsumerFragment : Fragment(), ConsumerModalAdapter.OnItemClickLi
 
         // displaying the recyclerView?/
         val adapter = ConsumerModalAdapter(ConsumerModalItem().consumerModalItem, this)
-        // val adapter = ModalAdapter(ConsumerModalItem().consumerModalItem, this)
-        binding.consumerModalRecyclerView.adapter = adapter
+        binding.favoriteCustomerRecyclerView.adapter = adapter
+
+        binding.favoriteCustomerBack.setOnClickListener {
+            findNavController().navigate(R.id.action_favouriteConsumerFragment2_to_supplierHomePage)
+        }
     }
 
     override fun onItemClick(position: Int) {
+        // displaying bottomSheet fragment
+
         dialog = BottomSheetDialog(requireContext(), R.style.bottom_sheet_dialog_theme)
         val productsDetailsDialogue: View = layoutInflater.inflate(
             R.layout.fragment_consumer_modal, view?.findViewById(R.id.consumer_modal_bottomSheet) as LinearLayout?
         )
 
-        // displaying bottomSheet fragment
         val setReminder: Button? = productsDetailsDialogue.findViewById(R.id.consumer_modal_button)
         setReminder?.setOnClickListener {
-            Toast.makeText(requireContext(), "hide", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.consumerModal2Fragment)
+            Toast.makeText(requireContext(), "show dialog", Toast.LENGTH_SHORT).show()
+            // findNavController().navigate(R.id.action_consumerModalFragment_to_consumerModal2Fragment)
         }
         showDialog(productsDetailsDialogue)
-
-//
-//        val productDetailsDialogue = LayoutInflater.from(requireContext()).inflate(
-//            R.layout.fragment_consumer_modal,
-//            LinearLayout(context)
-//        )
-//        Toast.makeText(requireContext(), "$position", Toast.LENGTH_SHORT).show()
-//
-        //    showDialog(productsDetailsDialogue)
     }
-
     private fun showDialog(view: View) {
         dialog.setContentView(view)
-
-        // on below line we are calling
-        // a show method to display a dialog.
         dialog.show()
     }
-
-//    override fun productsDetailsDialogue(view: View?) {
-//    }
-//
-//    override fun hideDialogue(view: View?) {
-//        dialog.hide()
-//        view?.let {
-//            showDialog(view)
-//        }
-    // }
 }

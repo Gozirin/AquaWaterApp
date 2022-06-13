@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerReferralScreenBinding
 
@@ -28,7 +27,7 @@ class ConsumerReferralScreenFragment : Fragment() {
 
         // Back button to return to Change Password page
         binding.consumerReferralScreenImageButton1.setOnClickListener {
-            findNavController().navigate(R.id.action_consumer_Referral_Screen_Fragment_to_consumer_Change_Password_Screen_Fragment)
+//            findNavController().navigate(R.id.action_consumer_Referral_Screen_Fragment_to_consumer_Change_Password_Screen_Fragment)
         }
     }
 }
