@@ -1,9 +1,12 @@
 package com.decagon.aqua.feature.login_and_registration
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -32,7 +35,17 @@ class ConsumerCheckMailFragment : Fragment() {
 
         // navigate to consumer create new password page
         binding.consumerCheckMailButton.setOnClickListener {
-            findNavController().navigate(R.id.action_consumerCheckMailFragment_to_consumerCreateNewPasswordFragment)
+            try {
+                val intent = Intent(Intent.ACTION_MAIN)
+                intent.addCategory(Intent.CATEGORY_APP_EMAIL)
+                this.startActivity(intent)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(
+                    requireContext(),
+                    "There is no email client installed.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
     }
 }

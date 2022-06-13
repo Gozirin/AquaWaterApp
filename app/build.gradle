@@ -99,6 +99,8 @@ dependencies {
     // retrofit
     implementation Dependencies.retrofit
     implementation Dependencies.retrofit_gson
+    implementation Dependencies.okHttp
+    implementation Dependencies.okHttp_logging_interceptor
 
     // unit test
     testImplementation TestDependencies.junit4
@@ -167,5 +169,14 @@ dependencies {
 
     //viewpager2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    // Retrofit
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation("com.squareup.moshi:moshi:1.13.0")
+
+    //Activity KTX
+    implementation"androidx.activity:activity-ktx:1.4.0"
 
 }

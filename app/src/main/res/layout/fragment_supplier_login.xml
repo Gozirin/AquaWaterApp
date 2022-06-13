@@ -7,7 +7,12 @@
     android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".feature.login_and_registration.SupplierLoginFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+</LinearLayout>
     <ImageView
         android:id="@+id/supplier_login_layout_image_view_image_icon"
         android:layout_width="65dp"
@@ -29,7 +34,6 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/manrope_bold"
         android:text="@string/consumer_login_fragment"
-        android:textColor="@color/black"
         android:textFontWeight="700"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_image_view_image_icon"
@@ -46,7 +50,6 @@
         android:layout_marginTop="76dp"
         android:fontFamily="@font/manrope"
         android:text="@string/consumer_login_text_view_email"
-        android:textColor="@color/black"
         android:textFontWeight="400"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_login_account"
@@ -62,9 +65,6 @@
         android:layout_margin="16dp"
         android:padding="15dp"
         android:fontFamily="@font/manrope"
-        android:textFontWeight="400"
-        android:textColor="@color/black"
-        android:inputType="textEmailAddress"
         android:background="@drawable/shapes"
         android:hint="@string/consumer_login_edit_text_email"
         android:textSize="15sp"
@@ -81,7 +81,6 @@
         android:layout_margin="16dp"
         android:fontFamily="@font/manrope"
         android:textFontWeight="400"
-        android:textColor="@color/black"
         android:layout_marginTop="76dp"
         android:text="@string/consumer_login_text_view_password"
         android:textSize="15sp"
@@ -99,7 +98,6 @@
         android:layout_marginStart="16dp"
         android:fontFamily="@font/manrope"
         android:textFontWeight="400"
-        android:textColor="@color/black"
         android:background="@drawable/shapes"
         android:hint="@string/consumer_login_edit_text_password"
         android:inputType="textPassword"
@@ -173,11 +171,22 @@
         android:layout_marginLeft="5dp"
         android:text="@string/consumer_login_text_view_signup"
         android:textColor="#4C9EDF"
+        android:layout_marginStart="5dp"
         app:layout_constraintEnd_toEndOf="@+id/supplier_login_layout_login_button"
         app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="@+id/supplier_login_layout_create_account"
         app:layout_constraintTop_toTopOf="@+id/supplier_login_layout_create_account"
         tools:ignore="RtlHardcoded" />
 
+    <ProgressBar
+        android:id="@+id/supplier_login_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
