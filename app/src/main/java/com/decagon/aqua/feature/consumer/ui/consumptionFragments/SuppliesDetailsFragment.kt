@@ -6,14 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
+import com.decagon.aqua.core.di.app.AppModule
 import com.decagon.aqua.databinding.FragmentSuppliesDetailsBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerSupplyDetailsAdapter
 import com.decagon.aqua.models.SupplyDetailsItem
 import com.like.LikeButton
+import retrofit2.HttpException
+import java.io.IOException
 
 class SuppliesDetailsFragment : Fragment() {
     private lateinit var binding: FragmentSuppliesDetailsBinding
@@ -46,6 +50,21 @@ class SuppliesDetailsFragment : Fragment() {
         binding.supplyDetailsBackBtn.setOnClickListener {
             findNavController().navigate(R.id.action_suppliesDetailsFragment_to_consumerHomeFragment)
         }
+
+//        lifecycleScope.launchWhenCreated {
+//            val response = try {
+//                AppModule.provideAquaApi().getProductsByCompanyID()
+//            } catch (e: IOException) {
+//                Toast.makeText(context, "Error encountered while loading", Toast.LENGTH_SHORT).show()
+//                return@launchWhenCreated
+//            } catch (e: HttpException) {
+//                Toast.makeText(context, "Error encountered while loading", Toast.LENGTH_SHORT).show()
+//                return@launchWhenCreated
+//            }
+//            if(response.isSuccessful && response.body() != null){
+//                consumerSuppliesDetailAdapter.
+//            }
+//        }
     }
 
     private fun initView2() {

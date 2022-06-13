@@ -59,8 +59,8 @@ class ConsumerLoginFragment : Fragment() {
             val login_request = UserLoginRequest(receivedEmail, receivedPassword)
 
             if (InputValidation.ValidateEmail(receivedEmail) != null || (InputValidation.validatePassword(receivedPassword) != "")) {
-                binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
-                binding.consumerLoginLayoutPasswordLo.helperText = "Enter a valid Password"
+//                binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
+//                binding.consumerLoginLayoutPasswordLo.helperText = "Enter a valid Password"
             } else {
                 aqua_view_model.loginUser(login_request)
                 binding.consumerLoginProgressBar.visibility = View.VISIBLE
