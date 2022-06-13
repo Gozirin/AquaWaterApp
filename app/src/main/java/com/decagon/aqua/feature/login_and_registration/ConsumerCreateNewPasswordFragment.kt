@@ -63,8 +63,6 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
                         )
                     )
                 }
-
-
             }
 
             /**
@@ -102,31 +100,26 @@ class ConsumerCreateNewPasswordFragment : Fragment() {
         )
     }
 
-    private fun onNewPassword(newPassword: String){
+    private fun onNewPassword(newPassword: String) {
         if (InputValidation.validatePassword(newPassword) == "Password cannot be empty") {
             binding.textInputLayout.helperText = "Password cannot be empty"
         } else if (InputValidation.validatePassword(newPassword) == "Password must have a minimum of 8 characters.") {
             binding.textInputLayout.helperText = "Password must have a minimum of 8 characters."
-
         } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 number.") {
-            binding.textInputLayout.helperText  = "Password must contain at least 1 number."
-
+            binding.textInputLayout.helperText = "Password must contain at least 1 number."
         } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 upper case character.") {
-            binding.textInputLayout.helperText  = "Password must contain at least 1 upper case character."
-
+            binding.textInputLayout.helperText = "Password must contain at least 1 upper case character."
         } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 lower case character.") {
             binding.textInputLayout.helperText = "Password must contain at least 1 lower case character."
-
-        } else if (InputValidation.validatePassword(newPassword)== "Password must contain at least 1 special character (@#$%&?!).") {
+        } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 special character (@#$%&?!).") {
             binding.textInputLayout.helperText = "Password must contain at least 1 special character (@#$%&?!)."
-
         } else {
             binding.textInputLayout.helperText = ""
         }
     }
 
     fun onConfirmPasswordTextChange(newPassword: String, confirmPassword: String) {
-        if (!InputValidation.validateConfirmPassword(newPassword,confirmPassword)) {
+        if (!InputValidation.validateConfirmPassword(newPassword, confirmPassword)) {
             binding.textInputLayout3.helperText = "Invalid Password Entered"
         } else {
             binding.textInputLayout3.helperText = ""

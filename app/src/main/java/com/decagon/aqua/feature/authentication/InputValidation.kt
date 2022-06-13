@@ -1,6 +1,5 @@
 package com.decagon.aqua.feature.authentication
 
-import android.util.Patterns
 var result = false
 object InputValidation {
 
@@ -61,7 +60,6 @@ object InputValidation {
         }
         return ""
     }
-
 
 //    fun validateNewPassword(newPassword: String): Boolean {
 //        // val checkedNewPassword = Regex("^(?=.*[A-Z].*[A-Z])(?=.*[!@#\$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}\$")

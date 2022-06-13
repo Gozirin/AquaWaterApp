@@ -1,7 +1,6 @@
 package com.decagon.aqua.feature.login_and_registration
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -96,9 +95,9 @@ class ConsumerForgotPasswordFragment : Fragment() {
     }
 
     private fun onEmailTextChanged(receivedEmail: String) {
-        if (InputValidation.validateEmail(receivedEmail) == "Enter a valid Email Address"){
+        if (InputValidation.validateEmail(receivedEmail) == "Enter a valid Email Address") {
             binding.forgotPasswordTextInputLayout5.helperText = "Enter a valid Email Address"
-        } else if (InputValidation.validateEmail(receivedEmail) == "Invalid Email Address"){
+        } else if (InputValidation.validateEmail(receivedEmail) == "Invalid Email Address") {
             binding.forgotPasswordTextInputLayout5.helperText = "Invalid Email Address"
         } else {
             binding.forgotPasswordTextInputLayout5.helperText = ""
