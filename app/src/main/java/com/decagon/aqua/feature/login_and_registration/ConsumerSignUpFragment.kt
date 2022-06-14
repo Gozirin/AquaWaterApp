@@ -11,11 +11,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentSignUpConsumerBinding
-import com.decagon.aqua.feature.consumer.validation.* // ktlint-disable no-wildcard-imports
 import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Location
 import com.decagon.aqua.models.consumerAuthModule.User
+import com.decagon.aqua.validations.* // ktlint-disable no-wildcard-imports
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 

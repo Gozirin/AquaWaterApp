@@ -1,15 +1,15 @@
 package com.decagon.aqua.core.di.app
 
 import com.decagon.aqua.commons.BASE_URL
-import com.decagon.aqua.core.service.ForgotResetPassWordAPI
 import com.decagon.aqua.feature.onboarding.ResetPasswordRepository
-import com.decagon.aqua.feature.repository.ForgotPasswordRepository
-import com.decagon.aqua.feature.repository.IForgotPasswordRepository
-import com.decagon.aqua.feature.repository.IResetPasswordRepositoryInterface
-import com.decagon.aqua.models.Util.ApiService
-import com.decagon.aqua.models.repository.IUpdatePasswordRepository
-import com.decagon.aqua.models.repository.UpdatePasswordRepository
-import com.decagon.aqua.network.SupplierAuthApi
+import com.decagon.aqua.network.ApiService
+import com.decagon.aqua.network.AuthenticationApi
+import com.decagon.aqua.network.ForgotResetPassWordAPI
+import com.decagon.aqua.repositories.ForgotPasswordRepository
+import com.decagon.aqua.repositories.IForgotPasswordRepository
+import com.decagon.aqua.repositories.IResetPasswordRepositoryInterface
+import com.decagon.aqua.repositories.IUpdatePasswordRepository
+import com.decagon.aqua.repositories.UpdatePasswordRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,8 +41,8 @@ class RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideSupplierAuthApi(): SupplierAuthApi {
-        return provideRetrofitInstance().create(SupplierAuthApi::class.java)
+    fun provideSupplierAuthApi(): AuthenticationApi {
+        return provideRetrofitInstance().create(AuthenticationApi::class.java)
     }
 
     @Singleton

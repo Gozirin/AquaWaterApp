@@ -1,9 +1,9 @@
 package com.decagon.aqua.feature.onboarding
 
-import com.decagon.aqua.core.service.ForgotResetPassWordAPI
-import com.decagon.aqua.feature.repository.IResetPasswordRepositoryInterface
-import com.decagon.aqua.resetpassword.ResetPasswordRequest
-import com.decagon.hbapplicationgroupa.model.authmodule.resetpassword.ResetPasswordResponse
+import com.decagon.aqua.models.ResetPasswordRequest
+import com.decagon.aqua.models.ResetPasswordResponse
+import com.decagon.aqua.network.ForgotResetPassWordAPI
+import com.decagon.aqua.repositories.IResetPasswordRepositoryInterface
 
 class ResetPasswordRepository(
     private val forgotResetPassWordAPI: ForgotResetPassWordAPI

@@ -21,16 +21,16 @@ import com.decagon.aqua.models.LocationX
 import com.decagon.aqua.models.Supplier
 import com.decagon.aqua.models.supplierAuthModule.CompanyList
 import com.decagon.aqua.models.supplierAuthModule.UserX
-import com.decagon.aqua.validations.SupplierRegistration
-import com.decagon.aqua.validations.SupplierRegistration.validateAgeInput
-import com.decagon.aqua.validations.SupplierRegistration.validateCompanySelection
-import com.decagon.aqua.validations.SupplierRegistration.validateConfirmPassword
-import com.decagon.aqua.validations.SupplierRegistration.validateEmailInput
-import com.decagon.aqua.validations.SupplierRegistration.validateFirstNameInput
-import com.decagon.aqua.validations.SupplierRegistration.validateLastNameInput
-import com.decagon.aqua.validations.SupplierRegistration.validatePasswordInput
-import com.decagon.aqua.validations.SupplierRegistration.validatePhoneInput
-import com.decagon.aqua.validations.SupplierRegistration.validateSex
+import com.decagon.aqua.validations.Validation
+import com.decagon.aqua.validations.Validation.validateAgeInput
+import com.decagon.aqua.validations.Validation.validateCompanySelection
+import com.decagon.aqua.validations.Validation.validateConfirmPassword
+import com.decagon.aqua.validations.Validation.validateEmailInput
+import com.decagon.aqua.validations.Validation.validateFirstNameInput
+import com.decagon.aqua.validations.Validation.validateLastNameInput
+import com.decagon.aqua.validations.Validation.validatePasswordInput
+import com.decagon.aqua.validations.Validation.validatePhoneInput
+import com.decagon.aqua.validations.Validation.validateSex
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 import dagger.hilt.android.AndroidEntryPoint
@@ -40,7 +40,7 @@ class SupplierSignUpFragment : Fragment() {
 
     private var _binding: FragmentSupplierSignUpBinding? = null
     private val binding get() = _binding!!
-    private val function = SupplierRegistration
+    private val function = Validation
     private val viewModel: AuthenticationViewModel by viewModels()
     private lateinit var connectivityLiveData: ConnectivityLiveData
     private lateinit var userInfo: Supplier

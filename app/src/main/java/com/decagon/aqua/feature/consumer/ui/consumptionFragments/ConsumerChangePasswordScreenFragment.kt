@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerChangePasswordScreenBinding
-import com.decagon.aqua.models.inputvalidation.Inputvalidation
+import com.decagon.aqua.feature.login_and_registration.viewmodels.UpdatePasswordViewModel
 import com.decagon.aqua.models.updatepassword.UpdatePasswordModel
-import com.decagon.aqua.models.viewmodel.UpdatePasswordViewModel
+import com.decagon.aqua.validations.Validation
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,10 +48,10 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
                 val confirmPassword = textInputLayout4.editText?.text.toString()
                 val currentPassword = changePasswordScreenTextInputLayout1.editText?.text.toString()
 
-                if (!Inputvalidation.validateNewPassword(newPassword) || !Inputvalidation.validateConfirmPassword(
+                if (!Validation.validatePasswordInput(newPassword) || !Validation.validateConfirmPassword(
                         newPassword,
                         confirmPassword
-                    ) || !Inputvalidation.validateNewPassword(currentPassword)
+                    ) || !Validation.validatePasswordInput(currentPassword)
                 ) {
                     Toast.makeText(requireContext(), "Enter Valid Password", Toast.LENGTH_SHORT)
                         .show()
@@ -73,15 +73,15 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
         /**
          * add a textchangeListener to input fields
          */
-        binding.currentPasswordEditText.addTextChangedListener {
-            val currentPassword = binding.currentPasswordEditText.text.toString()
-            onCurrentPasswordTextChange(currentPassword)
-        }
-
-        binding.newPasswordEditText.addTextChangedListener {
-            val newPassword = binding.newPasswordEditText.text.toString()
-            onNewPasswordTextChange(newPassword)
-        }
+//        binding.currentPasswordEditText.addTextChangedListener {
+//            val currentPassword = binding.currentPasswordEditText.text.toString()
+//            onCurrentPasswordTextChange(currentPassword)
+//        }
+//
+//        binding.newPasswordEditText.addTextChangedListener {
+//            val newPassword = binding.newPasswordEditText.text.toString()
+//            onNewPasswordTextChange(newPassword)
+//        }
 
         binding.confirmPasswordEditText.addTextChangedListener {
             val newPassword = binding.newPasswordEditText.text.toString()
@@ -106,52 +106,52 @@ class ConsumerChangePasswordScreenFragment : Fragment() {
         }
     }
 
-    fun onCurrentPasswordTextChange(currentPassword: String) {
-        if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password cannot be empty") {
-            binding.changePasswordScreenTextInputLayout1.helperText = "Password cannot be empty"
-        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must have a minimum of 8 characters.") {
-            binding.changePasswordScreenTextInputLayout1.helperText =
-                "Password must have a minimum of 8 characters."
-        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must contain at least 1 number.") {
-            binding.changePasswordScreenTextInputLayout1.helperText =
-                "Password must contain at least 1 number."
-        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must contain at least 1 upper case character.") {
-            binding.changePasswordScreenTextInputLayout1.helperText =
-                "Password must contain at least 1 upper case character."
-        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must contain at least 1 lower case character.") {
-            binding.changePasswordScreenTextInputLayout1.helperText =
-                "Password must contain at least 1 lower case character."
-        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must contain at least 1 special character (@#$%&?!).") {
-            binding.changePasswordScreenTextInputLayout1.helperText =
-                "Password must contain at least 1 special character (@#$%&?!)."
-        } else {
-            binding.changePasswordScreenTextInputLayout1.helperText = ""
-        }
-    }
-
-    fun onNewPasswordTextChange(newPassword: String) {
-        if (Inputvalidation.validatePasswordEntered(newPassword) == "Password cannot be empty") {
-            binding.textInputLayout2.helperText = "Password cannot be empty"
-        } else if (Inputvalidation.validatePasswordEntered(newPassword) == "Password must have a minimum of 8 characters.") {
-            binding.textInputLayout2.helperText = "Password must have a minimum of 8 characters."
-        } else if (Inputvalidation.validatePasswordEntered(newPassword) == "Password must contain at least 1 number.") {
-            binding.textInputLayout2.helperText = "Password must contain at least 1 number."
-        } else if (Inputvalidation.validatePasswordEntered(newPassword) == "Password must contain at least 1 upper case character.") {
-            binding.textInputLayout2.helperText =
-                "Password must contain at least 1 upper case character."
-        } else if (Inputvalidation.validatePasswordEntered(newPassword) == "Password must contain at least 1 lower case character.") {
-            binding.textInputLayout2.helperText =
-                "Password must contain at least 1 lower case character."
-        } else if (Inputvalidation.validatePasswordEntered(newPassword) == "Password must contain at least 1 special character (@#$%&?!).") {
-            binding.textInputLayout2.helperText =
-                "Password must contain at least 1 special character (@#$%&?!)."
-        } else {
-            binding.textInputLayout2.helperText = ""
-        }
-    }
+//    fun onCurrentPasswordTextChange(currentPassword: String) {
+//        if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password cannot be empty") {
+//            binding.changePasswordScreenTextInputLayout1.helperText = "Password cannot be empty"
+//        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must have a minimum of 8 characters.") {
+//            binding.changePasswordScreenTextInputLayout1.helperText =
+//                "Password must have a minimum of 8 characters."
+//        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must contain at least 1 number.") {
+//            binding.changePasswordScreenTextInputLayout1.helperText =
+//                "Password must contain at least 1 number."
+//        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must contain at least 1 upper case character.") {
+//            binding.changePasswordScreenTextInputLayout1.helperText =
+//                "Password must contain at least 1 upper case character."
+//        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must contain at least 1 lower case character.") {
+//            binding.changePasswordScreenTextInputLayout1.helperText =
+//                "Password must contain at least 1 lower case character."
+//        } else if (Inputvalidation.validatePasswordEntered(currentPassword) == "Password must contain at least 1 special character (@#$%&?!).") {
+//            binding.changePasswordScreenTextInputLayout1.helperText =
+//                "Password must contain at least 1 special character (@#$%&?!)."
+//        } else {
+//            binding.changePasswordScreenTextInputLayout1.helperText = ""
+//        }
+//    }
+//
+//    fun onNewPasswordTextChange(newPassword: String) {
+//        if (Inputvalidation.validatePasswordEntered(newPassword) == "Password cannot be empty") {
+//            binding.textInputLayout2.helperText = "Password cannot be empty"
+//        } else if (Inputvalidations.validatePasswordEntered(newPassword) == "Password must have a minimum of 8 characters.") {
+//            binding.textInputLayout2.helperText = "Password must have a minimum of 8 characters."
+//        } else if (Inputvalidations.validatePasswordEntered(newPassword) == "Password must contain at least 1 number.") {
+//            binding.textInputLayout2.helperText = "Password must contain at least 1 number."
+//        } else if (Inputvalidations.validatePasswordEntered(newPassword) == "Password must contain at least 1 upper case character.") {
+//            binding.textInputLayout2.helperText =
+//                "Password must contain at least 1 upper case character."
+//        } else if (Inputvalidations.validatePasswordEntered(newPassword) == "Password must contain at least 1 lower case character.") {
+//            binding.textInputLayout2.helperText =
+//                "Password must contain at least 1 lower case character."
+//        } else if (Inputvalidations.validatePasswordEntered(newPassword) == "Password must contain at least 1 special character (@#$%&?!).") {
+//            binding.textInputLayout2.helperText =
+//                "Password must contain at least 1 special character (@#$%&?!)."
+//        } else {
+//            binding.textInputLayout2.helperText = ""
+//        }
+//    }
 
     fun onConfirmPasswordTextChange(password: String, confirmPassword: String) {
-        if (!Inputvalidation.validateConfirmPassword(password, confirmPassword)) {
+        if (!Validation.validateConfirmPassword(password, confirmPassword)) {
             binding.textInputLayout4.helperText = "Invalid Password Entered"
         } else {
             binding.textInputLayout4.helperText = ""

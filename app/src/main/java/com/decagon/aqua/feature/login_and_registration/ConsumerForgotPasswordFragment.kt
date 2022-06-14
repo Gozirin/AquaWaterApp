@@ -13,9 +13,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerForgotPasswordBinding
-import com.decagon.aqua.feature.ForgotPassword.ForgotPasswordRequest
-import com.decagon.aqua.feature.authentication.InputValidation
-import com.decagon.aqua.feature.viewModel.ForgotPasswordViewModel
+import com.decagon.aqua.feature.login_and_registration.viewmodels.ForgotPasswordViewModel
+import com.decagon.aqua.models.ForgotPasswordRequest
+import com.decagon.aqua.validations.InputValidations
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -48,7 +48,7 @@ class ConsumerForgotPasswordFragment : Fragment() {
 
             forgotPasswordButton1.setOnClickListener {
                 val userEmail = forgotPasswordEditTextInputLayout5.text.toString()
-                if (!InputValidation.validateEmailInput(userEmail))
+                if (!InputValidations.validateEmailInput(userEmail))
                     Toast.makeText(requireContext(), "Enter Valid Email", Toast.LENGTH_SHORT).show()
                 else {
                     forgotPasswordViewModel.forgotPassword(ForgotPasswordRequest(userEmail))
@@ -95,9 +95,9 @@ class ConsumerForgotPasswordFragment : Fragment() {
     }
 
     private fun onEmailTextChanged(receivedEmail: String) {
-        if (InputValidation.validateEmail(receivedEmail) == "Enter a valid Email Address") {
+        if (InputValidations.validateEmail(receivedEmail) == "Enter a valid Email Address") {
             binding.forgotPasswordTextInputLayout5.helperText = "Enter a valid Email Address"
-        } else if (InputValidation.validateEmail(receivedEmail) == "Invalid Email Address") {
+        } else if (InputValidations.validateEmail(receivedEmail) == "Invalid Email Address") {
             binding.forgotPasswordTextInputLayout5.helperText = "Invalid Email Address"
         } else {
             binding.forgotPasswordTextInputLayout5.helperText = ""

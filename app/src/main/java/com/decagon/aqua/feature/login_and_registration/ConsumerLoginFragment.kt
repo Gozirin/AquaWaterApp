@@ -12,19 +12,19 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
-import com.decagon.aqua.commons.util.Resource
-import com.decagon.aqua.core.data.UserLoginRequest
-import com.decagon.aqua.databinding.FragmentLoginConsumerBinding
-import com.decagon.aqua.feature.consumer.authentication.AquaViewModel
-import com.decagon.aqua.feature.consumer.authentication.InputValidation
+import com.decagon.aqua.commons.Resource
+import com.decagon.aqua.databinding.FragmentConsumerLoginBinding
+import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
+import com.decagon.aqua.models.supplierAuthModule.LoginModel
+import com.decagon.aqua.validations.InputValidation
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ConsumerLoginFragment : Fragment() {
     private val TAG = "ConsumerLoginFragment"
-    private var _binding: FragmentLoginConsumerBinding? = null
-    private val binding get() = _binding!!
-    private val aqua_view_model: AquaViewModel by viewModels()
+    private lateinit var binding: FragmentConsumerLoginBinding
+    private lateinit var userInfo: LoginModel
+    private val viewModel: AuthenticationViewModel by viewModels()
     private lateinit var errorMsg: TextView
     private lateinit var receivedEmail: String
     private lateinit var receivedPassword: String
@@ -34,11 +34,12 @@ class ConsumerLoginFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentLoginConsumerBinding.inflate(inflater, container, false)
-        return binding.root
+        val binding = inflater.inflate(R.layout.fragment_consumer_login, container, false)
+        return binding.rootView
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentConsumerLoginBinding.bind(view)
         Log.d(TAG, "onViewCreated: Login Fragment")
         binding.consumerLoginLayoutPasswordLo.helperText = ""
         binding.consumerLoginLayoutEmailLo.helperText = ""
@@ -56,13 +57,14 @@ class ConsumerLoginFragment : Fragment() {
         binding.consumerLoginLayoutLoginButton.setOnClickListener {
             receivedEmail = binding.consumerLoginLayoutEditTextEmail.text.toString()
             receivedPassword = binding.consumerLoginLayoutEditTextPassword.text.toString()
-            val login_request = UserLoginRequest(receivedEmail, receivedPassword)
+            val login_request = LoginModel(email = receivedEmail, password = receivedPassword)
 
             if (InputValidation.ValidateEmail(receivedEmail) != null || (InputValidation.validatePassword(receivedPassword) != "")) {
-//                binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
-//                binding.consumerLoginLayoutPasswordLo.helperText = "Enter a valid Password"
+                binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
+                binding.consumerLoginLayoutPasswordLo.helperText = "Enter a valid Password"
+                errorMsg.text = null
             } else {
-                aqua_view_model.loginUser(login_request)
+                viewModel.loginUser(login_request)
                 binding.consumerLoginProgressBar.visibility = View.VISIBLE
             }
         }
@@ -70,10 +72,12 @@ class ConsumerLoginFragment : Fragment() {
         binding.consumerLoginLayoutEditTextEmail.addTextChangedListener {
             receivedEmail = binding.consumerLoginLayoutEditTextEmail.text.toString()
             onEmailTextChanged(receivedEmail)
+            errorMsg.text = null
         }
         binding.consumerLoginLayoutEditTextPassword.addTextChangedListener {
             receivedPassword = binding.consumerLoginLayoutEditTextPassword.text.toString()
             onPasswordTextChanged(receivedPassword)
+            errorMsg.text = null
         }
         observeLoginResponse()
     }
@@ -87,37 +91,21 @@ class ConsumerLoginFragment : Fragment() {
         return true
     }
     fun observeLoginResponse() {
-        aqua_view_model.loginLiveData.observe(
+        viewModel.loginResponse.observe(
             viewLifecycleOwner
         ) {
             when (it) {
                 is Resource.Success -> {
-                    Log.d("Login-succeed", it.value.message)
+                    Log.d("Login-succeed", it.message.toString())
                     binding.consumerLoginProgressBar.visibility = View.GONE
-                    Toast.makeText(requireContext(), it.value.message, Toast.LENGTH_LONG).show()
+//                    Toast.makeText(requireContext(), it.message, Toast.LENGTH_LONG).show()
                     findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
-//                    // Saving auth Token and Id to Shared Preference
-//                    AuthenticationPreference.setToken(it.value.data.token)
-//                    AuthenticationPreference.setId(it.value.data.id)
-//                    //  AuthenticationPreference.setRefreshToken(it.data.refreshToken)
-//
-//                    // refreshing token from api after 8 mins
-//                    val token =
-//                        "Bearer ${AuthenticationPreference.getToken(AuthenticationPreference.TOKEN_KEY)}"
-//                    val userId = AuthenticationPreference.getId(AuthenticationPreference.ID_KEY)
-//                    val refreshKey =
-//                        AuthenticationPreference.getRefreshToken(AuthenticationPreference.REFRESH_KEY)
-//                    if (userId != null) {
-//                        if (refreshKey != null) {
-//                            //      refreshTokenCountDown(token, userId, refreshKey)
-//                        }
-//                    }
                     binding.consumerLoginLayoutLoginButton.text = "Login"
                 }
                 is Resource.Error -> {
                     binding.consumerLoginProgressBar.visibility = View.GONE
-                    errorMsg.text = it.error
-                    Log.d("Login400: ", it.error)
+                    errorMsg.text = it.message.toString()
+                    Log.d("Login400: ", it.data?.errors.toString())
                     binding.consumerLoginLayoutLoginButton.text = "Login"
                 }
                 is Resource.Loading -> {
