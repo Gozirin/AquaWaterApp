@@ -73,7 +73,7 @@
         android:id="@+id/loginFragment"
         android:name="com.decagon.aqua.feature.login_and_registration.ConsumerLoginFragment"
         android:label="fragment_login_consumer"
-        >
+        tools:layout="@layout/fragment_login_consumer" >
         <action
             android:id="@+id/action_loginFragment_to_consumerSignUpFragment"
             app:destination="@id/consumerSignUpFragment" />
@@ -249,5 +249,16 @@
             app:destination="@id/consumer_mainActivity" />
     </fragment>
 
+    <fragment
+        android:id="@+id/logoutConfirmationDialog2"
+        android:name="com.decagon.aqua.feature.consumer.ui.LogoutConfirmationDialog"
+        android:label="LogoutConfirmationDialog" >
+        <action
+            android:id="@+id/action_logoutConfirmationDialog2_to_supplierLoginFragment"
+            app:destination="@id/supplierLoginFragment" />
+        <action
+            android:id="@+id/action_logoutConfirmationDialog2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 
 </navigation>

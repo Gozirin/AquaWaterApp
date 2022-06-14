@@ -53,4 +53,13 @@
             android:id="@+id/action_suppliesDetailsFragment_to_consumerHomeFragment"
             app:destination="@id/consumerHomeFragment" />
     </fragment>
+    <include app:graph="@navigation/onboarding_nav_graph" />
+    <fragment
+        android:id="@+id/logoutConfirmationDialog"
+        android:name="com.decagon.aqua.feature.consumer.ui.LogoutConfirmationDialog"
+        android:label="LogoutConfirmationDialog" >
+        <action
+            android:id="@+id/action_logoutConfirmationDialog_to_app_nav_graph"
+            app:destination="@id/app_nav_graph" />
+    </fragment>
 </navigation>

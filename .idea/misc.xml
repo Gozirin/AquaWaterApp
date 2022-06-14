@@ -23,6 +23,9 @@
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.1595" />
         <entry key="app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.1595" />
          new_aqua_dev_central
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24a.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24b.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.1205" />
         <entry key="app/src/main/res/drawable/ic_close_24.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/ic_comsumer_profile_modal_line2.xml" value="0.134" />
@@ -30,6 +33,8 @@
         <entry key="app/src/main/res/drawable/ic_emeka.xml" value="0.127" />
         <entry key="app/src/main/res/drawable/ic_frame_outline.xml" value="0.2145" />
         <entry key="app/src/main/res/drawable/ic_hand_emoji.xml" value="0.1505" />
+        <entry key="app/src/main/res/drawable/ic_heart.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/ic_heartb.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/ic_image_1.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_image_1__1_.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_input_field_background.xml" value="0.2105" />
@@ -53,6 +58,7 @@
         <entry key="app/src/main/res/font/manrope.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/font/manrope_bold.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/font/manrope_regular.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/layout-v28/fragment_supplier_login.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout-v28/fragment_consumer_modal.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/activity_consumer_main.xml" value="0.2554517133956386" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
@@ -112,14 +118,14 @@
         <entry key="app/src/main/res/layout/fragment_supplier_home_page_layout.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_supplier_homepage_overview.xml" value="0.20652173913043478" />
         <entry key="app/src/main/res/layout/fragment_supplier_homepage_overview_appbar.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_supplier_login.xml" value="0.23072916666666668" />
+        <entry key="app/src/main/res/layout/fragment_supplier_login.xml" value="0.2912912912912913" />
         <entry key="app/src/main/res/layout/fragment_supplier_orders_layout.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_supplier_profile_details.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_supplier_sign_up.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_supplies_details.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_supplies_made_activity_overview.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_third_onboarding_screen.xml" value="0.24479166666666666" />
-        <entry key="app/src/main/res/layout/fragment_total_supplies_made__supplier.xml" value="0.2074074074074074" />
+        <entry key="app/src/main/res/layout/fragment_total_supplies_made__supplier.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_week.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/fragment_year.xml" value="0.23802083333333332" />

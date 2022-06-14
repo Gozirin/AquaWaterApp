@@ -1,6 +1,7 @@
 package com.decagon.aqua.feature.onboarding.screens
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +35,7 @@ class FirstOnboardingScreenFragment : Fragment() {
             TabLayoutMediator(binding.pageIndicator, viewPager) { _, _ -> }.attach()
         }
         binding.tvSkip1.setOnClickListener {
+            Log.d("xyz", "onCreateView: Onboarding Fragment ")
             findNavController().navigate(R.id.action_viewPagerFragment_to_loggingFragment)
         }
         return view

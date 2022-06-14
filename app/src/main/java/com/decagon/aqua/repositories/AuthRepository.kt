@@ -1,16 +1,16 @@
 package com.decagon.aqua.repositories
 
 import com.decagon.aqua.commons.Resource
-import com.decagon.aqua.core.data.UserSignUpResponse
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
+import com.decagon.aqua.models.UserSignUpResponse
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
-import com.decagon.aqua.network.SupplierAuthApi
+import com.decagon.aqua.network.AuthenticationApi
 import javax.inject.Inject
 
 class AuthRepository @Inject constructor(
 
-    private val supplierAuthApi: SupplierAuthApi
+    private val supplierAuthApi: AuthenticationApi
 ) : AuthRepositoryInterface, BaseRepository() {
 
     override suspend fun addSupplier(supplier: Supplier): Resource<RegisterResponse> {

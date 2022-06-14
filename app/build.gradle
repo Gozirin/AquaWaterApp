@@ -68,6 +68,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
     // Koltin
     implementation Dependencies.kotlin_standard_library
     implementation Dependencies.kotlin_reflect
@@ -143,6 +145,9 @@ dependencies {
     // utilities
     // add other libraries below here
     // ---------------------------------------------------------------------------------------------
+  implementation'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
 
 
     // mike
@@ -178,5 +183,10 @@ dependencies {
 
     //Activity KTX
     implementation"androidx.activity:activity-ktx:1.4.0"
+
+    //datastore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.0-rc01"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
 
 }

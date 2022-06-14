@@ -94,19 +94,36 @@
                 android:text="@string/item"
                 android:textColor="#21334F"
                 android:textSize="12sp"
-                app:layout_constraintEnd_toStartOf="@+id/consumer_suppliesDetail_adapterItem_favourite_iv"
                 app:layout_constraintHorizontal_bias="0.018"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/consumer_suppliesDetail_adapterItem_imageView" />
 
 
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/consumer_suppliesDetail_adapterItem_favourite_iv"
                 android:layout_width="18dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/consumer_suppliesDetail_adapterItem_imageView" />-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/likebtn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:backgroundTint="@null"
+                android:visibility="gone"
+                android:background="@drawable/ic_heart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/consumer_suppliesDetail_adapterItem_imageView" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/likebtn2"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/ic_heartb"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/consumer_suppliesDetail_adapterItem_imageView" />
 

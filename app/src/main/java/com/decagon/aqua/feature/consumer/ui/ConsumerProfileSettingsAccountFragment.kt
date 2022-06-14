@@ -11,6 +11,7 @@ import com.decagon.aqua.databinding.FragmentConsumerProfileSettingsAccountBindin
 
 class ConsumerProfileSettingsAccountFragment : Fragment() {
     private lateinit var binding: FragmentConsumerProfileSettingsAccountBinding
+    private var showPW = false
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
