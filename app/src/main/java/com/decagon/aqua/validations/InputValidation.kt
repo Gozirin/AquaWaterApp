@@ -1,7 +1,5 @@
 package com.decagon.aqua.validations
 
-import android.util.Patterns
-
 object InputValidation {
 
     private var EMAIL_PATTERN = Regex("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+\$")
@@ -28,7 +26,7 @@ object InputValidation {
         if (email.isEmpty()) {
             return "Empty field. Enter a valid Email Address."
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        if (!email.matches(EMAIL_PATTERN)) {
             return "Invalid Email Address."
         }
         return null

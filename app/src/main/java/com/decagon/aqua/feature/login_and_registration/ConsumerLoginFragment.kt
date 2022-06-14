@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -58,9 +59,7 @@ class ConsumerLoginFragment : Fragment() {
             receivedPassword = binding.consumerLoginLayoutEditTextPassword.text.toString()
 
             if (!InputValidation.validateEmailInput(receivedEmail) || !InputValidation.validateUserPassword(receivedPassword)) {
-                binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
-                binding.consumerLoginLayoutPasswordLo.helperText = "Enter a valid Password"
-                errorMsg.text = null
+                Toast.makeText(requireContext(), "Your login credentials are invalid", Toast.LENGTH_SHORT).show()
             } else {
                 val login_request = LoginModel(email = receivedEmail, password = receivedPassword)
                 viewModel.loginUser(login_request)
@@ -71,24 +70,42 @@ class ConsumerLoginFragment : Fragment() {
         binding.consumerLoginLayoutEditTextEmail.addTextChangedListener {
             receivedEmail = binding.consumerLoginLayoutEditTextEmail.text.toString()
             onEmailTextChanged(receivedEmail)
-            errorMsg.text = null
         }
         binding.consumerLoginLayoutEditTextPassword.addTextChangedListener {
             receivedPassword = binding.consumerLoginLayoutEditTextPassword.text.toString()
             onPasswordTextChanged(receivedPassword)
-            errorMsg.text = null
         }
         observeLoginResponse()
     }
-    fun onPasswordTextChanged(received_Password: String): Boolean {
-        binding.consumerLoginLayoutPasswordLo.helperText = InputValidation.validatePassword(received_Password)
-        return true
+
+    private fun onEmailTextChanged(receivedEmail: String) {
+        if (InputValidation.ValidateEmail(receivedEmail) == "Enter a valid Email Address") {
+            binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
+        } else if (InputValidation.ValidateEmail(receivedEmail) == "Invalid Email Address") {
+            binding.consumerLoginLayoutEmailLo.helperText = "Invalid Email Address"
+        } else {
+            binding.consumerLoginLayoutEmailLo.helperText = ""
+        }
     }
 
-    fun onEmailTextChanged(received_Email: String): Boolean {
-        binding.consumerLoginLayoutEmailLo.helperText = InputValidation.ValidateEmail(received_Email)
-        return true
+    private fun onPasswordTextChanged(newPassword: String) {
+        if (InputValidation.validatePassword(newPassword) == "Password cannot be empty") {
+            binding.consumerLoginLayoutPasswordLo.helperText = "Password cannot be empty"
+        } else if (InputValidation.validatePassword(newPassword) == "Password must have a minimum of 8 characters.") {
+            binding.consumerLoginLayoutPasswordLo.helperText = "Password must have a minimum of 8 characters."
+        } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 number.") {
+            binding.consumerLoginLayoutPasswordLo.helperText = "Password must contain at least 1 number."
+        } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 upper case character.") {
+            binding.consumerLoginLayoutPasswordLo.helperText = "Password must contain at least 1 upper case character."
+        } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 lower case character.") {
+            binding.consumerLoginLayoutPasswordLo.helperText = "Password must contain at least 1 lower case character."
+        } else if (InputValidation.validatePassword(newPassword) == "Password must contain at least 1 special character (@#$%&?!).") {
+            binding.consumerLoginLayoutPasswordLo.helperText = "Password must contain at least 1 special character (@#$%&?!)."
+        } else {
+            binding.consumerLoginLayoutPasswordLo.helperText = ""
+        }
     }
+
     fun observeLoginResponse() {
         viewModel.loginResponse.observe(
             viewLifecycleOwner
@@ -97,7 +114,6 @@ class ConsumerLoginFragment : Fragment() {
                 is Resource.Success -> {
                     Log.d("Login-succeed", it.message.toString())
                     binding.consumerLoginProgressBar.visibility = View.GONE
-//                    Toast.makeText(requireContext(), it.message, Toast.LENGTH_LONG).show()
                     findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
                     binding.consumerLoginLayoutLoginButton.text = "Login"
                 }
