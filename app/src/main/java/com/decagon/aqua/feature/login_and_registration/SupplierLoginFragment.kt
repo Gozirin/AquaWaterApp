@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -52,25 +51,13 @@ class SupplierLoginFragment : Fragment() {
         makeCompanyListCall()
         binding.supplierLoginLayoutPasswordLo.helperText = ""
         binding.supplierLoginLayoutEmailLo.helperText = ""
-        errorMsg = binding.supplierLoginErrorMsg
-        onBackPressed()
+//        errorMsg = binding.supplierLoginErrorMsg
         // navigate to supplier forgot password page
         binding.supplierLoginLayoutTextViewForgetPassword.setOnClickListener {
             findNavController().navigate(R.id.action_supplierLoginFragment_to_consumerForgotPasswordFragment)
         }
 
         binding.supplierLoginSignup.setOnClickListener {
-//            viewModel.companyList.observe(requireActivity()) {
-//                when (it) {
-//                    is Resource.Loading -> {
-//                        binding.supplierLoginProgressBar.visibility = View.VISIBLE
-//                    }
-//                    is Resource.Error -> {
-//                        Snackbar.make(view, it.message.toString(), Snackbar.LENGTH_SHORT).setAnchorView(binding.supplierLoginSignup).show()
-//                        binding.supplierLoginProgressBar.visibility = View.GONE
-//                    }
-//                }
-//            }
             if (bundle.isEmpty) {
                 Toast.makeText(
                     requireContext(),
@@ -89,14 +76,12 @@ class SupplierLoginFragment : Fragment() {
             receivedEmail = binding.supplierLoginLayoutEditTextEmail.text.toString()
             receivedPassword = binding.supplierLoginLayoutEditTextPassword.text.toString()
 
-            if (InputValidation.ValidateEmail(receivedEmail) != null || (InputValidation.validatePassword(receivedPassword) != "")) {
-                binding.supplierLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
-                binding.supplierLoginLayoutPasswordLo.helperText = "Enter a valid Password"
-                errorMsg.text = null
+            if (!InputValidation.validateEmailInput(receivedEmail) || !InputValidation.validateUserPassword(receivedPassword)) {
                 Toast.makeText(requireContext(), "Your login credentials are invalid", Toast.LENGTH_SHORT).show()
             } else {
                 userInfo = LoginModel(email = receivedEmail, password = receivedPassword)
                 viewModel.loginUser(userInfo)
+                binding.supplierLoginProgressBar.visibility = View.VISIBLE
             }
         }
         /**
@@ -160,24 +145,32 @@ class SupplierLoginFragment : Fragment() {
             }
         }
     }
-    private fun onPasswordTextChanged(received_Password: String) {
-        binding.supplierLoginLayoutPasswordLo.helperText = InputValidation.validatePassword(received_Password)
-        errorMsg.text = null
-    }
 
-    private fun onEmailTextChanged(received_Email: String) {
-        binding.supplierLoginLayoutEmailLo.helperText = InputValidation.ValidateEmail(received_Email)
-        errorMsg.text = null
-    }
-
-    // Method to handle back press on this Fragment
-    private fun onBackPressed() {
-        // Overriding onBack press to navigate to home Fragment onBack Pressed
-        val callback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                findNavController().popBackStack()
-            }
+    private fun onPasswordTextChanged(receivedPassword: String) {
+        if (InputValidation.validatePassword(receivedPassword) == "Password cannot be empty") {
+            binding.supplierLoginLayoutPasswordLo.helperText = "Password cannot be empty"
+        } else if (InputValidation.validatePassword(receivedPassword) == "Password must have a minimum of 8 characters.") {
+            binding.supplierLoginLayoutPasswordLo.helperText = "Password must have a minimum of 8 characters."
+        } else if (InputValidation.validatePassword(receivedPassword) == "Password must contain at least 1 number.") {
+            binding.supplierLoginLayoutPasswordLo.helperText = "Password must contain at least 1 number."
+        } else if (InputValidation.validatePassword(receivedPassword) == "Password must contain at least 1 upper case character.") {
+            binding.supplierLoginLayoutPasswordLo.helperText = "Password must contain at least 1 upper case character."
+        } else if (InputValidation.validatePassword(receivedPassword) == "Password must contain at least 1 lower case character.") {
+            binding.supplierLoginLayoutPasswordLo.helperText = "Password must contain at least 1 lower case character."
+        } else if (InputValidation.validatePassword(receivedPassword) == "Password must contain at least 1 special character (@#$%&?!).") {
+            binding.supplierLoginLayoutPasswordLo.helperText = "Password must contain at least 1 special character (@#$%&?!)."
+        } else {
+            binding.supplierLoginLayoutPasswordLo.helperText = ""
         }
-        requireActivity().onBackPressedDispatcher.addCallback(callback)
+    }
+
+    private fun onEmailTextChanged(receivedEmail: String) {
+        if (InputValidation.validateEmail(receivedEmail) == "Enter a valid Email Address") {
+            binding.supplierLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
+        } else if (InputValidation.validateEmail(receivedEmail) == "Invalid Email Address") {
+            binding.supplierLoginLayoutEmailLo.helperText = "Invalid Email Address"
+        } else {
+            binding.supplierLoginLayoutEmailLo.helperText = ""
+        }
     }
 }

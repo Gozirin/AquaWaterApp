@@ -22,12 +22,12 @@ object InputValidation {
         }
     }
 
-    fun ValidateEmail(email: String): String? {
+    fun validateEmail(email: String): String? {
         if (email.isEmpty()) {
-            return "Empty field. Enter a valid Email Address."
+            return "Enter a valid Email Address"
         }
         if (!email.matches(EMAIL_PATTERN)) {
-            return "Invalid Email Address."
+            return "Invalid Email Address"
         }
         return null
     }

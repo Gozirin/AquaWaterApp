@@ -43,7 +43,6 @@ class ConsumerLoginFragment : Fragment() {
         Log.d(TAG, "onViewCreated: Login Fragment")
         binding.consumerLoginLayoutPasswordLo.helperText = ""
         binding.consumerLoginLayoutEmailLo.helperText = ""
-        errorMsg = binding.supplierLoginErrorMsg
 
         // Sign up if consumer don't have an account
         binding.consumerLoginLayoutLoginSignup.setOnClickListener {
@@ -79,9 +78,9 @@ class ConsumerLoginFragment : Fragment() {
     }
 
     private fun onEmailTextChanged(receivedEmail: String) {
-        if (InputValidation.ValidateEmail(receivedEmail) == "Enter a valid Email Address") {
+        if (InputValidation.validateEmail(receivedEmail) == "Enter a valid Email Address") {
             binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
-        } else if (InputValidation.ValidateEmail(receivedEmail) == "Invalid Email Address") {
+        } else if (InputValidation.validateEmail(receivedEmail) == "Invalid Email Address") {
             binding.consumerLoginLayoutEmailLo.helperText = "Invalid Email Address"
         } else {
             binding.consumerLoginLayoutEmailLo.helperText = ""
