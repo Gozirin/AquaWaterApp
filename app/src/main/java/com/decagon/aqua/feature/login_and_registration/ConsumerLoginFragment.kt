@@ -56,13 +56,13 @@ class ConsumerLoginFragment : Fragment() {
         binding.consumerLoginLayoutLoginButton.setOnClickListener {
             receivedEmail = binding.consumerLoginLayoutEditTextEmail.text.toString()
             receivedPassword = binding.consumerLoginLayoutEditTextPassword.text.toString()
-            val login_request = LoginModel(email = receivedEmail, password = receivedPassword)
 
-            if (InputValidation.ValidateEmail(receivedEmail) != null || (InputValidation.validatePassword(receivedPassword) != "")) {
+            if (!InputValidation.validateEmailInput(receivedEmail) || !InputValidation.validateUserPassword(receivedPassword)) {
                 binding.consumerLoginLayoutEmailLo.helperText = "Enter a valid Email Address"
                 binding.consumerLoginLayoutPasswordLo.helperText = "Enter a valid Password"
                 errorMsg.text = null
             } else {
+                val login_request = LoginModel(email = receivedEmail, password = receivedPassword)
                 viewModel.loginUser(login_request)
                 binding.consumerLoginProgressBar.visibility = View.VISIBLE
             }
