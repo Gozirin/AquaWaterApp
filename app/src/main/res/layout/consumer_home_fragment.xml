@@ -177,7 +177,7 @@
             android:id="@+id/consumer_home_fragment_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
+           android:padding="5dp"
             app:layoutManager="GridLayoutManager"
             app:layout_constraintBottom_toTopOf="@+id/consumer_home_fragment_advert_iv"
             app:layout_constraintEnd_toEndOf="parent"

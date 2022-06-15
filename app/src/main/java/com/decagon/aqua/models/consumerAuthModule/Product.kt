@@ -1,4 +1,4 @@
-package com.decagon.aqua.models.consumerAuthModule.getcompanieswithfeaturedproduct
+package com.decagon.aqua.models.consumerAuthModule
 
 data class Product(
     val additionalInformation: Any,
@@ -10,4 +10,8 @@ data class Product(
     val price: Double,
     val quantityAvailable: Int,
     val reviews: List<Any>
+)
+
+data class Photo(
+    val imageUrl: String
 )
