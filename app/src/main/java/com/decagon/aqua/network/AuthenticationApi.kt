@@ -3,6 +3,7 @@ package com.decagon.aqua.network
 import com.decagon.aqua.core.data.UserSignUpResponse
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
+import com.decagon.aqua.models.consumerAuthModule.getcompanieswithfeaturedproduct.AllCompaniesWithFeaturedProduct
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import retrofit2.Response
 import retrofit2.http.Body
@@ -40,6 +41,7 @@ interface SupplierAuthApi {
 
     @GET("/api/Company/GetAllCompaniesWithFeaturedProduct")
     suspend fun getCompaniesWithProducts(
-        @Query("PageSize") pageSize : Int = 10,
-        @Query("Page") page : Int = 1): Response<AllCompaniesWithFeaturedProduct>
+        @Query("PageSize") pageSize: Int = 10,
+        @Query("Page") page: Int = 1
+    ): Response<AllCompaniesWithFeaturedProduct>
 }

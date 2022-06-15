@@ -4,6 +4,7 @@ import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
 import com.decagon.aqua.models.UserSignUpResponse
+import com.decagon.aqua.models.consumerAuthModule.getcompanieswithfeaturedproduct.AllCompaniesWithFeaturedProduct
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 
 interface AuthRepositoryInterface {
