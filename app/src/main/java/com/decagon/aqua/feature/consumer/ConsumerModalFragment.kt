@@ -28,7 +28,7 @@ class ConsumerModalFragment : BottomSheetDialogFragment() {
 
         binding.consumerModalButton.setOnClickListener {
 
-            findNavController().navigate(R.id.action_consumerModalFragment_to_consumerModal2Fragment)
+//            findNavController().navigate(R.id.action_consumerModalFragment_to_consumerModal2Fragment)
         }
     }
 }

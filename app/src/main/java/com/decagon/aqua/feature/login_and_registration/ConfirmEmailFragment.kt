@@ -46,7 +46,7 @@ class ConfirmEmailFragment : Fragment() {
                 when (it) {
                     is Resource.Success -> {
                         Snackbar.make(view, it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.confirmEmailFragmentConfirmEmailButton).show()
-                        findNavController().navigate(ConfirmEmailFragmentDirections.actionConfirmEmailFragmentToSupplierLoginFragment())
+                       // findNavController().navigate(ConfirmEmailFragmentDirections.actionConfirmEmailFragmentToSupplierLoginFragment())
                     }
 
                     is Resource.Error -> {
