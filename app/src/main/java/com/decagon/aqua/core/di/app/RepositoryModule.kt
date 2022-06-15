@@ -1,6 +1,6 @@
 package com.decagon.aqua.core.di.app
 
-import com.decagon.aqua.network.SupplierAuthApi
+import com.decagon.aqua.network.AquaApi
 import com.decagon.aqua.repositories.AuthRepository
 import com.decagon.aqua.repositories.AuthRepositoryInterface
 import dagger.Module
@@ -15,12 +15,12 @@ class RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideAuthRepository(supplierAuthApi: SupplierAuthApi): AuthRepository {
-        return AuthRepository(supplierAuthApi)
+    fun provideAuthRepository(aquaApi: AquaApi): AuthRepository {
+        return AuthRepository(aquaApi)
     }
 
     @Singleton
     @Provides
-    fun provideAuthRepoInterface(supplierAuthApi: SupplierAuthApi): AuthRepositoryInterface =
-        AuthRepository(supplierAuthApi)
+    fun provideAuthRepoInterface(aquaApi: AquaApi): AuthRepositoryInterface =
+        AuthRepository(aquaApi)
 }

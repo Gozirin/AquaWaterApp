@@ -52,7 +52,7 @@ class FavouriteConsumerFragment : Fragment(), ConsumerModalAdapter.OnItemClickLi
         val setReminder: Button? = productsDetailsDialogue.findViewById(R.id.consumer_modal_button)
         setReminder?.setOnClickListener {
             Toast.makeText(requireContext(), "hide", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.consumerModal2Fragment)
+//            findNavController().navigate(R.id.consumerModal2Fragment)
         }
         showDialog(productsDetailsDialogue)
 

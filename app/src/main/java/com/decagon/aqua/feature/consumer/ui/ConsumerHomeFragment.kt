@@ -11,10 +11,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
+import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.databinding.ConsumerHomeFragmentBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerHomeScreenAdapter
 import com.decagon.aqua.feature.login_and_registration.viewmodels.ConsumerViewModel
-import com.decagon.aqua.models.consumerAuthModule.CompaniesWithProducts
+import com.decagon.aqua.models.consumerAuthModule.consumerhomepage.PageItem
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -63,19 +64,34 @@ class ConsumerHomeFragment : Fragment() {
 //        newArrayList.add(DummyConsumerItem(R.drawable.water_circle, "Arizona Water Inc", "Ikeja, Lagos", "N900.00per/bottle"))
 //    }
 
-    private fun renderProductList(productList: ArrayList<CompaniesWithProducts>) {
+    private fun renderProductList(productList: ArrayList<PageItem>) {
         consumerHomeScreenAdapter.setProductList(productList)
     }
 
     private fun getAllCompaniesWithProducts() {
         viewModel.getCompaniesWithProducts()
-        viewModel.products.observe(viewLifecycleOwner) { fetchProducts ->
-            if (fetchProducts.data != null) {
-                Log.d("TAG", "getAllCompaniesWithProducts$fetchProducts")
-                renderProductList(arrayListOf(fetchProducts.data))
-            } else {
-                Snackbar.make(requireView(), fetchProducts.message.toString(), Snackbar.LENGTH_SHORT).show()
+        viewModel.products.observe(viewLifecycleOwner) { response ->
+            when (response) {
+                is Resource.Success -> {
+                    response.data?.let { fetchProducts ->
+                        renderProductList(fetchProducts.pageItems as ArrayList<PageItem>)
+                    }
+                }
+                is Resource.Error -> {
+                    response.message?.let {
+                        Snackbar.make(
+                            requireView(),
+                            response.message.toString(),
+                            Snackbar.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+                is Resource.Loading -> {
+                    Snackbar.make(requireView(), "Loading!!!!", Snackbar.LENGTH_LONG).show()
+                }
             }
+
+
         }
     }
 }

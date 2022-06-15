@@ -4,31 +4,31 @@ import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.core.data.UserSignUpResponse
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
-import com.decagon.aqua.models.consumerAuthModule.CompaniesWithProducts
+import com.decagon.aqua.models.consumerAuthModule.consumerhomepage.AllCompaniesWithFeaturedProduct
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
-import com.decagon.aqua.network.SupplierAuthApi
+import com.decagon.aqua.network.AquaApi
 import javax.inject.Inject
 
 class AuthRepository @Inject constructor(
 
-    private val supplierAuthApi: SupplierAuthApi
+    private val aquaApi: AquaApi
 ) : AuthRepositoryInterface, BaseRepository() {
 
     override suspend fun addSupplier(supplier: Supplier): Resource<RegisterResponse> {
         return try {
-            safeApiCall { supplierAuthApi.addSuppiler(supplier) }
+            safeApiCall { aquaApi.addSuppiler(supplier) }
         } catch (e: Exception) {
             Resource.Error(e.printStackTrace().toString())
         }
     }
 
     override suspend fun getCompanies(): Resource<CompanyList> {
-        return safeApiCall { supplierAuthApi.getCompanies() }
+        return safeApiCall { aquaApi.getCompanies() }
     }
 
     override suspend fun confirmEmail(confirmEmailModel: ConfirmEmailModel): Resource<RegisterResponse> {
         return try {
-            safeApiCall { supplierAuthApi.confirmEmail(confirmEmailModel) }
+            safeApiCall { aquaApi.confirmEmail(confirmEmailModel) }
         } catch (e: Exception) {
             Resource.Error(e.printStackTrace().toString())
         }
@@ -36,7 +36,7 @@ class AuthRepository @Inject constructor(
 
     override suspend fun loginUser(loginModel: LoginModel): Resource<LoginResponse> {
         return try {
-            safeApiCall { supplierAuthApi.logIn(loginModel) }
+            safeApiCall { aquaApi.logIn(loginModel) }
         } catch (e: Exception) {
             Resource.Error(e.printStackTrace().toString())
         }
@@ -44,13 +44,13 @@ class AuthRepository @Inject constructor(
 
     override suspend fun addConsumer(signUpRequest: Consumer): Resource<UserSignUpResponse> {
         return try {
-            safeApiCall { supplierAuthApi.consumerSignUp(signUpRequest) }
+            safeApiCall { aquaApi.consumerSignUp(signUpRequest) }
         } catch (e: Exception) {
             Resource.Error(e.printStackTrace().toString())
         }
     }
 
-    override suspend fun getCompaniesProducts(): Resource<CompaniesWithProducts> {
-       return safeApiCall { supplierAuthApi.getCompaniesWithProducts() }
+    override suspend fun getCompaniesProducts(): Resource<AllCompaniesWithFeaturedProduct> {
+       return safeApiCall { aquaApi.getCompaniesWithProducts() }
     }
 }

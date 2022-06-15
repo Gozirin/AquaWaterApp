@@ -1,4 +1,4 @@
-package com.decagon.aqua.models.consumerAuthModule
+package com.decagon.aqua.models.consumerAuthModule.consumerhomepage
 
 data class Product(
     val additionalInformation: Any,
@@ -10,8 +10,4 @@ data class Product(
     val price: Double,
     val quantityAvailable: Int,
     val reviews: List<Any>
-)
-
-data class Photo(
-    val imageUrl: String
 )

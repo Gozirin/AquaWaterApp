@@ -1,7 +1,7 @@
 package com.decagon.aqua.core.di.app
 
 import com.decagon.aqua.commons.BASE_URL
-import com.decagon.aqua.network.SupplierAuthApi
+import com.decagon.aqua.network.AquaApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,7 +33,7 @@ class RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideSupplierAuthApi(): SupplierAuthApi {
-        return provideRetrofitInstance().create(SupplierAuthApi::class.java)
+    fun provideSupplierAuthApi(): AquaApi {
+        return provideRetrofitInstance().create(AquaApi::class.java)
     }
 }
