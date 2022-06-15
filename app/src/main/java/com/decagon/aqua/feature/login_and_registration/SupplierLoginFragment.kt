@@ -107,7 +107,7 @@ class SupplierLoginFragment : Fragment() {
             }
         }
         /**
-         * add TextChangeListener
+         * add TextChangeListener to views
          */
         binding.supplierLoginLayoutEditTextEmail.addTextChangedListener {
             receivedEmail = binding.supplierLoginLayoutEditTextEmail.text.toString()
