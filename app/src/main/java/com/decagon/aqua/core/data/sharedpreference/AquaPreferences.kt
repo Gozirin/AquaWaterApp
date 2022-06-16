@@ -12,11 +12,11 @@ class AquaPreferences @Inject constructor(context: Context) : Preference {
     private val preferences = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE)
 
     override fun putToken(token: String) {
-        preferences.edit().putString(PreferencesConstants.KEY_TOKEN, token).apply()
+        preferences.edit().putString(PreferencesConstant.KEY_TOKEN, token).apply()
     }
 
     override fun getToken(): String {
-        return preferences.getString(PreferencesConstants.KEY_TOKEN, "").orEmpty()
+        return preferences.getString(PreferencesConstant.KEY_TOKEN, "").orEmpty()
     }
 
 }
