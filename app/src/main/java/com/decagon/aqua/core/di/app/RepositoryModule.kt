@@ -1,12 +1,10 @@
 package com.decagon.aqua.core.di.app
 
-import com.decagon.aqua.network.AuthenticationApi
+import com.decagon.aqua.network.AuthenticationApi // ktlint-disable import-ordering
 import com.decagon.aqua.network.CompanyProductApi
-import com.decagon.aqua.network.ConsumerApi
+// import com.decagon.aqua.network.ConsumerApi
 import com.decagon.aqua.repositories.AuthRepository
 import com.decagon.aqua.repositories.AuthRepositoryInterface
-import com.decagon.aqua.repositories.ConsumerRepository
-import com.decagon.aqua.repositories.IConsumerRepository
 import com.decagon.aqua.repositories.companyproductrepository.CompanyProductRepository
 import com.decagon.aqua.repositories.companyproductrepository.ICompanyProductRepository
 import dagger.Module
@@ -34,7 +32,7 @@ class RepositoryModule {
     fun providesCompanyRepository(companyProductApi: CompanyProductApi): ICompanyProductRepository {
         return CompanyProductRepository(companyProductApi)
     }
-    fun provideConsumerRepository(consumerApi: ConsumerApi): IConsumerRepository {
-        return ConsumerRepository(consumerApi)
-    }
+//    fun provideConsumerRepository(consumerApi: ConsumerApi): IConsumerRepository {
+//        return ConsumerRepository(consumerApi)
+//    }
 }
