@@ -51,7 +51,7 @@ class SupplierLoginFragment : Fragment() {
         makeCompanyListCall()
         binding.supplierLoginLayoutPasswordLo.helperText = ""
         binding.supplierLoginLayoutEmailLo.helperText = ""
-//        errorMsg = binding.supplierLoginErrorMsg
+        errorMsg = binding.supplierLoginErrorMsg
         // navigate to supplier forgot password page
         binding.supplierLoginLayoutTextViewForgetPassword.setOnClickListener {
             findNavController().navigate(R.id.action_supplierLoginFragment_to_consumerForgotPasswordFragment)
