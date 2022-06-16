@@ -106,7 +106,7 @@ class SupplierLoginFragment : Fragment() {
                         Log.d(TAG, "check supplier token content: ${it.data.data.token}")
                         // save token
                         val receivedSupllierToken = it.data.data.token
-                        if (receivedSupllierToken != null){
+                        if (receivedSupllierToken != null) {
                             preference.putSupplierToken(receivedSupllierToken)
                         }
                         Log.d(TAG, "is the supplier token captured: ${preference.getSupplierToken()}")

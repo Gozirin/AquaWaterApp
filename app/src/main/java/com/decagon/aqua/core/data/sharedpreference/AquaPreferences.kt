@@ -26,5 +26,4 @@ class AquaPreferences @Inject constructor(context: Context) : Preference {
     override fun getSupplierToken(): String {
         return preferences.getString(PreferencesConstant.KEY_TOKEN_SUPPLIER, "").orEmpty()
     }
-
 }
