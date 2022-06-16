@@ -24,6 +24,16 @@ class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDet
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ProfileViewHolder, position: Int) {
         val currentItem = consumerItem[position]
+/*
+        holder.titleImage.apply {
+            Glide.with(this)
+                .load("https://aquawaterapp.herokuapp.com/swagger/api/Product/GetProductsByCompanyID")
+//                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${position + 1}.png")
+                .into(holder.titleImage)
+        }
+
+ */
+
         holder.titleImage.setImageResource(currentItem.image)
         holder.itemName.text = currentItem.itemName
         holder.starRating.rating = currentItem.starRating.toFloat()

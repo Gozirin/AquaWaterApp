@@ -4,12 +4,15 @@ import com.decagon.aqua.commons.BASE_URL
 import com.decagon.aqua.feature.onboarding.ResetPasswordRepository
 import com.decagon.aqua.network.ApiService
 import com.decagon.aqua.network.AuthenticationApi
+import com.decagon.aqua.network.CompanyProductApi
 import com.decagon.aqua.network.ForgotResetPassWordAPI
 import com.decagon.aqua.repositories.ForgotPasswordRepository
 import com.decagon.aqua.repositories.IForgotPasswordRepository
 import com.decagon.aqua.repositories.IResetPasswordRepositoryInterface
 import com.decagon.aqua.repositories.IUpdatePasswordRepository
 import com.decagon.aqua.repositories.UpdatePasswordRepository
+import com.decagon.aqua.repositories.companyproductrepository.CompanyProductRepository
+import com.decagon.aqua.repositories.companyproductrepository.ICompanyProductRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -49,6 +52,12 @@ class RetrofitModule {
     @Provides
     fun provideUpdatePasswordApiService(): ApiService {
         return provideRetrofitInstance().create(ApiService::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun providesCompanyProductApiServcie(): CompanyProductApi {
+        return provideRetrofitInstance().create(CompanyProductApi::class.java)
     }
 
     @Singleton

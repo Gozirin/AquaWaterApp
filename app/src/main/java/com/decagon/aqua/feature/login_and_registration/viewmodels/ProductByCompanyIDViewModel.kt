@@ -6,17 +6,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.models.ProductByCompanyID
-import com.decagon.aqua.repositories.AuthRepositoryInterface
+import com.decagon.aqua.repositories.companyproductrepository.ICompanyProductRepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class ProductByCompanyIDViewModel @Inject constructor(private val repo: AuthRepositoryInterface) : ViewModel() {
+
+
+class ProductByCompanyIDViewModel @Inject constructor(private val companyProductRepository: ICompanyProductRepository) : ViewModel() {
+
     private var _products: MutableLiveData<Resource<ProductByCompanyID>> = MutableLiveData()
     val products: LiveData<Resource<ProductByCompanyID>> = _products
-    fun getCompaniesWithProducts() {
+
+    fun getCompaniesWithProducts(companyProductId: String, token: String) {
         viewModelScope.launch {
-            // val response = repo.getCompaniesProducts()
-            //   _products.value = response
+            val response = companyProductRepository.productsByCompanyID(companyProductId, token)
+            _products.value = response
         }
     }
 }
