@@ -6,21 +6,32 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
+import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.databinding.FragmentSuppliesDetailsBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerSupplyDetailsAdapter
 import com.decagon.aqua.models.SupplyDetailsItem
+import com.decagon.aqua.models.companyProductmodel.CompanyProductResponse
 import com.like.LikeButton
+import dagger.hilt.android.AndroidEntryPoint
+import retrofit2.Response
 
+@AndroidEntryPoint
 class SuppliesDetailsFragment : Fragment() {
+
+    private val TAG = "SupplyDetailsFragment"
     private lateinit var binding: FragmentSuppliesDetailsBinding
     private lateinit var newArrayList: ArrayList<SupplyDetailsItem>
     private lateinit var consumerSuppliesDetailAdapter: ConsumerSupplyDetailsAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var likebtn: LikeButton
+//    private var companyIdViewModel: ProductByCompanyIDViewModel by viewModels()
+    private var _products: MutableLiveData<Resource<Response<CompanyProductResponse>>> = MutableLiveData()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,7 +57,7 @@ class SuppliesDetailsFragment : Fragment() {
         binding.supplyDetailsBackBtn.setOnClickListener {
             findNavController().navigate(R.id.action_suppliesDetailsFragment_to_consumerHomeFragment)
         }
-
+        val products: LiveData<Resource<Response<CompanyProductResponse>>> = _products
 //        lifecycleScope.launchWhenCreated {
 //            val response = try {
 //                AppModule.provideAquaApi().getProductsByCompanyID()
@@ -80,4 +91,31 @@ class SuppliesDetailsFragment : Fragment() {
         newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "in stock"))
         newArrayList.add(SupplyDetailsItem(R.drawable.water_circle, "Eva Bottle Water", "N750", "per/bottle", 6.5, "(6.5)", "out of stock"))
     }
+
+    fun observeCompanyIdResponse() {
+//        companyIdViewModel.products.observe(
+//            viewLifecycleOwner
+//        )
+        //        {
+//            when (it) {
+//                is Resource.Success -> {
+//                    Log.d("Login-succeed", it.message.toString())
+// //                    binding.consumerLoginProgressBar.visibility = View.GONE
+// //                    findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
+// //                    binding.consumerLoginLayoutLoginButton.text = "Login"
+//                }
+//                is Resource.Error -> {
+// //                    binding.consumerLoginProgressBar.visibility = View.GONE
+// //                    Toast.makeText(requireContext(), it.message.toString(), Toast.LENGTH_SHORT).show()
+// ////                    errorMsg.text = it.message.toString()
+// //                    Log.d("Login400: ", it.data?.errors.toString())
+//                    Log.d("Login400: ", it.message.toString())
+// //                    binding.consumerLoginLayoutLoginButton.text = "Login"
+//                }
+//                is Resource.Loading -> {
+// //                    binding.consumerLoginProgressBar.visibility = View.VISIBLE
+//                }
+    }
 }
+//    }
+// }
