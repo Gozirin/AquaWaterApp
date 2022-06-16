@@ -63,8 +63,8 @@
             android:id="@+id/action_consumerSignUpFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_consumerSignUpFragment_to_consumer_mainActivity"
-            app:destination="@id/consumer_mainActivity" />
+            android:id="@+id/action_consumerSignUpFragment_to_consumerCheckMailFragment"
+            app:destination="@id/consumerCheckMailFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
