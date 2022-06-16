@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".feature.consumer.ConsumerTransactionHistoryFragment">
+
+    <TextView
+        android:id="@+id/transaction_history_back_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/arrow"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="30px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/transaction_history_screen_text_view"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/manrope_bold"
+        android:textFontWeight="400"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="120dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="133dp"
+        android:text="Transaction History" />
+
+    <TextView
+        android:id="@+id/transaction_history_screen_option_text_view"
+        android:layout_width="57dp"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="332dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="21dp"
+        android:text="TextView"
+        android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transaction_history_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@id/transaction_history_screen_option_text_view"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/fragment_transaction_screen_item_list" />
+
+</RelativeLayout>
