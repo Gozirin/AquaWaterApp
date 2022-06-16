@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.databinding.FragmentConfirmEmailBinding
@@ -46,7 +45,7 @@ class ConfirmEmailFragment : Fragment() {
                 when (it) {
                     is Resource.Success -> {
                         Snackbar.make(view, it.message.toString(), Snackbar.LENGTH_LONG).setAnchorView(binding.confirmEmailFragmentConfirmEmailButton).show()
-                        findNavController().navigate(ConfirmEmailFragmentDirections.actionConfirmEmailFragmentToSupplierLoginFragment())
+                        // findNavController().navigate(ConfirmEmailFragmentDirections.actionConfirmEmailFragmentToSupplierLoginFragment())
                     }
 
                     is Resource.Error -> {
