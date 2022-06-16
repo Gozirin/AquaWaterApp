@@ -13,14 +13,18 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.commons.Resource
+import com.decagon.aqua.core.data.sharedpreference.Preference
 import com.decagon.aqua.databinding.FragmentConsumerLoginBinding
 import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
 import com.decagon.aqua.models.supplierAuthModule.LoginModel
 import com.decagon.aqua.validations.InputValidation
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class ConsumerLoginFragment : Fragment() {
+    @Inject
+    lateinit var preference: Preference
     private val TAG = "ConsumerLoginFragment"
     private lateinit var binding: FragmentConsumerLoginBinding
     private lateinit var userInfo: LoginModel
