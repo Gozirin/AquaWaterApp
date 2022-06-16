@@ -116,6 +116,13 @@ class ConsumerLoginFragment : Fragment() {
             when (it) {
                 is Resource.Success -> {
                     Log.d("Login-succeed", it.message.toString())
+                    Log.d(TAG, "check token content: ${it.data?.data?.token}")
+                    // save the token
+                    val receivedToken = it.data?.data?.token
+                    if (receivedToken != null) {
+                        preference.putToken(receivedToken)
+                    }
+                    Log.d(TAG, "is the token captured: ${receivedToken}")
                     binding.consumerLoginProgressBar.visibility = View.GONE
                     findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
                     binding.consumerLoginLayoutLoginButton.text = "Login"
