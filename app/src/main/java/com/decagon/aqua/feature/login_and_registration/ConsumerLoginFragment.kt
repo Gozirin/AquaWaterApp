@@ -13,14 +13,18 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.commons.Resource
+import com.decagon.aqua.core.data.sharedpreference.Preference
 import com.decagon.aqua.databinding.FragmentConsumerLoginBinding
 import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
 import com.decagon.aqua.models.supplierAuthModule.LoginModel
 import com.decagon.aqua.validations.InputValidation
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class ConsumerLoginFragment : Fragment() {
+    @Inject
+    lateinit var preference: Preference
     private val TAG = "ConsumerLoginFragment"
     private lateinit var binding: FragmentConsumerLoginBinding
     private lateinit var userInfo: LoginModel
@@ -112,6 +116,13 @@ class ConsumerLoginFragment : Fragment() {
             when (it) {
                 is Resource.Success -> {
                     Log.d("Login-succeed", it.message.toString())
+                    Log.d(TAG, "check token content: ${it.data?.data?.token}")
+                    // save the token
+                    val receivedToken = it.data?.data?.token
+                    if (receivedToken != null) {
+                        preference.putToken(receivedToken)
+                    }
+                    Log.d(TAG, "is the token captured: $receivedToken")
                     binding.consumerLoginProgressBar.visibility = View.GONE
                     findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
                     binding.consumerLoginLayoutLoginButton.text = "Login"

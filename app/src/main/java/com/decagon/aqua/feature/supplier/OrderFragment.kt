@@ -1,4 +1,4 @@
-package com.example.tablayout.fragment
+package com.decagon.aqua.feature.supplier
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,10 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.R
-import com.example.tablayout.* // ktlint-disable no-wildcard-imports
+import com.example.tablayout.SupplierAdapter
+import com.example.tablayout.SupplierOrderHistoryAdapter
+import com.example.tablayout.SupplierOrderHistoryRvItem
+import com.example.tablayout.fragment.OrderDetails
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class OrderFragment : BottomSheetDialogFragment(), SupplierAdapter.OnItemClickListener {

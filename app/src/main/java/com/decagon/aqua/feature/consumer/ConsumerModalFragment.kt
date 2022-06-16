@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.decagon.aqua.R
 import com.decagon.aqua.databinding.FragmentConsumerModalBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -28,7 +26,7 @@ class ConsumerModalFragment : BottomSheetDialogFragment() {
 
         binding.consumerModalButton.setOnClickListener {
 
-            findNavController().navigate(R.id.action_consumerModalFragment_to_consumerModal2Fragment)
+//            findNavController().navigate(R.id.action_consumerModalFragment_to_consumerModal2Fragment)
         }
     }
 }
