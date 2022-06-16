@@ -1,6 +1,7 @@
 package com.decagon.aqua.feature.login_and_registration
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,15 +15,18 @@ import androidx.navigation.fragment.findNavController
 import com.decagon.aqua.R
 import com.decagon.aqua.commons.ConnectivityLiveData
 import com.decagon.aqua.commons.Resource
+import com.decagon.aqua.core.data.sharedpreference.Preference
 import com.decagon.aqua.databinding.FragmentSupplierLoginBinding
 import com.decagon.aqua.feature.login_and_registration.viewmodels.AuthenticationViewModel
 import com.decagon.aqua.models.supplierAuthModule.LoginModel
 import com.decagon.aqua.validations.InputValidation
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SupplierLoginFragment : Fragment() {
-
+    @Inject
+    lateinit var preference: Preference
     private val TAG = "SupplierLoginFragment"
     private lateinit var binding: FragmentSupplierLoginBinding
     private val viewModel: AuthenticationViewModel by viewModels()
@@ -51,7 +55,7 @@ class SupplierLoginFragment : Fragment() {
         makeCompanyListCall()
         binding.supplierLoginLayoutPasswordLo.helperText = ""
         binding.supplierLoginLayoutEmailLo.helperText = ""
-//        errorMsg = binding.supplierLoginErrorMsg
+        errorMsg = binding.supplierLoginErrorMsg
         // navigate to supplier forgot password page
         binding.supplierLoginLayoutTextViewForgetPassword.setOnClickListener {
             findNavController().navigate(R.id.action_supplierLoginFragment_to_consumerForgotPasswordFragment)
@@ -99,6 +103,13 @@ class SupplierLoginFragment : Fragment() {
                 }
                 is Resource.Success -> {
                     if (it.data?.success == true) {
+                        Log.d(TAG, "check supplier token content: ${it.data.data.token}")
+                        // save token
+                        val receivedSupllierToken = it.data.data.token
+                        if (receivedSupllierToken != null) {
+                            preference.putSupplierToken(receivedSupllierToken)
+                        }
+                        Log.d(TAG, "is the supplier token captured: ${preference.getSupplierToken()}")
                         errorMsg.text = null
                         binding.supplierLoginProgressBar.visibility = View.GONE
                         findNavController().navigate(R.id.action_supplierLoginFragment_to_supplier_mainActivity)

@@ -1,6 +1,9 @@
 package com.decagon.aqua.core.di.app
 
+import android.content.Context
 import com.decagon.aqua.commons.BASE_URL
+import com.decagon.aqua.core.data.sharedpreference.AquaPreferences
+import com.decagon.aqua.core.data.sharedpreference.Preference
 import com.decagon.aqua.feature.onboarding.ResetPasswordRepository
 import com.decagon.aqua.network.ApiService
 import com.decagon.aqua.network.AuthenticationApi
@@ -13,6 +16,7 @@ import com.decagon.aqua.repositories.UpdatePasswordRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -73,5 +77,11 @@ class RetrofitModule {
     @Provides
     fun provideUpdatePasswordRepository(apiService: ApiService): IUpdatePasswordRepository {
         return UpdatePasswordRepository(apiService)
+    }
+
+    @Singleton
+    @Provides
+    fun provideSharedPreference(@ApplicationContext context: Context): Preference {
+        return AquaPreferences(context)
     }
 }
