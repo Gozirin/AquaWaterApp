@@ -122,7 +122,7 @@ class ConsumerLoginFragment : Fragment() {
                     if (receivedToken != null) {
                         preference.putToken(receivedToken)
                     }
-                    Log.d(TAG, "is the token captured: ${receivedToken}")
+                    Log.d(TAG, "is the token captured: $receivedToken")
                     binding.consumerLoginProgressBar.visibility = View.GONE
                     findNavController().navigate(R.id.action_loginFragment_to_consumer_mainActivity)
                     binding.consumerLoginLayoutLoginButton.text = "Login"

@@ -19,4 +19,12 @@ class AquaPreferences @Inject constructor(context: Context) : Preference {
         return preferences.getString(PreferencesConstant.KEY_TOKEN, "").orEmpty()
     }
 
+    override fun putSupplierToken(token: String) {
+        preferences.edit().putString(PreferencesConstant.KEY_TOKEN_SUPPLIER, token).apply()
+    }
+
+    override fun getSupplierToken(): String {
+        return preferences.getString(PreferencesConstant.KEY_TOKEN_SUPPLIER, "").orEmpty()
+    }
+
 }
