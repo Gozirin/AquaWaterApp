@@ -36,10 +36,10 @@ class ConsumerHomeFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getAllCompaniesWithProducts()
         consumerHomeScreenAdapter = ConsumerHomeScreenAdapter()
         Log.d("TAG", "onViewCreated: Welcome to consumer Home screen")
         initRecyclerView2()
-        getAllCompaniesWithProducts()
 
         binding.consumerHomeFragmentConsumptionSection.setOnClickListener {
             val action = com.decagon.aqua.feature.consumer.ui.ConsumerHomeFragmentDirections.actionConsumerHomeFragmentToConsumerConsumptionLevelFragment()
@@ -73,7 +73,9 @@ class ConsumerHomeFragment : Fragment() {
             when (response) {
                 is Resource.Success -> {
                     response.data?.let { fetchProducts ->
+                        Log.d("TAG", "getAllCompaniesWithProducts: $fetchProducts.pageItems ")
                         renderProductList(fetchProducts.pageItems as ArrayList<PageItem>)
+                        recyclerView.adapter?.notifyDataSetChanged()
                     }
                 }
                 is Resource.Error -> {
