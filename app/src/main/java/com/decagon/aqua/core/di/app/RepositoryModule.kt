@@ -5,10 +5,10 @@ import com.decagon.aqua.network.CompanyProductApi
 import com.decagon.aqua.network.ConsumerApi
 import com.decagon.aqua.repositories.AuthRepository
 import com.decagon.aqua.repositories.AuthRepositoryInterface
-import com.decagon.aqua.repositories.companyproductrepository.CompanyProductRepository
-import com.decagon.aqua.repositories.companyproductrepository.ICompanyProductRepository
 import com.decagon.aqua.repositories.ConsumerRepository
 import com.decagon.aqua.repositories.IConsumerRepository
+import com.decagon.aqua.repositories.companyproductrepository.CompanyProductRepository
+import com.decagon.aqua.repositories.companyproductrepository.ICompanyProductRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,7 +31,7 @@ class RepositoryModule {
         AuthRepository(authenticationApi)
     @Singleton
     @Provides
-    fun providesCompanyRepository(companyProductApi: CompanyProductApi): ICompanyProductRepository{
+    fun providesCompanyRepository(companyProductApi: CompanyProductApi): ICompanyProductRepository {
         return CompanyProductRepository(companyProductApi)
     }
     fun provideConsumerRepository(consumerApi: ConsumerApi): IConsumerRepository {

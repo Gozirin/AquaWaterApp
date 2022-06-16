@@ -1,12 +1,12 @@
 package com.decagon.aqua.network
 
 import com.decagon.aqua.models.ProductByCompanyID
-import com.decagon.aqua.models.consumerAuthModule.consumerhomepage.AllCompaniesWithFeaturedProduct
 import com.decagon.aqua.models.companyProductmodel.CompanyProductResponse
+import com.decagon.aqua.models.consumerAuthModule.consumerhomepage.AllCompaniesWithFeaturedProduct
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Query
 import retrofit2.http.Header
+import retrofit2.http.Query
 
 interface CompanyProductApi {
 

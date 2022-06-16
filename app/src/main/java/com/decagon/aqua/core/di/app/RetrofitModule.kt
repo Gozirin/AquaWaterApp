@@ -15,8 +15,6 @@ import com.decagon.aqua.repositories.IForgotPasswordRepository
 import com.decagon.aqua.repositories.IResetPasswordRepositoryInterface
 import com.decagon.aqua.repositories.IUpdatePasswordRepository
 import com.decagon.aqua.repositories.UpdatePasswordRepository
-import com.decagon.aqua.repositories.companyproductrepository.CompanyProductRepository
-import com.decagon.aqua.repositories.companyproductrepository.ICompanyProductRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

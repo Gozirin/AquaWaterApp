@@ -99,7 +99,7 @@ class SupplierLoginFragment : Fragment() {
                 }
                 is Resource.Error -> {
                     Toast.makeText(requireContext(), it.message.toString(), Toast.LENGTH_SHORT).show()
-                   // errorMsg.text = it.message.toString()
+                    // errorMsg.text = it.message.toString()
                     binding.supplierLoginProgressBar.visibility = View.GONE
                 }
                 is Resource.Success -> {

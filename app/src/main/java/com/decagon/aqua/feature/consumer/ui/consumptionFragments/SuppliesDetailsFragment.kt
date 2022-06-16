@@ -1,7 +1,6 @@
 package com.decagon.aqua.feature.consumer.ui.consumptionFragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -172,10 +171,6 @@ class SuppliesDetailsFragment : Fragment() {
             when (it) {
 //                Log.d(TAG, "here is the response from api: ${it.data.toString()}")
             }
-
         }
-
     }
 }
-
-
