@@ -3,13 +3,11 @@ package com.decagon.aqua.network
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
 import com.decagon.aqua.models.UserSignUpResponse
-import com.decagon.aqua.models.consumerAuthModule.consumerhomepage.AllCompaniesWithFeaturedProduct
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
-import retrofit2.http.Query
 
 interface AuthenticationApi {
 
@@ -38,6 +36,4 @@ interface AuthenticationApi {
     suspend fun consumerSignUp(
         @Body userSignUpRequest: Consumer
     ): Response<UserSignUpResponse>
-
-
 }

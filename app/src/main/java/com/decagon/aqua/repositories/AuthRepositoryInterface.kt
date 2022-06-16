@@ -12,5 +12,4 @@ interface AuthRepositoryInterface {
     suspend fun confirmEmail(confirmEmailModel: ConfirmEmailModel): Resource<RegisterResponse>
     suspend fun loginUser(loginModel: LoginModel): Resource<LoginResponse>
     suspend fun addConsumer(signUpRequest: Consumer): Resource<UserSignUpResponse>
-
 }

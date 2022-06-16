@@ -10,7 +10,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.decagon.aqua.R
 import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.databinding.ConsumerHomeFragmentBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerHomeScreenAdapter
@@ -90,8 +89,6 @@ class ConsumerHomeFragment : Fragment() {
                     Snackbar.make(requireView(), "Loading!!!!", Snackbar.LENGTH_LONG).show()
                 }
             }
-
-
         }
     }
 }

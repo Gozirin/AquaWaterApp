@@ -22,11 +22,9 @@ class RepositoryModule {
         return AuthRepository(supplierAuthApi)
     }
 
-
     @Singleton
     @Provides
     fun provideConsumerRepository(consumerApi: ConsumerApi): IConsumerRepository {
         return ConsumerRepository(consumerApi)
     }
-
 }
