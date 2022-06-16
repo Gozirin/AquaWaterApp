@@ -66,8 +66,8 @@
             android:id="@+id/action_consumerSignUpFragment_to_loginFragment"
             app:destination="@id/consumerLoginFragment" />
         <action
-            android:id="@+id/action_consumerSignUpFragment_to_consumer_mainActivity"
-            app:destination="@id/consumer_mainActivity" />
+            android:id="@+id/action_consumerSignUpFragment_to_consumerCheckMailFragment"
+            app:destination="@id/consumerCheckMailFragment" />
     </fragment>
     <fragment
         android:id="@+id/consumerLoginFragment"
@@ -189,7 +189,7 @@
     </fragment>
     <fragment
         android:id="@+id/orderFragment"
-        android:name="com.example.tablayout.fragment.OrderFragment"
+        android:name="com.decagon.aqua.feature.supplier.OrderFragment"
         android:label="OrderFragment" >
         <action
             android:id="@+id/action_orderFragment_to_supplierOrderHistoryMainActivity"

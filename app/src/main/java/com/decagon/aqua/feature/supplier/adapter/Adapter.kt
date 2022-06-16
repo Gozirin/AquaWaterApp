@@ -4,8 +4,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.decagon.aqua.feature.supplier.OrderFragment
 import com.example.tablayout.fragment.IncomingFragment
-import com.example.tablayout.fragment.OrderFragment
+// import com.example.tablayout.fragment.OrderFragment
 
 class Adapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle) {
     override fun getItemCount(): Int {
