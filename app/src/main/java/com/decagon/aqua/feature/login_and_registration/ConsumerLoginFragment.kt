@@ -43,7 +43,7 @@ class ConsumerLoginFragment : Fragment() {
         Log.d(TAG, "onViewCreated: Login Fragment")
         binding.consumerLoginLayoutPasswordLo.helperText = ""
         binding.consumerLoginLayoutEmailLo.helperText = ""
-
+        errorMsg = binding.supplierLoginErrorMsg
         // Sign up if consumer don't have an account
         binding.consumerLoginLayoutLoginSignup.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_consumerSignUpFragment)
