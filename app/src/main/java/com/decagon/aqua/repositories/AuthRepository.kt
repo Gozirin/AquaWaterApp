@@ -4,7 +4,6 @@ import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
 import com.decagon.aqua.models.UserSignUpResponse
-import com.decagon.aqua.models.consumerAuthModule.getcompanieswithfeaturedproduct.AllCompaniesWithFeaturedProduct
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 import com.decagon.aqua.network.AuthenticationApi
 import javax.inject.Inject
@@ -50,7 +49,5 @@ class AuthRepository @Inject constructor(
         }
     }
 
-    override suspend fun getCompaniesProducts(): Resource<AllCompaniesWithFeaturedProduct> {
-       return safeApiCall { supplierAuthApi.getCompaniesWithProducts() }
-    }
+
 }

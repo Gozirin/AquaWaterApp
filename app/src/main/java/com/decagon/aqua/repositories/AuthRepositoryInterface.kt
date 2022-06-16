@@ -4,7 +4,6 @@ import com.decagon.aqua.commons.Resource
 import com.decagon.aqua.models.Consumer
 import com.decagon.aqua.models.Supplier
 import com.decagon.aqua.models.UserSignUpResponse
-import com.decagon.aqua.models.consumerAuthModule.getcompanieswithfeaturedproduct.AllCompaniesWithFeaturedProduct
 import com.decagon.aqua.models.supplierAuthModule.* // ktlint-disable no-wildcard-imports
 
 interface AuthRepositoryInterface {
@@ -14,6 +13,4 @@ interface AuthRepositoryInterface {
     suspend fun loginUser(loginModel: LoginModel): Resource<LoginResponse>
     suspend fun addConsumer(signUpRequest: Consumer): Resource<UserSignUpResponse>
 
-    // get company products for consumer homepage
-    suspend fun getCompaniesProducts(): Resource<AllCompaniesWithFeaturedProduct>
 }
