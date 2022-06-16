@@ -1,6 +1,7 @@
 package com.decagon.aqua.network
 
 import com.decagon.aqua.models.ProductByCompanyID
+import com.decagon.aqua.models.companyProductmodel.CompanyProductResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -12,5 +13,5 @@ interface CompanyProductApi {
     suspend fun getProductsByCompanyID(
         @Header("Authorization") authToken: String,
         @Query("CompanyId") productCompanyId: String
-    ): Response<List<ProductByCompanyID>>
+    ): Response<CompanyProductResponse>
 }
