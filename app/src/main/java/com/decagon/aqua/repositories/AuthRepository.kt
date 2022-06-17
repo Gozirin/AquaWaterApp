@@ -9,7 +9,6 @@ import com.decagon.aqua.network.AuthenticationApi
 import javax.inject.Inject
 
 class AuthRepository @Inject constructor(
-
     private val supplierAuthApi: AuthenticationApi
 ) : AuthRepositoryInterface, BaseRepository() {
 
