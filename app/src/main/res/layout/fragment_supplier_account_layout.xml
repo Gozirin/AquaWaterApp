@@ -157,23 +157,24 @@
             app:drawableStartCompat="@drawable/ic_help_circle"
             app:drawableEndCompat="@drawable/ic_path" />
 
-        <TextView
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/supplier_account_fragment_logout_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
-            android:gravity="center"
             android:fontFamily="@font/manrope_semibold"
             android:layout_gravity="center"
             android:background="@drawable/ic_rectangle"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:paddingStart="130dp"
-            android:paddingEnd="130dp"
+            app:icon="@drawable/ic_logout_icon"
+            app:iconGravity="textStart"
+            android:paddingEnd="0dp"
             android:text="@string/logout"
             android:textColor="@color/main_blue"
             android:textSize="20sp"
-            app:drawableStartCompat="@drawable/ic_logout_icon" />
+
+             />
     </LinearLayout>
 
 </LinearLayout>

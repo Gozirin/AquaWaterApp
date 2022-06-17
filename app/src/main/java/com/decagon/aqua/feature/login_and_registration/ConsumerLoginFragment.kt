@@ -129,7 +129,8 @@ class ConsumerLoginFragment : Fragment() {
                 }
                 is Resource.Error -> {
                     binding.consumerLoginProgressBar.visibility = View.GONE
-                    errorMsg.text = it.message.toString()
+                    Toast.makeText(requireContext(), "it.message.toString()", Toast.LENGTH_SHORT).show()
+//                    errorMsg.text = it.message.toString()
                     Log.d("Login400: ", it.data?.errors.toString())
                     binding.consumerLoginLayoutLoginButton.text = "Login"
                 }
