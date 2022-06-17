@@ -5,14 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.decagon.aqua.R
-import com.decagon.aqua.feature.consumer.ui.ConsumerHomeFragmentDirections
+import com.decagon.aqua.commons.passCompanyNameToSupplyDetailsFragment
 import com.decagon.aqua.models.consumerAuthModule.consumerhomepage.PageItem
 
-class ConsumerHomeScreenAdapter() :
+class ConsumerHomeScreenAdapter(private val onClick: passCompanyNameToSupplyDetailsFragment) :
     RecyclerView.Adapter<ConsumerHomeScreenAdapter.ProfileViewHolder>() {
     private val consumerItem: ArrayList<PageItem> = arrayListOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileViewHolder {
@@ -34,10 +33,14 @@ class ConsumerHomeScreenAdapter() :
         holder.companyname.text = currentItem.companyName
         holder.location.text = "${currentItem.location.city}, ${currentItem.location.state}"
         holder.price.text = currentItem.product?.price.toString()
+
+        val nameOfCompany = currentItem.companyName
+
         holder.itemView.setOnClickListener {
-            val action = ConsumerHomeFragmentDirections.actionConsumerHomeFragmentToSuppliesDetailsFragment()
-            val navController = Navigation.findNavController(holder.itemView)
-            navController.navigate(action)
+            onClick.passCompanyNameToSupplyDetails(position, nameOfCompany)
+//            val action = ConsumerHomeFragmentDirections.actionConsumerHomeFragmentToSuppliesDetailsFragment()
+//            val navController = Navigation.findNavController(holder.itemView)
+//            navController.navigate(action)
         }
     }
 

@@ -7,7 +7,7 @@ import com.decagon.aqua.core.data.sharedpreference.Preference
 import com.decagon.aqua.feature.onboarding.ResetPasswordRepository
 import com.decagon.aqua.network.ApiService
 import com.decagon.aqua.network.AuthenticationApi
-import com.decagon.aqua.network.CompanyProductApi
+import com.decagon.aqua.network.ConsumerApi
 import com.decagon.aqua.network.ForgotResetPassWordAPI
 import com.decagon.aqua.repositories.ForgotPasswordRepository
 import com.decagon.aqua.repositories.IForgotPasswordRepository
@@ -56,11 +56,11 @@ class RetrofitModule {
         return provideRetrofitInstance().create(ApiService::class.java)
     }
 
-    @Singleton
-    @Provides
-    fun providesCompanyProductApiServcie(): CompanyProductApi {
-        return provideRetrofitInstance().create(CompanyProductApi::class.java)
-    }
+//    @Singleton
+//    @Provides
+//    fun providesCompanyProductApiServcie(): CompanyProductApi {
+//        return provideRetrofitInstance().create(CompanyProductApi::class.java)
+//    }
 
     @Singleton
     @Provides
@@ -91,10 +91,10 @@ class RetrofitModule {
     fun provideSharedPreference(@ApplicationContext context: Context): Preference {
         return AquaPreferences(context)
     }
-//
-//    @Singleton
-//    @Provides
-//    fun provideConsumerApi(): ConsumerApi {
-//        return provideRetrofitInstance().create(ConsumerApi::class.java)
-//    }
+
+    @Singleton
+    @Provides
+    fun provideConsumerApi(): ConsumerApi {
+        return provideRetrofitInstance().create(ConsumerApi::class.java)
+    }
 }

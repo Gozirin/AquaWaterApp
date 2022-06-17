@@ -8,13 +8,15 @@ import android.widget.* // ktlint-disable no-wildcard-imports
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.decagon.aqua.R
 import com.decagon.aqua.feature.consumer.ui.consumptionFragments.snackbar.CustomSnackbar
-import com.decagon.aqua.models.SupplyDetailsItem
-import kotlinx.coroutines.NonDisposableHandle.parent
+import com.decagon.aqua.models.companyProductmodel.ProductData
 
-class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDetailsItem>) :
+class ConsumerSupplyDetailsAdapter() :
     RecyclerView.Adapter<ConsumerSupplyDetailsAdapter.ProfileViewHolder>() {
+    private val consumerItem: ArrayList<ProductData> = arrayListOf()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.supplies_detail_fragment_item, parent, false)
@@ -34,13 +36,15 @@ class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDet
 
  */
 
-        holder.titleImage.setImageResource(currentItem.image)
-        holder.itemName.text = currentItem.itemName
-        holder.starRating.rating = currentItem.starRating.toFloat()
-        holder.price.text = currentItem.price
-        holder.pricePer.text = currentItem.perItem
-        holder.rating.text = currentItem.rating
-        holder.isStocked.text = currentItem.stock
+        Glide
+            .with(holder.itemView)
+            .load(currentItem.photos[0].imageUrl)
+            .into(holder.titleImage)
+        holder.itemName.text = currentItem.name
+        holder.starRating.rating = currentItem.rating.toFloat()
+        holder.price.text = currentItem.price.toString()
+        holder.rating.text = currentItem.noOfRating.toString()
+        holder.isStocked.text = currentItem.inStock.toString()
         holder.itemView.findViewById<AppCompatButton>(R.id.supply_details_add_to_cart_btn).setOnClickListener {
 
             CustomSnackbar.make(holder.itemView.rootView as ViewGroup).setAnchorView(R.id.supply_details_information).show()
@@ -60,7 +64,7 @@ class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDet
         val itemName: TextView = itemView.findViewById(R.id.consumer_suppliesDetails_adapterItem_itemName_tv)
         val price: TextView = itemView.findViewById(R.id.consumer_suppliesDetail_adapterItem_price_tv)
         val location: TextView = itemView.findViewById(R.id.consumer_suppliesDetails_adapterItem_rating_tv)
-        val pricePer: TextView = itemView.findViewById(R.id.consumer_suppliesDetail_adapterItem_pricePer_tv)
+        // val pricePer: TextView = itemView.findViewById(R.id.consumer_suppliesDetail_adapterItem_pricePer_tv)
         val starRating: RatingBar = itemView.findViewById(R.id.ratingBar)
         val isStocked: TextView = itemView.findViewById(R.id.consumer_suppliesDetail_adapterItem_stock_tv)
         val rating: TextView = itemView.findViewById(R.id.consumer_suppliesDetails_adapterItem_rating_tv)
@@ -69,4 +73,8 @@ class ConsumerSupplyDetailsAdapter(private val consumerItem: ArrayList<SupplyDet
     }
 
     override fun getItemCount(): Int = consumerItem.size
+
+    fun setProducts(products: ArrayList<ProductData>) {
+        consumerItem.addAll(products)
+    }
 }
