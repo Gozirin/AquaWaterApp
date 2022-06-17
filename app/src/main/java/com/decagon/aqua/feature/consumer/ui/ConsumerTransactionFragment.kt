@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagon.aqua.databinding.ConsumerTransactionFragmentBinding
+import com.decagon.aqua.feature.consumer.adapters.ConsumerTransactionHistoryAdapter
+import com.decagon.aqua.models.ConsumerTransactionItem
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ConsumerTransactionFragment : Fragment() {
+class ConsumerTransactionFragment : Fragment(), ConsumerTransactionHistoryAdapter.OnItemClickListener {
 
     private lateinit var binding: ConsumerTransactionFragmentBinding
 
@@ -20,5 +22,20 @@ class ConsumerTransactionFragment : Fragment() {
     ): View {
         binding = ConsumerTransactionFragmentBinding.inflate(inflater, container, false)
         return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = ConsumerTransactionFragmentBinding
+            .bind(view)
+
+        val adapter = ConsumerTransactionHistoryAdapter(ConsumerTransactionItem().consumerTransactionItem, this)
+        binding.transactionHistoryRecyclerView.adapter = adapter
+
+        binding.transactionHistoryBackArrow.setOnClickListener {
+//            findNavController().navigate(R.id.action_favouriteConsumerFragment2_to_supplierHomePage)
+        }
+    }
+
+    override fun onItemClick(position: Int) {
     }
 }
