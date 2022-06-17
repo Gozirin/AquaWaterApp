@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.decagon.aqua.R
 import com.decagon.aqua.databinding.ConsumerTransactionFragmentBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerTransactionHistoryAdapter
 import com.decagon.aqua.models.ConsumerTransactionItem
@@ -32,7 +34,7 @@ class ConsumerTransactionFragment : Fragment(), ConsumerTransactionHistoryAdapte
         binding.transactionHistoryRecyclerView.adapter = adapter
 
         binding.transactionHistoryBackArrow.setOnClickListener {
-//            findNavController().navigate(R.id.action_favouriteConsumerFragment2_to_supplierHomePage)
+            findNavController().navigate(R.id.consumerHomeFragment)
         }
     }
 
