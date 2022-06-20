@@ -56,6 +56,12 @@ class RetrofitModule {
         return provideRetrofitInstance().create(ApiService::class.java)
     }
 
+//    @Singleton
+//    @Provides
+//    fun providesCompanyProductApiServcie(): CompanyProductApi {
+//        return provideRetrofitInstance().create(CompanyProductApi::class.java)
+//    }
+
     @Singleton
     @Provides
     fun provideForgotPasswordResetApiService(): ForgotResetPassWordAPI {

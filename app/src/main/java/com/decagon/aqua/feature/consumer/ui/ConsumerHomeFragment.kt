@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.aqua.commons.Resource
+import com.decagon.aqua.commons.passCompanyNameToSupplyDetailsFragment
 import com.decagon.aqua.databinding.ConsumerHomeFragmentBinding
 import com.decagon.aqua.feature.consumer.adapters.ConsumerHomeScreenAdapter
 import com.decagon.aqua.feature.login_and_registration.viewmodels.ConsumerViewModel
@@ -19,7 +20,7 @@ import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ConsumerHomeFragment : Fragment() {
+class ConsumerHomeFragment : Fragment(), passCompanyNameToSupplyDetailsFragment {
 
     private lateinit var binding: ConsumerHomeFragmentBinding
     private val viewModel: ConsumerViewModel by viewModels()
@@ -37,12 +38,12 @@ class ConsumerHomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getAllCompaniesWithProducts()
-        consumerHomeScreenAdapter = ConsumerHomeScreenAdapter()
+        consumerHomeScreenAdapter = ConsumerHomeScreenAdapter(this)
         Log.d("TAG", "onViewCreated: Welcome to consumer Home screen")
         initRecyclerView2()
 
         binding.consumerHomeFragmentConsumptionSection.setOnClickListener {
-            val action = com.decagon.aqua.feature.consumer.ui.ConsumerHomeFragmentDirections.actionConsumerHomeFragmentToConsumerConsumptionLevelFragment()
+            val action = ConsumerHomeFragmentDirections.actionConsumerHomeFragmentToConsumerConsumptionLevelFragment()
             findNavController().navigate(action)
         }
     }
@@ -92,5 +93,10 @@ class ConsumerHomeFragment : Fragment() {
                 }
             }
         }
+    }
+
+    override fun passCompanyNameToSupplyDetails(position: Int, name: String) {
+        val actions = ConsumerHomeFragmentDirections.actionConsumerHomeFragmentToSuppliesDetailsFragment(name)
+        findNavController().navigate(actions)
     }
 }

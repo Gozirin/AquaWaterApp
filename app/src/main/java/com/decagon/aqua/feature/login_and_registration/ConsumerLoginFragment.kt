@@ -47,7 +47,7 @@ class ConsumerLoginFragment : Fragment() {
         Log.d(TAG, "onViewCreated: Login Fragment")
         binding.consumerLoginLayoutPasswordLo.helperText = ""
         binding.consumerLoginLayoutEmailLo.helperText = ""
-
+        errorMsg = binding.supplierLoginErrorMsg
         // Sign up if consumer don't have an account
         binding.consumerLoginLayoutLoginSignup.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_consumerSignUpFragment)
@@ -129,7 +129,7 @@ class ConsumerLoginFragment : Fragment() {
                 }
                 is Resource.Error -> {
                     binding.consumerLoginProgressBar.visibility = View.GONE
-                    Toast.makeText(requireContext(), "it.message.toString()", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), it.message.toString(), Toast.LENGTH_SHORT).show()
 //                    errorMsg.text = it.message.toString()
                     Log.d("Login400: ", it.data?.errors.toString())
                     binding.consumerLoginLayoutLoginButton.text = "Login"
