@@ -26,7 +26,7 @@ Aqua Codebase is designed to enable easy flow and collaboration among android na
 
 ## Contribution
 
-This Codebase is entirely developed by Decagon Institute Developers in Training, Android Stack, Squad 010. 
+This Codebase is entirely developed by Decagon Institute Developers. Android Stack, Squad 010. 
 
 As an intending contributor, you need to thoroughly go through the guidelines before you start contributing. You will find all the Guidlines in thw Wiki Page. 
 
