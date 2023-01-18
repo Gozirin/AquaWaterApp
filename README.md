@@ -22,9 +22,16 @@ Aqua Codebase is designed to enable easy flow and collaboration among android na
 - [Android Studio](https://developer.android.com/studio)
 - [Android Gradle](https://developer.android.com/studio/projects/gradle)
 - And many more
-
+<img width="287" alt="Screenshot-1" src="https://user-images.githubusercontent.com/95639970/213057568-6c4fa2da-0bbc-4f36-ab24-6d4887b804a5.png">
+<img width="290" alt="Screenshot-2" src="https://user-images.githubusercontent.com/95639970/213057594-12bc4894-9541-478f-adf1-88e0bd1346e3.png">
+<img width="290" alt="Screenshot-3" src="https://user-images.githubusercontent.com/95639970/213057620-ee3a36bd-87f7-43b3-a46f-5d6c729217dd.png">
+<img width="290" alt="Screenshot-5" src="https://user-images.githubusercontent.com/95639970/213057663-43d488a7-9311-4486-95da-9e37405d7851.png">
+<img width="290" alt="Screenshot-7" src="https://user-images.githubusercontent.com/95639970/213057741-7688512f-d72c-4f18-ac72-d0dd7020c15f.png">
+<img width="366" alt="Screenshot-9" src="https://user-images.githubusercontent.com/95639970/213057803-561da62f-fd98-415d-9af9-2a484c785fd7.png">
+<img width="368" alt="Screenshot-12" src="https://user-images.githubusercontent.com/95639970/213057938-32ffed93-81cd-420f-9de9-aff7de9f3eba.png">
 
 ## Contribution
+
 
 This Codebase is entirely developed by Decagon Institute Developers. Android Stack, Squad 010. 
 
